@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context="com.lecheng.hello.thirdapp.ActivityService1">
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnstartService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动一个服务" />
+
+    <Button
+        android:id="@+id/btnstopService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="停止一个服务" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="----------------\n测试模块2" />
+
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnbindService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="绑定MyService" />
+
+    <Button
+        android:id="@+id/btnunbindService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="解除绑定MyService" />
+
+    <Button
+        android:id="@+id/btnsync"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sync" />
+    <TextView
+        android:text="显示器"
+        android:textSize="25dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv1"/>
+
+
+</LinearLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lecheng.hello.thirdapp">
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".Utils.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="51ee952310e571951a23be9404933fc0" />
+
+        <activity
+            android:name=".AaMainMenu.MainMenu"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Dialog.Alert">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityListItem.Aty001Service"
+            android:label="服务1" />
+
+        <service
+            android:name=".Service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".ActivityListItem.OtherActivity.FarmeLayoutActivity"
+            android:label="@string/title_activity_fl" />
+        <activity
+            android:name=".ActivityListItem.Aty003EveryLayout"
+            android:label="@string/title_activity_layout3" />
+        <activity
+            android:name=".ActivityListItem.Aty004Animation"
+            android:label="@string/title_activity_animation4" />
+        <activity
+            android:name=".ActivityListItem.Aty005MulTouch"
+            android:label="@string/title_activity_mul_touch5" />
+        <activity
+            android:name=".ActivityListItem.Aty006SQLite"
+            android:label="@string/title_activity_sqlite6" />
+        <activity
+            android:name=".ActivityListItem.Aty014Fragment"
+            android:label="@string/title_activity_fragment2" />
+        <activity
+            android:name=".ActivityListItem.OtherActivity.NavigationActivity"
+            android:label="@string/title_activity_navigation" />
+        <activity
+            android:name=".ActivityListItem.OtherActivity.TabedActivity"
+            android:label="@string/title_activity_tabed" />
+        <activity
+            android:name=".ActivityListItem.Aty007SurfaceView"
+            android:label="画板" />
+        <activity
+            android:name=".ActivityListItem.Aty008TestTextViewCtrl"
+            android:label="TextPlayku" />
+        <activity
+            android:name=".ActivityListItem.Aty009View"
+            android:label="@string/title_activity_view9" />
+        <activity
+            android:name=".ActivityListItem.Aty010ViewPager"
+            android:label="@string/title_activity_guide10" />
+        <activity
+            android:name=".ActivityListItem.Aty011AsyncTask"
+            android:label="@string/title_activity_async_task11" />
+        <activity
+            android:name=".ActivityListItem.OtherActivity.HttpClientActivity"
+            android:label="@string/title_activity_http_client" />
+        <activity
+            android:name=".ActivityListItem.Aty012TestFileExplore"
+            android:label="@string/title_activity_file_explore12" />
+        <activity
+            android:name=".ActivityListItem.Aty013JSONResolve"
+            android:label="@string/title_activity_json13" />
+
+        <receiver android:name=".Receiver.SmsReceiver">
+            <intent-filter android:priority="800">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ActivityListItem.Aty002ServiceAnotherAty"
+            android:label="另一个服务" />
+        <activity android:name=".ActivityListItem.Aty015Volley" />
+        <activity android:name=".ActivityListItem.Aty016TestListView" />
+        <activity android:name=".ActivityListItem.Aty017TestLvAndCheckBox" />
+        <activity android:name=".ActivityListItem.Aty018TestMiniBrowser" />
+        <activity android:name=".ActivityListItem.Aty019TestWebView" />
+        <activity android:name=".ActivityListItem.Aty020FragmentTabHost" />
+        <activity android:name=".ActivityListItem.Aty021DemoImagecycleview" />
+        <activity android:name=".ActivityListItem.Aty022UniversalImgLoader" />
+        <activity android:name=".ActivityListItem.Aty023DemoUploadPic1" />
+        <activity android:name=".ActivityListItem.OtherActivity.SelectPicActivity" />
+        <activity android:name=".ActivityListItem.Aty024DemoShareToFriends" />
+        <activity android:name=".ActivityListItem.Aty025TestBackTop" />
+        <activity android:name=".ActivityListItem.Aty026XListView" />
+        <activity android:name=".ActivityListItem.Aty027ViewFlipper" />
+        <activity android:name=".ActivityListItem.Aty028PicView" />
+        <activity android:name=".ActivityListItem.Aty029AMap" />
+        <activity android:name=".ActivityListItem.Aty030VideoView" />
+        <activity android:name=".ActivityListItem.Aty031WoolGlass" />
+        <activity android:name=".ActivityListItem.Aty032Blur"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".ActivityListItem.OtherActivity.BlurAty" />
+    </application>
+
+</manifest>

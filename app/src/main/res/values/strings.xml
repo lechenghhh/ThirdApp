@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">ThirdAPP</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_service1">Service1</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_layout3">Layout3</string>
+    <string name="title_activity_fl">FlActivity</string>
+    <string name="title_activity_animation4">Animation4</string>
+    <string name="title_activity_mul_touch5">MulTouch5</string>
+    <string name="title_activity_sqlite">SQLite</string>
+    <string name="title_activity_sqlite6">SQLite6</string>
+    <string name="title_activity_fragment2">Fragment2</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+    <string name="title_activity_tabed">TabedActivity</string>
+    <string name="title_activity_drawable7">Drawable7</string>
+    <string name="title_activity_view9">View9</string>
+    <string name="title_activity_guide">Guide</string>
+    <string name="title_activity_guide10">Guide10</string>
+    <string name="title_activity_async_task11">AsyncTask11</string>
+    <string name="title_activity_http_client">HttpClient</string>
+    <string name="title_activity_file_explore12">FileExplore12</string>
+    <string name="title_activity_json10">JSON10</string>
+    <string name="title_activity_json13">JSON13</string>
+    <string name="title_activity_volley15">Volley15</string>
+    <string name="title_activity_new18">NewActivity18</string>
+    <string name="title_activity_aty018_activity_android5">Aty018ActivityAndroid5</string>
+</resources>

@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ActivityListItem.Aty007SurfaceView">
+
+
+    <item
+        android:id="@+id/action_bar_1"
+        android:title="one"
+        android:icon="@drawable/backpack"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_bar_2"
+        android:title="two"
+        android:icon="@drawable/delete"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_bar_3"
+        android:title="three"
+        android:icon="@drawable/round"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_bar_clear7"
+        android:title="Clear"
+        android:icon="@drawable/delete"
+        app:showAsAction="always" />
+</menu>

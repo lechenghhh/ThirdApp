@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_pic"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.lecheng.hello.thirdapp.ActivityListItem.Aty032Blur">
+    <EditText
+        android:id="@+id/aty32_et"
+        android:layout_width="match_parent"
+        android:lines="2"
+        android:layout_height="wrap_content"
+        android:hint="请输入内容："/>
+    <Button
+        android:id="@+id/aty32_btn1"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="启动毛玻璃效果" />
+</LinearLayout>
