@@ -16,7 +16,7 @@ public class Aty031Blur extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aty032_blur);
+        setContentView(R.layout.activity_aty031_blur);
         et = (EditText) findViewById(R.id.aty32_et);
         findViewById(R.id.aty32_btn1).setOnClickListener(this);
 

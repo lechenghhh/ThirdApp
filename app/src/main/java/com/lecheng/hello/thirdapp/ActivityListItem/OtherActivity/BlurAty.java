@@ -34,7 +34,7 @@ public class BlurAty extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aty032_blur2);
+        setContentView(R.layout.activity_aty031_blur2);
 
         layout = (LinearLayout) findViewById(R.id.aty31_ll);
         layout.setOnClickListener(new View.OnClickListener() {
