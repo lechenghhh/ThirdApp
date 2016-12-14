@@ -47,7 +47,7 @@ public class Aty32lunbotutest extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_32);
+        setContentView(R.layout.activity_aty32);
 
         showImgCycle();
 
