@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="@dimen/fab_margin"
-    tools:context=".ActivityListItem.Aty033UploadFile">
+    android:padding="@dimen/fab_margin">
 
     <TextView
         android:id="@+id/myText2"
@@ -22,6 +21,6 @@
     <Button
         android:id="@+id/myButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:text="@string/abc_action_bar_up_description" />
 </LinearLayout>
