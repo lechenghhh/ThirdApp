@@ -12,18 +12,23 @@ import android.widget.Toast;
 
 public class MainMenu extends ListActivity {
     //命名规范 前置Atyxxx  如果是实验模块功能请添加Test，如果是借鉴请添加Demo----16.9.6.
-    private String classes[] = {"Aty001Service", "Aty002ServiceAnotherAty", "Aty003EveryLayout",
+    private String classes[] = {
+            "-----------------------------------------",
+            "Aty001Service", "Aty002ServiceAnotherAty", "Aty003EveryLayout",
             "Aty004Animation", "Aty005MulTouch", "Aty006SQLite", "Aty007SurfaceView",
-            "Aty008TestTextViewCtrl", "Aty009View", "Aty010ViewPager", "Aty011AsyncTask",
-            "Aty012TestFileExplore", "Aty013JSONResolve", "Aty014Fragment", "Aty015Volley",
-            "Aty016TestListView", "Aty017TestLvAndCheckBox", "Aty018TestMiniBrowser",
-            "Aty019TestWebView", "Aty020FragmentTabHost", "Aty021DemoImagecycleview",
-            "Aty022UniversalImgLoader", "Aty023DemoUploadPic1", "Aty024DemoShareToFriends",
-            "Aty025TestBackTop", "Aty026XListView", "Aty027ViewFlipper",
-            "Aty028PicView", "Aty029AMap", "Aty030VideoView",
-            "Aty031WoolGlass", "Aty032Blur", "Aty033",
-            "Aty034", "Aty035", "Aty036",
-            "Aty037", "Aty038", "Aty039"};
+            "Aty008TestTextViewCtrl", "Aty009View", "Aty010ViewPager",
+            "-----------------------------------------",
+            "Aty011AsyncTask", "Aty012TestFileExplore", "Aty013JSONResolve",
+            "Aty014Fragment", "Aty015Volley", "Aty016TestListView",
+            "Aty017TestLvAndCheckBox", "Aty018TestMiniBrowser",
+            "Aty019TestWebView", "Aty020FragmentTabHost",
+            "-----------------------------------------",
+            "Aty021DemoImagecycleview", "Aty022UniversalImgLoader", "Aty023DemoUploadPic1",
+            "Aty024DemoShareToFriends", "Aty025TestBackTop", "Aty026XListView",
+            "Aty027ViewFlipper", "Aty028PicView", "Aty029AMap", "Aty030VideoView",
+            "-----------------------------------------",
+            "Aty031Blur", "Aty032lunbotutest", "Aty033UploadFile", "Aty034",
+            "Aty035", "Aty036", "Aty037", "Aty038", "Aty039"};
 
     private LayoutAnimationController lac;
     private ScaleAnimation sa;                  //动画
