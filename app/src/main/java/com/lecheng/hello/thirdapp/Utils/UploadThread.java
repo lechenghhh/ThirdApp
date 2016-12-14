@@ -47,7 +47,7 @@ public class UploadThread extends Thread {
         HttpPost post = new HttpPost(url);
         MultipartEntity multi = new MultipartEntity();
 
-        File fileAbs = new File(Environment.getExternalStorageDirectory(), fileName);
+        File fileAbs = new File(Environment.getExternalStorageDirectory(), "bc.jpg");
 //        File fileAbs = new File(Environment.getExternalStorageDirectory(), "bc.jpg");
         FileBody fileBody = new FileBody(fileAbs);
 
