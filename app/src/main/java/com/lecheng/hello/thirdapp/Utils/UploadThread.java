@@ -58,7 +58,7 @@ public class UploadThread extends Thread {
             HttpResponse response = client.execute(post);
             if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
                 System.out.println(EntityUtils.toString(response.getEntity()));
-                Toast.makeText(c, "上传成功：" + EntityUtils.toString(response.getEntity()), Toast.LENGTH_LONG).show();
+//                Toast.makeText(c, "上传成功：" + EntityUtils.toString(response.getEntity()), Toast.LENGTH_LONG).show();
             }
         } catch (IOException e) {
             e.printStackTrace();
