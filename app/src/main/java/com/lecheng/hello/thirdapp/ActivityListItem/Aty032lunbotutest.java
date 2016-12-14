@@ -18,7 +18,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class Aty32lunbotutest extends AppCompatActivity {
+public class Aty032lunbotutest extends AppCompatActivity {
     private ViewPager mVPlunbotu;
     private List<ImageView> lbtImages;
     private List<View> dots;
