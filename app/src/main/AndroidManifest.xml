@@ -120,9 +120,11 @@
         <activity android:name=".ActivityListItem.Aty028PicView" />
         <activity android:name=".ActivityListItem.Aty029AMap" />
         <activity android:name=".ActivityListItem.Aty030VideoView" />
-        <activity android:name=".ActivityListItem.Aty031Blur"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity
+            android:name=".ActivityListItem.Aty031Blur"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".ActivityListItem.OtherActivity.BlurAty" />
+        <activity android:name=".ActivityListItem.Aty32lunbotutest"/>
     </application>
 
 </manifest>
