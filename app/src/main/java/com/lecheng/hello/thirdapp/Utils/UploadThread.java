@@ -20,7 +20,6 @@ public class UploadThread extends Thread {
     private String fileName, url;
     private Context c;
 
-
     public UploadThread(Context c, String url, String fileName) {
         this.url = url;
         this.fileName = fileName;

@@ -21,6 +21,6 @@
     <Button
         android:id="@+id/myButton"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:text="@string/abc_action_bar_up_description" />
+        android:layout_height="66dp"
+        android:text="upload" />
 </LinearLayout>
