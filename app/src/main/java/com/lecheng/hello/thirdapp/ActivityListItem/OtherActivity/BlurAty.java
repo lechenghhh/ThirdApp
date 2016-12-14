@@ -10,7 +10,6 @@ import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -18,7 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.lecheng.hello.thirdapp.ActivityListItem.Aty032Blur;
+import com.lecheng.hello.thirdapp.ActivityListItem.Aty031Blur;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.FastBlur;
 
@@ -68,7 +67,7 @@ public class BlurAty extends Activity {
         mWidth = metrics.widthPixels;
         mHeight = metrics.heightPixels;
         Rect frame = new Rect();
-        Aty032Blur.instance.getWindow().getDecorView()
+        Aty031Blur.instance.getWindow().getDecorView()
                 .getWindowVisibleDisplayFrame(frame);
         statusBarHeight = frame.top;
         ///////////////////////////////
@@ -76,7 +75,7 @@ public class BlurAty extends Activity {
         int radius = 10;
         float scaleFactor = 8;
 
-        View view = Aty032Blur.instance.getWindow().getDecorView();
+        View view = Aty031Blur.instance.getWindow().getDecorView();
         view.setDrawingCacheEnabled(true);
         Bitmap mBitmap = view.getDrawingCache();
 
