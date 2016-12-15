@@ -30,7 +30,6 @@ import android.widget.Toast;
 
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.UploadThread;
-import com.lidroid.xutils.http.RequestParams;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
