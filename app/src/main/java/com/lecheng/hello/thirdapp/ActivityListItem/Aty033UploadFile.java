@@ -63,7 +63,6 @@ public class Aty033UploadFile extends AppCompatActivity {
 //                    }
 //                }.start();
 
-
             }
         });
     }
