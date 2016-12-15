@@ -1,7 +1,18 @@
 package com.lecheng.hello.thirdapp.Utils;
 
 import android.content.Context;
+import android.content.Entity;
+import android.os.Environment;
 import android.widget.Toast;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.content.FileBody;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -28,7 +39,37 @@ public class UploadThread extends Thread {
 
     @Override
     public void run() {
-        String boundary = "-----------------------------7de2c25201d48";
+//        uploadFile();
+        yuanshengshangchuan();
+    }
+
+    private void uploadFile() {
+//        HttpClient client = new DefaultHttpClient();
+//        HttpPost post = new HttpPost(url);
+//        MultipartEntity multi = new MultipartEntity();
+//
+//        File fileAbs = new File(Environment.getExternalStorageDirectory(), "bc.jpg");
+////        File fileAbs = new File(Environment.getExternalStorageDirectory(), "bc.jpg");
+//        FileBody fileBody = new FileBody(fileAbs);
+//
+//        multi.addPart("file", fileBody);
+//        post.setEntity(multi);
+//
+//        try {
+//            HttpResponse response = client.execute(post);
+//            if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
+//                System.out.println(EntityUtils.toString(response.getEntity()));
+////                Toast.makeText(c, "上传成功：" + EntityUtils.toString(response.getEntity()), Toast.LENGTH_LONG).show();
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+    }
+
+    //原生上传文件
+    private void yuanshengshangchuan() {
+        String boundary = "---------------------------7de2c25201d48";
         String prefix = "--";
         String end = "\r\n";
 
@@ -43,10 +84,9 @@ public class UploadThread extends Thread {
             DataOutputStream out = new DataOutputStream(conn.getOutputStream());
             out.writeBytes(prefix + boundary + end);
             out.writeBytes("Content-Disposition: form-data;"
-                    + "name=\"file\";filename=" + "bc.jpg" + "\"" + end);
+                    + "name=\"file\";filename=\"" + "bc.jpg" + "\"" + end);
             out.writeBytes(end);
-            FileInputStream fileInputStream =
-                    new FileInputStream(new File(fileName));
+            FileInputStream fileInputStream = new FileInputStream(new File(fileName));
             byte[] b = new byte[1024 * 4];
             int len;
             while ((len = fileInputStream.read(b)) != -1) {
@@ -80,6 +120,5 @@ public class UploadThread extends Thread {
             e.printStackTrace();
             System.out.println("IOException:" + e);
         }
-
     }
 }
