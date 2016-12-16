@@ -53,7 +53,8 @@ public class Aty033UploadFile extends AppCompatActivity {
                 File fielAbs = new File(file, "bc.jpg");
                 String fileName = fielAbs.getAbsolutePath();
                 System.out.println(fileName);
-                UploadThread httpThread = new UploadThread(getApplicationContext(), url, fileName);
+                UploadThread httpThread =
+                        new UploadThread(getApplicationContext(), url, fileName);
                 httpThread.start();
 //                new Thread() {
 //                    @Override
