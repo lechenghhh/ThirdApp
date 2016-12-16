@@ -43,30 +43,6 @@ public class UploadThread extends Thread {
         yuanshengshangchuan();
     }
 
-    private void uploadFile() {
-//        HttpClient client = new DefaultHttpClient();
-//        HttpPost post = new HttpPost(url);
-//        MultipartEntity multi = new MultipartEntity();
-//
-//        File fileAbs = new File(Environment.getExternalStorageDirectory(), "bc.jpg");
-////        File fileAbs = new File(Environment.getExternalStorageDirectory(), "bc.jpg");
-//        FileBody fileBody = new FileBody(fileAbs);
-//
-//        multi.addPart("file", fileBody);
-//        post.setEntity(multi);
-//
-//        try {
-//            HttpResponse response = client.execute(post);
-//            if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
-//                System.out.println(EntityUtils.toString(response.getEntity()));
-////                Toast.makeText(c, "上传成功：" + EntityUtils.toString(response.getEntity()), Toast.LENGTH_LONG).show();
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-    }
-
     //原生上传文件
     private void yuanshengshangchuan() {
         String boundary = "---------------------------7de2c25201d48";
@@ -95,30 +71,27 @@ public class UploadThread extends Thread {
             out.writeBytes(end);
             out.writeBytes(prefix + boundary + prefix + end);
             out.flush();
+            if (out != null) {
+                out.close();
+                System.out.println("out-request-提交成功-:");
+            }
+            ///接受返回》》》
 
-            BufferedReader reader =
-                    new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             StringBuffer sb = new StringBuffer();
             String str;
             while ((str = reader.readLine()) != null) {
                 sb.append(str);
             }
-
-            System.out.println("respose" + sb.toString());
-            if (out != null) {
-                out.close();
-            }
+            System.out.println("接受回调成功-respose:" + sb.toString());
             if (reader != null) {
                 reader.close();
             }
-            System.out.println("提交成功");
-            Toast.makeText(c, "提交成功", Toast.LENGTH_LONG).show();
         } catch (MalformedURLException e) {
             e.printStackTrace();
             System.out.println("MalformedURLException:" + e);
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("IOException:" + e);
         }
     }
 }
