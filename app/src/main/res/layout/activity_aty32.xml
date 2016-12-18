@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/aty32_ll"
     android:background="@drawable/bg_pic"
     android:orientation="vertical">
 <!--13-09修改后push-->

@@ -1,10 +1,57 @@
 package com.lecheng.hello.thirdapp.Utils;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
+import android.util.DisplayMetrics;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.LinearLayout;
 
-public class FastBlur {
-    public static Bitmap fastblur(Context context, Bitmap sentBitmap, int radius) {
+import com.lecheng.hello.thirdapp.ActivityListItem.Aty031Blur;
+
+public class FastBlur<T> {
+
+    public FastBlur(Context c, final LinearLayout ll, WindowManager windowManager,Activity aty) {
+        DisplayMetrics metrics = new DisplayMetrics();
+        windowManager.getDefaultDisplay().getMetrics(metrics);
+//        Aty031Blur.instance.getWindow().getDecorView().getWindowVisibleDisplayFrame(frame);
+        ///////////////////////////////
+        int radius = 10;
+        float scaleFactor = 8;
+//        Activity activity = (Activity) c;
+        View view = aty.getWindow().getDecorView();
+        view.setDrawingCacheEnabled(true);
+        Bitmap mBitmap = view.getDrawingCache();
+
+        if (mBitmap == null) {
+            return;
+        }
+        int width = mBitmap.getWidth();
+        int height = mBitmap.getHeight();
+
+        Bitmap overlay = Bitmap.createBitmap((int) (width / scaleFactor),
+                (int) (height / scaleFactor), Bitmap.Config.ARGB_8888); //对上一个activity的截图进行处理，要不然加载会很慢
+        Canvas canvas = new Canvas(overlay);
+        canvas.scale(1 / scaleFactor, 1 / scaleFactor);
+        Paint paint = new Paint();
+        paint.setFlags(Paint.FILTER_BITMAP_FLAG);
+        canvas.drawBitmap(mBitmap, 0, 0, paint);
+        view.setDrawingCacheEnabled(false);
+        final Bitmap blurBitmap = fastBlur2(c, overlay, radius);
+        ll.post(new Runnable() {
+            @Override
+            public void run() {
+                ll.setBackgroundDrawable(new BitmapDrawable(blurBitmap));
+            }
+        });
+    }
+
+    private Bitmap fastBlur2(Context context, Bitmap sentBitmap, int radius) {
 
         Bitmap bitmap = sentBitmap.copy(sentBitmap.getConfig(), true);
 
