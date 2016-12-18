@@ -123,7 +123,6 @@
         <activity
             android:name=".ActivityListItem.Aty031Blur"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".ActivityListItem.OtherActivity.BlurAty" />
         <activity android:name=".ActivityListItem.Aty032lunbotutest" />
         <activity android:name=".ActivityListItem.Aty033UploadFile" />
         <activity android:name=".ActivityListItem.OtherActivity.UploadPicAty" />

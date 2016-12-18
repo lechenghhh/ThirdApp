@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.Adapter.ImgCycViewPagerAdapter;
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.FastBlur;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.ArrayList;
