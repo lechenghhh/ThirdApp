@@ -83,7 +83,7 @@ public class UploadThread extends Thread {
             while ((str = reader.readLine()) != null) {
                 sb.append(str);
             }
-            System.out.println("接受回调成功-respose:" + sb.toString());
+            System.out.println("接受respose成功-:" + sb.toString());
             if (reader != null) {
                 reader.close();
             }

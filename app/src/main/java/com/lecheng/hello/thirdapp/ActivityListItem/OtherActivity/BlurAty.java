@@ -11,6 +11,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -25,11 +26,10 @@ public class BlurAty extends Activity {
 
     private ImageView mImageView;
     private LinearLayout layout;
-    private int mWidth;
-    private int mHeight;
     private TextView textView;
     private Button btn1;
-    private int statusBarHeight;
+    private BlurAty blurAty = this;
+//    private int statusBarHeight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,49 +56,8 @@ public class BlurAty extends Activity {
                 Toast.makeText(BlurAty.this, "关闭了", Toast.LENGTH_SHORT).show();
             }
         }).show();//在按键
-
-        //启动毛玻璃效果
-        blur1(layout);
+        //给layout添加毛玻璃效果
+        blurAty.getWindow().getDecorView().getWindowVisibleDisplayFrame(new Rect());
+        new FastBlur(getApplicationContext(), layout, getWindowManager(),blurAty);
     }
-
-    private void blur1(final LinearLayout ll) {
-        DisplayMetrics metrics = new DisplayMetrics();
-        this.getWindowManager().getDefaultDisplay().getMetrics(metrics);
-        mWidth = metrics.widthPixels;
-        mHeight = metrics.heightPixels;
-        Rect frame = new Rect();
-        Aty031Blur.instance.getWindow().getDecorView()
-                .getWindowVisibleDisplayFrame(frame);
-        statusBarHeight = frame.top;
-        ///////////////////////////////
-
-        int radius = 10;
-        float scaleFactor = 8;
-
-        View view = Aty031Blur.instance.getWindow().getDecorView();
-        view.setDrawingCacheEnabled(true);
-        Bitmap mBitmap = view.getDrawingCache();
-
-        if (mBitmap == null) {
-            return;
-        }
-        int width = mBitmap.getWidth();
-        int height = mBitmap.getHeight();
-
-        Bitmap overlay = Bitmap.createBitmap((int) (width / scaleFactor),
-                (int) (height / scaleFactor), Bitmap.Config.ARGB_8888); //对上一个activity的截图进行处理，要不然加载会很慢  
-        Canvas canvas = new Canvas(overlay);
-        canvas.scale(1 / scaleFactor, 1 / scaleFactor);
-        Paint paint = new Paint();
-        paint.setFlags(Paint.FILTER_BITMAP_FLAG);
-        canvas.drawBitmap(mBitmap, 0, 0, paint);
-        view.setDrawingCacheEnabled(false);
-        final Bitmap blurBitmap = FastBlur.fastblur(this, overlay, radius);
-        ll.post(new Runnable() {
-            @Override
-            public void run() {
-                ll.setBackgroundDrawable(new BitmapDrawable(blurBitmap));
-            }
-        });
-    }
-}  
+}

@@ -6,10 +6,12 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.Adapter.ImgCycViewPagerAdapter;
 import com.lecheng.hello.thirdapp.R;
+import com.lecheng.hello.thirdapp.Utils.FastBlur;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.ArrayList;
@@ -19,6 +21,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class Aty032lunbotutest extends AppCompatActivity {
+    private LinearLayout ll;
     private ViewPager mVPlunbotu;
     private List<ImageView> lbtImages;
     private List<View> dots;
@@ -48,6 +51,7 @@ public class Aty032lunbotutest extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aty32);
+        ll = (LinearLayout) findViewById(R.id.aty32_ll);
 
         showImgCycle();
 

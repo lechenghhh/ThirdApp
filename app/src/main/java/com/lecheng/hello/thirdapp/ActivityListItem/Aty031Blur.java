@@ -9,9 +9,11 @@ import android.widget.EditText;
 import com.lecheng.hello.thirdapp.ActivityListItem.OtherActivity.BlurAty;
 import com.lecheng.hello.thirdapp.R;
 
-public class Aty031Blur extends Activity implements View.OnClickListener {
+import java.io.Serializable;
+
+public class Aty031Blur extends Activity implements View.OnClickListener, Serializable {
     private EditText et;
-    public static Aty031Blur instance = null;
+//    public static Aty031Blur instance = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +22,7 @@ public class Aty031Blur extends Activity implements View.OnClickListener {
         et = (EditText) findViewById(R.id.aty32_et);
         findViewById(R.id.aty32_btn1).setOnClickListener(this);
 
-        instance = this;
+//        instance = this;
     }
 
     @Override
@@ -31,6 +33,8 @@ public class Aty031Blur extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.aty32_btn1) {
+//            Bundle b = new Bundle();
+//            b.putSerializable("aty", Aty031Blur.class);
             startActivity(new Intent(this, BlurAty.class)
                     .putExtra("blur_content", et.getText() + ""));
         }
