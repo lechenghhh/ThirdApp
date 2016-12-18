@@ -22,7 +22,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.io.Serializable;
 //16-12-18 20.07
-public class Aty031Blur extends Activity implements View.OnClickListener, Serializable {
+public class Aty031Blur extends Activity implements View.OnClickListener {
     private EditText et;
     private ImageView iv;
     private LinearLayout ll;
