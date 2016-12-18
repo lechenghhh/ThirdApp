@@ -50,12 +50,12 @@ public class Aty031Blur extends Activity implements View.OnClickListener, Serial
         if (v.getId() == R.id.aty32_btn1) {
             new AlertDialog.Builder(Aty031Blur.this).setTitle(et.getText().toString())//设置对话框标题
                     .setMessage(getIntent().getStringExtra("blur_content"))//设置显示的内容
-                    .setPositiveButton("返回上一个Aty", new DialogInterface.OnClickListener() {//添加确定按钮
+                    .setPositiveButton("关闭整个界面", new DialogInterface.OnClickListener() {//添加确定按钮
                         @Override
                         public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件
                             finish();
                         }
-                    }).setNegativeButton("关闭窗口", new DialogInterface.OnClickListener() {//添加返回按钮
+                    }).setNegativeButton("仅关闭窗口", new DialogInterface.OnClickListener() {//添加返回按钮
                 @Override
                 public void onClick(DialogInterface dialog, int which) {//响应事件
                     Toast.makeText(getApplicationContext(), "关闭了", Toast.LENGTH_SHORT).show();
