@@ -38,7 +38,6 @@ public class Aty015Volley extends AppCompatActivity {
                 Volley_post();
             }
         });
-
     }
 
     private void Volley_get() {
