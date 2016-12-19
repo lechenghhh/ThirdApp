@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.Bean;
+package com.lecheng.hello.thirdapp.DB;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

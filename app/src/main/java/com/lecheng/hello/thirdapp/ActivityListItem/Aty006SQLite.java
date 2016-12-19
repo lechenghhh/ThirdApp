@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SimpleCursorAdapter;
 
-import com.lecheng.hello.thirdapp.Bean.Db;
+import com.lecheng.hello.thirdapp.DB.Db;
 import com.lecheng.hello.thirdapp.R;
 
 
