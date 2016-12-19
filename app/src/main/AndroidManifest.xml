@@ -126,6 +126,7 @@
         <activity android:name=".ActivityListItem.Aty032lunbotutest" />
         <activity android:name=".ActivityListItem.Aty033UploadFile" />
         <activity android:name=".ActivityListItem.OtherActivity.UploadPicAty" />
+        <activity android:name=".ActivityListItem.Aty034"></activity>
     </application>
 
 </manifest>

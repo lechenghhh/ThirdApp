@@ -21,14 +21,13 @@ import com.lecheng.hello.thirdapp.R;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.io.Serializable;
+
 //16-12-18 20.07
 public class Aty031Blur extends Activity implements View.OnClickListener {
     private EditText et;
     private ImageView iv;
     private LinearLayout ll;
     private ImageLoader imageLoader = ImageLoader.getInstance();
-
-//    public static Aty031Blur instance = null;
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
@@ -40,8 +39,6 @@ public class Aty031Blur extends Activity implements View.OnClickListener {
         ll = (LinearLayout) findViewById(R.id.aty31_ll);
         findViewById(R.id.aty32_btn1).setOnClickListener(this);
 
-//        instance = this;
-//        iv.setImageBitmap;
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
@@ -64,7 +61,6 @@ public class Aty031Blur extends Activity implements View.OnClickListener {
 
             Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_pic);
             ll.setBackground(new BitmapDrawable((fastBlur(zoomImage(bitmap, 30, 30), 2))));
-
         }
     }
 
@@ -269,6 +265,7 @@ public class Aty031Blur extends Activity implements View.OnClickListener {
         return (bitmap);
     }
 
+    //压缩bitmap，一般用30x30
     public Bitmap zoomImage(Bitmap bgimage, double newWidth, double newHeight) {
         // 获取这个图片的宽和高
         float width = bgimage.getWidth();
