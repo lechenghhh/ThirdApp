@@ -178,7 +178,7 @@ public class UploadPicAty extends Activity implements OnClickListener {
         System.out.println("请求的URL=========" + URL_UPLOAD);
         System.out.println("请求的fileName====" + file.getName());
         final Map<String, String> params = new HashMap<String, String>();
-        params.put("file", "");
+        params.put("file", "file");
         new Thread(new Runnable() { //开启线程上传文件
             @Override
             public void run() {
