@@ -27,8 +27,9 @@ public class MainMenu extends ListActivity {
             "Aty024DemoShareToFriends", "Aty025TestBackTop", "Aty026XListView",
             "Aty027ViewFlipper", "Aty028PicView", "Aty029AMap", "Aty030VideoView",
             "-----------------------------------------",
-            "Aty031Blur", "Aty032lunbotutest", "Aty033UploadFile", "Aty034",
-            "Aty035Contact", "Aty036", "Aty037", "Aty038", "Aty039"};
+            "Aty031Blur", "Aty032lunbotutest", "Aty033UploadFile",
+            "Aty034", "Aty035Contact", "Aty036Calculator", "Aty037DemoWeather",
+            "Aty038Game2048", "Aty039"};
 
     private LayoutAnimationController lac;
     private ScaleAnimation sa;                  //动画

@@ -126,8 +126,11 @@
         <activity android:name=".ActivityListItem.Aty032lunbotutest" />
         <activity android:name=".ActivityListItem.Aty033UploadFile" />
         <activity android:name=".ActivityListItem.OtherActivity.UploadPicAty" />
-        <activity android:name=".ActivityListItem.Aty034"/>
-        <activity android:name=".ActivityListItem.Aty035Contact"/>
+        <activity android:name=".ActivityListItem.Aty034" />
+        <activity android:name=".ActivityListItem.Aty035Contact" />
+        <activity android:name=".ActivityListItem.Aty036Calculator" />
+        <activity android:name=".ActivityListItem.Aty037DemoWeather" />
+        <activity android:name=".ActivityListItem.Aty038Game2048" />
     </application>
 
 </manifest>
