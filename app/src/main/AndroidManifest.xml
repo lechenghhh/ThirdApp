@@ -130,6 +130,7 @@
         <activity android:name=".ActivityListItem.Aty035Contact" />
         <activity android:name=".ActivityListItem.Aty036Calculator" />
         <activity android:name=".ActivityListItem.Aty037DemoWeather" />
+        <activity android:name=".ActivityListItem.OtherActivity.SetCity037" />
         <activity android:name=".ActivityListItem.Aty038Game2048" />
     </application>
 

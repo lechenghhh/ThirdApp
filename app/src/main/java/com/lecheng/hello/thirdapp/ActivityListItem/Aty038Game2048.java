@@ -2,16 +2,19 @@ package com.lecheng.hello.thirdapp.ActivityListItem;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
 import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.R;
 
+
 public class Aty038Game2048 extends Activity {
+
+    private int score = 0;
+    private TextView tvScore;
+    private static Aty038Game2048 mainActivity = null;
 
     public Aty038Game2048() {
         mainActivity = this;
-
     }
 
     @Override
@@ -33,10 +36,6 @@ public class Aty038Game2048 extends Activity {
         score += s;
         showScore();
     }
-
-    private int score = 0;
-    private TextView tvScore;
-    private static Aty038Game2048 mainActivity = null;
 
     public static Aty038Game2048 getMainActivity() {
         return mainActivity;

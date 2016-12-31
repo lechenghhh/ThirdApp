@@ -52,7 +52,7 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/background_title"
+                android:background="@drawable/abc_list_focused_holo"
                 android:orientation="horizontal"
                 android:padding="5dp">
 
