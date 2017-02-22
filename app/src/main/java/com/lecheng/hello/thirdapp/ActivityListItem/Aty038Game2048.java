@@ -2,6 +2,7 @@ package com.lecheng.hello.thirdapp.ActivityListItem;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.view.View;
 import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.R;
@@ -22,6 +23,12 @@ public class Aty038Game2048 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aty038game2048);
         tvScore = (TextView) findViewById(R.id.tvScore);
+        findViewById(R.id.tvstart).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*在此处添加视图*/
+            }
+        });
     }
 
     public void clearScore() {

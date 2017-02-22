@@ -14,35 +14,32 @@ import android.view.View;
 /**
  * Created by Cheng on 2015/8/4.
  */
-public class MySurfaceView extends SurfaceView implements SurfaceHolder.Callback,View.OnTouchListener{
+public class MySurfaceView extends SurfaceView implements SurfaceHolder.Callback, View.OnTouchListener {
     private Paint p = new Paint();
     private Path path = new Path();
 
     public MySurfaceView(Context context, AttributeSet attrs) {
         super(context, attrs);
         getHolder().addCallback(this);
-
         p.setColor(Color.BLUE);
         p.setTextSize(10);
         p.setStyle(Paint.Style.STROKE);
         setOnTouchListener(this);
     }
 
-    public void draw(){
+    public void draw() {
         Canvas c = getHolder().lockCanvas();
         c.drawColor(Color.WHITE);
         c.drawPath(path, p);
         getHolder().unlockCanvasAndPost(c);
-
     }
 
-    public void clear(){
+    public void clear() {
         path.reset();
         draw();
     }
 
-
-    public void setMyView(int i){
+    public void setMyView(int i) {
         switch (i) {
             case 1:
                 p.setColor(Color.RED);
@@ -76,17 +73,16 @@ public class MySurfaceView extends SurfaceView implements SurfaceHolder.Callback
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        switch (event.getAction()){
+        switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                path.moveTo(event.getX(),event.getY());                            //获取坐标绘制
+                path.moveTo(event.getX(), event.getY());                            //获取坐标绘制
                 draw();
                 break;
             case MotionEvent.ACTION_MOVE:
-                path.lineTo(event.getX(),event.getY());                            //持续获取坐标并绘制
+                path.lineTo(event.getX(), event.getY());                            //持续获取坐标并绘制
                 draw();
                 break;
         }
-
 
         return true;
     }

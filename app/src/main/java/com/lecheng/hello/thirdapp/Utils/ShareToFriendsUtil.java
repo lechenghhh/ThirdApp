@@ -15,7 +15,7 @@ public class ShareToFriendsUtil {
         Intent intent = new Intent(Intent.ACTION_SEND); // �������?�͵�����
         intent.setType("text/plain"); // ���?�͵��������
         intent.putExtra(Intent.EXTRA_SUBJECT, "111"); // ���������
-        String text = "我在同城兔发现了好消息！！！\n";
+        String text = "我在发现了好消息！！！\n";
         text += "快来看这个网站:http://blog.csdn.net/lemon_tree12138";
         intent.putExtra(Intent.EXTRA_TEXT, text); // ���������
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

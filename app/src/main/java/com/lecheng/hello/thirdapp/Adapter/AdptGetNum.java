@@ -1,52 +1,68 @@
 package com.lecheng.hello.thirdapp.Adapter;
 
-import java.util.List;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.Bean.PhoneInfo;
 import com.lecheng.hello.thirdapp.R;
 
-public class AdptGetNum extends BaseAdapter{
-	private List<PhoneInfo>lists;
-	private Context context;
-	private LinearLayout layout;
-	
-	public AdptGetNum(List<PhoneInfo>lists,Context context){
-		this.lists=lists;
-		this.context=context;
-	}
+import java.util.List;
+import java.util.zip.Inflater;
 
-	@Override
-	public int getCount() {
-		return lists.size();
-	}
+/**
+ * Created by Cheng on 2017/1/18.
+ */
 
-	@Override
-	public Object getItem(int arg0) {
-		return lists.get(arg0);
-	}
+public class AdptGetNum extends BaseAdapter {
+    private Context context;
+    private List<PhoneInfo> lists;
 
-	@Override
-	public long getItemId(int arg0) {
-		return arg0;
-	}
+    public AdptGetNum(List<PhoneInfo> lists, Context context) {
+        this.lists = lists;
+        this.context = context;
+    }
 
-	@Override
-	public View getView(int arg0, View arg1, ViewGroup arg2) {
-		LayoutInflater inflater=LayoutInflater.from(context);
-		layout=(LinearLayout) inflater.inflate(R.layout.cell_call35, null);
-		TextView nametv=(TextView) layout.findViewById(R.id.name);
-		TextView numbertv=(TextView) layout.findViewById(R.id.number);
-		nametv.setText(lists.get(arg0).getName());
-		numbertv.setText(lists.get(arg0).getNumber());
-		return layout;
-	}
+    @Override
+    public int getCount() {
+        return lists.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return lists.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    class ViewHolder {                                                  //把控件放在vh内部
+        TextView tv1, tv2;
+
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder vh = null;                                           //局部类声明
+        if (convertView == null) {                                      //只有在没有convertview的时候
+            convertView = View.inflate(context, R.layout.cell_call35, null); //找到布局
+            vh = new ViewHolder();                                      //实例化vh
+            vh.tv1 = (TextView) convertView.findViewById(R.id.call35_name);    //找到控件
+            vh.tv2 = (TextView) convertView.findViewById(R.id.call35_number);    //找到控件
+            convertView.setTag(vh);                                     //设置标题
+        } else {
+            vh = (ViewHolder) convertView.getTag();                     //当存在convertview时候直接获取tag
+        }
+        //在这里控件任意设定
+        vh.tv1.setText(lists.get(position).getName() + "");
+        vh.tv2.setText(lists.get(position).getNumber() + "");
+
+        return convertView;
+    }
 
 }
