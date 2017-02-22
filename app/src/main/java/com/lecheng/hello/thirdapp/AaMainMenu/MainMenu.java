@@ -44,7 +44,6 @@ public class MainMenu extends ListActivity {
         sa = new ScaleAnimation(0, 1, 0, 1, 0, 1);
         sa.setDuration(1000);
         lac = new LayoutAnimationController(sa, 0.2f);
-
         getListView().setLayoutAnimation(lac);
     }
 

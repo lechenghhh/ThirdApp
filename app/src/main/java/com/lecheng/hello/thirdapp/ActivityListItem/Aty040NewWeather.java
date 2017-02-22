@@ -6,6 +6,8 @@ import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.animation.LayoutAnimationController;
+import android.view.animation.ScaleAnimation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -35,6 +37,9 @@ public class Aty040NewWeather extends Activity implements View.OnClickListener {
     private String[] cityList = {"北京", "上海", "广州", "深圳", "天津", "成都",
             "武汉", "重庆", "杭州", "沈阳", "厦门", "青岛", "福州"};
 
+    private LayoutAnimationController lac;      //动画
+    private ScaleAnimation sa;                  //动画
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +55,10 @@ public class Aty040NewWeather extends Activity implements View.OnClickListener {
         findViewById(R.id.aty40_ll).setOnClickListener(this);
         Volley_get();
 
+        sa = new ScaleAnimation(0, 1, 0, 1, 0, 1);
+        sa.setDuration(1000);
+        lac = new LayoutAnimationController(sa, 0.2f);
+        lv1.setLayoutAnimation(lac);
     }
 
     private void Volley_get() {
