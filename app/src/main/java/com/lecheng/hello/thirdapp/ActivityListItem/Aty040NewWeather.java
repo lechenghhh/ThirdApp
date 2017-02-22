@@ -57,7 +57,7 @@ public class Aty040NewWeather extends Activity {
         final Bean040Weather bean= GsonUtil.GsonToBean(strJson, Bean040Weather.class);
 //        //呈现到列表上
 //        mListView.setAdapter(new CommonAdapter<BeanSearch.list>(Search.this, beanSearch.getLists(), R.layout.cell62_hot) {
-//
+
     }
 
 
