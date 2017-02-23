@@ -41,7 +41,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ActivityListItem.Aty001Service"
+            android:name=".ActivityList.Aty001Service"
             android:label="服务1" />
 
         <service
@@ -50,52 +50,52 @@
             android:exported="true" />
 
         <activity
-            android:name=".ActivityListItem.Aty003EveryLayout_Frame"
+            android:name=".ActivityList.Aty003EveryLayout_Frame"
             android:label="@string/title_activity_fl" />
         <activity
-            android:name=".ActivityListItem.Aty003EveryLayout"
+            android:name=".ActivityList.Aty003EveryLayout"
             android:label="@string/title_activity_layout3" />
         <activity
-            android:name=".ActivityListItem.Aty004Animation"
+            android:name=".ActivityList.Aty004Animation"
             android:label="@string/title_activity_animation4" />
         <activity
-            android:name=".ActivityListItem.Aty005MulTouch"
+            android:name=".ActivityList.Aty005MulTouch"
             android:label="@string/title_activity_mul_touch5" />
         <activity
-            android:name=".ActivityListItem.Aty006SQLite"
+            android:name=".ActivityList.Aty006SQLite"
             android:label="@string/title_activity_sqlite6" />
         <activity
-            android:name=".ActivityListItem.Aty014Fragment"
+            android:name=".ActivityList.Aty014Fragment"
             android:label="@string/title_activity_fragment2" />
         <activity
-            android:name=".ActivityListItem.Aty014Fragment_Navi"
+            android:name=".ActivityList.Aty014Fragment_Navi"
             android:label="@string/title_activity_navigation" />
         <activity
-            android:name=".ActivityListItem.Aty014Fragment_Tabed"
+            android:name=".ActivityList.Aty014Fragment_Tabed"
             android:label="@string/title_activity_tabed" />
         <activity
-            android:name=".ActivityListItem.Aty007SurfaceView"
+            android:name=".ActivityList.Aty007SurfaceView"
             android:label="画板" />
         <activity
-            android:name=".ActivityListItem.Aty008TestTextViewCtrl"
+            android:name=".ActivityList.Aty008TestTextViewCtrl"
             android:label="TextPlayku" />
         <activity
-            android:name=".ActivityListItem.Aty009View"
+            android:name=".ActivityList.Aty009View"
             android:label="@string/title_activity_view9" />
         <activity
-            android:name=".ActivityListItem.Aty010ViewPager"
+            android:name=".ActivityList.Aty010ViewPager"
             android:label="@string/title_activity_guide10" />
         <activity
-            android:name=".ActivityListItem.Aty011HttpAsyncTask"
+            android:name=".ActivityList.Aty011HttpAsyncTask"
             android:label="@string/title_activity_async_task11" />
         <activity
-            android:name=".ActivityListItem.Aty011HttpAsyncTask_1"
+            android:name=".ActivityList.Aty011HttpAsyncTask_1"
             android:label="@string/title_activity_http_client" />
         <activity
-            android:name=".ActivityListItem.Aty012TestFileExplore"
+            android:name=".ActivityList.Aty012TestFileExplore"
             android:label="@string/title_activity_file_explore12" />
         <activity
-            android:name=".ActivityListItem.Aty013JSONResolve"
+            android:name=".ActivityList.Aty013JSONResolve"
             android:label="@string/title_activity_json13" />
 
         <receiver android:name=".Receiver.SmsReceiver">
@@ -105,40 +105,40 @@
         </receiver>
 
         <activity
-            android:name=".ActivityListItem.Aty002ServiceAnother"
+            android:name=".ActivityList.Aty002ServiceAnother"
             android:label="另一个服务" />
-        <activity android:name=".ActivityListItem.Aty015Volley" />
-        <activity android:name=".ActivityListItem.Aty016TestListView" />
-        <activity android:name=".ActivityListItem.Aty017TestLvAndCheckBox" />
-        <activity android:name=".ActivityListItem.Aty018MyBrowser" />
-        <activity android:name=".ActivityListItem.Aty019TestWebView" />
-        <activity android:name=".ActivityListItem.Aty020FragmentTabHost" />
-        <activity android:name=".ActivityListItem.Aty021Demo" />
-        <activity android:name=".ActivityListItem.Aty022UniversalImgLoader" />
-        <activity android:name=".ActivityListItem.Aty023UploadPic" />
-        <activity android:name=".ActivityListItem.Aty023UploadPic_Select" />
-        <activity android:name=".ActivityListItem.Aty024ShareToFriends" />
-        <activity android:name=".ActivityListItem.Aty025TestBackTop" />
-        <activity android:name=".ActivityListItem.Aty026XListView" />
-        <activity android:name=".ActivityListItem.Aty027ViewFlipper" />
-        <activity android:name=".ActivityListItem.Aty028PicView" />
-        <activity android:name=".ActivityListItem.Aty029AMap" />
-        <activity android:name=".ActivityListItem.Aty030VideoView" />
+        <activity android:name=".ActivityList.Aty015Volley" />
+        <activity android:name=".ActivityList.Aty016TestListView" />
+        <activity android:name=".ActivityList.Aty017TestLvAndCheckBox" />
+        <activity android:name=".ActivityList.Aty018MyBrowser" />
+        <activity android:name=".ActivityList.Aty019TestWebView" />
+        <activity android:name=".ActivityList.Aty020FragmentTabHost" />
+        <activity android:name=".ActivityList.Aty021Demo" />
+        <activity android:name=".ActivityList.Aty022UniversalImgLoader" />
+        <activity android:name=".ActivityList.Aty023UploadPic" />
+        <activity android:name=".ActivityList.Aty023UploadPic_Select" />
+        <activity android:name=".ActivityList.Aty024ShareToFriends" />
+        <activity android:name=".ActivityList.Aty025TestBackTop" />
+        <activity android:name=".ActivityList.Aty026XListView" />
+        <activity android:name=".ActivityList.Aty027ViewFlipper" />
+        <activity android:name=".ActivityList.Aty028PicView" />
+        <activity android:name=".ActivityList.Aty029AMap" />
+        <activity android:name=".ActivityList.Aty030VideoView" />
         <activity
-            android:name=".ActivityListItem.Aty031Blur"
+            android:name=".ActivityList.Aty031Blur"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".ActivityListItem.Aty032TestBanner" />
-        <activity android:name=".ActivityListItem.Aty033UploadFile" />
-        <activity android:name=".ActivityListItem.Aty033UploadFile_2" />
-        <activity android:name=".ActivityListItem.Aty033UploadFile_1" />
-        <activity android:name=".ActivityListItem.Aty034" />
-        <activity android:name=".ActivityListItem.Aty035Contact" />
-        <activity android:name=".ActivityListItem.Aty036Calculator" />
-        <activity android:name=".ActivityListItem.Aty037Weather" />
-        <activity android:name=".ActivityListItem.Aty037Weather_City" />
-        <activity android:name=".ActivityListItem.Aty038Game2048" />
-        <activity android:name=".ActivityListItem.Aty039MVP" />
-        <activity android:name=".ActivityListItem.Aty040NewWeather"></activity>
+        <activity android:name=".ActivityList.Aty032TestBanner" />
+        <activity android:name=".ActivityList.Aty033UploadFile" />
+        <activity android:name=".ActivityList.Aty033UploadFile_2" />
+        <activity android:name=".ActivityList.Aty033UploadFile_1" />
+        <activity android:name=".ActivityList.Aty034Tuner" />
+        <activity android:name=".ActivityList.Aty035Contact" />
+        <activity android:name=".ActivityList.Aty036Calculator" />
+        <activity android:name=".ActivityList.Aty037Weather" />
+        <activity android:name=".ActivityList.Aty037Weather_City" />
+        <activity android:name=".ActivityList.Aty038Game2048" />
+        <activity android:name=".ActivityList.Aty039MVP" />
+        <activity android:name=".ActivityList.Aty040NewWeather"></activity>
     </application>
 
 </manifest>

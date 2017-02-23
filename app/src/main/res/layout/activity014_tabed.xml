@@ -3,4 +3,4 @@
     android:id="@+id/pager"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityListItem.Aty014Fragment_Tabed" />
+    tools:context=".ActivityList.Aty014Fragment_Tabed" />

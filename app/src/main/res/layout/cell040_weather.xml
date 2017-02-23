@@ -2,64 +2,110 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" >
+    android:orientation="vertical"
+    android:paddingBottom="12dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="12dp">
 
-    <ImageView
-        android:id="@+id/img_weather"
-        android:layout_width="45dp"
-        android:layout_height="45dp"/>
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0.5dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:background="@color/colorWhite" />-->
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.8"
-            android:orientation="horizontal" >
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tvfutruetem"
-                android:layout_width="wrap_content"
+                android:id="@+id/listcell40_date"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="15-35*C"
+                android:gravity="left"
+                android:text="23日星期五"
+                android:textColor="@color/colorWhite"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/listcell40_type"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="type"
+                android:textColor="@color/colorWhite"
                 android:textSize="24dp" />
 
-            <TextView
-                android:layout_gravity="right"
-                android:id="@+id/tvfutrueweather"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:text="多云转晴"
-                android:textSize="15dp" />
+
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="right"
-            android:orientation="vertical" >
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tvfutrueweek"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:text="星期日"
-                android:textSize="20dp" />
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/listcell40_fengxiang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="fengxiang"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/listcell40_fengli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:text="fengli"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14dp" />
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/tvfutruedate"
+                android:id="@+id/listcell40_high"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:text="20151012"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="fengli"
+                android:textColor="@color/colorWhite"
                 android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/listcell40_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="fengli"
+                android:textColor="@color/colorWhite"
+                android:textSize="12dp" />
+
+
         </LinearLayout>
+
+
     </LinearLayout>
+
 
 </LinearLayout>

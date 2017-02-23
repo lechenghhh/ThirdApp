@@ -1,28 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_aty034"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="@dimen/fab_margin"
-    tools:context="com.lecheng.hello.thirdapp.ActivityListItem.Aty034">
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="标准调弦"
+        android:textSize="40dp"
+        android:gravity="center"/>
 
-    <Button
-        android:id="@+id/button31"
-        android:layout_width="match_parent"
+    <Switch
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="持续发声"
+        android:id="@+id/switch1"
+        android:checked="false"
+        android:layout_gravity="right"/>
 
-    <Button
-        android:id="@+id/button32"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="240dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:text="6\n\nE2"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:id="@+id/btn6"/>
+        <Button
+            android:text="5\n\nA2"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_height="100dp"
+            android:id="@+id/btn5"/>
+        <Button
+            android:text="4\n\nD3"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:id="@+id/btn4"/>
+        <Button
+            android:text="3\n\nG3"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:id="@+id/btn3"/>
+        <Button
+            android:text="2\n\nB3"
+            android:id="@+id/btn2"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp" />
+        <Button
+            android:text="1\n\nE4"
+            android:id="@+id/btn1"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="开发者的微博 :"
+        android:textSize="20dp"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="http://weibo.com/u/3500488795"
+        android:autoLink="web"
+        android:layout_gravity="bottom" />
+
 </LinearLayout>

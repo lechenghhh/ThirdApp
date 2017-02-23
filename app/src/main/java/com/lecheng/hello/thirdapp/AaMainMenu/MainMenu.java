@@ -28,7 +28,7 @@ public class MainMenu extends ListActivity {
             "Aty027ViewFlipper", "Aty028PicView", "Aty029AMap", "Aty030VideoView",
             "-------------------------------------",
             "Aty031Blur", "Aty032TestBanner", "Aty033UploadFile",
-            "Aty034", "Aty035Contact", "Aty036Calculator", "Aty037Weather",
+            "Aty034Tuner", "Aty035Contact", "Aty036Calculator", "Aty037Weather",
             "Aty038Game2048", "Aty039MVP", "Aty040NewWeather",
             "-------------------------------------",
             "Aty041", "Aty042", "Aty043",

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityListItem.Aty013JSONResolve">
+    tools:context=".ActivityList.Aty013JSONResolve">
 
     <LinearLayout
         android:layout_margin="@dimen/fab_margin"

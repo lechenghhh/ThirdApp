@@ -8,7 +8,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:id="@+id/view9"
-    tools:context=".ActivityListItem.Aty009View">
+    tools:context=".ActivityList.Aty009View">
 
 
     <com.lecheng.hello.thirdapp.Widgets.MyView2

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/fab_margin"
-    tools:context=".ActivityListItem.Aty023UploadPic">
+    tools:context=".ActivityList.Aty023UploadPic">
 
     <LinearLayout
         android:layout_width="match_parent"

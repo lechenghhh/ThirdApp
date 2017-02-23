@@ -7,7 +7,7 @@
     android:background="@drawable/bg_pic"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".ActivityListItem.Aty031Blur">
+    tools:context=".ActivityList.Aty031Blur">
 
     <EditText
         android:id="@+id/aty32_et"

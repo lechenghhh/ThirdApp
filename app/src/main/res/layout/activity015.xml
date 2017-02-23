@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityListItem.Aty015Volley"
+    tools:context=".ActivityList.Aty015Volley"
     tools:showIn="@layout/activity015_2">
 
     <LinearLayout

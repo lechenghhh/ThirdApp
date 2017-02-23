@@ -7,9 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.lecheng.hello.thirdapp.ActivityListItem.Aty014Fragment_Navi;
+import com.lecheng.hello.thirdapp.ActivityList.Aty014Fragment_Navi;
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.ActivityListItem.Aty014Fragment_Tabed;
+import com.lecheng.hello.thirdapp.ActivityList.Aty014Fragment_Tabed;
 
 /**
  * A placeholder fragment containing a simple view.

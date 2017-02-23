@@ -3,7 +3,7 @@ package com.lecheng.hello.thirdapp.Utils;
 import android.content.Context;
 import android.content.Intent;
 
-import com.lecheng.hello.thirdapp.ActivityListItem.Aty024ShareToFriends;
+import com.lecheng.hello.thirdapp.ActivityList.Aty024ShareToFriends;
 
 public class ShareToFriends {
 

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.lecheng.hello.thirdapp.ActivityListItem.Aty025TestBackTop">
+    tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty025TestBackTop">
 
     <com.lecheng.hello.thirdapp.Widgets.BackTopScrollView
         android:id="@+id/sv25"

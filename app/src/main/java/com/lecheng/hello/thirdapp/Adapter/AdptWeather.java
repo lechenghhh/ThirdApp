@@ -43,7 +43,7 @@ public class AdptWeather extends BaseAdapter{
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		LayoutInflater inflater=LayoutInflater.from(c);
-		l = (LinearLayout) inflater.inflate(R.layout.cell040_weather, null);
+		l = (LinearLayout) inflater.inflate(R.layout.cell037_weather, null);
 		tvfutrueweather = (TextView) l.findViewById(R.id.tvfutrueweather);
 		tvfutruetem = (TextView) l.findViewById(R.id.tvfutruetem);
 		tvfutrueweek = (TextView) l.findViewById(R.id.tvfutrueweek);

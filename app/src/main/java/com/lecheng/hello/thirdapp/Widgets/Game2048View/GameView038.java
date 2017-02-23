@@ -12,7 +12,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.GridLayout;
 
-import com.lecheng.hello.thirdapp.ActivityListItem.Aty038Game2048;
+import com.lecheng.hello.thirdapp.ActivityList.Aty038Game2048;
 
 
 public class GameView038 extends GridLayout {

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/fab_margin"
-    tools:context="com.lecheng.hello.thirdapp.ActivityListItem.Aty026XListView">
+    tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty026XListView">
 
     <com.lecheng.hello.thirdapp.Widgets.xListView.XListView
         android:id="@+id/techan_xListView"

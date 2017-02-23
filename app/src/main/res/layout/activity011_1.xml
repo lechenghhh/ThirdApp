@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ActivityListItem.Aty011HttpAsyncTask_1">
+    tools:context=".ActivityList.Aty011HttpAsyncTask_1">
 
 
 
