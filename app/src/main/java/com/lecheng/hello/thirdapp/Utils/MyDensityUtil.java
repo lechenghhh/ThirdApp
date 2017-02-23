@@ -3,9 +3,9 @@ package com.lecheng.hello.thirdapp.Utils;
 import android.content.Context;
 
 /**
- * Created by Cheng on 2016/8/12. 此类封装了像素与dip转换的方法
+ * Created by Cheng on 2016/8/12. 此类包含了像素与dip转换的方法
  */
-public class MyDensityUtils {
+public class MyDensityUtil {
     /**
      * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
      */

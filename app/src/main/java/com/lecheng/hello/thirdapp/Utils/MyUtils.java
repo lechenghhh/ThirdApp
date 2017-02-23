@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.DocumentsContract;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
@@ -37,18 +38,14 @@ public class MyUtils {
         return (int) (pxValue / scale + 0.5f);
     }
 
-    /**
-     * 根据传入的上下文，线性布局和变形的高度，来模拟显示隐藏的效果
-     */
+    //根据传入的上下文，线性布局和变形的高度，来模拟显示隐藏的效果
     public static void hideBackTopBtn(Context c, LinearLayout ll, int height) {
         LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) ll.getLayoutParams();
         lp.height = dip2pxMethod(c, height);             //120dp根据屏幕转换成px
         ll.setLayoutParams(lp);
     }
 
-    /*
-    *  获取listview的高度
-    * */
+    //获取listview的高度,并重新设置它的高度
     public static void setListViewHeightBasedOnChildren(ListView listView) {
         if (listView == null) return;
         ListAdapter listAdapter = listView.getAdapter();
@@ -118,10 +115,43 @@ public class MyUtils {
         return res;
     }
 
-    /*
-    * URI与URL转换
-    *
-    * */
+    public static String encodeChange(String subject){
+        if (!TextUtils.isEmpty(subject)) {//处理乱码的代码
+            try {
+                if (java.nio.charset.Charset.forName("UTF-8")
+                        .newEncoder().canEncode(subject)
+                        && java.nio.charset.Charset
+                        .forName("ISO-8859-1").newEncoder()
+                        .canEncode(subject)) {
+                    subject = new String(
+                            subject.getBytes("ISO-8859-1"), "UTF-8");
+                } else if (java.nio.charset.Charset
+                        .forName("UTF-8").newEncoder()
+                        .canEncode(subject)) {
+                    subject = new String(subject.getBytes(),
+                            "UTF-8");
+                } else if (java.nio.charset.Charset
+                        .forName("ISO-8859-1").newEncoder()
+                        .canEncode(subject)) {
+                    subject = new String(subject.getBytes(), "ISO-8859-1");
+                }
+            } catch (Exception e) {
+
+            }
+        }
+        return subject;
+    }
+
+
+
+
+
+
+
+
+
+
+    //URI与URL转换////////////////////////////////////////
     @TargetApi(Build.VERSION_CODES.KITKAT)
     public static String getPath(final Context context, final Uri uri) {
         // DocumentProvider
@@ -231,5 +261,6 @@ public class MyUtils {
     private static boolean isMediaDocument(Uri uri) {
         return "com.android.providers.media.documents".equals(uri.getAuthority());
     }
+    ////////////////////////////////////////
 
 }

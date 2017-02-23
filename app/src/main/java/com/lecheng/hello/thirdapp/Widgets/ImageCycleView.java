@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.Utils;
+package com.lecheng.hello.thirdapp.Widgets;
 
 import android.content.Context;
 import android.graphics.Bitmap;

@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.Utils;
+package com.lecheng.hello.thirdapp.Widgets;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,7 +9,7 @@ import android.view.View;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.fragment.ShareToFriendsFragment;
 
-public class ShareToFriendsUtil {
+public class ShareToFriends {
 
     public static void shareForFriend(Context context, View view) {
         Intent intent = new Intent(Intent.ACTION_SEND); // �������?�͵�����

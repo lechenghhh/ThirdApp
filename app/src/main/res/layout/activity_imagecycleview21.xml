@@ -6,7 +6,7 @@
 
     tools:context=".ActivityListItem.Aty021DemoImagecycleview">
 
-    <com.lecheng.hello.thirdapp.Utils.ImageCycleView
+    <com.lecheng.hello.thirdapp.Widgets.ImageCycleView
         android:id="@+id/icv_topView"
         android:layout_width="match_parent"
         android:layout_height="240dp" />

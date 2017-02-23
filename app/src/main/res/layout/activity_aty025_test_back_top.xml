@@ -6,7 +6,7 @@
     android:orientation="vertical"
     tools:context="com.lecheng.hello.thirdapp.ActivityListItem.Aty025TestBackTop">
 
-    <com.lecheng.hello.thirdapp.Utils.BackTopScrollView
+    <com.lecheng.hello.thirdapp.Widgets.BackTopScrollView
         android:id="@+id/sv25"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
             \nhehe\nhehe\nhehe\nhehe\nhfff
             \nhfff\nhehe\nhehe\nhehe\nhehe" />
         </LinearLayout>
-    </com.lecheng.hello.thirdapp.Utils.BackTopScrollView>
+    </com.lecheng.hello.thirdapp.Widgets.BackTopScrollView>
 
     <View
         android:id="@+id/btn25_v"

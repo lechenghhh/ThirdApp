@@ -105,7 +105,6 @@ public class Aty033UploadFile extends AppCompatActivity {
         MyApplication.getHttpQue().add(request2);
     }
 
-//                UploadThread httpThread = new UploadThread(getApplicationContext(), url, fileName);
 //                httpThread.start();
 //                volley_post();
 

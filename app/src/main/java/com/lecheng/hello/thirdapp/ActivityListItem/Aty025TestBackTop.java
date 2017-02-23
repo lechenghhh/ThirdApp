@@ -2,16 +2,10 @@ package com.lecheng.hello.thirdapp.ActivityListItem;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.ScrollView;
-import android.widget.Toast;
 
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.BackTopScrollView;
-import com.lecheng.hello.thirdapp.Utils.MyDensityUtils;
+import com.lecheng.hello.thirdapp.Widgets.BackTopScrollView;
 
 public class Aty025TestBackTop extends AppCompatActivity implements View.OnClickListener {
     private BackTopScrollView scrollView;
@@ -50,7 +44,7 @@ public class Aty025TestBackTop extends AppCompatActivity implements View.OnClick
 
 //    private void hideBackTopBtn(LinearLayout ll, int height) {
 //        LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) ll.getLayoutParams();
-//        lp.height = MyDensityUtils.dip2pxMethod(Aty025TestBackTop.this, height);             //120dp根据屏幕转换成px
+//        lp.height = MyDensityUtil.dip2pxMethod(Aty025TestBackTop.this, height);             //120dp根据屏幕转换成px
 //        btn.setLayoutParams(lp);
 //    }
 

@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-import com.lecheng.hello.thirdapp.Utils.ImageCycleView;
+import com.lecheng.hello.thirdapp.Widgets.ImageCycleView;
 import com.lecheng.hello.thirdapp.R;
 
 import java.util.ArrayList;

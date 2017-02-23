@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.ShareToFriendsUtil;
+import com.lecheng.hello.thirdapp.Widgets.ShareToFriends;
 
 public class ShareToFriendsFragment extends Fragment {
 
@@ -30,7 +30,7 @@ public class ShareToFriendsFragment extends Fragment {
 
             @Override
             public void onClick(View view) {
-                ShareToFriendsUtil.shareForFriend(getActivity(), v);
+                ShareToFriends.shareForFriend(getActivity(), v);
             }
         });
 

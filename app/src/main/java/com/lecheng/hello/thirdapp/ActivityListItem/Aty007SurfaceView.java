@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.lecheng.hello.thirdapp.Utils.MySurfaceView;
+import com.lecheng.hello.thirdapp.Widgets.MySurfaceView;
 import com.lecheng.hello.thirdapp.R;
 
 public class Aty007SurfaceView extends AppCompatActivity {

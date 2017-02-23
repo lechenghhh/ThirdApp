@@ -66,33 +66,8 @@ public class Aty040NewWeather extends Activity implements View.OnClickListener {
                 (Request.Method.GET, url, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String subject) {
-                        /*//////////////*/
-                        if (!TextUtils.isEmpty(subject)) {//处理乱码的代码
-                            try {
-                                if (java.nio.charset.Charset.forName("UTF-8")
-                                        .newEncoder().canEncode(subject)
-                                        && java.nio.charset.Charset
-                                        .forName("ISO-8859-1").newEncoder()
-                                        .canEncode(subject)) {
-                                    subject = new String(
-                                            subject.getBytes("ISO-8859-1"), "UTF-8");
-                                } else if (java.nio.charset.Charset
-                                        .forName("UTF-8").newEncoder()
-                                        .canEncode(subject)) {
-                                    subject = new String(subject.getBytes(),
-                                            "UTF-8");
-                                } else if (java.nio.charset.Charset
-                                        .forName("ISO-8859-1").newEncoder()
-                                        .canEncode(subject)) {
-                                    subject = new String(subject.getBytes(), "ISO-8859-1");
-                                }
-                            } catch (Exception e) {
-
-                            }
-                        }
-                        /*//////////////*/
 //                        Toast.makeText(getApplicationContext(), subject, Toast.LENGTH_SHORT).show();
-                        resolveJson(subject);
+                        resolveJson(MyUtils.encodeChange(subject));//编码转换
                     }
                 }, new Response.ErrorListener() {
                     @Override

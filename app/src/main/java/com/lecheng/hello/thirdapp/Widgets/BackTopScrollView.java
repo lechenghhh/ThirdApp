@@ -1,9 +1,11 @@
-package com.lecheng.hello.thirdapp.Utils;
+package com.lecheng.hello.thirdapp.Widgets;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ScrollView;
+
+import com.lecheng.hello.thirdapp.Utils.AnimationUtil;
 
 
 /**
