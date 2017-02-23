@@ -113,10 +113,10 @@
         <activity android:name=".ActivityListItem.Aty018TestMiniBrowser" />
         <activity android:name=".ActivityListItem.Aty019TestWebView" />
         <activity android:name=".ActivityListItem.Aty020FragmentTabHost" />
-        <activity android:name=".ActivityListItem.Aty021DemoImagecycleview" />
+        <activity android:name=".ActivityListItem.Aty021Demo" />
         <activity android:name=".ActivityListItem.Aty022UniversalImgLoader" />
-        <activity android:name=".ActivityListItem.Aty023DemoUploadPic" />
-        <activity android:name=".ActivityListItem.Aty023DemoUploadPic_Select" />
+        <activity android:name=".ActivityListItem.Aty023UploadPic" />
+        <activity android:name=".ActivityListItem.Aty023UploadPic_Select" />
         <activity android:name=".ActivityListItem.Aty024ShareToFriends" />
         <activity android:name=".ActivityListItem.Aty025TestBackTop" />
         <activity android:name=".ActivityListItem.Aty026XListView" />
@@ -127,9 +127,9 @@
         <activity
             android:name=".ActivityListItem.Aty031Blur"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".ActivityListItem.Aty032lunbotutest" />
+        <activity android:name=".ActivityListItem.Aty032TestBanner" />
         <activity android:name=".ActivityListItem.Aty033UploadFile" />
-        <activity android:name=".ActivityListItem.Aty033UploadFile2" />
+        <activity android:name=".ActivityListItem.Aty033UploadFile_2" />
         <activity android:name=".ActivityListItem.Aty033UploadFile_1" />
         <activity android:name=".ActivityListItem.Aty034" />
         <activity android:name=".ActivityListItem.Aty035Contact" />

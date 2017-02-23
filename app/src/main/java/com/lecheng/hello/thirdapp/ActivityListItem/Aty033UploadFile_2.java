@@ -12,8 +12,8 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 
-import com.lecheng.hello.thirdapp.Adapter.common.CommonAdapter;
-import com.lecheng.hello.thirdapp.Adapter.common.ViewHolder;
+import com.lecheng.hello.thirdapp.Adapter.Common.CommonAdapter;
+import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MySharedPreferences;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
@@ -47,7 +47,7 @@ import java.util.UUID;
  *
  * @author Administrator
  */
-public class Aty033UploadFile2 extends Activity implements OnClickListener {
+public class Aty033UploadFile_2 extends Activity implements OnClickListener {
     private String URL_UPLOAD = "http://www.tctu.cn/mapi.php/Article/upload";
     private ImageLoader imageLoader = ImageLoader.getInstance();
     private GridView gv;
@@ -94,13 +94,13 @@ public class Aty033UploadFile2 extends Activity implements OnClickListener {
 //                    Looper.getMainLooper();//获取主线程looper以便接下来toast
                     JSONObject jsonObject = new JSONObject(uploadFile(file, URL_UPLOAD, params));
                     //把图片列表存在sp中的pic_id键值对中
-                    String strPicId = (String) MySharedPreferences.loadData(Aty033UploadFile2.this, "pic_id", "");
+                    String strPicId = (String) MySharedPreferences.loadData(Aty033UploadFile_2.this, "pic_id", "");
                     strPicId = strPicId + jsonObject.get("pic_id") + "-";
-                    MySharedPreferences.saveData(Aty033UploadFile2.this, "pic_id", strPicId);
-//                    new MyToast(Aty033UploadFile2.this, "上传成功", 3000);
+                    MySharedPreferences.saveData(Aty033UploadFile_2.this, "pic_id", strPicId);
+//                    new MyToast(Aty033UploadFile_2.this, "上传成功", 3000);
 //                    finish();
                 } catch (JSONException e) {
-//                    new MyToast(Aty033UploadFile2.this, "上传失败\n" + e, 3000);
+//                    new MyToast(Aty033UploadFile_2.this, "上传失败\n" + e, 3000);
                 }
             }
         }).start();
@@ -267,7 +267,7 @@ public class Aty033UploadFile2 extends Activity implements OnClickListener {
                             bos.flush();
                             bos.close();
                         } else {
-                            Toast.makeText(Aty033UploadFile2.this, "保存失败，SD卡无效", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Aty033UploadFile_2.this, "保存失败，SD卡无效", Toast.LENGTH_SHORT).show();
                         }
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
@@ -277,12 +277,12 @@ public class Aty033UploadFile2 extends Activity implements OnClickListener {
                     break;
                 case 2:
                     //Uri转Url
-                    srcPath = MyUtils.getPath(Aty033UploadFile2.this, data.getData());
+                    srcPath = MyUtils.getPath(Aty033UploadFile_2.this, data.getData());
                     listUri.add(data.getData() + "");
                     System.out.println("Uri:" + data.getData() + "\n保存路径2----------:" + srcPath);
                     break;
             }
-            gv.setAdapter(new CommonAdapter<String>(Aty033UploadFile2.this, listUri, R.layout.cell001_pic) {
+            gv.setAdapter(new CommonAdapter<String>(Aty033UploadFile_2.this, listUri, R.layout.cell001_pic) {
                 @Override
                 public void convert(ViewHolder helper, String item) {
                     helper.setImageByUrl(R.id.cell8_iv_pic, item);

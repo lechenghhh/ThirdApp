@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.Adapter.common;
+package com.lecheng.hello.thirdapp.Adapter.Common;
 
 import android.content.Context;
 import android.graphics.Bitmap;

@@ -19,7 +19,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class Aty032lunbotutest extends AppCompatActivity {
+public class Aty032TestBanner extends AppCompatActivity {
     private LinearLayout ll;
     private ViewPager mVPlunbotu;
     private List<ImageView> lbtImages;

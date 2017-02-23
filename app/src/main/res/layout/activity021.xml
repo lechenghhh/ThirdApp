@@ -3,11 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".ActivityListItem.Aty021Demo">
 
-    tools:context=".ActivityListItem.Aty021DemoImagecycleview">
 
-    <com.lecheng.hello.thirdapp.Widgets.ImageCycleView
-        android:id="@+id/icv_topView"
-        android:layout_width="match_parent"
-        android:layout_height="240dp" />
 </LinearLayout>

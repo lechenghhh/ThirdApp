@@ -62,7 +62,7 @@ public class Aty033UploadFile extends AppCompatActivity {
         findViewById(R.id.aty33_btn_tct).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Aty033UploadFile2.class));
+                startActivity(new Intent(getApplicationContext(), Aty033UploadFile_2.class));
             }
         });
     }

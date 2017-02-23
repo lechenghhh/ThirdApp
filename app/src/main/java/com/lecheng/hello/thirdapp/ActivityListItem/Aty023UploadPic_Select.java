@@ -26,7 +26,7 @@ import com.lecheng.hello.thirdapp.R;
  *          说明：主要用于选择文件操作
  */
 
-public class Aty023DemoUploadPic_Select extends Activity implements OnClickListener {
+public class Aty023UploadPic_Select extends Activity implements OnClickListener {
 
     /***
      * 使用照相机拍照获取图片
@@ -42,7 +42,7 @@ public class Aty023DemoUploadPic_Select extends Activity implements OnClickListe
      */
     public static final String KEY_PHOTO_PATH = "photo_path";
 
-    private static final String TAG = "Aty023DemoUploadPic_Select";
+    private static final String TAG = "Aty023UploadPic_Select";
 
     private LinearLayout dialogLayout;
     private Button takePhotoBtn, pickPhotoBtn, cancelBtn;

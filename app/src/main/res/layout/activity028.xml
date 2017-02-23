@@ -12,12 +12,6 @@
         android:gravity="center"
         android:text="参考线"
         android:textColor="@color/colorWhite" />
-    <!--<com.lecheng.hello.tongchengtu.Utils.ImageCycleView-->
-    <!--android:id="@+id/home_icv_1"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:background="@color/colorTextGray1" />-->
-    <!---->
     <android.support.v4.view.ViewPager
         android:id="@+id/test_vp"
         android:layout_width="match_parent"

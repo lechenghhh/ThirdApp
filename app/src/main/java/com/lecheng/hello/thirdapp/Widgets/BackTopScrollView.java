@@ -41,7 +41,7 @@ public class BackTopScrollView extends ScrollView implements View.OnClickListene
                 goTopBtn.setAnimation(AnimationUtil.moveToViewLocation());
                 goTopBtn.setVisibility(VISIBLE);
             }
-        } else{
+        } else {
             if (goTopBtn.getVisibility() == View.VISIBLE) {
                 goTopBtn.setAnimation(AnimationUtil.moveToViewBottom());
                 goTopBtn.setVisibility(INVISIBLE);
