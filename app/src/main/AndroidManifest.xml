@@ -117,7 +117,7 @@
         <activity android:name=".ActivityListItem.Aty022UniversalImgLoader" />
         <activity android:name=".ActivityListItem.Aty023DemoUploadPic1" />
         <activity android:name=".ActivityListItem.OtherActivity.SelectPicActivity" />
-        <activity android:name=".ActivityListItem.Aty024DemoShareToFriends" />
+        <activity android:name=".ActivityListItem.Aty024ShareToFriends" />
         <activity android:name=".ActivityListItem.Aty025TestBackTop" />
         <activity android:name=".ActivityListItem.Aty026XListView" />
         <activity android:name=".ActivityListItem.Aty027ViewFlipper" />
