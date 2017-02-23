@@ -24,7 +24,7 @@ public class Aty011AsyncTask extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_async_task11);
+        setContentView(R.layout.activity011);
 
         findViewById(R.id.btnstarthttpclientget).setOnClickListener(new View.OnClickListener() {
             @Override

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ActivityListItem.Aty002ServiceAnotherAty">
+    tools:context=".ActivityListItem.Aty002ServiceAnother">
 
     <Button
         android:id="@+id/btn_service_another_bind"

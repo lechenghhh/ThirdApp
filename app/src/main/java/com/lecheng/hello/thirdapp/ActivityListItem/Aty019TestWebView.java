@@ -10,6 +10,6 @@ public class Aty019TestWebView extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_web_view19);
+        setContentView(R.layout.activity019);
     }
 }

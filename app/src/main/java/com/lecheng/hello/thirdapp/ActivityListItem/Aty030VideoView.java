@@ -1,7 +1,6 @@
 package com.lecheng.hello.thirdapp.ActivityListItem;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -29,7 +28,7 @@ public class Aty030VideoView extends Activity implements MediaPlayer.OnErrorList
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aty030_video_view);
+        setContentView(R.layout.activity030);
         //Set the screen to landscape.
 //        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 //        vv = (VideoView) findViewById(R.id.aty30_video_view2);

@@ -1,46 +1,132 @@
 package com.lecheng.hello.thirdapp.ActivityListItem;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.widget.Button;
+import android.webkit.WebViewClient;
 import android.widget.EditText;
 
 import com.lecheng.hello.thirdapp.R;
 
 public class Aty018TestMiniBrowser extends Activity implements OnClickListener{
-	EditText edithttp;
-	Button btngo;
-    WebView wvBrowser;
+	private WebView webView;
+	private EditText urlBox;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_minibrowser);
-		btngo=(Button)findViewById(R.id.btngo);
-		edithttp=(EditText)findViewById(R.id.edithttp);
-		wvBrowser=(WebView)findViewById(R.id.wvBrowser);
-		btngo.setOnClickListener(this);
-//		wvBrowser.setWebViewClient(new ourClient());
-		wvBrowser.setWebChromeClient(new WebChromeClient());
-		try{
-		    wvBrowser.loadUrl("http://wap.baidu.com");
-		}catch(Exception e){
-			e.printStackTrace();
-		}
+//        requestWindowFeature(Window.FEATURE_PROGRESS);
+		setContentView(R.layout.activity018);
+		init();
 	}
+
+	private void init() {
+
+		setProgressBarVisibility(true);
+		urlBox = (EditText) findViewById(R.id.house_et_url);
+		Intent ig = this.getIntent();
+		urlBox.setText(ig.getStringExtra("web_url") + "");
+		webView = (WebView) findViewById(R.id.house_webview);
+
+		webView.setWebViewClient(new WebViewClient() {
+			// Load opened URL in the application instead of standard browser
+			// application
+			public boolean shouldOverrideUrlLoading(WebView view, String url) {
+				view.loadUrl(url);
+				return true;
+			}
+		});
+		webView.setWebChromeClient(new WebChromeClient() {
+			// Set progress bar during loading
+			public void onProgressChanged(WebView view, int progress) {
+				Aty018TestMiniBrowser.this.setProgress(progress * 100);
+			}
+		});
+
+		// Enable some feature like Javascript and pinch zoom
+		WebSettings websettings = webView.getSettings();
+		websettings.setJavaScriptEnabled(true);                        // Warning! You can have XSS vulnerabilities!
+		websettings.setBuiltInZoomControls(true);
+
+		urlBox.setOnKeyListener(new View.OnKeyListener() {
+
+			public boolean onKey(View v, int keyCode, KeyEvent event) {
+				if (event.getAction() == KeyEvent.ACTION_DOWN) {
+					switch (keyCode) {
+						case KeyEvent.KEYCODE_ENTER:
+							webView.loadUrl(urlBox.getText().toString());
+							InputMethodManager inputManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+							inputManager.hideSoftInputFromWindow(
+									urlBox.getWindowToken(), 0);
+							return true;
+						default:
+							break;
+					}
+				}
+				return false;
+			}
+		});
+
+		//监听事件响应
+		findViewById(R.id.webview_backhomeaty).setOnClickListener(this);
+		findViewById(R.id.webview_back).setOnClickListener(this);
+		findViewById(R.id.webview_refresh).setOnClickListener(this);
+		findViewById(R.id.webview_stop).setOnClickListener(this);
+		findViewById(R.id.webview_forward).setOnClickListener(this);
+		findViewById(R.id.webview_goto).setOnClickListener(this);
+		//加载指定的居家网主页
+		webView.loadUrl(urlBox.getText().toString());
+	}
+
 	@Override
-	public void onClick(View arg0) {
-		// TODO Auto-generated method stub
-		switch(arg0.getId()){
-		case R.id.btngo:
-			String website=edithttp.getText().toString();
-			wvBrowser.loadUrl(website);
-			break;
+	public void onBackPressed() {
+//        webView.goBack();//浏览器返回
+		finish();//浏览器退出关闭
+	}
+
+	protected void onDestroy() {
+		super.onDestroy();
+		webView.removeAllViews();
+		webView.destroy();
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+			case R.id.webview_backhomeaty:
+				finish();
+				break;
+			case R.id.webview_back:
+				webView.goBack();
+				break;
+			case R.id.webview_refresh:
+				webView.reload();
+				break;
+			case R.id.webview_stop:
+				webView.stopLoading();
+				break;
+			case R.id.webview_forward:
+				webView.goForward();
+				break;
+			case R.id.webview_goto:
+				webView.loadUrl(urlBox.getText().toString());
+				break;
 		}
 	}
-    
+
+	@Override
+	public void finish() {
+		ViewGroup view = (ViewGroup) getWindow().getDecorView();
+		view.removeAllViews();
+		super.finish();
+	}
 }

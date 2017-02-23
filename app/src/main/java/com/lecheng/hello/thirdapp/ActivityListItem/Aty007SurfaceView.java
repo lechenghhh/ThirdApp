@@ -15,7 +15,7 @@ public class Aty007SurfaceView extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drawable7);
+        setContentView(R.layout.activity007);
         mv = (MySurfaceView) findViewById(R.id.MyView);
 
     }

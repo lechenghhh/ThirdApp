@@ -12,7 +12,7 @@ public class Aty029AMap extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test009_auto_map);
+        setContentView(R.layout.activity029);
         mMapView = (MapView) findViewById(R.id.test9_map);
         //在activity执行onCreate时执行mMapView.onCreate(savedInstanceState)，实现地图生命周期管理
         mMapView.onCreate(savedInstanceState);

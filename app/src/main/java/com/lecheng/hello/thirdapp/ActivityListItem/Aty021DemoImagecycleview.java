@@ -16,7 +16,7 @@ public class Aty021DemoImagecycleview extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_imagecycleview21);
+        setContentView(R.layout.activity021);
 
         mImageCycleView = (ImageCycleView) findViewById(R.id.icv_topView);
 //		mImageCycleView.setAutoCycle(false); //关闭自动播放

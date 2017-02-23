@@ -16,7 +16,7 @@ public class Aty016TestListView extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_view16);
+        setContentView(R.layout.activity016);
         lv = (ListView) findViewById(R.id.lv_16);
         adapter = new Adapter16(this, 10);
         lv.setAdapter(adapter);

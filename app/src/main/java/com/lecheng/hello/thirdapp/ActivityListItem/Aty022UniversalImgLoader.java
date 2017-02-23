@@ -15,7 +15,7 @@ public class Aty022UniversalImgLoader extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_universal_img_loader22);
+        setContentView(R.layout.activity022);
 
         imageLoader = ImageLoader.getInstance();
         iv = (ImageView) findViewById(R.id.universalimgloader_iv);

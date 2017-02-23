@@ -26,7 +26,7 @@ public class Aty010ViewPager extends AppCompatActivity implements ViewPager.OnPa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_guide10);
+        setContentView(R.layout.activity010);
         LayoutInflater inflater = LayoutInflater.from(this);
 
         views = new ArrayList<View>();

@@ -10,6 +10,6 @@ public class Aty039MVP extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aty39_mvp);
+        setContentView(R.layout.activity039);
     }
 }

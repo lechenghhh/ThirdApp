@@ -12,13 +12,13 @@ import android.view.View;
 import com.lecheng.hello.thirdapp.Service.MyService;
 import com.lecheng.hello.thirdapp.R;
 
-public class Aty002ServiceAnotherAty extends AppCompatActivity implements View.OnClickListener, ServiceConnection {
+public class Aty002ServiceAnother extends AppCompatActivity implements View.OnClickListener, ServiceConnection {
     private MyService.MyBinder b2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_service_another14);
+        setContentView(R.layout.activity002);
 
         findViewById(R.id.btn_service_another_bind).setOnClickListener(this);
         findViewById(R.id.btn_service_another_unbind).setOnClickListener(this);
@@ -41,7 +41,7 @@ public class Aty002ServiceAnotherAty extends AppCompatActivity implements View.O
                 }
                 break;
             case R.id.btn_service_another_intent:
-                startActivity(new Intent(Aty002ServiceAnotherAty.this,Aty001Service.class));
+                startActivity(new Intent(Aty002ServiceAnother.this,Aty001Service.class));
                 break;
         }
     }

@@ -24,7 +24,7 @@ public class Aty008TestTextViewCtrl extends Activity implements View.OnClickList
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.text_play);
+        setContentView(R.layout.activity008);
 
         init();
 

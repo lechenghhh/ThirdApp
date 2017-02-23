@@ -105,7 +105,7 @@
         </receiver>
 
         <activity
-            android:name=".ActivityListItem.Aty002ServiceAnotherAty"
+            android:name=".ActivityListItem.Aty002ServiceAnother"
             android:label="另一个服务" />
         <activity android:name=".ActivityListItem.Aty015Volley" />
         <activity android:name=".ActivityListItem.Aty016TestListView" />

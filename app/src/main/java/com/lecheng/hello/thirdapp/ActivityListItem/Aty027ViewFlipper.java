@@ -29,7 +29,7 @@ public class Aty027ViewFlipper extends Activity implements OnGestureListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_view_flipper);
+        setContentView(R.layout.activity027);
 
         detector = new GestureDetector(this);
         flipper = (ViewFlipper) this.findViewById(R.id.ViewFlipper1);

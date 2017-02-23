@@ -4,7 +4,6 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
@@ -20,8 +19,6 @@ import android.widget.Toast;
 import com.lecheng.hello.thirdapp.R;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
-import java.io.Serializable;
-
 //16-12-18 20.07
 public class Aty031Blur extends Activity implements View.OnClickListener {
     private EditText et;
@@ -33,7 +30,7 @@ public class Aty031Blur extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aty031_blur);
+        setContentView(R.layout.activity031);
         et = (EditText) findViewById(R.id.aty32_et);
         iv = (ImageView) findViewById(R.id.aty32_iv);
         ll = (LinearLayout) findViewById(R.id.aty31_ll);

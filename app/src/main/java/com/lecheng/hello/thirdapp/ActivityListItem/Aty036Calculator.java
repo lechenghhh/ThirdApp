@@ -1,21 +1,10 @@
 package com.lecheng.hello.thirdapp.ActivityListItem;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
-import android.app.ActionBar;
-import android.app.Fragment;
-import android.content.ClipData.Item;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.widget.TextView;
-import android.os.Build;
 
 import com.lecheng.hello.thirdapp.R;
 
@@ -27,7 +16,7 @@ public class Aty036Calculator extends Activity implements OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.aty036_calculator);
+        setContentView(R.layout.activity036);
         findViewById(R.id.btn0).setOnClickListener(this);
         findViewById(R.id.btn1).setOnClickListener(this);
         findViewById(R.id.btn2).setOnClickListener(this);

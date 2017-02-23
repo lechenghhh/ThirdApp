@@ -2,7 +2,6 @@ package com.lecheng.hello.thirdapp.ActivityListItem;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.view.animation.LayoutAnimationController;
 import android.view.animation.ScaleAnimation;
@@ -41,7 +40,7 @@ public class Aty040NewWeather extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aty040_new_weather);
+        setContentView(R.layout.activity040);
         tv = (TextView) findViewById(R.id.aty40_tv_city);
         tv1 = (TextView) findViewById(R.id.aty40_tv1);
         tv2 = (TextView) findViewById(R.id.aty40_tv2);

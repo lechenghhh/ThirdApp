@@ -51,7 +51,7 @@ public class Aty020FragmentTabHost extends FragmentActivity {
      */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fragment_tab_host20);
+        setContentView(R.layout.activity020);
 
         initView();
     }

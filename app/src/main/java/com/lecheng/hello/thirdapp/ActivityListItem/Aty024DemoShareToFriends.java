@@ -13,7 +13,7 @@ public class Aty024DemoShareToFriends extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shared24);
+        setContentView(R.layout.activity024);
 
         loadShareFriendsFragment();
     }

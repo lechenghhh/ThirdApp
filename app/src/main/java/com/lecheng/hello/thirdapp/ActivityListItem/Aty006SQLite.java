@@ -36,7 +36,7 @@ public class Aty006SQLite extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sqlite);
+        setContentView(R.layout.activity006);
 
         etname = (EditText) findViewById(R.id.etname);
         etsex = (EditText) findViewById(R.id.etsex);

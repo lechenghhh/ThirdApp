@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/house_et_url"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:text=""
+        android:visibility="gone" />
+
+    <WebView
+        android:id="@+id/house_webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" />
+
+    <View style="@style/style_v_line2" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="54dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View style="@style/style_v_line2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/webview_backhomeaty"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/error_state_selector"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/abc_list_focused_holo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:text="回到同城兔"
+                    android:textColor="@drawable/delete"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/webview_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/round"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/abc_btn_check_material" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:text="上一页"
+                    android:textColor="@drawable/abc_edit_text_material"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/webview_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/icon_rain"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/complete_state_selector" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:text="刷新"
+                    android:textColor="@drawable/abc_spinner_mtrl_am_alpha"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/webview_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/abc_ic_go_search_api_mtrl_alpha"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/abc_btn_check_material" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:text="停止"
+                    android:textColor="@drawable/abc_btn_radio_to_on_mtrl_015"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/webview_forward"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="进入" />
+
+            <TextView
+                android:id="@+id/webview_goto"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="进入" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -16,7 +16,7 @@ public class Aty003EveryLayout extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_layout3);
+        setContentView(R.layout.activity003);
 
 
         findViewById(R.id.btnstartFL).setOnClickListener(new View.OnClickListener() {

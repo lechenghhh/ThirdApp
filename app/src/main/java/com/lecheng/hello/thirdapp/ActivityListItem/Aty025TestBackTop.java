@@ -17,7 +17,7 @@ public class Aty025TestBackTop extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aty025_test_back_top);
+        setContentView(R.layout.activity025);
         scrollView = (BackTopScrollView) findViewById(R.id.sv25);
         btn = findViewById(R.id.btn25_v);
         scrollView.setImgeViewOnClickGoToFirst(btn);

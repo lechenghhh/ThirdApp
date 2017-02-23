@@ -26,7 +26,7 @@ public class Aty001Service extends Activity implements View.OnClickListener, Ser
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_service1);
+        setContentView(R.layout.activity001);
 
         Toast.makeText(this,"欢迎来到服务的学习实验",Toast.LENGTH_LONG).show();
 

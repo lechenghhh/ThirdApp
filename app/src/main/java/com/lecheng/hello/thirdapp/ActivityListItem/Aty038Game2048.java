@@ -21,7 +21,7 @@ public class Aty038Game2048 extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aty038game2048);
+        setContentView(R.layout.activity038);
         tvScore = (TextView) findViewById(R.id.tvScore);
         findViewById(R.id.tvstart).setOnClickListener(new View.OnClickListener() {
             @Override

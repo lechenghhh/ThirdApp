@@ -39,7 +39,7 @@ public class Aty033UploadFile extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aty033_upload);
+        setContentView(R.layout.activity033);
 
         File fielAbs = new File(Environment.getExternalStorageDirectory(), "bc.jpg");
         final String filePath = fielAbs.getAbsolutePath();

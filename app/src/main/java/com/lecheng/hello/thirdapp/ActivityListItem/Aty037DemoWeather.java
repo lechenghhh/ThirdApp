@@ -3,7 +3,6 @@ package com.lecheng.hello.thirdapp.ActivityListItem;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.text.SimpleDateFormat;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.ParseException;
@@ -15,26 +14,16 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.R.string;
 import android.app.Activity;
-import android.app.ActionBar;
-import android.app.Fragment;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.os.Build;
 
 import com.lecheng.hello.thirdapp.ActivityListItem.OtherActivity.SetCity037;
 import com.lecheng.hello.thirdapp.Adapter.AdptWeather;
@@ -59,7 +48,7 @@ public class Aty037DemoWeather extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aty037weather);
+        setContentView(R.layout.activity037);
 
 
         client = new DefaultHttpClient();

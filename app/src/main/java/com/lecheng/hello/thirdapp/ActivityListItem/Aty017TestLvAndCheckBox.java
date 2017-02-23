@@ -18,7 +18,7 @@ public class Aty017TestLvAndCheckBox extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_view_andcheck_box17);
+        setContentView(R.layout.activity017);
 
         initView();
     }
