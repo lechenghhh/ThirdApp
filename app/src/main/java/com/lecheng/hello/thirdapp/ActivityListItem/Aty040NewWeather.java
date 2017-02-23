@@ -2,8 +2,6 @@ package com.lecheng.hello.thirdapp.ActivityListItem;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.animation.LayoutAnimationController;
@@ -53,7 +51,7 @@ public class Aty040NewWeather extends Activity implements View.OnClickListener {
         lv1 = (ListView) findViewById(R.id.aty40_lv);
         lv2 = (ListView) findViewById(R.id.aty40_lv2);
         findViewById(R.id.aty40_ll).setOnClickListener(this);
-        Volley_get();
+        volleyGet();
 
         sa = new ScaleAnimation(0, 1, 0, 1, 0, 1);
         sa.setDuration(1000);
@@ -61,7 +59,7 @@ public class Aty040NewWeather extends Activity implements View.OnClickListener {
         lv1.setLayoutAnimation(lac);
     }
 
-    private void Volley_get() {
+    private void volleyGet() {
         String url = "http://wthrcdn.etouch.cn/weather_mini?city=" +
                 MySharedPreferences.loadData(getApplicationContext(), "city", "福州");
         StringRequest request = new StringRequest
@@ -103,7 +101,7 @@ public class Aty040NewWeather extends Activity implements View.OnClickListener {
                     }
                 });
         request.setTag("cancelGet");
-        MyApplication.getHttpQueue().add(request);
+        MyApplication.getHttpQue().add(request);
     }
 
     private void resolveJson(String strJson) {//解析json方法，并呈现
@@ -137,7 +135,7 @@ public class Aty040NewWeather extends Activity implements View.OnClickListener {
                 MySharedPreferences.saveData(getApplicationContext(), "city", cityList[position]);
                 lv1.setVisibility(View.VISIBLE);
                 lv2.setVisibility(View.GONE);
-                Volley_get();
+                volleyGet();
             }
         });
     }

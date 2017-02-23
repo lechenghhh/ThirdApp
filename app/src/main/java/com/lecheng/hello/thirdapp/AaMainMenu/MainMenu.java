@@ -29,7 +29,10 @@ public class MainMenu extends ListActivity {
             "-------------------------------------",
             "Aty031Blur", "Aty032lunbotutest", "Aty033UploadFile",
             "Aty034", "Aty035Contact", "Aty036Calculator", "Aty037DemoWeather",
-            "Aty038Game2048", "Aty039","Aty040NewWeather"};
+            "Aty038Game2048", "Aty039MVP", "Aty040NewWeather",
+            "-------------------------------------",
+            "Aty041", "Aty042", "Aty043",
+    };
 
     private LayoutAnimationController lac;
     private ScaleAnimation sa;                  //动画

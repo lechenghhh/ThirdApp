@@ -57,7 +57,7 @@ public class Aty015Volley extends AppCompatActivity {
                     }
                 });
         request.setTag("cancelGet");
-        MyApplication.getHttpQueue().add(request);
+        MyApplication.getHttpQue().add(request);
 
     }
 
@@ -89,6 +89,6 @@ public class Aty015Volley extends AppCompatActivity {
             }
         };
         request2.setTag("cancelPost");
-        MyApplication.getHttpQueue().add(request2);
+        MyApplication.getHttpQue().add(request2);
     }
 }

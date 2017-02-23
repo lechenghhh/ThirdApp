@@ -102,7 +102,7 @@ public class Aty033UploadFile extends AppCompatActivity {
             }
         };
         request2.setTag("cancelPost33");
-        MyApplication.getHttpQueue().add(request2);
+        MyApplication.getHttpQue().add(request2);
     }
 
 //                UploadThread httpThread = new UploadThread(getApplicationContext(), url, fileName);
