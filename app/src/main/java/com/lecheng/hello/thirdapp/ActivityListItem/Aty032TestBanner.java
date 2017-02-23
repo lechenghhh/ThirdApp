@@ -30,18 +30,18 @@ public class Aty032TestBanner extends AppCompatActivity {
     private int oldPosition = 0;
     //存放图片的url
     private String[] img_url = {
-            "http://117.78.43.201/life/home/images/%E6%B5%B7%E5%B0%94%E5%AE%B6%E7%94%B5.jpg",
-            "http://117.78.43.201/life/home/images/%E6%B5%B7%E5%B0%94.jpg",
-            "http://117.78.43.201/life/home/images/%E5%BE%AE%E5%BE%AE%E6%96%B0%E5%A8%98%E5%A9%9A%E7%BA%B1%E6%91%84%E5%BD%B1.jpg",
-            "http://117.78.43.201/life/home/images/%E5%BE%AE%E5%BE%AE%E6%96%B0%E5%A8%98.jpg",
-            "http://117.78.43.201/life/home/images/b5e8330dec06ca690afa274dedf5c3eb0da0648147e941-xptG2z_fw658_09.png"};
+            "http://www.tctu.cn/Uploads/Seller/2017-01-24/58873cf689a67.png",
+            "http://www.tctu.cn/Uploads/Seller/2017-01-24/58873e9a3ae6c.png",
+            "http://www.tctu.cn/Uploads/Seller/2017-01-24/58873e1095bc5.png",
+            "http://www.tctu.cn/Uploads/Seller/2016-11-08/5821708096a43.jpg",
+            "http://www.tctu.cn/Uploads/Admin/2016-10-29/581450822d269.jpg"};
     //存放图片的标题
     private String[] titles = new String[]{
-            "巩俐不低俗，我就不能低俗",
+            "好得多",
             "扑树又回来啦！再唱经典老歌引万人大合唱",
             "揭秘北京电影如何升级",
             "乐视网TV版大派送",
-            "热血屌丝的反杀"
+            "酷炫"
     };
     private TextView title;
     private ImageLoader imageLoader = ImageLoader.getInstance();

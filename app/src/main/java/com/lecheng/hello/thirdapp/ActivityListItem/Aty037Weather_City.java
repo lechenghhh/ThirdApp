@@ -32,7 +32,7 @@ public class Aty037Weather_City extends Activity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				System.out.println(citylistarray[position] + ">>>>>>>");
-				Intent i2 = new Intent(Aty037Weather_City.this,Aty037DemoWeather.class);
+				Intent i2 = new Intent(Aty037Weather_City.this,Aty037Weather.class);
 				i2.putExtra("city_list_item", citylistarray[position]);
 				startActivity(i2);
 			}

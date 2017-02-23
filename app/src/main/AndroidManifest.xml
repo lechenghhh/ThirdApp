@@ -110,7 +110,7 @@
         <activity android:name=".ActivityListItem.Aty015Volley" />
         <activity android:name=".ActivityListItem.Aty016TestListView" />
         <activity android:name=".ActivityListItem.Aty017TestLvAndCheckBox" />
-        <activity android:name=".ActivityListItem.Aty018TestMiniBrowser" />
+        <activity android:name=".ActivityListItem.Aty018MyBrowser" />
         <activity android:name=".ActivityListItem.Aty019TestWebView" />
         <activity android:name=".ActivityListItem.Aty020FragmentTabHost" />
         <activity android:name=".ActivityListItem.Aty021Demo" />
@@ -134,7 +134,7 @@
         <activity android:name=".ActivityListItem.Aty034" />
         <activity android:name=".ActivityListItem.Aty035Contact" />
         <activity android:name=".ActivityListItem.Aty036Calculator" />
-        <activity android:name=".ActivityListItem.Aty037DemoWeather" />
+        <activity android:name=".ActivityListItem.Aty037Weather" />
         <activity android:name=".ActivityListItem.Aty037Weather_City" />
         <activity android:name=".ActivityListItem.Aty038Game2048" />
         <activity android:name=".ActivityListItem.Aty039MVP" />

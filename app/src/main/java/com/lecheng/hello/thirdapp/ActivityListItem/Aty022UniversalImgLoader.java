@@ -21,6 +21,5 @@ public class Aty022UniversalImgLoader extends AppCompatActivity {
         iv = (ImageView) findViewById(R.id.universalimgloader_iv);
         imageLoader.displayImage("http://fanyi.baidu.com/static/translation/img/header/logo_cbfea26.png", iv);
 
-
     }
 }

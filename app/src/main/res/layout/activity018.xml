@@ -1,28 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
 
-    <EditText
-        android:id="@+id/house_et_url"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:maxLines="1"
-        android:scrollHorizontally="true"
-        android:text=""
-        android:visibility="gone" />
+        <EditText
+            android:id="@+id/house_et_url"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textSize="14dp"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/webview_goto"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="进入" />
+    </LinearLayout>
+
+
+    <View style="@style/style_v_line2" />
+
 
     <WebView
         android:id="@+id/house_webview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1" />
-
-    <View style="@style/style_v_line2" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -42,7 +57,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/selector_error_state"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -50,15 +64,14 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginTop="4dp"
-                    android:background="@drawable/abc_list_focused_holo" />
+                    android:background="@drawable/ic_cloudy" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="16dp"
                     android:layout_marginTop="3dp"
                     android:gravity="center"
-                    android:text="回到同城兔"
-                    android:textColor="@drawable/ic_delete"
+                    android:text="退出"
                     android:textSize="12dp" />
             </LinearLayout>
 
@@ -67,7 +80,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/ic_round"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -75,7 +87,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/abc_btn_check_material" />
+                    android:background="@drawable/ic_broken_sky" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -83,7 +95,6 @@
                     android:layout_marginTop="3dp"
                     android:gravity="center"
                     android:text="上一页"
-                    android:textColor="@drawable/abc_edit_text_material"
                     android:textSize="12dp" />
             </LinearLayout>
 
@@ -92,7 +103,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/ic_rain"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -100,7 +110,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/selector_complete_state" />
+                    android:background="@drawable/ic_rain" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -108,7 +118,6 @@
                     android:layout_marginTop="3dp"
                     android:gravity="center"
                     android:text="刷新"
-                    android:textColor="@drawable/abc_spinner_mtrl_am_alpha"
                     android:textSize="12dp" />
             </LinearLayout>
 
@@ -117,7 +126,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/abc_ic_go_search_api_mtrl_alpha"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -125,7 +133,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginTop="4dp"
-                    android:background="@drawable/abc_btn_check_material" />
+                    android:background="@drawable/ic_snow" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -133,7 +141,6 @@
                     android:layout_marginTop="3dp"
                     android:gravity="center"
                     android:text="停止"
-                    android:textColor="@drawable/abc_btn_radio_to_on_mtrl_015"
                     android:textSize="12dp" />
             </LinearLayout>
 
@@ -144,15 +151,9 @@
                 android:gravity="center"
                 android:text="进入" />
 
-            <TextView
-                android:id="@+id/webview_goto"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:text="进入" />
+
         </LinearLayout>
 
 
     </LinearLayout>
-
-</FrameLayout>
+</LinearLayout>

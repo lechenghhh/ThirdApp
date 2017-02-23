@@ -28,7 +28,7 @@ import android.widget.TextView;
 import com.lecheng.hello.thirdapp.Adapter.AdptWeather;
 import com.lecheng.hello.thirdapp.R;
 
-public class Aty037DemoWeather extends Activity {
+public class Aty037Weather extends Activity {
     private Button btnselectcity;
     private TextView tvcity, tvdate, tvtem, tvweather;
     private String fweather[] = new String[14], ftem[] = new String[14],
@@ -80,7 +80,7 @@ public class Aty037DemoWeather extends Activity {
     }
 
     public void selectcity(View s) {
-        startActivity(new Intent(Aty037DemoWeather.this, Aty037Weather_City.class));
+        startActivity(new Intent(Aty037Weather.this, Aty037Weather_City.class));
     }
 
     public void syncweather(View s) {                                                    //准备链接
