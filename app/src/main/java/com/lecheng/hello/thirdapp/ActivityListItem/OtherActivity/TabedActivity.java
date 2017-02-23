@@ -39,7 +39,7 @@ public class TabedActivity extends AppCompatActivity implements ActionBar.TabLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tabed);
+        setContentView(R.layout.activity014_tabed);
 
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();

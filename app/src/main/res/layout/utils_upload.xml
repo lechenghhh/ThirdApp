@@ -17,7 +17,7 @@
             android:layout_marginTop="14dp"
             android:gravity="center"
             android:text="请选择照片"
-            android:textColor="@color/colorTextBlack1"
+            android:textColor="@color/colorText1"
             android:textSize="17dp" />
 
         <View style="@style/style_v_line2" />

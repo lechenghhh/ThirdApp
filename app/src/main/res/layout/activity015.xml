@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ActivityListItem.Aty015Volley"
-    tools:showIn="@layout/activity_volley15">
+    tools:showIn="@layout/activity015_2">
 
     <LinearLayout
         android:layout_width="match_parent"

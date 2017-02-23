@@ -21,7 +21,7 @@ public class Fragment2Fragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
-        View fragment2 = inflater.inflate(R.layout.fragment2, container, false);
+        View fragment2 = inflater.inflate(R.layout.fragment014, container, false);
 
         fragment2.findViewById(R.id.btn2anothersFAty).setOnClickListener(new View.OnClickListener() {
             @Override

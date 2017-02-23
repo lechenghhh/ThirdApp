@@ -1,7 +1,6 @@
 package com.lecheng.hello.thirdapp.Adapter;
 
 import android.content.Context;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,7 +43,7 @@ public class AdptWeather extends BaseAdapter{
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		LayoutInflater inflater=LayoutInflater.from(c);
-		l = (LinearLayout) inflater.inflate(R.layout.cell_weather, null);
+		l = (LinearLayout) inflater.inflate(R.layout.cell040_weather, null);
 		tvfutrueweather = (TextView) l.findViewById(R.id.tvfutrueweather);
 		tvfutruetem = (TextView) l.findViewById(R.id.tvfutruetem);
 		tvfutrueweek = (TextView) l.findViewById(R.id.tvfutrueweek);

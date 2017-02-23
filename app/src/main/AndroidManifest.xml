@@ -86,7 +86,7 @@
             android:name=".ActivityListItem.Aty010ViewPager"
             android:label="@string/title_activity_guide10" />
         <activity
-            android:name=".ActivityListItem.Aty011AsyncTask"
+            android:name=".ActivityListItem.Aty011HttpAsyncTask"
             android:label="@string/title_activity_async_task11" />
         <activity
             android:name=".ActivityListItem.OtherActivity.HttpClientActivity"

@@ -32,7 +32,7 @@ public class Aty026XListView extends AppCompatActivity implements XListView.IXLi
         mListView = (XListView) findViewById(R.id.techan_xListView);// 你这个listview是在这个layout里面
         mListView.setPullLoadEnable(true);// 设置让它上拉，FALSE为不让上拉，便不加载更多数据
         mAdapter1 = new SimpleAdapter(Aty026XListView.this, getData(),
-                R.layout.list_items, new String[] { "name", "img", "content" },
+                R.layout.cell026, new String[] { "name", "img", "content" },
                 new int[] { R.id.title, R.id.mImage, R.id.content });
         mListView.setAdapter(mAdapter1);
         mListView.setXListViewListener(this);

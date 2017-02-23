@@ -282,7 +282,7 @@ public class UploadPic extends Activity implements OnClickListener {
                     System.out.println("Uri:" + data.getData() + "\n保存路径2----------:" + srcPath);
                     break;
             }
-            gv.setAdapter(new CommonAdapter<String>(UploadPic.this, listUri, R.layout.cell8_pic) {
+            gv.setAdapter(new CommonAdapter<String>(UploadPic.this, listUri, R.layout.cell001_pic) {
                 @Override
                 public void convert(ViewHolder helper, String item) {
                     helper.setImageByUrl(R.id.cell8_iv_pic, item);

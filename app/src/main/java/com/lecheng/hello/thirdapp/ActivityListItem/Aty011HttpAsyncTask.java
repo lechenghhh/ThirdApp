@@ -18,7 +18,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class Aty011AsyncTask extends AppCompatActivity {
+public class Aty011HttpAsyncTask extends AppCompatActivity {
     private TextView textasync;
 
     @Override
@@ -29,7 +29,7 @@ public class Aty011AsyncTask extends AppCompatActivity {
         findViewById(R.id.btnstarthttpclientget).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Aty011AsyncTask.this,HttpClientActivity.class));
+                startActivity(new Intent(Aty011HttpAsyncTask.this,HttpClientActivity.class));
             }
         });
 

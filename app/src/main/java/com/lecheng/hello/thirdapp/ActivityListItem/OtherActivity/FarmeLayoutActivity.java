@@ -2,8 +2,6 @@ package com.lecheng.hello.thirdapp.ActivityListItem.OtherActivity;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
@@ -27,7 +25,7 @@ public class FarmeLayoutActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(layout.activity_fl);
+        setContentView(layout.activity010_1);
 
         root = (android.widget.FrameLayout) findViewById(R.id.root);
         initview();

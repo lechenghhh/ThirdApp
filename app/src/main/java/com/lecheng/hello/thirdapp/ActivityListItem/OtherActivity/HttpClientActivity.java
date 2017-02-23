@@ -11,7 +11,6 @@ import com.lecheng.hello.thirdapp.R;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
@@ -24,7 +23,7 @@ public class HttpClientActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_http_client);
+        setContentView(R.layout.activity011_1);
         editText2 = (EditText) findViewById(R.id.editText2);
         client = new DefaultHttpClient();
         thcget = (TextView) findViewById(R.id.texthttpclientget);

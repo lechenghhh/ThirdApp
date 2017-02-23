@@ -58,7 +58,7 @@ public class Aty028PicView extends AppCompatActivity implements View.OnClickList
         LayoutInflater inflater = LayoutInflater.from(Aty028PicView.this);
 
         for (int i = 0; i < _imgUrlArray.length; i++) {
-            mViews1.add(inflater.inflate(R.layout.picview_cell, null));      //添加view，
+            mViews1.add(inflater.inflate(R.layout.cell028_picview, null));      //添加view，
             _pvArray[i] = (PhotoView) mViews1.get(i).findViewById(R.id.testcell_img);  //对每个view内承载的photoview实例化
             imageLoader.displayImage(_imgUrlArray[i], _pvArray[i]);                    //图片加载
         }

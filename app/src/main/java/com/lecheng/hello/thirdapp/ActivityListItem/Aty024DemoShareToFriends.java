@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Widgets.ShareToFriends;
+import com.lecheng.hello.thirdapp.Utils.MyShareToFriendsUtils;
 
 public class Aty024DemoShareToFriends extends FragmentActivity {
 
@@ -15,18 +15,9 @@ public class Aty024DemoShareToFriends extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity024);
 
-        loadShareFriendsFragment();
+        new MyShareToFriendsUtils(Aty024DemoShareToFriends.this,
+                this, "hello", "http://www.tctu.cn");         //分享在这
     }
 
-    private void loadShareFriendsFragment() {
-        FragmentManager fm = getSupportFragmentManager();
-        ShareToFriends.loadShareFriendsFragment(fm);
-//		ShareToFriends.shareForFriend();
-//		Fragment fragment = fm.findFragmentById(R.id.activity_main_share_friends_framelayout);
-//		if (fragment == null) {
-//			fragment = ShareToFriendsFragment.newInstance();
-//			fm.beginTransaction().add(R.id.activity_main_share_friends_framelayout, fragment)
-//					.commit();
-//		}
-    }
+
 }

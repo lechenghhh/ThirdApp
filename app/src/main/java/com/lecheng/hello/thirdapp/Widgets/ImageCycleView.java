@@ -182,7 +182,7 @@ public class ImageCycleView extends FrameLayout {
 	 * @author 代凯男
 	 */
 	private void initView() {
-		View.inflate(mContext, R.layout.view_image_cycle, this);
+		View.inflate(mContext, R.layout.utils_image_cycle, this);
 		FrameLayout fl_image_cycle = (FrameLayout) findViewById(R.id.fl_image_cycle);
 		mViewPager=new ImageCycleViewPager(mContext);
 		mViewPager.setLayoutParams(new  ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT));

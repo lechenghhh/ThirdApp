@@ -18,7 +18,7 @@ public class MainMenu extends ListActivity {
             "Aty004Animation", "Aty005MulTouch", "Aty006SQLite", "Aty007SurfaceView",
             "Aty008TestTextViewCtrl", "Aty009View", "Aty010ViewPager",
             "-------------------------------------",
-            "Aty011AsyncTask", "Aty012TestFileExplore", "Aty013JSONResolve",
+            "Aty011HttpAsyncTask", "Aty012TestFileExplore", "Aty013JSONResolve",
             "Aty014Fragment", "Aty015Volley", "Aty016TestListView",
             "Aty017TestLvAndCheckBox", "Aty018TestMiniBrowser",
             "Aty019TestWebView", "Aty020FragmentTabHost",

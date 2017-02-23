@@ -61,7 +61,7 @@ public class UploadPicAty extends Activity implements OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.aty34);
+        setContentView(R.layout.activity033_1);
         photo_full = (LinearLayout) findViewById(R.id.photo_full);
         initView();
     }

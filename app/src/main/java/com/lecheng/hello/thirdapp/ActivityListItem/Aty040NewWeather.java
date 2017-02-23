@@ -84,7 +84,7 @@ public class Aty040NewWeather extends Activity implements View.OnClickListener {
         tv.setText(bean.getData().getCity());
         tv1.setText(bean.getData().getWendu() + "摄氏度");
         tv2.setText(bean.getData().getGanmao());
-        lv1.setAdapter(new CommonAdapter<Bean040Weather.DataBean.ForecastBean>(getApplicationContext(), bean.getData().getForecast(), R.layout.listcell40_weather) {
+        lv1.setAdapter(new CommonAdapter<Bean040Weather.DataBean.ForecastBean>(getApplicationContext(), bean.getData().getForecast(), R.layout.cell037_weather) {
             @Override
             public void convert(ViewHolder helper, Bean040Weather.DataBean.ForecastBean item) {
                 helper.setText(R.id.listcell40_type, item.getType());
