@@ -77,23 +77,23 @@ import java.util.List;
 public ImageView loadAndDisplay(ImageCycleView.ImageInfo imageInfo){
 
 //本地图片
-//ImageView imageView=new ImageView(Aty023DemoUploadPic1.this);
+//ImageView imageView=new ImageView(Aty023DemoUploadPic.this);
 //imageView.setImageResource(Integer.parseInt(imageInfo.image.toString()));
 //return imageView;
 
 //使用SD卡图片
-SmartImageView smartImageView=new SmartImageView(Aty023DemoUploadPic1.this);
+SmartImageView smartImageView=new SmartImageView(Aty023DemoUploadPic.this);
 smartImageView.setImageURI(Uri.fromFile((File)imageInfo.image));
 return smartImageView;
 
 //使用SmartImageView
-//SmartImageView smartImageView=new SmartImageView(Aty023DemoUploadPic1.this);
+//SmartImageView smartImageView=new SmartImageView(Aty023DemoUploadPic.this);
 //smartImageView.setImageResource(Integer.parseInt(imageInfo.image.toString()));
 //return smartImageView;
 
 //使用BitmapUtils
-BitmapUtils bitmapUtils=new BitmapUtils(Aty023DemoUploadPic1.this);
-ImageView imageView=new ImageView(Aty023DemoUploadPic1.this);
+BitmapUtils bitmapUtils=new BitmapUtils(Aty023DemoUploadPic.this);
+ImageView imageView=new ImageView(Aty023DemoUploadPic.this);
 bitmapUtils.display(imageView,imageInfo.image.toString());
 return imageView;
 }

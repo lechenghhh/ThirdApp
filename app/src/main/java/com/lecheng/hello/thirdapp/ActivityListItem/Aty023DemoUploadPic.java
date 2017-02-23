@@ -20,7 +20,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.lecheng.hello.thirdapp.ActivityListItem.OtherActivity.SelectPicActivity;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.UploadUtil;
 
@@ -30,7 +29,7 @@ import com.lecheng.hello.thirdapp.Utils.UploadUtil;
  *         QQ: 840950105<br>
  *         说明：主要用于选择文件和上传文件操作
  */
-public class Aty023DemoUploadPic1 extends Activity implements OnClickListener, UploadUtil.OnUploadProcessListener {
+public class Aty023DemoUploadPic extends Activity implements OnClickListener, UploadUtil.OnUploadProcessListener {
     private static final String TAG = "uploadImage";
 
     /**
@@ -93,7 +92,7 @@ public class Aty023DemoUploadPic1 extends Activity implements OnClickListener, U
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_uploadpic_selectImage:
-                Intent intent = new Intent(this, SelectPicActivity.class);
+                Intent intent = new Intent(this, Aty023DemoUploadPic_Select.class);
                 startActivityForResult(intent, TO_SELECT_PHOTO);
                 break;
             case R.id.btn_uploadpic_uploadImage:
@@ -111,7 +110,7 @@ public class Aty023DemoUploadPic1 extends Activity implements OnClickListener, U
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == Activity.RESULT_OK && requestCode == TO_SELECT_PHOTO) {
-            picPath = data.getStringExtra(SelectPicActivity.KEY_PHOTO_PATH);
+            picPath = data.getStringExtra(Aty023DemoUploadPic_Select.KEY_PHOTO_PATH);
             Log.i(TAG, "最终选择的图片=" + picPath);
             Bitmap bm = BitmapFactory.decodeFile(picPath);
             imageView.setImageBitmap(bm);

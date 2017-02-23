@@ -19,7 +19,6 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.lecheng.hello.thirdapp.ActivityListItem.OtherActivity.UploadPicAty;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MyApplication;
 
@@ -57,7 +56,7 @@ public class Aty033UploadFile extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), UploadPicAty.class));
+                startActivity(new Intent(getApplicationContext(), Aty033UploadFile_1.class));
             }
         });
         findViewById(R.id.aty33_btn_tct).setOnClickListener(new View.OnClickListener() {

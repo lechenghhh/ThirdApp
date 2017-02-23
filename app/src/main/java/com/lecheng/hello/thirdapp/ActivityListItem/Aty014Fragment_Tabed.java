@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.ActivityListItem.OtherActivity;
+package com.lecheng.hello.thirdapp.ActivityListItem;
 
 import java.util.Locale;
 
@@ -19,7 +19,7 @@ import android.view.ViewGroup;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.fragment.FragmentAnothers;
 
-public class TabedActivity extends AppCompatActivity implements ActionBar.TabListener {
+public class Aty014Fragment_Tabed extends AppCompatActivity implements ActionBar.TabListener {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide

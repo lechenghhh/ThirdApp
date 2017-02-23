@@ -23,7 +23,7 @@ public class MainMenu extends ListActivity {
             "Aty017TestLvAndCheckBox", "Aty018TestMiniBrowser",
             "Aty019TestWebView", "Aty020FragmentTabHost",
             "-------------------------------------",
-            "Aty021DemoImagecycleview", "Aty022UniversalImgLoader", "Aty023DemoUploadPic1",
+            "Aty021DemoImagecycleview", "Aty022UniversalImgLoader", "Aty023DemoUploadPic",
             "Aty024ShareToFriends", "Aty025TestBackTop", "Aty026XListView",
             "Aty027ViewFlipper", "Aty028PicView", "Aty029AMap", "Aty030VideoView",
             "-------------------------------------",

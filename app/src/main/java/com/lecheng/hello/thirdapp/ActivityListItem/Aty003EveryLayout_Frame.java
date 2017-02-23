@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.ActivityListItem.OtherActivity;
+package com.lecheng.hello.thirdapp.ActivityListItem;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import com.lecheng.hello.thirdapp.R;
 import static com.lecheng.hello.thirdapp.R.*;
 
 
-public class FarmeLayoutActivity extends Activity {
+public class Aty003EveryLayout_Frame extends Activity {
 
 
     private android.widget.FrameLayout root;

@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.ActivityListItem.OtherActivity;
+package com.lecheng.hello.thirdapp.Widgets.Game2048View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -230,7 +230,7 @@ public class GameView038 extends GridLayout {
         }
     }
 
-    private Card038[][] cardsMap = new Card038[4][4];
+    private CardView038[][] cardsMap = new CardView038[4][4];
     private List<Point> emptyPoints = new ArrayList<Point>();
 
     @Override
@@ -243,10 +243,10 @@ public class GameView038 extends GridLayout {
     }
 
     private void addCards(int cardWidth, int cardHeight) {
-        Card038 c;
+        CardView038 c;
         for (int y = 0; y < 4; y++) {
             for (int x = 0; x < 4; x++) {
-                c = new Card038(getContext());
+                c = new CardView038(getContext());
                 c.setNum(0);
                 addView(c, cardWidth, cardHeight);
                 cardsMap[x][y] = c;

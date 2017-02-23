@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.Utils.x;
+package com.lecheng.hello.thirdapp.Widgets.xListView;
 
 
 import android.content.Context;
@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.LinearLayout.LayoutParams;
 
 import com.lecheng.hello.thirdapp.R;
 

@@ -57,15 +57,15 @@ public class AdptWeather extends BaseAdapter{
 		tvfutruedate.setText(fdate[position]);
 		
 		if (fweather[position].indexOf("雪") != -1) {
-			img_weather.setBackgroundResource(R.drawable.icon_snow);
+			img_weather.setBackgroundResource(R.drawable.ic_snow);
 		} else if (fweather[position].indexOf("雨") != -1) {
-			img_weather.setBackgroundResource(R.drawable.icon_rain);
+			img_weather.setBackgroundResource(R.drawable.ic_rain);
 		} else if (fweather[position].indexOf("阴") != -1) {
-			img_weather.setBackgroundResource(R.drawable.icon_cloudy);
+			img_weather.setBackgroundResource(R.drawable.ic_cloudy);
 		} else if (fweather[position].indexOf("晴") != -1) {
-			img_weather.setBackgroundResource(R.drawable.icon_sunny);
+			img_weather.setBackgroundResource(R.drawable.ic_sunny);
 		} else if (fweather[position].indexOf("云") != -1) {
-			img_weather.setBackgroundResource(R.drawable.icon_broken_sky);
+			img_weather.setBackgroundResource(R.drawable.ic_broken_sky);
 		}
 		
 		return l;

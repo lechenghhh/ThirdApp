@@ -36,9 +36,9 @@ public class Aty020FragmentTabHost extends FragmentActivity {
     /**
      * 存放图片数组
      */
-    private int mImageArray[] = {R.drawable.backpack,
-            R.drawable.round, R.drawable.round,
-            R.drawable.round, R.drawable.round};
+    private int mImageArray[] = {R.drawable.ic_bag,
+            R.drawable.ic_round, R.drawable.ic_round,
+            R.drawable.ic_round, R.drawable.ic_round};
 
     /**
      * 选修卡文字

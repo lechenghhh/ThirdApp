@@ -71,7 +71,7 @@
             android:layout_marginLeft="@dimen/fab_margin"
             android:layout_marginRight="@dimen/fab_margin"
             android:layout_marginTop="@dimen/fab_margin"
-            android:background="@drawable/round"
+            android:background="@drawable/ic_round"
             android:text="上传并返回"
             android:textColor="@color/colorWhite"
             android:textSize="18dp" />

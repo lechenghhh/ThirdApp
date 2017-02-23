@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.ActivityListItem.OtherActivity;
+package com.lecheng.hello.thirdapp.ActivityListItem;
 
 import java.io.BufferedOutputStream;
 import java.io.DataOutputStream;
@@ -46,7 +46,7 @@ import com.lecheng.hello.thirdapp.R;
  *
  * @author Administrator
  */
-public class UploadPicAty extends Activity implements OnClickListener {
+public class Aty033UploadFile_1 extends Activity implements OnClickListener {
     private String URL_UPLOAD = "http://tests.tctu.cn/mapi.php/UploadImg/upload";
     private ImageView img;
     private EditText img_content;
@@ -78,7 +78,7 @@ public class UploadPicAty extends Activity implements OnClickListener {
         OnClickListener keyboard_hide = new OnClickListener() {
             @Override
             public void onClick(View v) {
-                InputMethodManager imm = (InputMethodManager) UploadPicAty.this
+                InputMethodManager imm = (InputMethodManager) Aty033UploadFile_1.this
                         .getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
             }
@@ -139,7 +139,7 @@ public class UploadPicAty extends Activity implements OnClickListener {
                             bos.close();
                         } else {
 
-                            Toast toast = Toast.makeText(UploadPicAty.this, "保存失败，SD卡无效", Toast.LENGTH_SHORT);
+                            Toast toast = Toast.makeText(Aty033UploadFile_1.this, "保存失败，SD卡无效", Toast.LENGTH_SHORT);
                             toast.setGravity(Gravity.CENTER, 0, 0);
                             toast.show();
                         }

@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.ActivityListItem.OtherActivity;
+package com.lecheng.hello.thirdapp.ActivityListItem;
 
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +16,7 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 
-public class HttpClientActivity extends AppCompatActivity {
+public class Aty011HttpAsyncTask_1 extends AppCompatActivity {
     TextView thcget ;
     EditText editText2;
     DefaultHttpClient client ;

@@ -7,5 +7,5 @@
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:src="@drawable/guide2" />
+        android:src="@drawable/bg_guide2" />
 </LinearLayout>

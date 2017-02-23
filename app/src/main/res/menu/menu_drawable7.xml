@@ -7,21 +7,21 @@
     <item
         android:id="@+id/action_bar_1"
         android:title="one"
-        android:icon="@drawable/backpack"
+        android:icon="@drawable/ic_bag"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_bar_2"
         android:title="two"
-        android:icon="@drawable/delete"
+        android:icon="@drawable/ic_delete"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_bar_3"
         android:title="three"
-        android:icon="@drawable/round"
+        android:icon="@drawable/ic_round"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_bar_clear7"
         android:title="Clear"
-        android:icon="@drawable/delete"
+        android:icon="@drawable/ic_delete"
         app:showAsAction="always" />
 </menu>

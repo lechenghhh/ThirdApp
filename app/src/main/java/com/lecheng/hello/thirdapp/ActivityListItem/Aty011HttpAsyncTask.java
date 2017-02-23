@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.lecheng.hello.thirdapp.ActivityListItem.OtherActivity.HttpClientActivity;
 import com.lecheng.hello.thirdapp.R;
 
 import java.io.BufferedReader;
@@ -29,7 +28,7 @@ public class Aty011HttpAsyncTask extends AppCompatActivity {
         findViewById(R.id.btnstarthttpclientget).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Aty011HttpAsyncTask.this,HttpClientActivity.class));
+                startActivity(new Intent(Aty011HttpAsyncTask.this,Aty011HttpAsyncTask_1.class));
             }
         });
 

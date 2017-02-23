@@ -68,5 +68,5 @@
         android:layout_gravity="bottom|right"
         android:layout_marginBottom="28dp"
         android:layout_marginRight="28dp"
-        android:background="@drawable/round" />
+        android:background="@drawable/ic_round" />
 </FrameLayout>

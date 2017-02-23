@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/error_state_selector"
+                android:background="@drawable/selector_error_state"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -58,7 +58,7 @@
                     android:layout_marginTop="3dp"
                     android:gravity="center"
                     android:text="回到同城兔"
-                    android:textColor="@drawable/delete"
+                    android:textColor="@drawable/ic_delete"
                     android:textSize="12dp" />
             </LinearLayout>
 
@@ -67,7 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/round"
+                android:background="@drawable/ic_round"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -92,7 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/icon_rain"
+                android:background="@drawable/ic_rain"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -100,7 +100,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/complete_state_selector" />
+                    android:background="@drawable/selector_complete_state" />
 
                 <TextView
                     android:layout_width="match_parent"

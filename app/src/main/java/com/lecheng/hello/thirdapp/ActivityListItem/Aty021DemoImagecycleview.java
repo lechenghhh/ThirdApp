@@ -33,9 +33,9 @@ public class Aty021DemoImagecycleview extends Activity {
         ArrayList<ImageCycleView.ImageInfo> list = new ArrayList<ImageCycleView.ImageInfo>();
 
         //res图片资源
-        list.add(new ImageCycleView.ImageInfo(R.drawable.round, "111111111111", ""));
-        list.add(new ImageCycleView.ImageInfo(R.drawable.backpack, "222222222222222", ""));
-        list.add(new ImageCycleView.ImageInfo(R.drawable.delete, "3333333333333", ""));
+        list.add(new ImageCycleView.ImageInfo(R.drawable.ic_round, "111111111111", ""));
+        list.add(new ImageCycleView.ImageInfo(R.drawable.ic_bag, "222222222222222", ""));
+        list.add(new ImageCycleView.ImageInfo(R.drawable.ic_delete, "3333333333333", ""));
 
         //SD卡图片资源
 //		list.add(new ImageCycleView.ImageInfo(new File(Environment.getExternalStorageDirectory(),"a1.jpg"),"11111",""));
@@ -50,7 +50,7 @@ public class Aty021DemoImagecycleview extends Activity {
 //		mImageCycleView.setOnPageClickListener(new ImageCycleView.OnPageClickListener() {
 //			@Override
 //			public void onClick(View imageView, ImageCycleView.ImageInfo imageInfo) {
-//				Toast.makeText(Aty023DemoUploadPic1.this, "你点击了" + imageInfo.value.toString(), Toast.LENGTH_SHORT).show();
+//				Toast.makeText(Aty023DemoUploadPic.this, "你点击了" + imageInfo.value.toString(), Toast.LENGTH_SHORT).show();
 //			}
 //		});
 
@@ -65,18 +65,18 @@ public class Aty021DemoImagecycleview extends Activity {
 
 
 //				//使用SD卡图片
-//				SmartImageView smartImageView=new SmartImageView(Aty023DemoUploadPic1.this);
+//				SmartImageView smartImageView=new SmartImageView(Aty023DemoUploadPic.this);
 //				smartImageView.setImageURI(Uri.fromFile((File)imageInfo.image));
 //				return smartImageView;
 
 //				//使用SmartImageView，既可以使用网络图片也可以使用本地资源
-//				SmartImageView smartImageView=new SmartImageView(Aty023DemoUploadPic1.this);
+//				SmartImageView smartImageView=new SmartImageView(Aty023DemoUploadPic.this);
 //				smartImageView.setImageResource(Integer.parseInt(imageInfo.image.toString()));
 //				return smartImageView;
 
                 //使用BitmapUtils,只能使用网络图片
-//				BitmapUtils bitmapUtils = new BitmapUtils(Aty023DemoUploadPic1.this);
-//				ImageView imageView = new ImageView(Aty023DemoUploadPic1.this);
+//				BitmapUtils bitmapUtils = new BitmapUtils(Aty023DemoUploadPic.this);
+//				ImageView imageView = new ImageView(Aty023DemoUploadPic.this);
 //				bitmapUtils.display(imageView, imageInfo.image.toString());
 //				return imageView;
 

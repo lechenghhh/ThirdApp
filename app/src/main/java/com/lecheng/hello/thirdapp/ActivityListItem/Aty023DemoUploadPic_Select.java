@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.ActivityListItem.OtherActivity;
+package com.lecheng.hello.thirdapp.ActivityListItem;
 
 import android.app.Activity;
 import android.content.ContentValues;
@@ -26,7 +26,7 @@ import com.lecheng.hello.thirdapp.R;
  *          说明：主要用于选择文件操作
  */
 
-public class SelectPicActivity extends Activity implements OnClickListener {
+public class Aty023DemoUploadPic_Select extends Activity implements OnClickListener {
 
     /***
      * 使用照相机拍照获取图片
@@ -42,7 +42,7 @@ public class SelectPicActivity extends Activity implements OnClickListener {
      */
     public static final String KEY_PHOTO_PATH = "photo_path";
 
-    private static final String TAG = "SelectPicActivity";
+    private static final String TAG = "Aty023DemoUploadPic_Select";
 
     private LinearLayout dialogLayout;
     private Button takePhotoBtn, pickPhotoBtn, cancelBtn;

@@ -50,7 +50,7 @@
             android:exported="true" />
 
         <activity
-            android:name=".ActivityListItem.OtherActivity.FarmeLayoutActivity"
+            android:name=".ActivityListItem.Aty003EveryLayout_Frame"
             android:label="@string/title_activity_fl" />
         <activity
             android:name=".ActivityListItem.Aty003EveryLayout"
@@ -68,10 +68,10 @@
             android:name=".ActivityListItem.Aty014Fragment"
             android:label="@string/title_activity_fragment2" />
         <activity
-            android:name=".ActivityListItem.OtherActivity.NavigationActivity"
+            android:name=".ActivityListItem.Aty014Fragment_Navi"
             android:label="@string/title_activity_navigation" />
         <activity
-            android:name=".ActivityListItem.OtherActivity.TabedActivity"
+            android:name=".ActivityListItem.Aty014Fragment_Tabed"
             android:label="@string/title_activity_tabed" />
         <activity
             android:name=".ActivityListItem.Aty007SurfaceView"
@@ -89,7 +89,7 @@
             android:name=".ActivityListItem.Aty011HttpAsyncTask"
             android:label="@string/title_activity_async_task11" />
         <activity
-            android:name=".ActivityListItem.OtherActivity.HttpClientActivity"
+            android:name=".ActivityListItem.Aty011HttpAsyncTask_1"
             android:label="@string/title_activity_http_client" />
         <activity
             android:name=".ActivityListItem.Aty012TestFileExplore"
@@ -115,8 +115,8 @@
         <activity android:name=".ActivityListItem.Aty020FragmentTabHost" />
         <activity android:name=".ActivityListItem.Aty021DemoImagecycleview" />
         <activity android:name=".ActivityListItem.Aty022UniversalImgLoader" />
-        <activity android:name=".ActivityListItem.Aty023DemoUploadPic1" />
-        <activity android:name=".ActivityListItem.OtherActivity.SelectPicActivity" />
+        <activity android:name=".ActivityListItem.Aty023DemoUploadPic" />
+        <activity android:name=".ActivityListItem.Aty023DemoUploadPic_Select" />
         <activity android:name=".ActivityListItem.Aty024ShareToFriends" />
         <activity android:name=".ActivityListItem.Aty025TestBackTop" />
         <activity android:name=".ActivityListItem.Aty026XListView" />
@@ -130,12 +130,12 @@
         <activity android:name=".ActivityListItem.Aty032lunbotutest" />
         <activity android:name=".ActivityListItem.Aty033UploadFile" />
         <activity android:name=".ActivityListItem.Aty033UploadFile2" />
-        <activity android:name=".ActivityListItem.OtherActivity.UploadPicAty" />
+        <activity android:name=".ActivityListItem.Aty033UploadFile_1" />
         <activity android:name=".ActivityListItem.Aty034" />
         <activity android:name=".ActivityListItem.Aty035Contact" />
         <activity android:name=".ActivityListItem.Aty036Calculator" />
         <activity android:name=".ActivityListItem.Aty037DemoWeather" />
-        <activity android:name=".ActivityListItem.OtherActivity.SetCity037" />
+        <activity android:name=".ActivityListItem.Aty037Weather_City" />
         <activity android:name=".ActivityListItem.Aty038Game2048" />
         <activity android:name=".ActivityListItem.Aty039MVP" />
         <activity android:name=".ActivityListItem.Aty040NewWeather"></activity>

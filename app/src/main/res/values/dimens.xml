@@ -9,5 +9,6 @@
     <dimen name="fab_margin">10dp</dimen>
     <dimen name="title_height1">32dp</dimen>
     <dimen name="Edit_height1">40dp</dimen>
+    <dimen name="unit_textsize">14dp</dimen>
 
 </resources>

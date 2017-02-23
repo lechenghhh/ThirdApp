@@ -25,7 +25,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.lecheng.hello.thirdapp.ActivityListItem.OtherActivity.SetCity037;
 import com.lecheng.hello.thirdapp.Adapter.AdptWeather;
 import com.lecheng.hello.thirdapp.R;
 
@@ -81,7 +80,7 @@ public class Aty037DemoWeather extends Activity {
     }
 
     public void selectcity(View s) {
-        startActivity(new Intent(Aty037DemoWeather.this, SetCity037.class));
+        startActivity(new Intent(Aty037DemoWeather.this, Aty037Weather_City.class));
     }
 
     public void syncweather(View s) {                                                    //准备链接
@@ -125,7 +124,6 @@ public class Aty037DemoWeather extends Activity {
             String s_today = j_result.getString("today");
             JSONObject j_today = new JSONObject(s_today);
 
-            setweatherbackground(j_today.getString("weather"));
             tvdate.setText(j_today.getString("week") + "\n" + j_today.getString("date_y"));
             tvcity.setText(j_today.getString("city"));
             tvtem.setText(j_today.getString("temperature"));
@@ -153,19 +151,7 @@ public class Aty037DemoWeather extends Activity {
         }
     }
 
-    public void setweatherbackground(String s_weather) { // 根据天气设置背景
-        if (s_weather.indexOf("雪") != -1) {
-            linearlayout1.setBackgroundResource(R.drawable.weather_snow);
-        } else if (s_weather.indexOf("雨") != -1) {
-            linearlayout1.setBackgroundResource(R.drawable.weather_rain);
-        } else if (s_weather.indexOf("阴") != -1) {
-            linearlayout1.setBackgroundResource(R.drawable.weather_cloudy);
-        } else if (s_weather.indexOf("晴") != -1) {
-            linearlayout1.setBackgroundResource(R.drawable.weather_sunny);
-        } else if (s_weather.indexOf("云") != -1) {
-            linearlayout1.setBackgroundResource(R.drawable.weather_broken_sky);
-        }
-    }
+
 
     @Override
     protected void onResume() {

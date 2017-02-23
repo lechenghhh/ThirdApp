@@ -1,12 +1,12 @@
-package com.lecheng.hello.thirdapp.ActivityListItem.OtherActivity;
+package com.lecheng.hello.thirdapp.Widgets.Game2048View;
 
 import android.content.Context;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-public class Card038 extends FrameLayout {
+public class CardView038 extends FrameLayout {
 
-    public Card038(Context context) {
+    public CardView038(Context context) {
         super(context);
         // TODO Auto-generated constructor stub
         label = new TextView(getContext());
@@ -33,7 +33,7 @@ public class Card038 extends FrameLayout {
         }
     }
 
-    public boolean equals(Card038 o) {
+    public boolean equals(CardView038 o) {
         // TODO Auto-generated method stub
         return getNum() == o.getNum();
     }

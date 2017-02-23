@@ -7,7 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.lecheng.hello.thirdapp.ActivityListItem.OtherActivity.FarmeLayoutActivity;
 import com.lecheng.hello.thirdapp.R;
 
 
@@ -22,7 +21,7 @@ public class Aty003EveryLayout extends ActionBarActivity {
         findViewById(R.id.btnstartFL).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Aty003EveryLayout.this,FarmeLayoutActivity.class));
+                startActivity(new Intent(Aty003EveryLayout.this,Aty003EveryLayout_Frame.class));
             }
         });
 

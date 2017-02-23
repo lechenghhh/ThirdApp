@@ -7,9 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.lecheng.hello.thirdapp.ActivityListItem.OtherActivity.NavigationActivity;
+import com.lecheng.hello.thirdapp.ActivityListItem.Aty014Fragment_Navi;
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.ActivityListItem.OtherActivity.TabedActivity;
+import com.lecheng.hello.thirdapp.ActivityListItem.Aty014Fragment_Tabed;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -34,14 +34,14 @@ public class Fragment2Fragment extends Fragment {
         fragment2.findViewById(R.id.btn2navigationAty).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), NavigationActivity.class));
+                startActivity(new Intent(getActivity(), Aty014Fragment_Navi.class));
 
             }
         });
         fragment2.findViewById(R.id.btn2tabAty).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(),TabedActivity.class));
+                startActivity(new Intent(getActivity(),Aty014Fragment_Tabed.class));
 
             }
         });

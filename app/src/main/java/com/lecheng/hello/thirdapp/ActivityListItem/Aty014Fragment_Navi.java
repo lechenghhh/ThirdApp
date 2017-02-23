@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.ActivityListItem.OtherActivity;
+package com.lecheng.hello.thirdapp.ActivityListItem;
 
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +16,7 @@ import android.support.v4.widget.DrawerLayout;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.fragment.NavigationDrawerFragment;
 
-public class NavigationActivity extends AppCompatActivity
+public class Aty014Fragment_Navi extends AppCompatActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
@@ -141,7 +141,7 @@ public class NavigationActivity extends AppCompatActivity
         @Override
         public void onAttach(Activity activity) {
             super.onAttach(activity);
-            ((NavigationActivity) activity).onSectionAttached(
+            ((Aty014Fragment_Navi) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
     }

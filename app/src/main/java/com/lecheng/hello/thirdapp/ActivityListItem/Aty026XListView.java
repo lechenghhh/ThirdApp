@@ -7,7 +7,7 @@ import android.view.KeyEvent;
 import android.widget.SimpleAdapter;
 
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.x.XListView;
+import com.lecheng.hello.thirdapp.Widgets.xListView.XListView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -43,7 +43,7 @@ public class Aty026XListView extends AppCompatActivity implements XListView.IXLi
             HashMap<String, Object> map = new HashMap<String, Object>();
             map.put("name", data[i]);
             map.put("content", data1[i]);
-            map.put("img", R.drawable.delete);
+            map.put("img", R.drawable.ic_delete);
             dlist.add(map);
         }
         return dlist;
