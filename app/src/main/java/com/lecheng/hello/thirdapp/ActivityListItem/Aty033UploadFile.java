@@ -52,33 +52,21 @@ public class Aty033UploadFile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 volley_post();
-//                new Thread() {
-//                    @Override
-//                    public void run() {
-                //讲图片转换成base64并展示
-//                Bitmap bm = BitmapFactory.decodeFile(filePath);
-//                imgstr = ReadImgToBinary2.imgToBase64(filePath, bm, "");
-//                Toast.makeText(getApplicationContext(), imgstr, Toast.LENGTH_LONG).show();
-//                btn.setText(imgstr);
-
-//                    }
-//                }.start();
-
-                //将base64字符转换成图片
-//                ReadImgToBinary2.base64ToBitmap(img_android, "bc2.jpg", "");
             }
         });
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), UploadPicAty.class));
-//                btn.setText(imgstr);
-
             }
         });
-
+        findViewById(R.id.aty33_btn_tct).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Aty033UploadFile2.class));
+            }
+        });
     }
-
 
     private void volley_post() {
         String url2 = "http://tests.tctu.cn/mapi.php/UploadImg/upload";

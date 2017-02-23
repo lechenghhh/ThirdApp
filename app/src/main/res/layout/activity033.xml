@@ -10,7 +10,6 @@
         android:orientation="vertical"
         android:padding="@dimen/fab_margin">
 
-
         <TextView
             android:id="@+id/aty33_myText3"
             android:layout_width="match_parent"
@@ -34,6 +33,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="显示" />
+
+        <Button
+            android:id="@+id/aty33_btn_tct"
+            android:text="tct图片上传功能"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </ScrollView>
