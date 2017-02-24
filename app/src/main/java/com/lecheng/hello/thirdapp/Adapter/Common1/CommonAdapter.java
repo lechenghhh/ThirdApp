@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.Adapter.Common;
+package com.lecheng.hello.thirdapp.Adapter.Common1;
 
 import android.content.Context;
 import android.view.LayoutInflater;
