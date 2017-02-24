@@ -12,8 +12,8 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 
-import com.lecheng.hello.thirdapp.Adapter.Common1.CommonAdapter;
-import com.lecheng.hello.thirdapp.Adapter.Common1.ViewHolder;
+import com.lecheng.hello.thirdapp.Adapter.Common.CommonAdapter;
+import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MySharedPreferences;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
