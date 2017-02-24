@@ -113,7 +113,7 @@
         <activity android:name=".ActivityList.Aty018MyBrowser" />
         <activity android:name=".ActivityList.Aty019TestWebView" />
         <activity android:name=".ActivityList.Aty020FragmentTabHost" />
-        <activity android:name=".ActivityList.Aty021Demo" />
+        <activity android:name=".ActivityList.Aty021ButterKnife" />
         <activity android:name=".ActivityList.Aty022UniversalImgLoader" />
         <activity android:name=".ActivityList.Aty023UploadPic" />
         <activity android:name=".ActivityList.Aty023UploadPic_Select" />
