@@ -17,7 +17,6 @@ public class Aty007SurfaceView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity007);
         mv = (MySurfaceView) findViewById(R.id.MyView);
-
     }
 
     @Override

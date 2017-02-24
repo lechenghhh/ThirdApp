@@ -39,8 +39,7 @@ public class Aty037Weather extends Activity {
     private AdptWeather a;
     String intentcity;
     //	 = "北京"
-    public static String urlEncode;
-    //	= "%E5%8C%97%E4%BA%AC&"
+    public static String urlEncode = "%E5%8C%97%E4%BA%AC&";
     private static LinearLayout linearlayout1;
     private SharedPreferences sdata;
 
@@ -150,7 +149,6 @@ public class Aty037Weather extends Activity {
             e.printStackTrace();
         }
     }
-
 
 
     @Override

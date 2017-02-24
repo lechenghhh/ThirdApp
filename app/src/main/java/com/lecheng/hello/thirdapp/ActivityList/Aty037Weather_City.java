@@ -19,7 +19,6 @@ public class Aty037Weather_City extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity037_1);
 		citylistview = (ListView) findViewById(R.id.lv2);

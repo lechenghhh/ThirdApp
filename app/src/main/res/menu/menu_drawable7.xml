@@ -3,25 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ActivityList.Aty007SurfaceView">
 
-
     <item
         android:id="@+id/action_bar_1"
+        android:icon="@drawable/ic_snow"
         android:title="one"
-        android:icon="@drawable/ic_bag"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_bar_2"
+        android:icon="@drawable/ic_broken_sky"
         android:title="two"
-        android:icon="@drawable/ic_delete"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_bar_3"
+        android:icon="@drawable/ic_sunny"
         android:title="three"
-        android:icon="@drawable/ic_round"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_bar_clear7"
-        android:title="Clear"
         android:icon="@drawable/ic_delete"
+        android:title="Clear"
         app:showAsAction="always" />
 </menu>

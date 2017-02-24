@@ -111,7 +111,7 @@
         <activity android:name=".ActivityList.Aty016TestListView" />
         <activity android:name=".ActivityList.Aty017TestLvAndCheckBox" />
         <activity android:name=".ActivityList.Aty018MyBrowser" />
-        <activity android:name=".ActivityList.Aty019TestWebView" />
+        <activity android:name=".ActivityList.Aty019Demo" />
         <activity android:name=".ActivityList.Aty020FragmentTabHost" />
         <activity android:name=".ActivityList.Aty021ButterKnife" />
         <activity android:name=".ActivityList.Aty022UniversalImgLoader" />

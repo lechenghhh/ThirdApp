@@ -21,7 +21,7 @@ public class MainMenu extends ListActivity {
             "Aty011HttpAsyncTask", "Aty012TestFileExplore", "Aty013JSONResolve",
             "Aty014Fragment", "Aty015Volley", "Aty016TestListView",
             "Aty017TestLvAndCheckBox", "Aty018MyBrowser",
-            "Aty019TestWebView", "Aty020FragmentTabHost",
+            "Aty019Demo", "Aty020FragmentTabHost",
             "-------------------------------------",
             "Aty021ButterKnife", "Aty022UniversalImgLoader", "Aty023UploadPic",
             "Aty024ShareToFriends", "Aty025TestBackTop", "Aty026XListView",
@@ -56,7 +56,7 @@ public class MainMenu extends ListActivity {
 
         String classStr = classes[position];
         try {
-            Class ourClass = Class.forName("com.lecheng.hello.thirdapp.ActivityListItem." + classStr);
+            Class ourClass = Class.forName("com.lecheng.hello.thirdapp.ActivityList." + classStr);
             Intent ourIntent = new Intent(MainMenu.this, ourClass);
             startActivity(ourIntent);
         } catch (ClassNotFoundException e) {
