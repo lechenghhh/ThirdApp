@@ -40,12 +40,9 @@ public class MyApplication extends Application {
 
     private void init() {
 
-
         que = Volley.newRequestQueue(getApplicationContext());
 
-
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(   //UniversalImageLoader
-                this)
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this)//UniversalImageLoader
                 .memoryCacheExtraOptions(480, 800)
                 // max width, max height，即保存的每个缓存文件的最大长宽
 //				.discCacheExtraOptions(480, 800, null)
@@ -67,8 +64,8 @@ public class MyApplication extends Application {
                 .discCacheFileCount(100)
                 // 缓存的文件数量
                 .discCache(new UnlimitedDiscCache(new File(Environment
-                                .getExternalStorageDirectory()
-                                + "/android/appimgCache")))
+                        .getExternalStorageDirectory()
+                        + "/android/appimgCache")))
                 // 自定义缓存路径
                 .defaultDisplayImageOptions(getDisplayOptions())
                 .imageDownloader(
