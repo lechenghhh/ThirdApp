@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.lecheng.hello.thirdapp.R;
 
-public class Aty039MVP extends AppCompatActivity {
+public class Aty041MVP_View extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

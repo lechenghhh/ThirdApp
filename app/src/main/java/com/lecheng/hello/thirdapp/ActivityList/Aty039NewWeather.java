@@ -26,7 +26,7 @@ import com.lecheng.hello.thirdapp.Utils.MySharedPreferences;
 import com.lecheng.hello.thirdapp.Utils.MyUtils;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
-public class Aty040NewWeather extends Activity implements View.OnClickListener {
+public class Aty039NewWeather extends Activity implements View.OnClickListener {
     private TextView tv, tv1, tv2, tv3;
     private ListView lv1, lv2;
     private ImageView iv1;

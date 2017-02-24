@@ -29,7 +29,7 @@ public class MainMenu extends ListActivity {
             "-------------------------------------",
             "Aty031Blur", "Aty032TestBanner", "Aty033UploadFile",
             "Aty034Tuner", "Aty035Contact", "Aty036Calculator", "Aty037Weather",
-            "Aty038Game2048", "Aty039MVP", "Aty040NewWeather",
+            "Aty038Game2048", "Aty039NewWeather", "Aty041MVP_View",
             "-------------------------------------",
             "Aty041", "Aty042", "Aty043",
     };
