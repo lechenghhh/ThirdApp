@@ -11,22 +11,20 @@ import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.R;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class Aty019Demo extends AppCompatActivity {
 
-    @BindView(R.id.pb1)
-    ProgressBar pb1;
-    @BindView(R.id.tv1)
-    TextView tv1;
+//    @BindView(R.id.pb1)
+//    ProgressBar pb1;
+//    @BindView(R.id.tv1)
+//    TextView tv1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity019);
-        ButterKnife.bind(this);
         StartPd();
 
     }
@@ -111,13 +109,13 @@ public class Aty019Demo extends AppCompatActivity {
     }
 
 
-    @OnClick({R.id.pb1, R.id.tv1})
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.pb1:
-                break;
-            case R.id.tv1:
-                break;
-        }
-    }
+//    @OnClick({R.id.pb1, R.id.tv1})
+//    public void onClick(View view) {
+//        switch (view.getId()) {
+//            case R.id.pb1:
+//                break;
+//            case R.id.tv1:
+//                break;
+//        }
+//    }
 }

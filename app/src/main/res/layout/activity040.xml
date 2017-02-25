@@ -1,98 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/fab_margin"
+    android:orientation="vertical"
+    tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty040NetNote">
 
-    <ImageView
-        android:id="@+id/aty40_iv_bg"
+    <EditText
+        android:id="@+id/tvTitle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/background_floating_material_dark"
-        android:scaleType="centerCrop" />
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="标题"
+        android:textSize="16dp" />
 
-    <ScrollView
-        android:id="@+id/aty40_sync"
+    <EditText
+        android:id="@+id/tvContent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="内容" />
 
-        <LinearLayout
+    <ListView
+        android:id="@+id/lvNoteList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAdd"
+            style="@style/style_btn_blue1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="添加" />
 
-            <LinearLayout
-                android:id="@+id/aty40_ll"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginTop="24dp"
-                android:background="@color/weatherblack"
-                android:gravity="center">
+        <Button
+            android:id="@+id/btnEdit"
+            style="@style/style_btn_blue1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="添加" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+        <Button
+            android:id="@+id/btnDelete"
+            style="@style/style_btn_blue1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="删除" />
+    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/aty40_tv_city"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:text="城市"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="16dp" />
-
-                    <TextView
-                        android:id="@+id/aty40_tv1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="温度"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="24dp" />
-                </LinearLayout>
-
-
-                <TextView
-                    android:id="@+id/aty40_tv2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="12dp"
-                    android:layout_weight="1"
-                    android:text="穿衣建议"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="12dp" />
-            </LinearLayout>
-
-            <ListView
-                android:id="@+id/aty40_lv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_weight="1"
-                android:background="@color/weatherblack" />
-
-            <ListView
-                android:id="@+id/aty40_lv2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_weight="1"
-                android:background="@color/weatherblack"
-                android:visibility="gone" />
-
-
-        </LinearLayout>
-    </ScrollView>
-</FrameLayout>
+</LinearLayout>

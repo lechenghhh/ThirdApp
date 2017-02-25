@@ -137,8 +137,11 @@
         <activity android:name=".ActivityList.Aty037Weather" />
         <activity android:name=".ActivityList.Aty037Weather_City" />
         <activity android:name=".ActivityList.Aty038Game2048" />
-        <activity android:name=".ActivityList.Aty039NewWeather"/>
-        <activity android:name=".ActivityList.Aty041MVP_View" />
+        <activity android:name=".ActivityList.Aty039NewWeather" />
+        <activity
+            android:name=".ActivityList.Aty041MVP_View"
+            android:label="MVP开发案例" />
+        <activity android:name=".ActivityList.Aty040NetNote"></activity>
     </application>
 
 </manifest>

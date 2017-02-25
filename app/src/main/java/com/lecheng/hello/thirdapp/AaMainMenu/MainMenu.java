@@ -29,9 +29,9 @@ public class MainMenu extends ListActivity {
             "-------------------------------------",
             "Aty031Blur", "Aty032TestBanner", "Aty033UploadFile",
             "Aty034Tuner", "Aty035Contact", "Aty036Calculator", "Aty037Weather",
-            "Aty038Game2048", "Aty039NewWeather", "Aty041MVP_View",
+            "Aty038Game2048", "Aty039NewWeather", "Aty040NetNote",
             "-------------------------------------",
-            "Aty041", "Aty042", "Aty043",
+            "Aty041MVP_View", "Aty042", "Aty043",
     };
 
     private LayoutAnimationController lac;
@@ -54,14 +54,12 @@ public class MainMenu extends ListActivity {
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
 
-        String classStr = classes[position];
         try {
-            Class ourClass = Class.forName("com.lecheng.hello.thirdapp.ActivityList." + classStr);
+            Class ourClass = Class.forName("com.lecheng.hello.thirdapp.ActivityList." + classes[position]);
             Intent ourIntent = new Intent(MainMenu.this, ourClass);
             startActivity(ourIntent);
         } catch (ClassNotFoundException e) {
-            Toast.makeText(MainMenu.this, "跳转失败---LeCheng", Toast.LENGTH_SHORT).show();
-            e.printStackTrace();
+            Toast.makeText(MainMenu.this, "跳转失败\n" + e, Toast.LENGTH_SHORT).show();
         }
     }
 
