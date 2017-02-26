@@ -6,7 +6,7 @@ import java.util.List;
  * Created by Cheng on 2017/2/22.
  */
 
-public class Bean040Weather {
+public class Bean039Weather {
 
     /**
      * desc : OK

@@ -18,11 +18,12 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.lecheng.hello.thirdapp.Adapter.Common.CommonAdapter;
 import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
-import com.lecheng.hello.thirdapp.Bean.Bean040Weather;
+import com.lecheng.hello.thirdapp.Bean.Bean039Weather;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.GsonUtil;
 import com.lecheng.hello.thirdapp.Utils.MyApplication;
 import com.lecheng.hello.thirdapp.Utils.MySharedPreferences;
+import com.lecheng.hello.thirdapp.Utils.MyToast;
 import com.lecheng.hello.thirdapp.Utils.MyUtils;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -33,6 +34,7 @@ public class Aty039NewWeather extends Activity implements View.OnClickListener {
     private ImageLoader imageLoader = ImageLoader.getInstance();
     private String[] cityList = {"北京", "上海", "广州", "深圳", "天津", "成都",
             "武汉", "重庆", "杭州", "沈阳", "厦门", "青岛", "福州"};
+    private String bgUrl = "http://appserver.m.bing.net/BackgroundImageService/TodayImageService.svc/GetTodayImage?dateOffset=0&urlEncodeHeaders=true&osName=windowsPhone&osVersion=8.10&orientation=480x800&deviceName=WP8&mkt=en-US";
 
     private LayoutAnimationController lac;      //动画
     private ScaleAnimation sa;                  //动画
@@ -46,56 +48,12 @@ public class Aty039NewWeather extends Activity implements View.OnClickListener {
         tv2 = (TextView) findViewById(R.id.aty40_tv2);
         tv3 = (TextView) findViewById(R.id.aty40_tv_city);
         iv1 = (ImageView) findViewById(R.id.aty40_iv_bg);
-        imageLoader.displayImage("http://www.dujin.org/sys/bing/1366.php", iv1);
+        imageLoader.displayImage(bgUrl, iv1);
         lv1 = (ListView) findViewById(R.id.aty40_lv);
         lv2 = (ListView) findViewById(R.id.aty40_lv2);
         findViewById(R.id.aty40_ll).setOnClickListener(this);
         volleyGet();
 
-        sa = new ScaleAnimation(0, 1, 0, 1, 0, 1);
-        sa.setDuration(1000);
-        lac = new LayoutAnimationController(sa, 0.2f);
-        lv1.setLayoutAnimation(lac);
-    }
-
-    private void volleyGet() {
-        String url = "http://wthrcdn.etouch.cn/weather_mini?city=" +
-                MySharedPreferences.loadData(getApplicationContext(), "city", "福州");
-        StringRequest request = new StringRequest
-                (Request.Method.GET, url, new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String subject) {
-//                        Toast.makeText(getApplicationContext(), subject, Toast.LENGTH_SHORT).show();
-                        resolveJson(MyUtils.encodeChange(subject));//编码转换
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError volleyError) {
-                        Toast.makeText(getApplicationContext(), "failed", Toast.LENGTH_SHORT).show();
-                    }
-                });
-        request.setTag("cancelGet");
-        MyApplication.getHttpQue().add(request);
-    }
-
-    private void resolveJson(String strJson) {//解析json方法，并呈现
-        final Bean040Weather bean = GsonUtil.GsonToBean(strJson, Bean040Weather.class);
-//        //呈现到列表上
-        tv.setText(bean.getData().getCity());
-        tv1.setText(bean.getData().getWendu() + "摄氏度");
-        tv2.setText(bean.getData().getGanmao());
-        lv1.setAdapter(new CommonAdapter<Bean040Weather.DataBean.ForecastBean>(getApplicationContext(), bean.getData().getForecast(), R.layout.cell040_weather) {
-            @Override
-            public void convert(ViewHolder helper, Bean040Weather.DataBean.ForecastBean item) {
-                helper.setText(R.id.listcell40_type, item.getType());
-                helper.setText(R.id.listcell40_fengxiang, item.getFengxiang());
-                helper.setText(R.id.listcell40_fengli, item.getFengli());
-                helper.setText(R.id.listcell40_high, "最" + item.getHigh() + "度");
-                helper.setText(R.id.listcell40_low, "最" + item.getLow() + "度");
-                helper.setText(R.id.listcell40_date, item.getDate());
-            }
-        });
-        MyUtils.setListViewHeightBasedOnChildren(lv1);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
                 (getApplicationContext(), android.R.layout.simple_list_item_1);
         lv2.setAdapter(adapter);
@@ -112,6 +70,58 @@ public class Aty039NewWeather extends Activity implements View.OnClickListener {
                 volleyGet();
             }
         });
+
+        sa = new ScaleAnimation(0, 1, 0, 1, 0, 1);
+        sa.setDuration(1000);
+        lac = new LayoutAnimationController(sa, 0.2f);
+        lv1.setLayoutAnimation(lac);
+    }
+
+    private void volleyGet() {
+        String url = "http://wthrcdn.etouch.cn/weather_mini?city=" +
+                MySharedPreferences.loadData(getApplicationContext(), "city", "福州");
+        System.out.println("city" + MySharedPreferences.loadData(getApplicationContext(), "city", "福州"));
+        StringRequest request = new StringRequest
+                (Request.Method.GET, url, new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String subject) {
+//                        new MyToast(getApplicationContext(), subject, 3000);
+                        try {
+                            resolveJson(MyUtils.encodeChange(subject));//编码转换
+                        } catch (Exception e) {
+                            new MyToast(getApplicationContext(), "数据加载错误！", 3000);
+                        }
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        Toast.makeText(getApplicationContext(), "failed", Toast.LENGTH_SHORT).show();
+                    }
+                });
+        request.setTag("cancelGet");
+        MyApplication.getHttpQue().add(request);
+    }
+
+    private void resolveJson(String strJson) {//解析json方法，并呈现
+        final Bean039Weather bean = GsonUtil.GsonToBean(strJson, Bean039Weather.class);
+//        //呈现到列表上
+
+        tv.setText(bean.getData().getCity());
+        tv1.setText(bean.getData().getWendu() + "摄氏度");
+        tv2.setText(bean.getData().getGanmao());
+        lv1.setAdapter(new CommonAdapter<Bean039Weather.DataBean.ForecastBean>(getApplicationContext(), bean.getData().getForecast(), R.layout.cell040_weather) {
+            @Override
+            public void convert(ViewHolder helper, Bean039Weather.DataBean.ForecastBean item) {
+                helper.setText(R.id.listcell40_type, item.getType());
+                helper.setText(R.id.listcell40_fengxiang, item.getFengxiang());
+                helper.setText(R.id.listcell40_fengli, item.getFengli());
+                helper.setText(R.id.listcell40_high, "最" + item.getHigh() + "度");
+                helper.setText(R.id.listcell40_low, "最" + item.getLow() + "度");
+                helper.setText(R.id.listcell40_date, item.getDate());
+            }
+        });
+        MyUtils.setListViewHeightBasedOnChildren(lv1);
+
     }
 
 

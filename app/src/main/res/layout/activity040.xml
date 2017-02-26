@@ -11,8 +11,7 @@
         android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="标题"
+        android:hint="标题"
         android:textSize="16dp" />
 
     <EditText
@@ -20,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:text="内容" />
+        android:hint="内容" />
 
     <ListView
         android:id="@+id/lvNoteList"
