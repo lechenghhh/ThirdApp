@@ -56,7 +56,8 @@ public class Aty040NetNote extends AppCompatActivity {
     Button btnAdd;
     @Bind(R.id.btnDelete)
     Button btnDelete;
-    private int item;
+    private String token = "qfnByOQJGXoAUeHGfXfAbtZUxBqDiTEv";
+    private int item = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +71,7 @@ public class Aty040NetNote extends AppCompatActivity {
         String url =
 //                "http://v2.mashupcloud.cn/LIST/NetNote/?appid=233&token=kGhMkHHEPyYrMCNIpAvBBxSiPEUHsvtx";
                 "http://v2.mashupcloud.cn/LIST/NetNote/" +
-                        "?token=kGhMkHHEPyYrMCNIpAvBBxSiPEUHsvtx" +
+                        "?token=" + token +
                         "&appid=233" +
                         "&pageSize=100";
         StringRequest request = new StringRequest
@@ -92,7 +93,7 @@ public class Aty040NetNote extends AppCompatActivity {
     private void volleyAdd() {
         String url =
                 "http://v2.mashupcloud.cn/ADD/NetNote/" +
-                        "?token=kGhMkHHEPyYrMCNIpAvBBxSiPEUHsvtx" +
+                        "?token=" + token +
                         "&appid=233" +
                         "&title=" + etTitle.getText() +
                         "&content=" + etContent.getText() +
@@ -118,7 +119,7 @@ public class Aty040NetNote extends AppCompatActivity {
     private void volleyDelete() {
         String url =
                 "http://v2.mashupcloud.cn/DELETE/NetNote/" +
-                        "?token=kGhMkHHEPyYrMCNIpAvBBxSiPEUHsvtx" +
+                        "?token=" + token +
                         "&appid=233" +
                         "&id=" + item;
         StringRequest request = new StringRequest
@@ -136,6 +137,34 @@ public class Aty040NetNote extends AppCompatActivity {
         request.setTag("volleyList");
         MyApplication.getHttpQue().add(request);
     }
+
+    private void volleyEdit() {
+        String url =
+                "http://v2.mashupcloud.cn/DELETE/NetNote/" +
+                        "?token=" + token +
+                        "&appid=233" +
+                        "&id=" + item +
+                        "&title=" + etTitle.getText() +
+                        "&content=" + etContent.getText();
+        StringRequest request = new StringRequest
+                (Request.Method.GET, url, new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String s) {
+                        new MyToast(Aty040NetNote.this, s, 3000);
+                        displayLv();
+                        volleyList();
+                        item=-1;
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        new MyToast(getApplicationContext(), "失败", 3000);
+                    }
+                });
+        request.setTag("volleyList");
+        MyApplication.getHttpQue().add(request);
+    }
+
 
     private void resolveJson(String s) {
 //        new MyToast(getApplicationContext(), s, 3000);
@@ -160,6 +189,7 @@ public class Aty040NetNote extends AppCompatActivity {
                 etContent.setText(beanList.getData().get(position).getContent());
                 hideLv();
                 item = position;
+
             }
         });
     }
@@ -190,8 +220,10 @@ public class Aty040NetNote extends AppCompatActivity {
             case R.id.btnAdd:
                 if (lvNoteList.getVisibility() == View.VISIBLE) {
                     hideLv();
-                } else {
+                } else if (item == -1) {
                     volleyAdd();
+                } else {
+                    volleyEdit();
                 }
                 break;
             case R.id.btnDelete:
