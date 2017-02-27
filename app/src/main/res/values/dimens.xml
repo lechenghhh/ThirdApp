@@ -6,7 +6,7 @@
     <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
          https://developer.android.com/design/patterns/navigation-drawer.html -->
     <dimen name="navigation_drawer_width">240dp</dimen>
-    <dimen name="fab_margin">10dp</dimen>
+    <dimen name="fab_margin">18dp</dimen>
     <dimen name="title_height1">32dp</dimen>
     <dimen name="Edit_height1">40dp</dimen>
     <dimen name="unit_textsize">14dp</dimen>

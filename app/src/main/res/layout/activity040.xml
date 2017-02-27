@@ -3,23 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/fab_margin"
     android:orientation="vertical"
     tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty040NetNote">
 
     <EditText
-        android:id="@+id/tvTitle"
+        android:id="@+id/etTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="标题"
-        android:textSize="16dp" />
+        android:textSize="16dp"
+        android:visibility="gone" />
 
     <EditText
-        android:id="@+id/tvContent"
+        android:id="@+id/etContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:hint="内容" />
+        android:layout_weight="1"
+        android:gravity="top"
+        android:hint="内容"
+        android:textSize="14dp"
+        android:visibility="gone" />
 
     <ListView
         android:id="@+id/lvNoteList"
@@ -29,24 +33,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="32dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnAdd"
             style="@style/style_btn_blue1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:text="添加" />
-
-        <Button
-            android:id="@+id/btnEdit"
-            style="@style/style_btn_blue1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
+            android:layout_height="36dp"
+            android:layout_margin="6dp"
             android:layout_weight="1"
             android:text="添加" />
 
@@ -54,10 +49,11 @@
             android:id="@+id/btnDelete"
             style="@style/style_btn_blue1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
+            android:layout_height="36dp"
+            android:layout_margin="6dp"
             android:layout_weight="1"
-            android:text="删除" />
-    </LinearLayout>
+            android:text="删除"
+            android:visibility="gone" />
 
+    </LinearLayout>
 </LinearLayout>
