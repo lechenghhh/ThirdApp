@@ -49,54 +49,24 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity
-            android:name=".ActivityList.Aty003EveryLayout_Frame"
-            android:label="@string/title_activity_fl" />
-        <activity
-            android:name=".ActivityList.Aty003EveryLayout"
-            android:label="@string/title_activity_layout3" />
-        <activity
-            android:name=".ActivityList.Aty004Animation"
-            android:label="@string/title_activity_animation4" />
-        <activity
-            android:name=".ActivityList.Aty005MulTouch"
-            android:label="@string/title_activity_mul_touch5" />
-        <activity
-            android:name=".ActivityList.Aty006SQLite"
-            android:label="@string/title_activity_sqlite6" />
-        <activity
-            android:name=".ActivityList.Aty014Fragment"
-            android:label="@string/title_activity_fragment2" />
-        <activity
-            android:name=".ActivityList.Aty014Fragment_Navi"
-            android:label="@string/title_activity_navigation" />
-        <activity
-            android:name=".ActivityList.Aty014Fragment_Tabed"
-            android:label="@string/title_activity_tabed" />
+        <activity android:name=".ActivityList.Aty003EveryLayout_Frame" />
+        <activity android:name=".ActivityList.Aty003EveryLayout" />
+        <activity android:name=".ActivityList.Aty004Animation" />
+        <activity android:name=".ActivityList.Aty005MulTouch" />
+        <activity android:name=".ActivityList.Aty006SQLite" />
+        <activity android:name=".ActivityList.Aty014Fragment" />
+        <activity android:name=".ActivityList.Aty014Fragment_Navi" />
+        <activity android:name=".ActivityList.Aty014Fragment_Tabed" />
         <activity
             android:name=".ActivityList.Aty007SurfaceView"
             android:label="画板" />
-        <activity
-            android:name=".ActivityList.Aty008TestTextViewCtrl"
-            android:label="TextPlayku" />
-        <activity
-            android:name=".ActivityList.Aty009View"
-            android:label="@string/title_activity_view9" />
-        <activity
-            android:name=".ActivityList.Aty010ViewPager"
-            android:label="@string/title_activity_guide10" />
-        <activity
-            android:name=".ActivityList.Aty011HttpAsyncTask"
-            android:label="@string/title_activity_async_task11" />
-        <activity
-            android:name=".ActivityList.Aty011HttpAsyncTask_1"
-            android:label="@string/title_activity_http_client" />
-        <activity
-            android:name=".ActivityList.Aty012TestFileExplore"
-            android:label="@string/title_activity_file_explore12" />
-        <activity
-            android:name=".ActivityList.Aty013JSONResolve"
-            android:label="@string/title_activity_json13" />
+        <activity android:name=".ActivityList.Aty008TestTextViewCtrl" />
+        <activity android:name=".ActivityList.Aty009View" />
+        <activity android:name=".ActivityList.Aty010ViewPager" />
+        <activity android:name=".ActivityList.Aty011HttpAsyncTask" />
+        <activity android:name=".ActivityList.Aty011HttpAsyncTask_1" />
+        <activity android:name=".ActivityList.Aty012TestFileExplore" />
+        <activity android:name=".ActivityList.Aty013JSONResolve" />
 
         <receiver android:name=".Receiver.SmsReceiver">
             <intent-filter android:priority="800">
@@ -144,7 +114,9 @@
         <activity
             android:name=".ActivityList.Aty041MVP_View"
             android:label="MVP开发案例" />
-        <activity android:name=".ActivityList.Aty042Test"></activity>
+        <activity android:name=".ActivityList.Aty042ServiceDownLoad" />
+
+        <service android:name=".Service.Ser042Download" />
     </application>
 
 </manifest>
