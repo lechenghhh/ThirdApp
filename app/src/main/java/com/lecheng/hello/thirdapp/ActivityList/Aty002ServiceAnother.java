@@ -9,11 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.lecheng.hello.thirdapp.Service.MyService;
+import com.lecheng.hello.thirdapp.Service.Ser001;
 import com.lecheng.hello.thirdapp.R;
 
 public class Aty002ServiceAnother extends AppCompatActivity implements View.OnClickListener, ServiceConnection {
-    private MyService.MyBinder b2;
+    private Ser001.MyBinder b2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class Aty002ServiceAnother extends AppCompatActivity implements View.OnCl
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_service_another_bind:
-                bindService(new Intent(this,MyService.class),this, Context.BIND_AUTO_CREATE);
+                bindService(new Intent(this,Ser001.class),this, Context.BIND_AUTO_CREATE);
                 break;
             case R.id.btn_service_another_unbind:
                 unbindService(this);
@@ -48,7 +48,7 @@ public class Aty002ServiceAnother extends AppCompatActivity implements View.OnCl
 
     @Override
     public void onServiceConnected(ComponentName name, IBinder service) {
-        b2 = (MyService.MyBinder) service;
+        b2 = (Ser001.MyBinder) service;
     }
 
     @Override

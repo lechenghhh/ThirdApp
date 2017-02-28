@@ -5,12 +5,12 @@ import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
 
-public class MyService extends Service {
+public class Ser001 extends Service {
     public String data1 = "默认信息1";
     private boolean serviceRunning=false;
     private String data2 = "默认信息2";
 
-    public MyService() {
+    public Ser001() {
     }
 
     @Override
@@ -19,13 +19,13 @@ public class MyService extends Service {
     }
     public class MyBinder extends Binder{       //自定义MyBinder 增加了功能：把外面传进值传给自身
         public void setdata1(String data){
-            MyService.this.data1 = data;
+            Ser001.this.data1 = data;
         }
         public void setdata2(String data){
-            MyService.this.data2 = data;
+            Ser001.this.data2 = data;
         }
-        public MyService getService(){          //使外界获取到MyService类
-            return MyService.this;
+        public Ser001 getService(){          //使外界获取到MyService类
+            return Ser001.this;
         }
     }
 

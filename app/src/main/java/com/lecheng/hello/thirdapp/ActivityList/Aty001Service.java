@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.lecheng.hello.thirdapp.Service.MyService;
+import com.lecheng.hello.thirdapp.Service.Ser001;
 import com.lecheng.hello.thirdapp.R;
 
 
@@ -20,7 +20,7 @@ public class Aty001Service extends Activity implements View.OnClickListener, Ser
     private EditText ed1 ,ed2;
     private TextView tv1;
     private Intent i;
-    private MyService.MyBinder b ;
+    private Ser001.MyBinder b ;
     private static String a;
 
     @Override
@@ -30,7 +30,7 @@ public class Aty001Service extends Activity implements View.OnClickListener, Ser
 
         Toast.makeText(this,"欢迎来到服务的学习实验",Toast.LENGTH_LONG).show();
 
-        i = new Intent(Aty001Service.this,MyService.class);
+        i = new Intent(Aty001Service.this,Ser001.class);
 
         ed1 = (EditText) findViewById(R.id.et1);
         ed2 = (EditText) findViewById(R.id.et2);
@@ -59,7 +59,7 @@ public class Aty001Service extends Activity implements View.OnClickListener, Ser
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btnbindService:
-                bindService(new Intent(this,MyService.class),this, Context.BIND_AUTO_CREATE);
+                bindService(new Intent(this,Ser001.class),this, Context.BIND_AUTO_CREATE);
                 break;
             case R.id.btnunbindService:
                 unbindService(this);
@@ -76,8 +76,8 @@ public class Aty001Service extends Activity implements View.OnClickListener, Ser
     @Override
     public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
         Toast.makeText(this, "服务绑定成功", Toast.LENGTH_SHORT).show();
-        b = (MyService.MyBinder) iBinder;
-        b.getService().setCb(new MyService.Callback() {
+        b = (Ser001.MyBinder) iBinder;
+        b.getService().setCb(new Ser001.Callback() {
             @Override
             public void onDataChange(String Data) {                 //调用接口2下的回调方法，
                 a=Data;
