@@ -35,4 +35,7 @@
     <string name="title_activity_volley15">Volley15</string>
     <string name="title_activity_new18">NewActivity18</string>
     <string name="title_activity_aty018_activity_android5">Aty018ActivityAndroid5</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
