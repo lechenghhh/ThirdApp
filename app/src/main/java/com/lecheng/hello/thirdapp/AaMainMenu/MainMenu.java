@@ -31,7 +31,12 @@ public class MainMenu extends ListActivity {
             "Aty034Tuner", "Aty035Contact", "Aty036Calculator", "Aty037Weather",
             "Aty038Game2048", "Aty039NewWeather", "Aty040NetNote",
             "-------------------------------------",
-            "Aty041MVP_View", "Aty042ServiceDownLoad", "Aty043",
+            "Aty041MVP_View", "Aty042ServiceDownLoad", "Aty043WeiXinPay",
+            "Aty044", "Aty045", "Aty046", "Aty047",
+            "Aty048", "Aty049", "Aty050",
+            "-------------------------------------",
+
+            "Aty051", "Aty052", "Aty053", "Aty054", "Aty055", "Aty056",
     };
 
     private LayoutAnimationController lac;

@@ -27,14 +27,14 @@
         android:id="@+id/btn_save"
         style="@style/style_btn_blue1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:text="保存数据" />
 
     <Button
         android:id="@+id/btn_load"
         style="@style/style_btn_blue1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:layout_marginTop="@dimen/fab_margin"
         android:text="显示数据" />
 

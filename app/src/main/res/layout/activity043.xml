@@ -22,7 +22,7 @@
         android:id="@+id/btnPay"
         style="@style/style_btn_green1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:layout_marginTop="@dimen/fab_margin"
         android:text="微信支付测试" />
 </LinearLayout>

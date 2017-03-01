@@ -49,21 +49,16 @@
     <style name="style_btn_blue1">
         <!--绿色按钮样式-->
         <item name="android:background">@drawable/style_btn_blue</item>
-        <item name="android:padding">4dp</item>
         <!--<item name="android:layout_weight">1</item>-->
         <item name="android:textColor">@color/colorWhite</item>
-        <item name="android:textSize">18dp</item>
     </style>
 
     <style name="style_btn_green1">
         <!--绿色按钮样式-->
         <item name="android:background">@drawable/style_btn_green</item>
-        <item name="android:padding">4dp</item>
         <!--<item name="android:layout_weight">1</item>-->
         <item name="android:textColor">@color/colorWhite</item>
-        <item name="android:textSize">18dp</item>
     </style>
-
 
     <style name="style_ll_vertical">
         <!--通用卡片式垂直线性布局-->
@@ -78,11 +73,12 @@
 
 
     <style name="style_tv_screen">
-        <!--加载中展示-->
+        <!--显示器-->
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:text">Screen</item>
         <item name="android:textSize">20dp</item>
     </style>
+
     <style name="style_tv_loading">
         <!--加载中展示-->
         <item name="android:gravity">center</item>
