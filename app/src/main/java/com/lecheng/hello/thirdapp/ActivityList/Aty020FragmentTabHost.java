@@ -75,7 +75,7 @@ public class Aty020FragmentTabHost extends FragmentActivity {
             mTabHost.addTab(tabSpec, mFragmentArray[i], null);
             // 设置Tab按钮的背景
             mTabHost.getTabWidget().getChildAt(i)
-                    .setBackgroundResource(R.drawable.style_btn_green);
+                    .setBackgroundResource(R.drawable.style_btn_blue);
         }
     }
 

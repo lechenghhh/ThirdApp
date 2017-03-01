@@ -117,6 +117,8 @@
         <activity android:name=".ActivityList.Aty042ServiceDownLoad" />
 
         <service android:name=".Service.Ser042Download" />
+
+        <activity android:name=".ActivityList.Aty043WeiXinPay"></activity>
     </application>
 
 </manifest>
