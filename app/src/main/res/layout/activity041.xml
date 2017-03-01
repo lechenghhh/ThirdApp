@@ -11,7 +11,7 @@
         android:id="@+id/tv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/weatherblack"
+        android:background="@color/BlackCool"
         android:gravity="center"
         android:padding="@dimen/fab_margin"
         android:text="Screen"

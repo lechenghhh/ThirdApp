@@ -1,41 +1,48 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    tools:context=".ActivityList.Aty011HttpAsyncTask"
-    >
+    tools:context=".ActivityList.Aty011HttpAsyncTask">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <Button
-            android:text="使用Http的get方式"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:id="@+id/btnasync"
-            android:textAllCaps="false"/>
-        <Button
-            android:text="HttpClient方式"
-            android:layout_weight="1"
+            style="@style/style_btn_green1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="使用Http的get方式"
+            android:textAllCaps="false" />
+
+        <Button
             android:id="@+id/btnstarthttpclientget"
-            android:textAllCaps="false"/>
+            style="@style/style_btn_blue1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_weight="1"
+            android:text="HttpClient方式"
+            android:textAllCaps="false" />
     </LinearLayout>
+
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/textasync"
-            android:text="就绪"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="就绪" />
     </ScrollView>
 
 

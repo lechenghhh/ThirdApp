@@ -9,6 +9,7 @@
         android:orientation="vertical">
 
         <EditText
+            android:background="@drawable/style_et1"
             android:id="@+id/aty30_testurl"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -20,6 +21,8 @@
             android:layout_height="300dp" />
 
         <Button
+            style="@style/style_btn_blue1"
+            android:layout_margin="@dimen/fab_margin"
             android:id="@+id/aty30_openurl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -60,7 +60,7 @@
         <activity
             android:name=".ActivityList.Aty007SurfaceView"
             android:label="画板" />
-        <activity android:name=".ActivityList.Aty008TestTextViewCtrl" />
+        <activity android:name=".ActivityList.Aty008Test" />
         <activity android:name=".ActivityList.Aty009View" />
         <activity android:name=".ActivityList.Aty010ViewPager" />
         <activity android:name=".ActivityList.Aty011HttpAsyncTask" />

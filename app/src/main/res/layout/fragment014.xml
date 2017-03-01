@@ -6,31 +6,39 @@
     tools:context=".fragment.Fragment2Fragment">
 
     <Button
-        android:id="@+id/btn2anothersFAty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/btn2tabAty"
-        android:text="跳转到另一个fragment" />
-
-    <Button
         android:id="@+id/btn2navigationAty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btn2anothersFAty"
-        android:layout_alignBottom="@+id/btn2anothersFAty"
-        android:layout_toLeftOf="@+id/btn2anothersFAty"
-        android:layout_toStartOf="@+id/btn2anothersFAty"
-        android:text="启动带有侧边栏的activity" />
+        style="@style/style_btn_green1"
+        android:text="启动带有侧边栏的activity"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="94dp"
+        android:layout_below="@+id/btn2tabAty"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/btn2tabAty"
         android:layout_width="wrap_content"
+        style="@style/style_btn_green1"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:text="启动Tabed界面"
         android:layout_centerVertical="true"
-        android:text="启动Tabed界面" />
+        android:layout_toLeftOf="@+id/btn2anothersFAty"
+        android:layout_toStartOf="@+id/btn2anothersFAty" />
+
+    <Button
+        android:id="@+id/btn2anothersFAty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/style_btn_green1"
+        android:text="跳转到另一个fragment"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="53dp" />
 
 </RelativeLayout>

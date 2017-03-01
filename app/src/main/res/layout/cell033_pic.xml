@@ -11,7 +11,7 @@
         android:layout_width="102dp"
         android:layout_height="102dp"
         android:scaleType="centerCrop"
-        android:background="@color/weatherblack"/>
+        android:background="@color/BlackCool"/>
 
     <TextView
         android:layout_width="96dp"

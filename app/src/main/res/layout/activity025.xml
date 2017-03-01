@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="@dimen/fab_margin"
     tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty025TestBackTop">
 
     <com.lecheng.hello.thirdapp.Widgets.BackTopScrollView
@@ -26,6 +27,7 @@
                 android:textSize="14dp" />
 
             <Button
+                style="@style/style_btn_blue1"
                 android:layout_width="wrap_content"
                 android:layout_height="1600dp"
                 android:text="

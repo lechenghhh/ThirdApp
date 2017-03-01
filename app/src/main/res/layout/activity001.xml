@@ -24,6 +24,7 @@
         android:text="停止一个服务" />
 
     <TextView
+        style="@style/style_tv_screen"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="----------------\n测试模块2" />
@@ -50,12 +51,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sync" />
+
     <TextView
-        android:text="显示器"
-        android:textSize="25dp"
+        android:id="@+id/tv1"
+        style="@style/style_tv_screen"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv1"/>
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>

@@ -2,77 +2,102 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_margin="@dimen/fab_margin"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/tvscreen1"
+        style="@style/style_tv_screen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="40dp"
-        android:text="显示器" />
+        android:text="显示器"
+        android:textSize="40dp" />
 
     <TableLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/btn1"
+                style="@style/style_btn_green1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:text="1" />
+
             <Button
                 android:id="@+id/btn2"
+                style="@style/style_btn_green1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:text="2" />
+
             <Button
                 android:id="@+id/btn3"
+                style="@style/style_btn_green1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:text="3" />
+
             <Button
                 android:id="@+id/btnadd"
+                style="@style/style_btn_blue1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:text="+" />
-            
+
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow2"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
+
             <Button
                 android:id="@+id/btn4"
+                style="@style/style_btn_green1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:text="4" />
+
             <Button
                 android:id="@+id/btn5"
+                style="@style/style_btn_green1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:text="5" />
+
             <Button
                 android:id="@+id/btn6"
+                style="@style/style_btn_green1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:text="6" />
+
             <Button
                 android:id="@+id/btnsub"
+                style="@style/style_btn_blue1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:text="-" />
         </TableRow>
@@ -80,29 +105,41 @@
         <TableRow
             android:id="@+id/tableRow3"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
+
             <Button
                 android:id="@+id/btn7"
+                style="@style/style_btn_green1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:text="7" />
+
             <Button
                 android:id="@+id/btn8"
+                style="@style/style_btn_green1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:text="8" />
+
             <Button
                 android:id="@+id/btn9"
+                style="@style/style_btn_green1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:text="9" />
+
             <Button
                 android:id="@+id/btnmul"
+                style="@style/style_btn_blue1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:text="*" />
         </TableRow>
@@ -110,38 +147,51 @@
         <TableRow
             android:id="@+id/tableRow4"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
+
             <Button
                 android:id="@+id/btn0"
+                style="@style/style_btn_green1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:text="0" />
+
             <Button
                 android:id="@+id/btnclear"
+                style="@style/style_btn_blue1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:text="c" />
+
             <Button
                 android:id="@+id/btnequ"
+                style="@style/style_btn_blue1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:text="=" />
+
             <Button
                 android:id="@+id/btndiv"
+                style="@style/style_btn_blue1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:text="/" />
         </TableRow>
     </TableLayout>
 
     <TextView
+        style="@style/style_tv_screen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:text="乐城实验用计算器" />
+        android:text="乐城实验用计算器"
+        android:textSize="25dp" />
 
 </LinearLayout>

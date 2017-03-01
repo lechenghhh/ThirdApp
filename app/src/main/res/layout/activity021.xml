@@ -4,16 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="@dimen/fab_margin"
     tools:context=".ActivityList.Aty021ButterKnife">
 
     <TextView
         android:id="@+id/tv"
+        style="@style/style_tv_screen"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="cccccjkfdajkl" />
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btn1"
+        style="@style/style_btn_blue1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="kjkja" />
