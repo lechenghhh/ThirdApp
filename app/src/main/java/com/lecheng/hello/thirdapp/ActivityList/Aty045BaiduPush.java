@@ -33,6 +33,8 @@ public class Aty045BaiduPush extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity045_baidupush);
         ButterKnife.bind(this);
+        PushManager.startWork(getApplicationContext(),    //百度推送apikey写入
+                PushConstants.LOGIN_TYPE_API_KEY, API_KEY);
         displayPushState();//显示推送状态
 
     }
@@ -41,8 +43,7 @@ public class Aty045BaiduPush extends AppCompatActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnStartWork:
-                PushManager.startWork(getApplicationContext(),    //百度推送apikey写入
-                        PushConstants.LOGIN_TYPE_API_KEY, API_KEY);
+
                 displayPushState();
                 break;
             case R.id.btnStop:
@@ -66,7 +67,13 @@ public class Aty045BaiduPush extends AppCompatActivity {
             tv.setText("推送已经停止");
     }
 
-    /*
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        PushManager.stopWork(this);
+    }
+
+   /*
     *public void onMessage(Context context, String message, String customContentString);//接收透传消息
     * public static boolean isPushEnabled(Context context);//是否被停止
     *
