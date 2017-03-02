@@ -8,6 +8,8 @@ import com.lecheng.hello.thirdapp.Utils.MyToast;
 
 import java.util.List;
 
+import de.greenrobot.event.EventBus;
+
 /**
  * Created by 乐城 on 2017/3/2.
  * 百度推送的Receiver
@@ -42,7 +44,7 @@ public class PushReceiver extends PushMessageReceiver {
     @Override
     public void onMessage(Context context, String s, String s1) {
         new MyToast(context, s + "/n" + s1, 3333);
-        MySharedPreferences.saveData(context, "push_data", s + s1);
+        EventBus.getDefault().post(s + "/n" + s1);
     }
 
     @Override

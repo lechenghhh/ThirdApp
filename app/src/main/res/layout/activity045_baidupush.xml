@@ -8,6 +8,12 @@
     tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty044AliPay">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:text="http://push.baidu.com/console/0Lzoyo7vGG9fQTk35KkYcxKw?device_type=3#/pushs" />
+
+    <TextView
         android:id="@+id/tv"
         style="@style/style_tv_screen"
         android:layout_width="match_parent"
@@ -16,10 +22,10 @@
     <Button
         android:id="@+id/btnStartWork"
         style="@style/style_btn_blue1"
-        android:enabled="false"
         android:layout_width="match_parent"
         android:layout_height="36dp"
         android:layout_marginTop="@dimen/fab_margin"
+        android:enabled="false"
         android:text="启动推送" />
 
     <Button

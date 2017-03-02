@@ -13,6 +13,7 @@ import com.lecheng.hello.thirdapp.Utils.MySharedPreferences;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import de.greenrobot.event.EventBus;
 
 /*
 * http://push.baidu.com/doc/android/api
@@ -36,14 +37,13 @@ public class Aty045BaiduPush extends AppCompatActivity {
         PushManager.startWork(getApplicationContext(),    //百度推送apikey写入
                 PushConstants.LOGIN_TYPE_API_KEY, API_KEY);
         displayPushState();//显示推送状态
-
+        EventBus.getDefault().register(this);//注册事件监听器
     }
 
     @OnClick({R.id.btnStartWork, R.id.btnStop, R.id.btnResume, R.id.btnSync})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnStartWork:
-
                 displayPushState();
                 break;
             case R.id.btnStop:
@@ -55,7 +55,6 @@ public class Aty045BaiduPush extends AppCompatActivity {
                 displayPushState();
                 break;
             case R.id.btnSync:
-                tv2.setText(MySharedPreferences.loadData(this, "push_data", "null") + "");
                 break;
         }
     }
@@ -67,10 +66,15 @@ public class Aty045BaiduPush extends AppCompatActivity {
             tv.setText("推送已经停止");
     }
 
+    public void onEvent(String s) {
+        tv2.setText(s);
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
         PushManager.stopWork(this);
+        EventBus.getDefault().unregister(this);//注销事件监听器
     }
 
    /*
