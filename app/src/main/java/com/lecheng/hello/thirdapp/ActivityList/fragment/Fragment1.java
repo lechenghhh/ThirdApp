@@ -23,8 +23,9 @@ import de.greenrobot.event.EventBus;
  */
 public class Fragment1 extends Fragment {
 
-    @Bind(R.id.btn2navigationAty)
-    Button btn2navigationAty;
+
+    @Bind(R.id.btnSend)
+    Button btnSend;
 
     public Fragment1() {
     }
@@ -70,10 +71,10 @@ public class Fragment1 extends Fragment {
     @OnClick(R.id.btnSend)
     public void onClick() {
         EventBus.getDefault().post(new MsgFragment14("hello"));
-        btn2navigationAty.setText("已发送");
+        btnSend.setText("已发送");
     }
 
     public void onEvent(String str) {
-        btn2navigationAty.setText("已收到");
+        btnSend.setText("已收到");
     }
 }
