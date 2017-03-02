@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.fragment;
+package com.lecheng.hello.thirdapp.ActivityList.fragment;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,11 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.lecheng.hello.thirdapp.Bean.EventBusMsg.MsgFragment14;
+import com.lecheng.hello.thirdapp.Bean.EventBusMsg.MsgPush;
 import com.lecheng.hello.thirdapp.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import de.greenrobot.event.EventBus;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -73,6 +76,7 @@ public class Fragment4 extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment014_4, container, false);
         ButterKnife.bind(this, view);
+        EventBus.getDefault().register(this);//注册事件监听器
         return view;
     }
 
@@ -94,11 +98,20 @@ public class Fragment4 extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
+        EventBus.getDefault().unregister(this);//注销事件监听器
     }
 
-    @OnClick(R.id.tvBack)
-    public void onClick() {
-        getActivity().finish();
+    @OnClick({R.id.tvBack, R.id.btnSend})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.tvBack:
+                getActivity().finish();
+                break;
+            case R.id.btnSend:
+                EventBus.getDefault().post("hello");
+                tvBack.setTextSize(10);
+                break;
+        }
     }
 
     /**
@@ -114,5 +127,12 @@ public class Fragment4 extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    int i = 0;
+
+    public void onEvent(MsgFragment14 msgFragment14) {
+        tvBack.setTextSize(i + 1);
+        i = i + 1;
     }
 }

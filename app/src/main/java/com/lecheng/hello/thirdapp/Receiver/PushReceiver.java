@@ -3,8 +3,7 @@ package com.lecheng.hello.thirdapp.Receiver;
 import android.content.Context;
 
 import com.baidu.android.pushservice.PushMessageReceiver;
-import com.lecheng.hello.thirdapp.Bean.MsgPush;
-import com.lecheng.hello.thirdapp.Utils.MySharedPreferences;
+import com.lecheng.hello.thirdapp.Bean.EventBusMsg.MsgPush;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
 
 import java.util.List;

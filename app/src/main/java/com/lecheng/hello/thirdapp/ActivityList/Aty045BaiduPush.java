@@ -7,9 +7,8 @@ import android.widget.TextView;
 
 import com.baidu.android.pushservice.PushConstants;
 import com.baidu.android.pushservice.PushManager;
-import com.lecheng.hello.thirdapp.Bean.MsgPush;
+import com.lecheng.hello.thirdapp.Bean.EventBusMsg.MsgPush;
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.MySharedPreferences;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -77,10 +76,4 @@ public class Aty045BaiduPush extends AppCompatActivity {
         PushManager.stopWork(this);
         EventBus.getDefault().unregister(this);//注销事件监听器
     }
-
-   /*
-    *public void onMessage(Context context, String message, String customContentString);//接收透传消息
-    * public static boolean isPushEnabled(Context context);//是否被停止
-    *
-    * */
 }

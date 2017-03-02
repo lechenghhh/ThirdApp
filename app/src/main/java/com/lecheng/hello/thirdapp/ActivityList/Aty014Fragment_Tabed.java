@@ -17,7 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.fragment.FragmentAnothers;
+import com.lecheng.hello.thirdapp.ActivityList.fragment.FragmentAnothers;
 
 public class Aty014Fragment_Tabed extends AppCompatActivity implements ActionBar.TabListener {
 

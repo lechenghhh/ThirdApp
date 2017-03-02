@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.fragment;
+package com.lecheng.hello.thirdapp.ActivityList.fragment;
 
 import android.support.v7.app.AppCompatActivity;
 import android.app.Activity;
@@ -29,7 +29,7 @@ import com.lecheng.hello.thirdapp.R;
  * See the <a href="https://developer.android.com/design/patterns/navigation-drawer.html#Interaction">
  * design guidelines</a> for a complete explanation of the behaviors implemented here.
  */
-public class NavigationDrawerFragment extends Fragment {
+public class FragmentNavi extends Fragment {
 
     /**
      * Remember the position of the selected item.
@@ -60,7 +60,7 @@ public class NavigationDrawerFragment extends Fragment {
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
 
-    public NavigationDrawerFragment() {
+    public FragmentNavi() {
     }
 
     @Override
@@ -92,7 +92,7 @@ public class NavigationDrawerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mDrawerListView = (ListView) inflater.inflate(
-                R.layout.fragment014_navi1, container, false);
+                R.layout.fragment014_navilist, container, false);
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

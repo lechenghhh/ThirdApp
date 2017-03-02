@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.Bean;
+package com.lecheng.hello.thirdapp.Bean.EventBusMsg;
 
 /**
  * Created by 乐城 on 2017/3/2.

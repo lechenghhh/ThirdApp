@@ -1,16 +1,25 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="com.lecheng.hello.thirdapp.fragment.Fragment4">
+    android:layout_margin="@dimen/fab_margin"
+    android:orientation="vertical"
+    tools:context=".ActivityList.fragment.Fragment4">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/tvBack"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/hello_blank_fragment"
-        android:textColor="@color/colorBlue1"
+        android:textColor="@color/colorOrange1"
         android:textSize="20dp" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/btnSend"
+        style="@style/style_btn_red1"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="发送信息给上面的fragment" />
+</LinearLayout>

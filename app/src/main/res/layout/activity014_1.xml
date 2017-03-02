@@ -21,10 +21,10 @@
          the container. -->
     <fragment
         android:id="@+id/navigation_drawer"
-        android:name="com.lecheng.hello.thirdapp.fragment.NavigationDrawerFragment"
+        android:name="com.lecheng.hello.thirdapp.ActivityList.fragment.FragmentNavi"
         android:layout_width="@dimen/navigation_drawer_width"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        tools:layout="@layout/fragment014_navi1" />
+        tools:layout="@layout/fragment014_navilist" />
 
 </android.support.v4.widget.DrawerLayout>

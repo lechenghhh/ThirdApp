@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.fragment;
+package com.lecheng.hello.thirdapp.ActivityList.fragment;
 
 
 import android.os.Bundle;
@@ -18,7 +18,7 @@ public class FragmentAnothers extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View fragmentanothers = inflater.inflate(R.layout.fragment014_1,container,false);
+        View fragmentanothers = inflater.inflate(R.layout.fragment014_3,container,false);
 
         fragmentanothers.findViewById(R.id.fragmentback).setOnClickListener(new View.OnClickListener() {
             @Override
