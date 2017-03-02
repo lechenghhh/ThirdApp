@@ -11,7 +11,7 @@ import com.lecheng.hello.thirdapp.R;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
+/*lecheng 17-2-2 19.38*/
 public class Aty043WeiXinPay extends AppCompatActivity {
 
     @Bind(R.id.tv1)
