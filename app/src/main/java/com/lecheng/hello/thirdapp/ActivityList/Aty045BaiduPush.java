@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import com.baidu.android.pushservice.PushConstants;
 import com.baidu.android.pushservice.PushManager;
+import com.lecheng.hello.thirdapp.Bean.MsgPush;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MySharedPreferences;
 
@@ -66,8 +67,8 @@ public class Aty045BaiduPush extends AppCompatActivity {
             tv.setText("推送已经停止");
     }
 
-    public void onEvent(String s) {
-        tv2.setText(s);
+    public void onEvent(MsgPush msgPush) {
+        tv2.setText(msgPush.msg + "/n" + msgPush.msg2);
     }
 
     @Override

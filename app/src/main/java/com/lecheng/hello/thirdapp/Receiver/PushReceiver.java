@@ -3,6 +3,7 @@ package com.lecheng.hello.thirdapp.Receiver;
 import android.content.Context;
 
 import com.baidu.android.pushservice.PushMessageReceiver;
+import com.lecheng.hello.thirdapp.Bean.MsgPush;
 import com.lecheng.hello.thirdapp.Utils.MySharedPreferences;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
 
@@ -42,9 +43,9 @@ public class PushReceiver extends PushMessageReceiver {
     }
 
     @Override
-    public void onMessage(Context context, String s, String s1) {
-        new MyToast(context, s + "/n" + s1, 3333);
-        EventBus.getDefault().post(s + "/n" + s1);
+    public void onMessage(Context context, String s1, String s2) {
+        new MyToast(context, s1 + "/n" + s2, 3333);
+        EventBus.getDefault().post(new MsgPush(s1, s2));
     }
 
     @Override
