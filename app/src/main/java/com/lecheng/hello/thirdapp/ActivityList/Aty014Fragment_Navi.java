@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 
+import com.lecheng.hello.thirdapp.IMyAidlInterface;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.ActivityList.fragment.FragmentNavi;
 
