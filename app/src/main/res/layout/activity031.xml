@@ -19,16 +19,24 @@
     <Button
         android:id="@+id/aty32_btn1"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
         android:text="启动毛玻璃效果" />
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="示例文字"
+        android:text="以上是
+        利用bitmap算法对背景图片进行模糊处理"
         android:textSize="22dp" />
+
+    <Button
+        android:id="@+id/btnShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="显示模糊背景dialog" />
 
     <ImageView
         android:id="@+id/aty32_iv"
