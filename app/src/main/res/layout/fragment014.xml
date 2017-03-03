@@ -9,7 +9,7 @@
     <Button
         android:id="@+id/btn2anothersFAty"
         style="@style/style_btn_green1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="36dp"
         android:layout_marginTop="@dimen/fab_margin"
         android:text="跳转到另一个fragment" />
@@ -17,7 +17,7 @@
     <Button
         android:id="@+id/btn2tabAty"
         style="@style/style_btn_green1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="36dp"
         android:layout_marginTop="@dimen/fab_margin"
         android:text="启动Tabed界面" />
@@ -25,7 +25,7 @@
     <Button
         android:id="@+id/btn2navigationAty"
         style="@style/style_btn_green1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="36dp"
         android:layout_marginTop="@dimen/fab_margin"
         android:text="启动带有侧边栏的activity" />
