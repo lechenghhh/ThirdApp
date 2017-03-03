@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/aty31_ll"
+    android:id="@+id/ll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_pic"
@@ -10,14 +10,14 @@
     tools:context=".ActivityList.Aty031Blur">
 
     <EditText
-        android:id="@+id/aty32_et"
+        android:id="@+id/et1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="请输入内容："
         android:lines="2" />
 
     <Button
-        android:id="@+id/aty32_btn1"
+        android:id="@+id/btn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
@@ -32,14 +32,14 @@
         android:textSize="22dp" />
 
     <Button
-        android:id="@+id/btnShow"
+        android:id="@+id/btn2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
         android:text="显示模糊背景dialog" />
 
     <ImageView
-        android:id="@+id/aty32_iv"
+        android:id="@+id/iv1"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

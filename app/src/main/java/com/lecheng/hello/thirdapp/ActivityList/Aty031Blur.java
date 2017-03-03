@@ -10,6 +10,8 @@ import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -19,11 +21,22 @@ import android.widget.Toast;
 import com.lecheng.hello.thirdapp.R;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 //16-12-18 20.07
 public class Aty031Blur extends Activity implements View.OnClickListener {
-    private EditText et;
-    private ImageView iv;
-    private LinearLayout ll;
+
+    @Bind(R.id.et1)
+    EditText et1;
+    @Bind(R.id.iv1)
+    ImageView iv1;
+    @Bind(R.id.ll)
+    LinearLayout ll;
+    FragmentManager fragmentManager;
+    FragmentTransaction transaction;
+
     private ImageLoader imageLoader = ImageLoader.getInstance();
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
@@ -31,35 +44,11 @@ public class Aty031Blur extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity031);
-        et = (EditText) findViewById(R.id.aty32_et);
-        iv = (ImageView) findViewById(R.id.aty32_iv);
-        ll = (LinearLayout) findViewById(R.id.aty31_ll);
-        findViewById(R.id.aty32_btn1).setOnClickListener(this);
+        ButterKnife.bind(this);
+
 
     }
 
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
-    @Override
-    public void onClick(View v) {
-        if (v.getId() == R.id.aty32_btn1) {
-            new AlertDialog.Builder(Aty031Blur.this).setTitle(et.getText().toString())//设置对话框标题
-                    .setMessage(getIntent().getStringExtra("blur_content"))//设置显示的内容
-                    .setPositiveButton("关闭整个界面", new DialogInterface.OnClickListener() {//添加确定按钮
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件
-                            finish();
-                        }
-                    }).setNegativeButton("仅关闭窗口", new DialogInterface.OnClickListener() {//添加返回按钮
-                @Override
-                public void onClick(DialogInterface dialog, int which) {//响应事件
-                    Toast.makeText(getApplicationContext(), "关闭了", Toast.LENGTH_SHORT).show();
-                }
-            }).show();//在按键
-
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_pic);
-            ll.setBackground(new BitmapDrawable((fastBlur(zoomImage(bitmap, 30, 30), 2))));
-        }
-    }
 
     //毛玻璃效果，radius越大越明显
     public Bitmap fastBlur(Bitmap sentBitmap, int radius) {
@@ -276,5 +265,44 @@ public class Aty031Blur extends Activity implements View.OnClickListener {
         matrix.postScale(scaleWidth, scaleHeight);
         Bitmap bitmap = Bitmap.createBitmap(bgimage, 0, 0, (int) width, (int) height, matrix, true);
         return bitmap;
+    }
+
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+    @OnClick({R.id.btn, R.id.btn2})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn:
+                new AlertDialog.Builder(Aty031Blur.this).setTitle(et1.getText().toString())//设置对话框标题
+                        .setMessage(getIntent().getStringExtra("blur_content"))//设置显示的内容
+                        .setPositiveButton("关闭整个界面", new DialogInterface.OnClickListener() {//添加确定按钮
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件
+                                finish();
+                            }
+                        }).setNegativeButton("仅关闭窗口", new DialogInterface.OnClickListener() {//添加返回按钮
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {//响应事件
+                        Toast.makeText(getApplicationContext(), "关闭了", Toast.LENGTH_SHORT).show();
+                    }
+                }).show();//在按键
+                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_pic);
+                ll.setBackground(new BitmapDrawable((fastBlur(zoomImage(bitmap, 30, 30), 2))));
+                break;
+            case R.id.btn2:
+                new AlertDialog.Builder(Aty031Blur.this).setTitle(et1.getText().toString())//设置对话框标题
+                        .setMessage(getIntent().getStringExtra("blur_content"))//设置显示的内容
+                        .setPositiveButton("关闭整个界面", new DialogInterface.OnClickListener() {//添加确定按钮
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件
+                                finish();
+                            }
+                        }).setNegativeButton("仅关闭窗口", new DialogInterface.OnClickListener() {//添加返回按钮
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {//响应事件
+                        Toast.makeText(getApplicationContext(), "关闭了", Toast.LENGTH_SHORT).show();
+                    }
+                }).show();//在按键
+                break;
+        }
     }
 }
