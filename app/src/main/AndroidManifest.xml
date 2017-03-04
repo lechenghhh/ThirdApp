@@ -84,7 +84,7 @@
         <activity
             android:name=".ActivityList.Aty007SurfaceView"
             android:label="画板" />
-        <activity android:name=".ActivityList.Aty008Test" />
+        <activity android:name=".ActivityList.Aty008Player" />
         <activity android:name=".ActivityList.Aty009View" />
         <activity android:name=".ActivityList.Aty010ViewPager" />
         <activity android:name=".ActivityList.Aty011HttpAsyncTask" />
@@ -213,11 +213,12 @@
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
-
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/my_widget01_info" />
         </receiver>
+
+        <service android:name=".Service.SerMedia" />
     </application>
 
 </manifest>
