@@ -21,6 +21,12 @@ import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+/*使用说明  ：http://p.codekk.com/detail/Android/tvbarthel/BlurDialogFragment
+* 在 fragment继承这几个类后，在oncreate方法中加入
+*        this.debug(true);
+*        this.setBlurRadius(4);
+*        this.setDownScaleFactor(5.0f);*/
+
 /**
  * Encapsulate the whole behaviour to provide a blur effect on a DialogFragment.
  * <p/>

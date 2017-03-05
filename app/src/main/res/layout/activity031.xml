@@ -21,7 +21,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        android:text="启动毛玻璃效果" />
+        android:text="毛玻璃效果//Dialog" />
 
     <TextView
         android:layout_width="match_parent"
@@ -36,11 +36,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        android:text="显示模糊背景dialog" />
+        android:text="背景模糊的FragmentDialog" />
 
     <ImageView
         android:id="@+id/iv1"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <!--<fragment-->
+        <!--android:name="com.lecheng.hello.thirdapp.ActivityList.fragment.Frag031Blur"-->
+        <!--android:layout_width="20dp"-->
+        <!--android:layout_height="20dp" />-->
 
 </LinearLayout>
