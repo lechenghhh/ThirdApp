@@ -13,7 +13,7 @@ import com.lecheng.hello.thirdapp.R;
 /**
  * Created by Cheng on 2015/7/25.
  */
-public class FragmentAnothers extends Fragment{
+public class Frag014_Anothers extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

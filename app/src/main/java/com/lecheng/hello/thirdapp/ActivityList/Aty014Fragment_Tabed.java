@@ -17,7 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.ActivityList.fragment.FragmentAnothers;
+import com.lecheng.hello.thirdapp.ActivityList.fragment.Frag014_Anothers;
 
 public class Aty014Fragment_Tabed extends AppCompatActivity implements ActionBar.TabListener {
 
@@ -132,7 +132,7 @@ public class Aty014Fragment_Tabed extends AppCompatActivity implements ActionBar
 
             switch (position){
                 case 0:
-                    return new FragmentAnothers();
+                    return new Frag014_Anothers();
             }
 
 

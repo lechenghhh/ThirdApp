@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.Widgets.blurdialogfragment;
+package com.lecheng.hello.mylibrary.blurdialogfragment;
 
 import android.annotation.TargetApi;
 import android.app.DialogFragment;

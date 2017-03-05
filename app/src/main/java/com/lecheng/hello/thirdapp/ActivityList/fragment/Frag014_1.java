@@ -21,13 +21,13 @@ import de.greenrobot.event.EventBus;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class Fragment1 extends Fragment {
+public class Frag014_1 extends Fragment {
 
 
     @Bind(R.id.btnSend)
     Button btnSend;
 
-    public Fragment1() {
+    public Frag014_1() {
     }
 
     @Override
@@ -38,7 +38,7 @@ public class Fragment1 extends Fragment {
             @Override
             public void onClick(View v) {
                 getFragmentManager().beginTransaction().addToBackStack(null)
-                        .add(R.id.fragment, new FragmentAnothers()).commit();
+                        .add(R.id.fragment, new Frag014_Anothers()).commit();
             }
         });
 

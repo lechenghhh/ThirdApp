@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:padding="@dimen/fab_margin"
     android:background="@color/BlackCool"
-    tools:context=".ActivityList.fragment.Fragment1">
+    tools:context=".ActivityList.fragment.Frag014_1">
 
     <Button
         android:id="@+id/btn2anothersFAty"

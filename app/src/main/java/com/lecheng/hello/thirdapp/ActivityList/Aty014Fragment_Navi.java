@@ -13,17 +13,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 
-import com.lecheng.hello.thirdapp.IMyAidlInterface;
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.ActivityList.fragment.FragmentNavi;
+import com.lecheng.hello.thirdapp.ActivityList.fragment.Frag014_Navi;
 
 public class Aty014Fragment_Navi extends AppCompatActivity
-        implements FragmentNavi.NavigationDrawerCallbacks {
+        implements Frag014_Navi.NavigationDrawerCallbacks {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
-    private FragmentNavi mNavigationDrawerFragment;
+    private Frag014_Navi mNavigationDrawerFragment;
 
     /**
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
@@ -35,7 +34,7 @@ public class Aty014Fragment_Navi extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity014_1);
 
-        mNavigationDrawerFragment = (FragmentNavi)
+        mNavigationDrawerFragment = (Frag014_Navi)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
 

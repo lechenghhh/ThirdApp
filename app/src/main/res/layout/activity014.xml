@@ -10,13 +10,13 @@
 
         <fragment
             android:id="@+id/fragment"
-            android:name="com.lecheng.hello.thirdapp.ActivityList.fragment.Fragment1"
+            android:name="com.lecheng.hello.thirdapp.ActivityList.fragment.Frag014_1"
             android:layout_width="match_parent"
             android:layout_height="240dp"
             tools:layout="@layout/fragment014" />
 
         <fragment
-            android:name="com.lecheng.hello.thirdapp.ActivityList.fragment.Fragment4"
+            android:name="com.lecheng.hello.thirdapp.ActivityList.fragment.Frag014_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout="@layout/fragment014_4" />

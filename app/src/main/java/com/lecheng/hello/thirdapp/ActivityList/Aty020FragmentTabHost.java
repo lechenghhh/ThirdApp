@@ -9,8 +9,8 @@ import android.widget.ImageView;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 
-import com.lecheng.hello.thirdapp.ActivityList.fragment.Fragment1;
-import com.lecheng.hello.thirdapp.ActivityList.fragment.FragmentAnothers;
+import com.lecheng.hello.thirdapp.ActivityList.fragment.Frag014_1;
+import com.lecheng.hello.thirdapp.ActivityList.fragment.Frag014_Anothers;
 import com.lecheng.hello.thirdapp.R;
 
 
@@ -31,8 +31,8 @@ public class Aty020FragmentTabHost extends FragmentActivity {
     /**
      * Fragment数组界面
      */
-    private Class mFragmentArray[] = {Fragment1.class, Fragment1.class,
-            FragmentAnothers.class, Fragment1.class, FragmentAnothers.class};
+    private Class mFragmentArray[] = {Frag014_1.class, Frag014_1.class,
+            Frag014_Anothers.class, Frag014_1.class, Frag014_Anothers.class};
     /**
      * 存放图片数组
      */
