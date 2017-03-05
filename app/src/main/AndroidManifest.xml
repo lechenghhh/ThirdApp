@@ -89,6 +89,7 @@
         <activity android:name=".ActivityList.Aty010ViewPager" />
         <activity android:name=".ActivityList.Aty011HttpAsyncTask" />
         <activity android:name=".ActivityList.Aty011HttpAsyncTask_1" />
+        <activity android:name=".ActivityList.Aty011HttpAsyncTask_2" />
         <activity android:name=".ActivityList.Aty012TestFileExplore" />
         <activity android:name=".ActivityList.Aty013JSONResolve" />
 

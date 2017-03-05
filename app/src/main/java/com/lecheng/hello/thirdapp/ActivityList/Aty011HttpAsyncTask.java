@@ -28,7 +28,7 @@ public class Aty011HttpAsyncTask extends AppCompatActivity {
         findViewById(R.id.btnstarthttpclientget).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Aty011HttpAsyncTask.this,Aty011HttpAsyncTask_1.class));
+                startActivity(new Intent(Aty011HttpAsyncTask.this, Aty011HttpAsyncTask_1.class));
             }
         });
 
@@ -38,6 +38,13 @@ public class Aty011HttpAsyncTask extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ReadURL("http://www.baidu.com");
+            }
+        });
+        findViewById(R.id.btnchatrobot).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Aty011HttpAsyncTask.this, Aty011HttpAsyncTask_2.class));
+
             }
         });
     }
@@ -54,9 +61,9 @@ public class Aty011HttpAsyncTask extends AppCompatActivity {
                     InputStreamReader isr = new InputStreamReader(is);
                     BufferedReader br = new BufferedReader(isr);
 
-                    String line ;
+                    String line;
                     StringBuffer b = new StringBuffer();
-                    while ((line=br.readLine())!=null){
+                    while ((line = br.readLine()) != null) {
                         b.append(line);
                     }
                     br.close();
