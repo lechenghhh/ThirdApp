@@ -8,10 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.lecheng.hello.mylibrary.blurdialogfragment.BlurDialogEngine;
 import com.lecheng.hello.thirdapp.R;
+import com.lecheng.hello.thirdapp.Utils.MyToast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -29,8 +31,6 @@ import butterknife.OnClick;
 
 public class Frag031Blur extends DialogFragment {
 
-    @Bind(R.id.tvBack)
-    TextView tvBack;
     /**
      * DialogFragment使用方法：
      * http://blog.csdn.net/lmj623565791/article/details/37815413/
@@ -44,9 +44,8 @@ public class Frag031Blur extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View root = inflater.inflate(R.layout.fragment014_4, null, false);
+        View root = inflater.inflate(R.layout.fragment031, null, false);
         getDialog().requestWindowFeature(Window.FEATURE_NO_TITLE);//去掉标题栏
-        ButterKnife.bind(this, root);
         return root;
     }
 
@@ -76,6 +75,7 @@ public class Frag031Blur extends DialogFragment {
     public void onDestroy() {
         super.onDestroy();
         mBlurEngine.onDestroy();
+        new MyToast(getActivity(), "未完成!", 3333);
     }
 
     @Override
@@ -87,8 +87,4 @@ public class Frag031Blur extends DialogFragment {
         ButterKnife.unbind(this);
     }
 
-    @OnClick(R.id.btnSend)
-    public void onClick() {
-        tvBack.setText("你好，世界！");
-    }
 }

@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/BlackCool"
+    android:orientation="vertical"
+    android:padding="@dimen/fab_margin"
+    tools:context=".ActivityList.fragment.Frag014_4">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tvBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:text="@string/hello_blank_fragment"
+        android:textColor="@color/colorOrange1"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="请输入账号："
+        android:textColor="@color/colorWhite" />
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="请输入密码："
+        android:textColor="@color/colorWhite" />
+
+    <EditText
+        android:id="@+id/etPwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnReturn"
+        style="@style/style_btn_red1"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="登陆" />
+</LinearLayout>
