@@ -69,7 +69,7 @@ public class Aty011HttpAsyncTask_2 extends AppCompatActivity {
 
             @Override
             protected void onPostExecute(String s) {
-                builder.insert(builder.length(), "老王说：" + s + "\n");
+                builder.insert(builder.length(), "隔壁老王说：" + s + "\n");
                 tv.setText(builder.toString());
 
             }
