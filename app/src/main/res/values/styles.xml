@@ -103,6 +103,7 @@
     </style>
 
     <style name="theme_AlertNoActionBarBy" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!--无标题的窗口activity主题-->
         <item name="windowActionBar">false</item>
         <item name="android:windowFrame">@null</item>
         <item name="android:windowIsFloating">true</item>

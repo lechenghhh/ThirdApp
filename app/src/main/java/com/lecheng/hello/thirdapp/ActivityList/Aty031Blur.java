@@ -46,8 +46,6 @@ public class Aty031Blur extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity031);
         ButterKnife.bind(this);
-
-
     }
 
 
