@@ -214,12 +214,15 @@
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
+
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/my_widget01_info" />
         </receiver>
 
         <service android:name=".Service.SerMedia" />
+
+        <activity android:name=".ActivityList.Aty046MsgVerify"></activity>
     </application>
 
 </manifest>
