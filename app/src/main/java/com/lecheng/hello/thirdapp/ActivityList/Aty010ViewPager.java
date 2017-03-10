@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.lecheng.hello.thirdapp.AaMainMenu.MainMenu;
+import com.lecheng.hello.thirdapp.MainMenu;
 import com.lecheng.hello.thirdapp.Adapter.MyVPAdapter;
 import com.lecheng.hello.thirdapp.R;
 

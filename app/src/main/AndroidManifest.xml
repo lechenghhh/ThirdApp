@@ -55,7 +55,7 @@
             android:value="51ee952310e571951a23be9404933fc0" />
 
         <activity
-            android:name=".AaMainMenu.MainMenu"
+            android:name=".MainMenu"
             android:label="@string/app_name"
             android:theme="@style/Theme.AppCompat.Dialog.Alert">
             <intent-filter>

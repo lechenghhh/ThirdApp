@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.AaMainMenu;
+package com.lecheng.hello.thirdapp;
 
 import android.app.ListActivity;
 import android.content.Intent;
@@ -33,7 +33,7 @@ public class MainMenu extends ListActivity {
             "-------------------------------------",
             "Aty041MVP_View", "Aty042ServiceDownLoad", "Aty043WeiXinPay",
             "Aty044AliPay", "Aty045BaiduPush", "Aty046MsgVerify",
-            "Aty047", "Aty048", "Aty049", "Aty050",
+            "Aty047MVC", "Aty048", "Aty049", "Aty050",
             "-------------------------------------",
             "Aty051", "Aty052", "Aty053", "Aty054", "Aty055", "Aty056",
     };
