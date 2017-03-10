@@ -1,83 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/aty047_mvc"
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="@dimen/fab_margin">
+    android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/editText3"
+    <LinearLayout
+        android:id="@+id/aty047_mvc"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="输入城市编码如:101010100(北京)"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/fab_margin">
 
-    <Button
-        android:id="@+id/button2"
-        style="@style/style_btn_green1"
-        android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:text="Button" />
 
-    <TextView
-        android:id="@+id/textView10"
-        style="@style/style_tv_screen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入城市编码如:101010100(北京)"
+            android:inputType="textPersonName" />
 
-    <TextView
-        android:id="@+id/textView11"
-        style="@style/style_tv_screen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/button2"
+            style="@style/style_btn_green1"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="Button" />
 
-    <TextView
-        android:id="@+id/textView12"
-        style="@style/style_tv_screen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textView10"
+            style="@style/style_tv_screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/textView13"
-        style="@style/style_tv_screen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="match_parent"
+            android:src="@drawable/bg_047"
+            android:layout_height="600dp" />
+    </LinearLayout>
+</ScrollView>
 
-    <TextView
-        android:id="@+id/textView14"
-        style="@style/style_tv_screen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/textView15"
-        style="@style/style_tv_screen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/textView16"
-        style="@style/style_tv_screen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/textView17"
-        style="@style/style_tv_screen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/textView18"
-        style="@style/style_tv_screen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/textView19"
-        style="@style/style_tv_screen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-</LinearLayout>
