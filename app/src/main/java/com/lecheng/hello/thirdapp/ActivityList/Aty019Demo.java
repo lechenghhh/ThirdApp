@@ -5,14 +5,8 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
-import android.view.View;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.R;
-
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class Aty019Demo extends AppCompatActivity {
 
@@ -24,7 +18,7 @@ public class Aty019Demo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity019);
+        setContentView(R.layout.aty019);
         StartPd();
 
     }

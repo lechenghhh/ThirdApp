@@ -24,7 +24,7 @@ public class Aty043WeiXinPay extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity043);
+        setContentView(R.layout.aty043);
         ButterKnife.bind(this);
     }
 

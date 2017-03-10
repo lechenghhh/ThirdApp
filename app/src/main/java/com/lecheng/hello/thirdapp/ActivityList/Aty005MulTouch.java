@@ -17,7 +17,7 @@ public class Aty005MulTouch extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity005);
+        setContentView(R.layout.aty005);
 
         iv3= (ImageView) findViewById(R.id.iv3);
 

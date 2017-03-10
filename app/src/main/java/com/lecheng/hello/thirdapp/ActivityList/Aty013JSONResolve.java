@@ -38,7 +38,7 @@ public class Aty013JSONResolve extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity013);
+        setContentView(R.layout.aty013);
         tvjson = (TextView) findViewById(R.id.tvjson);
         tvjson.setText(s);
         tvtem = (TextView) findViewById(R.id.tvtem);

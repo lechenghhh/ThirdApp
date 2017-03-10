@@ -18,7 +18,7 @@ public class Aty044AliPay extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity044_alipay);
+        setContentView(R.layout.aty044_alipay);
         ButterKnife.bind(this);
     }
 

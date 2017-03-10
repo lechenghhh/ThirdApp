@@ -25,7 +25,7 @@ public class Aty015Volley extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity015);
+        setContentView(R.layout.aty015);
         tv = (TextView) findViewById(R.id.volley_tv);
         findViewById(R.id.volley_get).setOnClickListener(new View.OnClickListener() {
             @Override

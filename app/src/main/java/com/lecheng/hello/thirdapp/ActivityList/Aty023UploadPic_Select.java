@@ -59,7 +59,7 @@ public class Aty023UploadPic_Select extends Activity implements OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity023_1);
+        setContentView(R.layout.aty023_1);
         initView();
     }
 

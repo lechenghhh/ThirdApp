@@ -222,7 +222,8 @@
 
         <service android:name=".Service.SerMedia" />
 
-        <activity android:name=".ActivityList.Aty046MsgVerify"></activity>
+        <activity android:name=".ActivityList.Aty046MsgVerify" />
+        <activity android:name=".ActivityList.Aty047MVC"></activity>
     </application>
 
 </manifest>

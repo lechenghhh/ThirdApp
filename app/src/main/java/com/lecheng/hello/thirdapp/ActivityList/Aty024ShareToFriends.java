@@ -13,7 +13,7 @@ public class Aty024ShareToFriends extends FragmentActivity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity024);
+        setContentView(R.layout.aty024);
         findViewById(R.id.activity_main_share_friends_framelayout).setOnClickListener(this);
     }
 

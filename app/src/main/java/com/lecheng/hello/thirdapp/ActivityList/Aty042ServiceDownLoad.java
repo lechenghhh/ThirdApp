@@ -21,7 +21,7 @@ public class Aty042ServiceDownLoad extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity042_test);
+        setContentView(R.layout.aty042_test);
         ButterKnife.bind(this);
 
     }

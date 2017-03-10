@@ -32,7 +32,7 @@ public class Aty045BaiduPush extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity045_baidupush);
+        setContentView(R.layout.aty045_baidupush);
         ButterKnife.bind(this);
         PushManager.startWork(getApplicationContext(),    //百度推送apikey写入
                 PushConstants.LOGIN_TYPE_API_KEY, API_KEY);

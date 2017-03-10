@@ -23,7 +23,7 @@ public class Aty021ButterKnife extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity021);
+        setContentView(R.layout.aty021);
         ButterKnife.bind(this);
 
     }

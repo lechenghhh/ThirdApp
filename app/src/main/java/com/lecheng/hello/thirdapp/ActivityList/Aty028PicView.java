@@ -37,7 +37,7 @@ public class Aty028PicView extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity028);
+        setContentView(R.layout.aty028);
 
         init();
     }

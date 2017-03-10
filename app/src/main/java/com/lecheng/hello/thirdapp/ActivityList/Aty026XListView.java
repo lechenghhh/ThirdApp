@@ -26,7 +26,7 @@ public class Aty026XListView extends AppCompatActivity implements XListView.IXLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity026);
+        setContentView(R.layout.aty026);
         /** 下拉刷新，上拉加载 */
         dlist = new ArrayList<HashMap<String, Object>>();
         mListView = (XListView) findViewById(R.id.techan_xListView);// 你这个listview是在这个layout里面

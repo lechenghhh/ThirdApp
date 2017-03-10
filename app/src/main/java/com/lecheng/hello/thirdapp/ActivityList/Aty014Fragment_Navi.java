@@ -32,7 +32,7 @@ public class Aty014Fragment_Navi extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity014_1);
+        setContentView(R.layout.aty014_1);
 
         mNavigationDrawerFragment = (Frag014_Navi)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);

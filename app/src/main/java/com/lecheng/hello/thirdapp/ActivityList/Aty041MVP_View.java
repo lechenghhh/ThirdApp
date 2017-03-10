@@ -24,7 +24,7 @@ public class Aty041MVP_View extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity041);
+        setContentView(R.layout.aty041);
         ButterKnife.bind(this);
     }
 

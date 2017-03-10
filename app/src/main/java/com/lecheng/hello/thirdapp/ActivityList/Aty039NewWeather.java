@@ -42,7 +42,7 @@ public class Aty039NewWeather extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity039);
+        setContentView(R.layout.aty039);
         tv = (TextView) findViewById(R.id.aty40_tv_city);
         tv1 = (TextView) findViewById(R.id.aty40_tv1);
         tv2 = (TextView) findViewById(R.id.aty40_tv2);

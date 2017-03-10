@@ -46,7 +46,7 @@ public class Aty037Weather extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity037);
+        setContentView(R.layout.aty037);
 
 
         client = new DefaultHttpClient();

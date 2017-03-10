@@ -20,7 +20,7 @@ public class Aty037Weather_City extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity037_1);
+		setContentView(R.layout.aty037_1);
 		citylistview = (ListView) findViewById(R.id.lv2);
 		arraA = new ArrayAdapter<String>(this,
 				android.R.layout.simple_list_item_1, citylistarray);

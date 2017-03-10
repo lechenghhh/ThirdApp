@@ -18,7 +18,7 @@ public class Aty004Animation extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity004);
+        setContentView(R.layout.aty004);
 
         ta = new TranslateAnimation(0,222,0,111);
         ta.setDuration(1000);

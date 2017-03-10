@@ -12,7 +12,7 @@ public class Aty009View extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity009);
+        setContentView(R.layout.aty009);
     }
 
     @Override

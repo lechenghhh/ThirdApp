@@ -18,7 +18,7 @@ public class Aty002ServiceAnother extends AppCompatActivity implements View.OnCl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity002);
+        setContentView(R.layout.aty002);
 
         findViewById(R.id.btn_service_another_bind).setOnClickListener(this);
         findViewById(R.id.btn_service_another_unbind).setOnClickListener(this);

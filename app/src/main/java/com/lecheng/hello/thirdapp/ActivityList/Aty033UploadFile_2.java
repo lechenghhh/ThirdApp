@@ -60,7 +60,7 @@ public class Aty033UploadFile_2 extends Activity implements OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity033_2);
+        setContentView(R.layout.aty033_2);
         init();
     }
 

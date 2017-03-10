@@ -25,7 +25,7 @@ public class Aty003EveryLayout_Frame extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(layout.activity010_1);
+        setContentView(layout.aty010_1);
 
         root = (android.widget.FrameLayout) findViewById(R.id.root);
         initview();

@@ -44,7 +44,7 @@ public class Aty031Blur extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity031);
+        setContentView(R.layout.aty031);
         ButterKnife.bind(this);
     }
 

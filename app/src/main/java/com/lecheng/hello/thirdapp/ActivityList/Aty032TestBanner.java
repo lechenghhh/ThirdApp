@@ -49,7 +49,7 @@ public class Aty032TestBanner extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity032);
+        setContentView(R.layout.aty032);
         ll = (LinearLayout) findViewById(R.id.aty32_ll);
 
         showImgCycle();

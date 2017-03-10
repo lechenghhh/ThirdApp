@@ -17,7 +17,7 @@ public class Aty008Player extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity008);
+        setContentView(R.layout.aty008);
         ButterKnife.bind(this);
     }
 

@@ -5,11 +5,11 @@ import android.os.Bundle;
 
 import com.lecheng.hello.thirdapp.R;
 
-public class Aty014Fragment extends AppCompatActivity {
+public class Aty047MVC extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.aty014);
+        setContentView(R.layout.aty047_mvc);
     }
 }

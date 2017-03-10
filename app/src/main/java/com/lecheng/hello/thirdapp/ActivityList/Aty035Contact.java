@@ -22,7 +22,7 @@ public class Aty035Contact extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity035);
+        setContentView(R.layout.aty035);
         getNumber(this);
         lv = (ListView) findViewById(R.id.lv);
         adapter = new AdptGetNum(lists, this);

@@ -39,7 +39,7 @@ public class Aty014Fragment_Tabed extends AppCompatActivity implements ActionBar
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity014_tabed);
+        setContentView(R.layout.aty014_tabed);
 
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
