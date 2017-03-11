@@ -49,13 +49,8 @@ public class Aty047MVC extends AppCompatActivity implements Aty047MVC_Listener {
         displayWeather(strJson);
     }
 
-    @Override
-    public void onError() {
-
-    }
-
     @OnClick(R.id.button2)
     public void onClick() {
-        weatherModel.getWeather(editText3.getText().toString(), this);
+        weatherModel.getWeather(getApplicationContext(),editText3.getText().toString(), this);
     }
 }

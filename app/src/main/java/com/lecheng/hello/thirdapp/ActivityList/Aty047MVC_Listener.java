@@ -8,5 +8,5 @@ import com.lecheng.hello.thirdapp.Bean.Bean047Weather;
 public interface Aty047MVC_Listener {
     void onSuccess(String strJson);
 
-    void onError();
+//    void onError();
 }
