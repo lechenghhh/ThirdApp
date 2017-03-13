@@ -10,10 +10,7 @@ import com.lecheng.hello.thirdapp.R;
 
 public class Aty047Demo extends AppCompatActivity {
 
-//    @BindView(R.id.pb1)
-//    ProgressBar pb1;
-//    @BindView(R.id.tv1)
-//    TextView tv1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,13 +100,4 @@ public class Aty047Demo extends AppCompatActivity {
     }
 
 
-//    @OnClick({R.id.pb1, R.id.tv1})
-//    public void onClick(View view) {
-//        switch (view.getId()) {
-//            case R.id.pb1:
-//                break;
-//            case R.id.tv1:
-//                break;
-//        }
-//    }
 }

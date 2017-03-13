@@ -12,7 +12,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 /*lecheng 17-2-2 19.38*/
-public class Aty043WeiXinPay extends AppCompatActivity {
+public class Aty043WeiXPay extends AppCompatActivity {
 
     @Bind(R.id.tv1)
     TextView tv1;

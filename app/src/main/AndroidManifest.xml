@@ -53,11 +53,11 @@
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="51ee952310e571951a23be9404933fc0" />
-        <!--android:theme="@style/Theme.AppCompat.Dialog.Alert">-->
+        <!--android:theme="@style/Theme.AppCompat.Light.Dialog.Alert">-->
         <activity
             android:name=".MainMenu"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert">
+            android:theme="@style/Theme.AppCompat.Light.Dialog.MinWidth">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -139,11 +139,11 @@
         <activity
             android:name=".ActivityList.Aty041MVP_View"
             android:label="MVP开发案例" />
-        <activity android:name=".ActivityList.Aty042ServiceDownLoad" />
+        <activity android:name=".ActivityList.Aty042SerDownLoad" />
 
         <service android:name=".Service.Ser042Download" />
 
-        <activity android:name=".ActivityList.Aty043WeiXinPay" />
+        <activity android:name=".ActivityList.Aty043WeiXPay" />
         <activity android:name=".ActivityList.Aty044AliPay" />
         <activity android:name=".ActivityList.Aty045BaiduPush" />
 

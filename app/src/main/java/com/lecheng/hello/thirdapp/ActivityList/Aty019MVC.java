@@ -29,7 +29,6 @@ public class Aty019MVC extends AppCompatActivity implements I047Listener {
     TextView textView10;
     @Bind(R.id.image1)
     ImageView image1;
-    LinearLayout aty047Mvc;
     ImageLoader imageLoader = ImageLoader.getInstance();
     private Http047 weatherModel;
 

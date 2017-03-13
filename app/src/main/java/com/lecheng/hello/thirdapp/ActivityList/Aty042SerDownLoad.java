@@ -13,7 +13,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Aty042ServiceDownLoad extends AppCompatActivity {
+public class Aty042SerDownLoad extends AppCompatActivity {
 
     @Bind(R.id.tv)
     TextView tv;

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="@dimen/fab_margin"
     android:orientation="vertical"
-    tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty042ServiceDownLoad">
+    tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty042SerDownLoad">
 
     <Button
         android:id="@+id/btnDownload"

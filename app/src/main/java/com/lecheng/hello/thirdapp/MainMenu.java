@@ -31,7 +31,7 @@ public class MainMenu extends ListActivity {
             "Aty034Tuner", "Aty035Contact", "Aty036Calculator", "Aty037Weather",
             "Aty038Game2048", "Aty039NewWeather", "Aty040NetNote",
             "-------------------------------------",
-            "Aty041MVP_View", "Aty042ServiceDownLoad", "Aty043WeiXinPay",
+            "Aty041MVP_View", "Aty042SerDownLoad", "Aty043WeiXPay",
             "Aty044AliPay", "Aty045BaiduPush", "Aty046MsgVerify",
             "Aty047Demo", "Aty048", "Aty049", "Aty050",
             "-------------------------------------",
