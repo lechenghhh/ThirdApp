@@ -16,9 +16,9 @@ import com.lecheng.hello.thirdapp.Utils.MyToast;
 import java.util.HashMap;
 import java.util.Map;
 
-
-/* Http047
-* */
+/*
+Http047
+*/
 
 public class Http047 implements I047Model {
 
