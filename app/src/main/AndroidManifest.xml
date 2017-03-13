@@ -53,11 +53,11 @@
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="51ee952310e571951a23be9404933fc0" />
-
+        <!--android:theme="@style/Theme.AppCompat.Dialog.Alert">-->
         <activity
             android:name=".MainMenu"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.Dialog.Alert">
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -106,7 +106,7 @@
         <activity android:name=".ActivityList.Aty016TestListView" />
         <activity android:name=".ActivityList.Aty017TestLvAndCheckBox" />
         <activity android:name=".ActivityList.Aty018MyBrowser" />
-        <activity android:name=".ActivityList.Aty019Demo" />
+        <activity android:name=".ActivityList.Aty019MVC" />
         <activity android:name=".ActivityList.Aty020FragmentTabHost" />
         <activity android:name=".ActivityList.Aty021ButterKnife" />
         <activity android:name=".ActivityList.Aty022UniversalImgLoader" />
@@ -223,7 +223,7 @@
         <service android:name=".Service.SerMedia" />
 
         <activity android:name=".ActivityList.Aty046MsgVerify" />
-        <activity android:name=".ActivityList.Aty047MVC"></activity>
+        <activity android:name=".ActivityList.Aty047Demo" />
     </application>
 
 </manifest>

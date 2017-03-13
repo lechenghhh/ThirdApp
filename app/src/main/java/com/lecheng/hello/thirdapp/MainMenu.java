@@ -21,7 +21,7 @@ public class MainMenu extends ListActivity {
             "Aty011HttpAsyncTask", "Aty012TestFileExplore", "Aty013JSONResolve",
             "Aty014Fragment", "Aty015Volley", "Aty016TestListView",
             "Aty017TestLvAndCheckBox", "Aty018MyBrowser",
-            "Aty019Demo", "Aty020FragmentTabHost",
+            "Aty019MVC", "Aty020FragmentTabHost",
             "-------------------------------------",
             "Aty021ButterKnife", "Aty022UniversalImgLoader", "Aty023UploadPic",
             "Aty024ShareToFriends", "Aty025TestBackTop", "Aty026XListView",
@@ -33,7 +33,7 @@ public class MainMenu extends ListActivity {
             "-------------------------------------",
             "Aty041MVP_View", "Aty042ServiceDownLoad", "Aty043WeiXinPay",
             "Aty044AliPay", "Aty045BaiduPush", "Aty046MsgVerify",
-            "Aty047MVC", "Aty048", "Aty049", "Aty050",
+            "Aty047Demo", "Aty048", "Aty049", "Aty050",
             "-------------------------------------",
             "Aty051", "Aty052", "Aty053", "Aty054", "Aty055", "Aty056",
     };

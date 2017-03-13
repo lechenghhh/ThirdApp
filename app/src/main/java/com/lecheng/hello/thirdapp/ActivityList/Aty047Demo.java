@@ -8,7 +8,7 @@ import android.view.KeyEvent;
 
 import com.lecheng.hello.thirdapp.R;
 
-public class Aty019Demo extends AppCompatActivity {
+public class Aty047Demo extends AppCompatActivity {
 
 //    @BindView(R.id.pb1)
 //    ProgressBar pb1;
@@ -18,7 +18,7 @@ public class Aty019Demo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.aty019);
+        setContentView(R.layout.aty047);
         StartPd();
 
     }

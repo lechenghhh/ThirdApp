@@ -21,7 +21,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Aty047MVC extends AppCompatActivity implements I047Listener {
+public class Aty019MVC extends AppCompatActivity implements I047Listener {
 
     @Bind(R.id.editText3)
     EditText editText3;
@@ -36,7 +36,7 @@ public class Aty047MVC extends AppCompatActivity implements I047Listener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.aty047_mvc);
+        setContentView(R.layout.aty019_mvc);
         ButterKnife.bind(this);
         weatherModel = new Http047();
     }
@@ -64,7 +64,7 @@ public class Aty047MVC extends AppCompatActivity implements I047Listener {
                 map.put("type", "data");
                 map.put("doctype", "json");
                 map.put("version", "1.1");
-                map.put("q", "Chinese");
+                map.put("q", editText3.getText()+"");
                 String url2 = "http://fanyi.youdao.com/openapi.do?";
                 weatherModel.http047Post(getApplicationContext(), url2, map, this);
                 break;
