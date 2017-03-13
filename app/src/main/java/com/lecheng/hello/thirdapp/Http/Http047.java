@@ -16,12 +16,7 @@ import com.lecheng.hello.thirdapp.Utils.MyToast;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Description:从网络获取天气信息接口实现
- * User: xjp
- * Date: 2015/6/3
- * Time: 15:40
- */
+
 /* Http047
 * */
 
@@ -60,7 +55,6 @@ public class Http047 implements I047Model {
                     @Override
                     public void onErrorResponse(VolleyError e) {
                         new MyToast(c, "请求失败:\n" + e, 3000);
-
                     }
                 }) {
             @Override
