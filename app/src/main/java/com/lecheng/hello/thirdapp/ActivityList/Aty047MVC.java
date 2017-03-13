@@ -3,40 +3,42 @@ package com.lecheng.hello.thirdapp.ActivityList;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.lecheng.hello.thirdapp.Http.Http047;
+import com.lecheng.hello.thirdapp.Interface.I047Listener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.download.ImageDownloader;
+
+import java.util.HashMap;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Aty047MVC extends AppCompatActivity implements Aty047MVC_Listener {
+public class Aty047MVC extends AppCompatActivity implements I047Listener {
 
     @Bind(R.id.editText3)
     EditText editText3;
     @Bind(R.id.textView10)
     TextView textView10;
-
-
-    LinearLayout aty047Mvc;
     @Bind(R.id.image1)
     ImageView image1;
+    LinearLayout aty047Mvc;
     ImageLoader imageLoader = ImageLoader.getInstance();
-    private Aty047MVC_ModelImpl weatherModel;
+    private Http047 weatherModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty047_mvc);
         ButterKnife.bind(this);
-        weatherModel = new Aty047MVC_ModelImpl();
+        weatherModel = new Http047();
     }
 
     private void displayWeather(String strJson) {
@@ -49,8 +51,23 @@ public class Aty047MVC extends AppCompatActivity implements Aty047MVC_Listener {
         displayWeather(strJson);
     }
 
-    @OnClick(R.id.button2)
-    public void onClick() {
-        weatherModel.getWeather(getApplicationContext(),editText3.getText().toString(), this);
+    @OnClick({R.id.button2, R.id.button3})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.button2:
+                weatherModel.http047Get(getApplicationContext(), editText3.getText().toString(), this);
+                break;
+            case R.id.button3:
+                HashMap<String, String> map = new HashMap<String, String>();
+                map.put("keyfrom", "951827860");
+                map.put("key", "123087914");
+                map.put("type", "data");
+                map.put("doctype", "json");
+                map.put("version", "1.1");
+                map.put("q", "Chinese");
+                String url2 = "http://fanyi.youdao.com/openapi.do?";
+                weatherModel.http047Post(getApplicationContext(), url2, map, this);
+                break;
+        }
     }
 }

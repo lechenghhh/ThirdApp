@@ -25,7 +25,15 @@
             style="@style/style_btn_green1"
             android:layout_width="match_parent"
             android:layout_height="36dp"
-            android:text="Button" />
+            android:text="GET" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/style_btn_green1"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:text="POST" />
 
         <TextView
             android:id="@+id/textView10"
@@ -36,8 +44,8 @@
         <ImageView
             android:id="@+id/image1"
             android:layout_width="match_parent"
-            android:src="@drawable/bg_047"
-            android:layout_height="600dp" />
+            android:layout_height="600dp"
+            android:src="@drawable/bg_047" />
     </LinearLayout>
 </ScrollView>
 
