@@ -16,12 +16,14 @@ import com.lecheng.hello.thirdapp.Utils.MyToast;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.lecheng.hello.thirdapp.Utils.MyApplication.getHttpQue;
+
 /*
 */
 
 public class Http047 implements I047Model {
 
-    @Override
+    @Override               //Get请求
     public void http047Get(final Context c, String url, final I047Listener listener) {
         StringRequest request = new StringRequest
                 (Request.Method.GET, "http://" + url, new Response.Listener<String>() {
@@ -38,10 +40,10 @@ public class Http047 implements I047Model {
                     }
                 });
         request.setTag("cancelGet");
-        MyApplication.getHttpQue().add(request);
+        getHttpQue().add(request);
     }
 
-    @Override
+    @Override               //Post请求
     public void http047Post(final Context c, String url, final HashMap<String, String> hashMap, final I047Listener listener) {
         StringRequest request2 = new StringRequest
                 (Request.Method.POST, url, new Response.Listener<String>() {
@@ -63,6 +65,11 @@ public class Http047 implements I047Model {
             }
         };
         request2.setTag("cancelPost");
-        MyApplication.getHttpQue().add(request2);
+        getHttpQue().add(request2);
+    }
+
+    @Override               //取消队列
+    public void http047Cancel(String tag) {
+        getHttpQue().cancelAll(tag);
     }
 }
