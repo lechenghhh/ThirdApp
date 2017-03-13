@@ -17,7 +17,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 /*
-Http047
 */
 
 public class Http047 implements I047Model {
@@ -48,8 +47,8 @@ public class Http047 implements I047Model {
                 (Request.Method.POST, url, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String s) {
+                        System.out.println("onResponse-Success: " + s);
                         listener.onSuccess(s);
-                        System.out.println("Aty047-onResponse");
                     }
                 }, new Response.ErrorListener() {
                     @Override
