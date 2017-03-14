@@ -224,7 +224,7 @@
 
         <activity android:name=".ActivityList.Aty046MsgVerify" />
         <activity android:name=".ActivityList.Aty047ProgressDialog" />
-        <activity android:name=".ActivityList.Aty048WebService"></activity>
+        <activity android:name=".ActivityList.Aty048Test"></activity>
     </application>
 
 </manifest>
