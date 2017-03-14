@@ -8,7 +8,7 @@ import android.view.KeyEvent;
 
 import com.lecheng.hello.thirdapp.R;
 
-public class Aty047Demo extends AppCompatActivity {
+public class Aty047ProgressDialog extends AppCompatActivity {
 
 
 
