@@ -16,6 +16,7 @@ import com.lecheng.hello.thirdapp.Http.Http047;
 import com.lecheng.hello.thirdapp.Interface.I047Listener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MyApplication;
+import com.lecheng.hello.thirdapp.Utils.MyToast;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -32,33 +33,26 @@ public class Aty046MsgVerify extends AppCompatActivity implements I047Listener {
     EditText et2;
     @Bind(R.id.tv)
     TextView tv;
-    private Http047 weatherModel;
-
-    private String string = "{\n" +
-            "    \"tel\": {  \n" +
-            "            \"nationcode\": \"86\", //国家码\n" +
-            "            \"phone\": \"13788888888\" //手机号码\n" +
-            "      },\n" +
-            "    \"type\": \"0\", //0:普通短信;1:营销短信（强调：要按需填值，不然会影响到业务的正常使用）\n" +
-            "    \"msg\": \"你的验证码是1234\", //验证码,utf8编码    \n" +
-            "    \"sig\": \"fdba654e05bc0d15796713a1a1a2318c\", //app凭证，具体计算方式见下注\n" +
-            "    \"extend\": \"\", //可选字段，默认没有开通(需要填空)。通道扩展码，\n" +
-            "      //在短信回复场景中，腾讯server会原样返回，开发者可依此区分是哪种类型的回复\n" +
-            "    \"ext\": \"\" //可选字段，不需要就填空。用户的session内容，腾讯server回包中会原样返回\n" +
-            "}";
+    private Http047 http047;
+    private HashMap<String, String> map;
+    private String url = "http://10.0.110.114:8090/Androidpacs/services/AndroidController?wsdl";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty046_msgverify);
         ButterKnife.bind(this);
+        //实例化
+        http047 = new Http047();
+        map = new HashMap<String, String>();
     }
-
 
     @OnClick({R.id.btn, R.id.btn2})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn:
+                map.put("tel", "18606940624");
+                http047.http047Post(this, url, map, this);
                 break;
             case R.id.btn2:
                 break;
@@ -67,6 +61,6 @@ public class Aty046MsgVerify extends AppCompatActivity implements I047Listener {
 
     @Override
     public void onSuccess(String strJson) {
-
+        new MyToast(this, strJson, 3333);
     }
 }

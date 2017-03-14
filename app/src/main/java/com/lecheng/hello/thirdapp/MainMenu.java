@@ -13,6 +13,7 @@ import android.widget.Toast;
 public class MainMenu extends ListActivity {
     //命名规范 前置Atyxxx  如果是实验模块功能请添加Test，如果是借鉴请添加Demo----16.9.6.
     private String classes[] = {
+            "https://github.com/lechenghhh/ThirdApp",
             "-------------Hello World !-------------",
             "Aty001Service", "Aty002ServiceAnother", "Aty003EveryLayout",
             "Aty004Animation", "Aty005MulTouch", "Aty006SQLite", "Aty007SurfaceView",
