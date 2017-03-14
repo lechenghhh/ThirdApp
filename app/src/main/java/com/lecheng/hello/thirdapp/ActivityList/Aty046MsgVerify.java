@@ -51,7 +51,7 @@ public class Aty046MsgVerify extends AppCompatActivity implements I047Listener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn:
-                map.put("tel", "18606940624");
+                map.put("tel", et.getText() + "");
                 http047.http047Post(this, url, map, this);
                 break;
             case R.id.btn2:
