@@ -13,7 +13,7 @@
         android:contentDescription="好玩"
         android:gravity="center"
         android:text="真好玩2"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorWhite1"
         android:textSize="24dp"
         android:textStyle="bold|italic" />
 

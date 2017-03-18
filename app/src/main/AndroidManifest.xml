@@ -224,7 +224,10 @@
 
         <activity android:name=".ActivityList.Aty046MsgVerify" />
         <activity android:name=".ActivityList.Aty047ProgressDialog" />
-        <activity android:name=".ActivityList.Aty048Test"></activity>
+        <activity android:name=".ActivityList.Aty048Test" />
+        <activity
+            android:name=".ActivityList.Aty049MetroUI"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
     </application>
 
 </manifest>

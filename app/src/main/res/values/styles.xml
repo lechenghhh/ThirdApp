@@ -52,7 +52,7 @@
         <item name="android:paddingRight">@dimen/fab_margin</item>
         <item name="android:paddingLeft">@dimen/fab_margin</item>
         <!--<item name="android:layout_weight">1</item>-->
-        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColor">@color/colorWhite1</item>
     </style>
 
     <style name="style_btn_green1">
@@ -61,7 +61,7 @@
         <item name="android:paddingRight">@dimen/fab_margin</item>
         <item name="android:paddingLeft">@dimen/fab_margin</item>
         <!--<item name="android:layout_weight">1</item>-->
-        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColor">@color/colorWhite1</item>
     </style>
 
     <style name="style_btn_red1">
@@ -70,7 +70,7 @@
         <item name="android:paddingRight">@dimen/fab_margin</item>
         <item name="android:paddingLeft">@dimen/fab_margin</item>
         <!--<item name="android:layout_weight">1</item>-->
-        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColor">@color/colorWhite1</item>
     </style>
 
     <style name="style_ll_vertical">
@@ -78,7 +78,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_marginTop">@dimen/fab_margin</item>
-        <item name="android:background">@color/colorWhite</item>
+        <item name="android:background">@color/colorWhite1</item>
         <item name="android:orientation">vertical</item>
         <item name="android:elevation" tools:targetApi="lollipop">2dp</item>
 
