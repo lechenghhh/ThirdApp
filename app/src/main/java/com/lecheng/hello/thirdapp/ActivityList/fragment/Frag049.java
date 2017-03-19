@@ -90,7 +90,7 @@ public class Frag049 extends Fragment implements I047Listener {
 
     @Override
     public void onSuccess(final String strJson) {
-        new MyToast(getActivity(), "数据加载成功", 3333);
+        new MyToast(getActivity(), type + "数据加载成功,page=" + page, 3333);
         final Bean049 bean049 = GsonUtil.GsonToBean(strJson, Bean049.class);
 //        lv1.setAdapter(new Adpt049List(getActivity(), bean049));
         lv1.setAdapter(new CommonAdapter<Bean049.ListBean>(getActivity(), bean049.getList(), R.layout.cell049_metro) {

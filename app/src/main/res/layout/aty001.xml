@@ -3,8 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
-    tools:context="com.lecheng.hello.thirdapp.ActivityService1">
+    android:padding="20dp">
 
     <EditText
         android:id="@+id/et1"

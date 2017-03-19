@@ -10,16 +10,16 @@
     <Button
         android:id="@+id/btn_service_another_bind"
         style="@style/style_btn_blue1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
         android:layout_marginTop="@dimen/fab_margin"
         android:text="绑定MyService" />
 
     <Button
         android:id="@+id/btn_service_another_unbind"
         style="@style/style_btn_blue1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
         android:layout_marginTop="@dimen/fab_margin"
         android:text="解除绑定MyService" />
 
@@ -27,15 +27,16 @@
         android:id="@+id/btn_service_another_send"
         style="@style/style_btn_green1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:layout_marginTop="@dimen/fab_margin"
         android:text="发送消息给service并传给Aty1" />
 
     <Button
         android:id="@+id/btn_service_another_intent"
         style="@style/style_btn_blue1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+
         android:layout_marginTop="@dimen/fab_margin"
         android:text="跳转到主菜单并且后台" />
 </LinearLayout>
