@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.lecheng.hello.thirdapp.Adapter.ImgCycViewPagerAdapter;
+import com.lecheng.hello.thirdapp.Adapter.AdptImgCycVP;
 import com.lecheng.hello.thirdapp.R;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -75,7 +75,7 @@ public class Aty032TestBanner extends AppCompatActivity {
         //标题显示
 //        title = (TextView) findViewById(R.id.test8_title);
 //        title.setText(titles[0]);
-        mVPlunbotu.setAdapter(new ImgCycViewPagerAdapter(getApplicationContext(), lbtImages));
+        mVPlunbotu.setAdapter(new AdptImgCycVP(getApplicationContext(), lbtImages));
         mVPlunbotu.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {

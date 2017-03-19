@@ -11,14 +11,14 @@ import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.R;
 
-public class Adapter16 extends BaseAdapter {
+public class Adpt016 extends BaseAdapter {
     private Context context;
     private int i, count = 1;
     private LinearLayout ly;
     private TextView tv;
     private EditText et;
 
-    public Adapter16(Context context, int i) {
+    public Adpt016(Context context, int i) {
         this.context = context;
         this.i = i;
     }

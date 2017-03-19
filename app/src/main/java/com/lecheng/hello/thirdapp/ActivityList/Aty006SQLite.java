@@ -68,6 +68,7 @@ public class Aty006SQLite extends ListActivity {
             syncListView();
         }
     };
+
     private void syncListView(){
         Cursor c = dbread.query("user",null,null,null,null,null,null);
         adapter.changeCursor(c);

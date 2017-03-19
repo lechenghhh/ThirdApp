@@ -13,11 +13,11 @@ import java.util.List;
  *
  * @author liuyazhuang
  */
-public class ImgCycViewPagerAdapter extends PagerAdapter {
+public class AdptImgCycVP extends PagerAdapter {
     List<ImageView> images;
     Context c;
 
-    public ImgCycViewPagerAdapter(Context c, List<ImageView> images) {
+    public AdptImgCycVP(Context c, List<ImageView> images) {
         this.c = c;
         this.images = images;
     }

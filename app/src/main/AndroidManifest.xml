@@ -105,7 +105,10 @@
         <activity android:name=".ActivityList.Aty015Volley" />
         <activity android:name=".ActivityList.Aty016TestListView" />
         <activity android:name=".ActivityList.Aty017TestLvAndCheckBox" />
-        <activity android:name=".ActivityList.Aty018MyBrowser" />
+        <activity
+            android:name=".ActivityList.Aty018MyBrowser"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
         <activity android:name=".ActivityList.Aty019MVC" />
         <activity android:name=".ActivityList.Aty020FragmentTabHost" />
         <activity android:name=".ActivityList.Aty021ButterKnife" />

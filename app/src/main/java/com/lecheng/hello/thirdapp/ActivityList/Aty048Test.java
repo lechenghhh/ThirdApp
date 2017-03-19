@@ -1,19 +1,19 @@
 package com.lecheng.hello.thirdapp.ActivityList;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.MyToast;
-
 
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+import static android.R.attr.duration;
 
 public class Aty048Test extends AppCompatActivity {
 
@@ -25,7 +25,7 @@ public class Aty048Test extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.aty048_webservice);
+        setContentView(R.layout.aty048);
         ButterKnife.bind(this);
     }
 
@@ -33,10 +33,12 @@ public class Aty048Test extends AppCompatActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnSend:
-
                 break;
             case R.id.btnCheck:
                 break;
         }
     }
+
+
+
 }

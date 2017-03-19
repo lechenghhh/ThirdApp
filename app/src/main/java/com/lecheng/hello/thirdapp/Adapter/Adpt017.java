@@ -15,7 +15,7 @@ import java.util.HashMap;
 /**
  * Created by Cheng on 2016/3/19.
  */
-public class Adapter17 extends BaseAdapter{
+public class Adpt017 extends BaseAdapter{
     private Context context;
     private String[] beans;
 
@@ -28,7 +28,7 @@ public class Adapter17 extends BaseAdapter{
         CheckBox cb;
     }
 
-    public Adapter17(Context context, String[] beans) {
+    public Adpt017(Context context, String[] beans) {
         this.beans = beans;
         this.context = context;
         isSelected = new HashMap<Integer, Boolean>();
@@ -104,6 +104,6 @@ public class Adapter17 extends BaseAdapter{
     }
 
     public static void setIsSelected(HashMap<Integer, Boolean> isSelected) {
-        Adapter17.isSelected = isSelected;
+        Adpt017.isSelected = isSelected;
     }
 }

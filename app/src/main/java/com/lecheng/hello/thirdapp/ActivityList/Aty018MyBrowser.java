@@ -2,6 +2,7 @@ package com.lecheng.hello.thirdapp.ActivityList;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.webkit.WebViewClient;
 import android.widget.EditText;
 
 import com.lecheng.hello.thirdapp.R;
+import com.lecheng.hello.thirdapp.Utils.KeyBoardUtils;
 
 public class Aty018MyBrowser extends Activity implements OnClickListener {
     private WebView webView;
@@ -32,8 +34,13 @@ public class Aty018MyBrowser extends Activity implements OnClickListener {
 
         setProgressBarVisibility(true);
         urlBox = (EditText) findViewById(R.id.house_et_url);
-//		Intent ig = this.getIntent();
-		urlBox.setText("http://fanyi.baidu.com/?aldtype=16047#en/zh/");
+
+        Intent ig = this.getIntent();
+        if (ig.getStringExtra("url") == "")
+            urlBox.setText("http://fanyi.baidu.com/?aldtype=16047#en/zh/");
+        else
+            urlBox.setText(ig.getStringExtra("url"));
+        KeyBoardUtils.closeKeybord(urlBox, this);
 
         webView = (WebView) findViewById(R.id.house_webview);
 

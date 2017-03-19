@@ -9,13 +9,13 @@
     tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty048Test">
 
     <EditText
+        android:id="@+id/etPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="18606940624"
         android:ems="10"
-        android:id="@+id/etPhone"
-        android:hint="手机号码" />
+        android:hint="手机号码"
+        android:inputType="textPersonName"
+        android:text="" />
 
     <Button
         android:text="btnSend"

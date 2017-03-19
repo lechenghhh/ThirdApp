@@ -1,57 +1,59 @@
 package com.lecheng.hello.thirdapp.ActivityList;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.ActionBarActivity;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
+import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.R;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+/*              view移动动画
+*/
 
 public class Aty004Animation extends ActionBarActivity {
 
-
-    private TranslateAnimation ta;
+    @Bind(R.id.textView3)
+    TextView textView3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty004);
-
-        ta = new TranslateAnimation(0,222,0,111);
-        ta.setDuration(1000);
-
-        findViewById(R.id.btnAnimMe).setOnClickListener(new View.OnClickListener() {
+        ButterKnife.bind(this);
+        findViewById(R.id.btnAnimMe3).setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                view.startAnimation(ta);
-
+            public boolean onTouch(View v, MotionEvent event) {
+                final ScaleAnimation sa = new ScaleAnimation(0.98f, 1.0f, 0.98f, 1f, 1, 0.5f, 1, 0.5f);
+                sa.setDuration(100);
+                v.startAnimation(sa);
+                return false;                   //true会消耗掉这个事件
             }
         });
-
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_animation4, menu);
-        return true;
-    }
+    @OnClick({R.id.btnAnimMe, R.id.btnAnimMe2, R.id.btnAnimMe3})
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btnAnimMe:
+                final TranslateAnimation ta = new TranslateAnimation(0, 222, 0, 111);
+                ta.setDuration(1000);
+                v.startAnimation(ta);
+                break;
+            case R.id.btnAnimMe2:
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+                break;
+            case R.id.btnAnimMe3:
+//                final TranslateAnimation ta2 = new TranslateAnimation(2, 2, 2, 2);
+//                ta2.setDuration(10);
+//                v.startAnimation(ta2);
+                break;
         }
-
-        return super.onOptionsItemSelected(item);
     }
 }
