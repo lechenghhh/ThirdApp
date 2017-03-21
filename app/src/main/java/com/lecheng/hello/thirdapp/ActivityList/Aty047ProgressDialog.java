@@ -1,21 +1,33 @@
 package com.lecheng.hello.thirdapp.ActivityList;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.R;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class Aty047ProgressDialog extends AppCompatActivity {
 
 
+    @Bind(R.id.pb1)
+    ProgressBar pb1;
+    @Bind(R.id.tv1)
+    TextView tv1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty047);
+        ButterKnife.bind(this);
         StartPd();
 
     }
@@ -100,4 +112,21 @@ public class Aty047ProgressDialog extends AppCompatActivity {
     }
 
 
+    @OnClick(R.id.btn1)
+    public void onClick() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                }).show();
+//        AlertDialog alert = builder.create();
+    }
 }

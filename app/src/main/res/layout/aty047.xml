@@ -21,4 +21,11 @@
         android:gravity="center"
         android:text="请稍等..." />
 
+    <Button
+        android:layout_margin="36dp"
+        android:id="@+id/btn1"
+        style="@style/style_btn_blue1"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:text="启动一个Dialog" />
 </LinearLayout>
