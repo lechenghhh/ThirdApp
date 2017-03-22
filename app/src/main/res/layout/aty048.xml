@@ -6,34 +6,33 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/fab_margin"
-    tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty048Test">
+    tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty048TimePiker">
 
     <EditText
         android:id="@+id/etPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="手机号码"
+        android:hint=""
         android:inputType="textPersonName"
         android:text="" />
 
     <Button
-        android:text="btnSend"
+        android:id="@+id/btnSend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnSend" />
+        android:text="btnSend" />
 
-    <EditText
+    <TextView
+        android:hint="日期"
+        android:id="@+id/etDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/etCode"
-        android:hint="验证码" />
+        android:gravity="center" />
 
     <Button
-        android:text="btnCheck"
+        android:id="@+id/btnDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnCheck" />
+        android:text="Date" />
 </LinearLayout>

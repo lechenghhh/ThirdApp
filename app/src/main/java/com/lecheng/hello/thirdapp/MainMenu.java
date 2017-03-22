@@ -34,7 +34,7 @@ public class MainMenu extends ListActivity {
             "-------------------------------------",
             "Aty041MVP_View", "Aty042SerDownLoad", "Aty043WeiXPay",
             "Aty044AliPay", "Aty045BaiduPush", "Aty046MsgVerify",
-            "Aty047ProgressDialog", "Aty048Test", "Aty049MetroUI", "Aty050",
+            "Aty047ProgressDialog", "Aty048TimePiker", "Aty049MetroUI", "Aty050",
             "-------------------------------------",
             "Aty051", "Aty052", "Aty053", "Aty054", "Aty055", "Aty056",
     };
@@ -49,7 +49,7 @@ public class MainMenu extends ListActivity {
         setListAdapter(new ArrayAdapter<String>
                 (MainMenu.this, android.R.layout.simple_list_item_1, classes));
         sa = new ScaleAnimation(0, 1, 0, 1, 0, 1);
-        sa.setDuration(1000);
+        sa.setDuration(300);
         lac = new LayoutAnimationController(sa, 0.2f);
         getListView().setLayoutAnimation(lac);
     }

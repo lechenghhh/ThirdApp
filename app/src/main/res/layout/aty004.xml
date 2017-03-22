@@ -2,33 +2,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/shape_blue1"
+    android:gravity="center"
     android:orientation="vertical"
     android:padding="@dimen/fab_margin"
     tools:context=".ActivityList.Aty004Animation">
 
     <TextView
-        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
+
+    <View
+        android:id="@+id/vView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/select_btn_add" />
 
     <Button
         android:id="@+id/btnAnimMe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="透明动画按钮" />
+        android:layout_marginTop="24dp"
+        android:text="平移动画" />
 
     <Button
         android:id="@+id/btnAnimMe2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="位移动画" />
+        android:text="隐藏动画" />
 
     <Button
         android:id="@+id/btnAnimMe3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView3"
+        android:text="显示动画" />
+
+    <Button
+        android:id="@+id/btnAnimMe4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
         android:text="缩放动画" />
+
+    <Button
+        android:id="@+id/btnAnimMe5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:text="动画5" />
+
+    <Button
+        android:id="@+id/btnAnimMe6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:text="动画6" />
 
 </LinearLayout>
