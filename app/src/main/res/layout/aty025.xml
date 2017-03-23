@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_margin="@dimen/fab_margin"
+    android:orientation="vertical"
     tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty025TestBackTop">
 
     <com.lecheng.hello.thirdapp.Widgets.BackTopScrollView
@@ -27,6 +28,7 @@
                 android:textSize="14dp" />
 
             <Button
+                android:id="@+id/btnHello"
                 style="@style/style_btn_blue1"
                 android:layout_width="wrap_content"
                 android:layout_height="1600dp"
@@ -71,4 +73,5 @@
         android:layout_marginBottom="28dp"
         android:layout_marginRight="28dp"
         android:background="@drawable/ic_round" />
+
 </FrameLayout>

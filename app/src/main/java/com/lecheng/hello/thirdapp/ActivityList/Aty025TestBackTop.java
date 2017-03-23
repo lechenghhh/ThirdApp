@@ -21,6 +21,7 @@ public class Aty025TestBackTop extends AppCompatActivity implements View.OnClick
         scrollView = (BackTopScrollView) findViewById(R.id.sv25);
         btn = findViewById(R.id.btn25_v);
         scrollView.setImgeViewOnClickGoToFirst(btn);
+        findViewById(R.id.btnHello).setOnClickListener(this);
 //        btn.setOnClickListener(this);
 //        scrollView.setOnTouchListener(new View.OnTouchListener() {
 //            @Override
@@ -82,6 +83,8 @@ public class Aty025TestBackTop extends AppCompatActivity implements View.OnClick
 //                Toast.makeText(this, "返回顶部", Toast.LENGTH_SHORT).show();
 //                hideBackTopBtn(btn, 2);
                 moveY = 0;
+                break;
+            case R.id.btnHello:
                 break;
         }
     }

@@ -12,14 +12,17 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.lecheng.hello.thirdapp.ActivityList.fragment.Frag031Blur;
 import com.lecheng.hello.thirdapp.R;
+import com.lecheng.hello.thirdapp.Utils.ScreenUtils;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import butterknife.Bind;
@@ -37,6 +40,12 @@ public class Aty031Blur extends Activity implements View.OnClickListener {
     LinearLayout ll;
     FragmentManager fragmentManager;
     FragmentTransaction transaction;
+    @Bind(R.id.tvH)
+    TextView tvH;
+    @Bind(R.id.tvW)
+    TextView tvW;
+    @Bind(R.id.v1)
+    View v1;
 
     private ImageLoader imageLoader = ImageLoader.getInstance();
 
@@ -46,8 +55,16 @@ public class Aty031Blur extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty031);
         ButterKnife.bind(this);
-    }
+        tvH.setText(ScreenUtils.getScreenHeight(this) + "");
+        tvW.setText(ScreenUtils.getScreenWidth(this) + "");
+        LinearLayout.LayoutParams linearParams =
+                (LinearLayout.LayoutParams) v1.getLayoutParams(); //取控件textView当前的布局参数
+        linearParams.height = 220;// 控件的高强制设成20
 
+        linearParams.width = 400;// 控件的宽强制设成30
+
+        v1.setLayoutParams(linearParams); //使设置好的布局参数应用到控件
+    }
 
     //毛玻璃效果，radius越大越明显
     public Bitmap fastBlur(Bitmap sentBitmap, int radius) {

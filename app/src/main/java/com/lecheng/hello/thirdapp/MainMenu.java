@@ -41,7 +41,6 @@ public class MainMenu extends ListActivity {
 
     private LayoutAnimationController lac;
     private ScaleAnimation sa;                  //动画
-    private long lct = 0;                       //后退事件处理
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +56,6 @@ public class MainMenu extends ListActivity {
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-
         try {
             Class ourClass = Class.forName("com.lecheng.hello.thirdapp.ActivityList." + classes[position]);
             Intent ourIntent = new Intent(MainMenu.this, ourClass);
@@ -66,6 +64,7 @@ public class MainMenu extends ListActivity {
             Toast.makeText(MainMenu.this, "跳转失败\n" + e, Toast.LENGTH_SHORT).show();
         }
     }
+    private long lct = 0;                       //后退事件处理
 
     @Override
     public void onBackPressed() {

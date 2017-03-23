@@ -41,11 +41,31 @@
     <ImageView
         android:id="@+id/iv1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="20dp" />
 
+    <TextView
+        android:id="@+id/tvH"
+        style="@style/style_tv_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="屏幕高度" />
+
+    <TextView
+        android:id="@+id/tvW"
+        style="@style/style_tv_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="屏幕宽度" />
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="400dp"
+        android:layout_height="10dp"
+        android:layout_margin="@dimen/fab_margin"
+        android:background="@color/colorOrange1" />
     <!--<fragment-->
-        <!--android:name="com.lecheng.hello.thirdapp.ActivityList.fragment.Frag031Blur"-->
-        <!--android:layout_width="20dp"-->
-        <!--android:layout_height="20dp" />-->
+    <!--android:name="com.lecheng.hello.thirdapp.ActivityList.fragment.Frag031Blur"-->
+    <!--android:layout_width="20dp"-->
+    <!--android:layout_height="20dp" />-->
 
 </LinearLayout>
