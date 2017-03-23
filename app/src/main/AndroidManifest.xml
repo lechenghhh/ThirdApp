@@ -231,6 +231,7 @@
         <activity
             android:name=".ActivityList.Aty049MetroUI"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".ActivityList.Aty050CrashTest"></activity>
     </application>
 
 </manifest>

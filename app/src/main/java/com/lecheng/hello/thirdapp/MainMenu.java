@@ -34,7 +34,7 @@ public class MainMenu extends ListActivity {
             "-------------------------------------",
             "Aty041MVP_View", "Aty042SerDownLoad", "Aty043WeiXPay",
             "Aty044AliPay", "Aty045BaiduPush", "Aty046MsgVerify",
-            "Aty047ProgressDialog", "Aty048TimePiker", "Aty049MetroUI", "Aty050",
+            "Aty047ProgressDialog", "Aty048TimePiker", "Aty049MetroUI", "Aty050CrashTest",
             "-------------------------------------",
             "Aty051", "Aty052", "Aty053", "Aty054", "Aty055", "Aty056",
     };
