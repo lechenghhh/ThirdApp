@@ -14,7 +14,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.lecheng.hello.thirdapp.Adapter.Common.CommonAdapter;
+import com.lecheng.hello.thirdapp.Adapter.Common.UnityAdpt;
 import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
 import com.lecheng.hello.thirdapp.Bean.Aty040.BeanList;
 import com.lecheng.hello.thirdapp.R;
@@ -170,7 +170,7 @@ public class Aty040NetNote extends AppCompatActivity {
         String sChange = "{\"data\":" + s.substring(i, s.length() - 1) + "}";
         System.out.println("修改后的Json：" + sChange);
         final BeanList beanList = GsonUtil.GsonToBean(sChange, BeanList.class);
-        lvNoteList.setAdapter(new CommonAdapter<BeanList.DataBean>(Aty040NetNote.this, beanList.getData(), R.layout.cell006_sqlite) {
+        lvNoteList.setAdapter(new UnityAdpt<BeanList.DataBean>(Aty040NetNote.this, beanList.getData(), R.layout.cell006_sqlite) {
             @Override
             public void convert(ViewHolder helper, BeanList.DataBean item) {
                 helper.setText(R.id.textView4, item.getTitle());

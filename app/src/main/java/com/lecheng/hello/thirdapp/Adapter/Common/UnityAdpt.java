@@ -8,13 +8,13 @@ import android.widget.BaseAdapter;
 
 import java.util.List;
 
-public abstract class CommonAdapter<T> extends BaseAdapter {
+public abstract class UnityAdpt<T> extends BaseAdapter {
     protected LayoutInflater mInflater;
     protected Context mContext;
     protected List<T> mDatas;
     protected final int mItemLayoutId;
 
-    public CommonAdapter(Context context, List<T> mDatas, int itemLayoutId) {
+    public UnityAdpt(Context context, List<T> mDatas, int itemLayoutId) {
         this.mContext = context;
         this.mInflater = LayoutInflater.from(mContext);
         this.mDatas = mDatas;

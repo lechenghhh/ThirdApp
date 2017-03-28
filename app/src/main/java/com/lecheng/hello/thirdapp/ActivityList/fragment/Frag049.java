@@ -13,8 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.ActivityList.Aty018MyBrowser;
-import com.lecheng.hello.thirdapp.Adapter.Adpt049List;
-import com.lecheng.hello.thirdapp.Adapter.Common.CommonAdapter;
+import com.lecheng.hello.thirdapp.Adapter.Common.UnityAdpt;
 import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
 import com.lecheng.hello.thirdapp.Bean.Bean049;
 import com.lecheng.hello.thirdapp.Http.Http047;
@@ -93,7 +92,7 @@ public class Frag049 extends Fragment implements I047Listener {
         new MyToast(getActivity(), type + "数据加载成功,page=" + page, 3333);
         final Bean049 bean049 = GsonUtil.GsonToBean(strJson, Bean049.class);
 //        lv1.setAdapter(new Adpt049List(getActivity(), bean049));
-        lv1.setAdapter(new CommonAdapter<Bean049.ListBean>(getActivity(), bean049.getList(), R.layout.cell049_metro) {
+        lv1.setAdapter(new UnityAdpt<Bean049.ListBean>(getActivity(), bean049.getList(), R.layout.cell049_metro) {
             @Override
             public void convert(ViewHolder helper, Bean049.ListBean item) {
                 helper.setText(R.id.tv1, item.getTitle());
