@@ -36,7 +36,7 @@ public class MainMenu extends ListActivity {
             "Aty044AliPay", "Aty045BaiduPush", "Aty046MsgVerify",
             "Aty047ProgressDialog", "Aty048TimePiker", "Aty049MetroUI", "Aty050CrashTest",
             "-------------------------------------",
-            "Aty051", "Aty052", "Aty053", "Aty054", "Aty055", "Aty056",
+            "Aty051PopWindow", "Aty052", "Aty053", "Aty054", "Aty055", "Aty056",
     };
 
     private LayoutAnimationController lac;

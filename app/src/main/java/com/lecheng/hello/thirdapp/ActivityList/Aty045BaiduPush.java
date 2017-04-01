@@ -28,7 +28,6 @@ public class Aty045BaiduPush extends AppCompatActivity {
     @Bind(R.id.tv2)
     TextView tv2;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
