@@ -12,6 +12,7 @@
         style="@style/style_btn_blue1"
         android:layout_width="match_parent"
         android:layout_height="36dp"
+        android:text="fab"
         android:layout_marginTop="@dimen/fab_margin" />
 
     <Button
@@ -39,7 +40,7 @@
 
     <View
         android:id="@+id/v1"
-        android:layout_width="32dp"
+        android:layout_width="64dp"
         android:layout_height="32dp"
         android:layout_margin="@dimen/fab_margin"
         android:background="@color/colorPurple1" />

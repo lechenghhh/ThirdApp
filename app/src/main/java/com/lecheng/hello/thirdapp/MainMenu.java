@@ -36,11 +36,11 @@ public class MainMenu extends ListActivity {
             "Aty044AliPay", "Aty045BaiduPush", "Aty046MsgVerify",
             "Aty047ProgressDialog", "Aty048TimePiker", "Aty049MetroUI", "Aty050CrashTest",
             "-------------------------------------",
-            "Aty051PopWindow", "Aty052", "Aty053", "Aty054", "Aty055", "Aty056",
+            "Aty051PopWindow", "Aty052CardView", "Aty053", "Aty054", "Aty055", "Aty056",
     };
 
     private LayoutAnimationController lac;
-    private ScaleAnimation sa;                  //动画
+    private ScaleAnimation sa;        //动画
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
