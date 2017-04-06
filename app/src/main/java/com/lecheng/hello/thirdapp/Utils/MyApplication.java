@@ -36,8 +36,8 @@ public class MyApplication extends Application {
 
     private void init() {
 
-        CrashHandler crashHandler = CrashHandler.getInstance();
-        crashHandler.init(getApplicationContext());//异常捕获类单例
+//        CrashHandler crashHandler = CrashHandler.getInstance();
+//        crashHandler.init(getApplicationContext());//异常捕获类单例
 
         que = Volley.newRequestQueue(getApplicationContext());
 

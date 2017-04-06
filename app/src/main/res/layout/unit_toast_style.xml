@@ -1,25 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/shape_toast"
     android:gravity="center"
-    android:orientation="vertical"
-    android:padding="10dp">
+    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/ivIcon"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="@dimen/fab_margin"
-        android:src="@drawable/ic_add" />
+    <!--<ImageView-->
+    <!--android:id="@+id/ivIcon"-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:layout_marginBottom="@dimen/fab_margin"-->
+    <!--android:src="@drawable/ic_add" />-->
 
-    <TextView
-        android:id="@+id/tvMsg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorWhite"
-        android:textSize="15dp" />
+    <!--<TextView-->
+    <!--android:id="@+id/tvMsg"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="15dp" />-->
     <!-- android:shadowColor="#bbdcdcdc"
         android:shadowRadius="2.75"-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:stateListAnimator="@animator/cardview_touch_raise"
+        app:cardBackgroundColor="@color/colorGreen2"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp">
+
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:textColor="@color/colorWhite" />
+    </android.support.v7.widget.CardView>
 </LinearLayout>
