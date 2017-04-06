@@ -36,7 +36,6 @@ public class Aty052CardView extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty052);
         ButterKnife.bind(this);
-
         seek1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -48,15 +47,12 @@ public class Aty052CardView extends ActionBarActivity {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-
             }
         });
-
         seek2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -68,12 +64,10 @@ public class Aty052CardView extends ActionBarActivity {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-
             }
         });
     }
@@ -82,12 +76,13 @@ public class Aty052CardView extends ActionBarActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.cv1:
-                new MyToast(this, "HelloWorld!", 1);
+
                 break;
             case R.id.cv2:
-                new MyToast(this, "HelloWorld222!", 1);
+                new MyToast(this, "HelloWorld!", 1);
                 break;
             case R.id.cv3:
+                new MyToast(this, "HelloWorld222!", 1);
                 break;
         }
     }
