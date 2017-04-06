@@ -76,7 +76,6 @@ public class Aty052CardView extends ActionBarActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.cv1:
-
                 break;
             case R.id.cv2:
                 new MyToast(this, "HelloWorld!", 1);
