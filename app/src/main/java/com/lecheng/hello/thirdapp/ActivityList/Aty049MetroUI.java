@@ -39,12 +39,7 @@ public class Aty049MetroUI extends AppCompatActivity {
         FragmentManager manager = getSupportFragmentManager();
         Adpt049Frag adapter049 = new Adpt049Frag(manager, list);
         vp1.setAdapter(adapter049);
-        vp1.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                return true;
-            }
-        });
+
 
 
     }
