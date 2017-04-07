@@ -4,11 +4,13 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -30,6 +32,9 @@ public class Aty052CardView extends ActionBarActivity {
     TextView tv1;
     @Bind(R.id.tv2)
     TextView tv2;
+    @Bind(R.id.iv1)
+    ImageView iv1;
+    private ImageLoader il = ImageLoader.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +81,7 @@ public class Aty052CardView extends ActionBarActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.cv1:
+                il.displayImage("https://img3.doubanio.com/f/sns/3ac664d558f14a44d5fd6a065029e69eba0ed062/pics/sns/index_douban_ad_4.png", iv1);
                 break;
             case R.id.cv2:
                 new MyToast(this, "HelloWorld!", 1);

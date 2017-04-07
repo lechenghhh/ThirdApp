@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
+import android.view.View;
 
 import com.lecheng.hello.thirdapp.ActivityList.fragment.Frag049;
 import com.lecheng.hello.thirdapp.Adapter.Adpt049Frag;
@@ -37,6 +39,12 @@ public class Aty049MetroUI extends AppCompatActivity {
         FragmentManager manager = getSupportFragmentManager();
         Adpt049Frag adapter049 = new Adpt049Frag(manager, list);
         vp1.setAdapter(adapter049);
+        vp1.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
 
 
     }
