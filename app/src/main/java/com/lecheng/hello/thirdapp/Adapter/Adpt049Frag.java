@@ -38,7 +38,7 @@ import java.util.List;
 //
 //}import java.util.List;
 
-
+//教程地址：http://blog.csdn.net/guo807015563/article/details/42081799
 public class Adpt049Frag extends FragmentPagerAdapter {
 
     public FragmentManager fm;
