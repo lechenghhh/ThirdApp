@@ -86,7 +86,6 @@ public class Frag014_4 extends Fragment {
         }
     }
 
-
     @Override
     public void onDetach() {
         super.onDetach();
