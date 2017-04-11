@@ -1,51 +1,126 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/BlackCool"
-    android:orientation="vertical"
-    android:padding="@dimen/fab_margin"
-    tools:context=".ActivityList.fragment.Frag014_4">
+    android:background="@color/colorWhite1">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/tvBack"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/fab_margin"
-        android:text="@string/hello_blank_fragment"
-        android:textColor="@color/colorOrange1"
-        android:textSize="20dp" />
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:background="@drawable/shape_login"
+        android:orientation="vertical"
+        android:padding="@dimen/fab_margin">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/fab_margin"
-        android:text="请输入账号："
-        android:textColor="@color/colorWhite1" />
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:text="登陆"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp" />
 
-    <EditText
-        android:id="@+id/etUserName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:text="请输入账号："
+            android:textColor="@color/colorWhite" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/fab_margin"
-        android:text="请输入密码："
-        android:textColor="@color/colorWhite1" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center">
 
-    <EditText
-        android:id="@+id/etPwd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <View
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_cloudy" />
 
-    <Button
-        android:id="@+id/btnReturn"
-        style="@style/style_btn_red1"
-        android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:layout_margin="@dimen/fab_margin"
-        android:text="登陆" />
-</LinearLayout>
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/tranBlack"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="2dp">
+
+                <EditText
+                    android:id="@+id/etUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:textSize="13dp"
+                    android:background="@drawable/style_bg_color"
+                    android:hint="在此输入账号"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite1" />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <View
+            style="@style/style_v_line1"
+            android:layout_marginTop="6dp"
+            android:background="@color/colorWhite1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="请输入密码："
+            android:textColor="@color/colorWhite" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center">
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_rain" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/tranBlack"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="2dp">
+
+                <EditText
+                    android:id="@+id/etPwd"
+                    android:layout_width="match_parent"
+                    android:textSize="13dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/style_bg_color"
+                    android:hint="在此输入密码"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite1" />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <View
+            style="@style/style_v_line1"
+            android:layout_marginTop="6dp"
+            android:background="@color/colorWhite1" />
+
+        <Button
+            android:id="@+id/btnReturn"
+            style="@style/style_btn_blue1"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_margin="@dimen/fab_margin"
+            android:text="登陆" />
+    </LinearLayout>
+</ScrollView>

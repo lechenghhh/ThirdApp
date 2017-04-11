@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#d22f2f</color>
     <color name="colorAccent">#fe4081</color>
 
-
+    <color name="colorTran">#00ffffff</color>
     <color name="background1">#ffffff</color>
     <color name="background2">#f7f7f5</color>
     <color name="colorTransparent">#00ffffff</color>
@@ -15,6 +15,7 @@
 
     <color name="colorWhite">#ffffff</color>
     <color name="colorWhite1">#b0ffffff</color>
+    <color name="colorWhite3">#26e9f0eb</color>
     <color name="colorRed2">#8c0002</color>
     <color name="colorRed1">#f80408</color>
     <color name="colorOrange1">#ff7300</color>
