@@ -1,50 +1,44 @@
 package com.lecheng.hello.thirdapp.ActivityList;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.lecheng.hello.thirdapp.R;
+import com.lecheng.hello.thirdapp.Widgets.RippleBackground;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+//https://github.com/skyfishjy/android-ripple-background
 public class Aty009View extends AppCompatActivity {
+
+
+    @Bind(R.id.ripplebg)
+    RippleBackground ripplebg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty009);
+        ButterKnife.bind(this);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_view9, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    @OnClick({R.id.button4, R.id.iv1})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.button4:
+                ripplebg.stopRippleAnimation();
+                break;
+            case R.id.iv1:
+                ripplebg.startRippleAnimation();
+                break;
         }
-
-        return super.onOptionsItemSelected(item);
     }
 
-//   public static class PlaceholderFragment extends Fragment{
-//
-//       @Nullable
-//       @Override
-//       public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-//            View v = inflater.inflate(R.layout.frgment_view2,container,false);
-//
-//            return v;
-//       }
-//   }
+
 }
