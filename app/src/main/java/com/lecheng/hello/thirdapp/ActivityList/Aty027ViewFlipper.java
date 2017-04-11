@@ -36,7 +36,7 @@ public class Aty027ViewFlipper extends Activity implements OnGestureListener {
 
         flipper.addView(addImageView(R.color.colorRed1));
         flipper.addView(addImageView(R.color.colorOrange1));
-        flipper.addView(addImageView(R.color.colorAccent));
+        flipper.addView(addImageView(R.color.colorYellow));
         flipper.addView(addImageView(R.color.colorGreen2));
         flipper.addView(addImageView(R.color.colorBlue3));
     }
