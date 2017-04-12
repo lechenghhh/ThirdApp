@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.lecheng.hello.thirdapp.Utils.MyToast;
+
 public class MainMenu extends ListActivity {
     //命名规范 前置Atyxxx  如果是实验模块功能请添加Test，如果是借鉴请添加Demo----16.9.6.
     private String classes[] = {
@@ -70,14 +72,14 @@ public class MainMenu extends ListActivity {
     public void onBackPressed() {
 
         if (lct <= 0) {
-            Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+            new MyToast(this,"再按一次退出程序",1);
             lct = System.currentTimeMillis();
         } else {
             long cct = System.currentTimeMillis();
             if (cct - lct < 1200) {
                 finish();
             } else {
-                Toast.makeText(this, "再按一次吧", Toast.LENGTH_SHORT).show();
+                new MyToast(this,"再按一次吧",1);
                 lct = cct;
             }
         }
