@@ -81,6 +81,8 @@ public class Aty052CardView extends ActionBarActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.cv1:
+                //        imageLoader.displayImage("drawable://" + R.drawable.logo_02005, mIV);
+
                 il.displayImage("https://img3.doubanio.com/f/sns/3ac664d558f14a44d5fd6a065029e69eba0ed062/pics/sns/index_douban_ad_4.png", iv1);
                 break;
             case R.id.cv2:
