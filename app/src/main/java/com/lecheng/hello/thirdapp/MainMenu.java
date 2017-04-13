@@ -4,6 +4,9 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.view.animation.LayoutAnimationController;
 import android.view.animation.ScaleAnimation;
 import android.widget.ArrayAdapter;
@@ -42,17 +45,17 @@ public class MainMenu extends ListActivity {
     };
 
     private LayoutAnimationController lac;
-    private ScaleAnimation sa;        //动画
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setListAdapter(new ArrayAdapter<String>
                 (MainMenu.this, android.R.layout.simple_list_item_1, classes));
-        sa = new ScaleAnimation(0, 1, 0, 1, 0, 1);
-        sa.setDuration(300);
-        lac = new LayoutAnimationController(sa, 0.2f);
-        getListView().setLayoutAnimation(lac);
+
+        Animation animation = new AlphaAnimation(0, 1);     //AlphaAnimation 控制渐变透明的动画效果
+        animation.setDuration(300);                         //动画时间毫秒数
+        LayoutAnimationController controller = new LayoutAnimationController(animation, 1);
+        getListView().setLayoutAnimation(controller);
     }
 
     @Override
@@ -66,20 +69,20 @@ public class MainMenu extends ListActivity {
             Toast.makeText(MainMenu.this, "跳转失败\n" + e, Toast.LENGTH_SHORT).show();
         }
     }
+
     private long lct = 0;                       //后退事件处理
 
     @Override
     public void onBackPressed() {
-
         if (lct <= 0) {
-            new MyToast(this,"再按一次退出程序",1);
+            new MyToast(this, "再按一次退出程序", 1);
             lct = System.currentTimeMillis();
         } else {
             long cct = System.currentTimeMillis();
             if (cct - lct < 1200) {
                 finish();
             } else {
-                new MyToast(this,"再按一次吧",1);
+                new MyToast(this, "再按一次吧", 1);
                 lct = cct;
             }
         }
