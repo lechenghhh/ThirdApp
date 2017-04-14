@@ -79,7 +79,7 @@ public class Aty040NetNote extends AppCompatActivity {
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        new MyToast(getApplicationContext(), "失败", 3000);
+                        new MyToast(Aty040NetNote.this, "失败", 3000);
                     }
                 });
         request.setTag("volleyList");
@@ -105,7 +105,7 @@ public class Aty040NetNote extends AppCompatActivity {
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        new MyToast(getApplicationContext(), "失败", 3000);
+                        new MyToast(Aty040NetNote.this, "失败", 3000);
                     }
                 });
         request.setTag("getList");
@@ -127,7 +127,7 @@ public class Aty040NetNote extends AppCompatActivity {
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        new MyToast(getApplicationContext(), "失败", 3000);
+                        new MyToast(Aty040NetNote.this, "失败", 3000);
                     }
                 });
         request.setTag("volleyList");
@@ -154,7 +154,7 @@ public class Aty040NetNote extends AppCompatActivity {
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        new MyToast(getApplicationContext(), "失败", 3000);
+                        new MyToast(Aty040NetNote.this, "失败", 3000);
                     }
                 });
         request.setTag("volleyList");
@@ -163,7 +163,7 @@ public class Aty040NetNote extends AppCompatActivity {
 
 
     private void resolveJson(String s) {
-//        new MyToast(getApplicationContext(), s, 3000);
+//        new MyToast(this, s, 3000);
         //对string进行操作
         int i = indexOf(s, "]") + 2;
         System.out.println("开头截取的位置：" + i);
@@ -224,7 +224,7 @@ public class Aty040NetNote extends AppCompatActivity {
                 break;
             case R.id.btnDelete:
                 volleyDelete();
-                new MyToast(getApplicationContext(), "请求数据中...", 3000);
+                new MyToast(this, "请求数据中...", 3000);
                 break;
         }
     }

@@ -30,7 +30,7 @@ public class Aty021ButterKnife extends Activity {
 
     @OnClick(R.id.btn1)
     public void onClick() {
-        new MyToast(getApplication(), "好东西", 3000);
+        new MyToast(this, "好东西", 3000);
         tv.setText("数据是：" + a);
         a++;
     }

@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.lecheng.hello.thirdapp.ActivityList.fragment.Frag031Blur;
 import com.lecheng.hello.thirdapp.R;
+import com.lecheng.hello.thirdapp.Utils.MyToast;
 import com.lecheng.hello.thirdapp.Utils.ScreenUtils;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -298,7 +299,7 @@ public class Aty031Blur extends Activity implements View.OnClickListener {
                         }).setNegativeButton("仅关闭窗口", new DialogInterface.OnClickListener() {//添加返回按钮
                     @Override
                     public void onClick(DialogInterface dialog, int which) {//响应事件
-                        Toast.makeText(getApplicationContext(), "关闭了", Toast.LENGTH_SHORT).show();
+                        new MyToast(Aty031Blur.this, "关闭了", 1);
                     }
                 }).show();//在按键
                 Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_pic);

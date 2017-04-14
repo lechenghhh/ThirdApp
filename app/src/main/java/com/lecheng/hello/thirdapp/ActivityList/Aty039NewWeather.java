@@ -9,25 +9,39 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
 import com.lecheng.hello.thirdapp.Adapter.Common.UnityAdpt;
 import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
 import com.lecheng.hello.thirdapp.Bean.Bean039Weather;
+import com.lecheng.hello.thirdapp.Http.Http047;
+import com.lecheng.hello.thirdapp.Interface.I047Listener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.GsonUtil;
-import com.lecheng.hello.thirdapp.Utils.MyApplication;
 import com.lecheng.hello.thirdapp.Utils.MySharedPreferences;
-import com.lecheng.hello.thirdapp.Utils.MyToast;
 import com.lecheng.hello.thirdapp.Utils.MyUtils;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
-public class Aty039NewWeather extends Activity implements View.OnClickListener {
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class Aty039NewWeather extends Activity implements I047Listener {
+    @Bind(R.id.aty40_iv_bg)
+    ImageView aty40IvBg;
+    @Bind(R.id.aty40_tv_city)
+    TextView aty40TvCity;
+    @Bind(R.id.aty40_tv1)
+    TextView aty40Tv1;
+    @Bind(R.id.aty40_tv2)
+    TextView aty40Tv2;
+    @Bind(R.id.aty40_lv)
+    ListView aty40Lv;
+    @Bind(R.id.aty40_lv2)
+    ListView aty40Lv2;
+    @Bind(R.id.aty40_sync)
+    ScrollView aty40Sync;
     private TextView tv, tv1, tv2, tv3;
     private ListView lv1, lv2;
     private ImageView iv1;
@@ -39,20 +53,16 @@ public class Aty039NewWeather extends Activity implements View.OnClickListener {
     private LayoutAnimationController lac;      //动画
     private ScaleAnimation sa;                  //动画
 
+    private Http047 http047 = new Http047();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty039);
-        tv = (TextView) findViewById(R.id.aty40_tv_city);
-        tv1 = (TextView) findViewById(R.id.aty40_tv1);
-        tv2 = (TextView) findViewById(R.id.aty40_tv2);
-        tv3 = (TextView) findViewById(R.id.aty40_tv_city);
-        iv1 = (ImageView) findViewById(R.id.aty40_iv_bg);
+        ButterKnife.bind(this);
         imageLoader.displayImage(bgUrl, iv1);
-        lv1 = (ListView) findViewById(R.id.aty40_lv);
-        lv2 = (ListView) findViewById(R.id.aty40_lv2);
-        findViewById(R.id.aty40_ll).setOnClickListener(this);
-        volleyGet();
+        http047.http047Get(this, "http://wthrcdn.etouch.cn/weather_mini?city=" +
+                MySharedPreferences.loadData(getApplicationContext(), "city", "福州"), this);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
                 (getApplicationContext(), android.R.layout.simple_list_item_1);
@@ -67,7 +77,10 @@ public class Aty039NewWeather extends Activity implements View.OnClickListener {
                 MySharedPreferences.saveData(getApplicationContext(), "city", cityList[position]);
                 lv1.setVisibility(View.VISIBLE);
                 lv2.setVisibility(View.GONE);
-                volleyGet();
+                http047.http047Get(Aty039NewWeather.this,
+                        "http://wthrcdn.etouch.cn/weather_mini?city=" +
+                                MySharedPreferences.loadData(getApplicationContext(), "city", "福州"),
+                        Aty039NewWeather.this);
             }
         });
 
@@ -77,35 +90,11 @@ public class Aty039NewWeather extends Activity implements View.OnClickListener {
         lv1.setLayoutAnimation(lac);
     }
 
-    private void volleyGet() {
-        String url = "http://wthrcdn.etouch.cn/weather_mini?city=" +
-                MySharedPreferences.loadData(getApplicationContext(), "city", "福州");
-        System.out.println("city" + MySharedPreferences.loadData(getApplicationContext(), "city", "福州"));
-        StringRequest request = new StringRequest
-                (Request.Method.GET, url, new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String subject) {
-//                        new MyToast(getApplicationContext(), subject, 3000);
-                        try {
-                            resolveJson(MyUtils.encodeChange(subject));//编码转换
-                        } catch (Exception e) {
-                            new MyToast(getApplicationContext(), "数据加载错误！", 3000);
-                        }
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError volleyError) {
-                        Toast.makeText(getApplicationContext(), "failed", Toast.LENGTH_SHORT).show();
-                    }
-                });
-        request.setTag("cancelGet");
-        MyApplication.getHttpQue().add(request);
-    }
 
-    private void resolveJson(String strJson) {//解析json方法，并呈现
+    @Override
+    public void onSuccess(String strJson) {
         final Bean039Weather bean = GsonUtil.GsonToBean(strJson, Bean039Weather.class);
 //        //呈现到列表上
-
         tv.setText(bean.getData().getCity());
         tv1.setText(bean.getData().getWendu() + "摄氏度");
         tv2.setText(bean.getData().getGanmao());
@@ -124,14 +113,9 @@ public class Aty039NewWeather extends Activity implements View.OnClickListener {
 
     }
 
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.aty40_ll:
-                lv1.setVisibility(View.GONE);
-                lv2.setVisibility(View.VISIBLE);
-                break;
-        }
+    @OnClick(R.id.aty40_ll)
+    public void onClick() {
+        lv1.setVisibility(View.GONE);
+        lv2.setVisibility(View.VISIBLE);
     }
 }

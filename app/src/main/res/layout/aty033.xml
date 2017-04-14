@@ -36,7 +36,7 @@
 
         <Button
             android:id="@+id/aty33_btn_tct"
-            android:text="tct图片上传功能"
+            android:text="tct图片上传功能 17-4-14测试成功"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>

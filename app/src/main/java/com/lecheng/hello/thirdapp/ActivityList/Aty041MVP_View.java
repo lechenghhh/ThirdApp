@@ -33,11 +33,11 @@ public class Aty041MVP_View extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.btn_save:
                 presenter.saveData(et1.getText().toString());
-                new MyToast(getApplicationContext(), "保存成功", 3000);
+                new MyToast(this, "保存成功", 3000);
                 break;
             case R.id.btn_load:
                 tv1.setText(presenter.loadData().toString());
-                new MyToast(getApplicationContext(), "读取成功", 3000);
+                new MyToast(this, "读取成功", 3000);
                 break;
         }
     }

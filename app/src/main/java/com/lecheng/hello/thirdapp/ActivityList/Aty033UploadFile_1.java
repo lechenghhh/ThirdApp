@@ -102,7 +102,7 @@ public class Aty033UploadFile_1 extends Activity implements OnClickListener {
                 break;
             case R.id.submit:
                 if (srcPath == null || srcPath == "") {
-                    Toast.makeText(getApplicationContext(), "文件不存在！！！", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "文件不存在！！！", Toast.LENGTH_LONG).show();
                 } else {
                     submitUploadFile();
                 }

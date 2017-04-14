@@ -45,12 +45,16 @@
             <Button
                 android:id="@+id/upload_btn_natives"
                 style="@style/style_btn_blue1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/unit_btnheight"
                 android:layout_weight="1"
                 android:text="图库" />
 
             <Button
                 android:id="@+id/upload_btn_takepic"
                 style="@style/style_btn_blue1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/unit_btnheight"
                 android:layout_weight="1"
                 android:text="拍照" />
         </LinearLayout>
@@ -66,12 +70,12 @@
         <Button
             android:id="@+id/upload_btn_submit"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/Edit_height1"
+            android:layout_height="@dimen/unit_btnheight"
             android:layout_marginBottom="@dimen/fab_margin"
             android:layout_marginLeft="@dimen/fab_margin"
             android:layout_marginRight="@dimen/fab_margin"
             android:layout_marginTop="@dimen/fab_margin"
-            android:background="@drawable/ic_round"
+            android:background="@drawable/abc_list_focused_holo"
             android:text="上传并返回"
             android:textColor="@color/colorWhite1"
             android:textSize="18dp" />

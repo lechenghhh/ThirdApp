@@ -196,11 +196,11 @@ public class Aty033UploadFile_2 extends Activity implements OnClickListener {
                     }
                     result = sb1.toString();
                     System.out.println("返回结果result===============:" + result);
-//                 // 移除进度框  
+//                 // 移除进度框
 //                  removeProgressDialog();  
 //                    finish();
                 } else {
-                    new MyToast(getApplicationContext(), "请求失败，请重试", 3000);
+                    new MyToast(this, "请求失败，请重试", 3000);
                 }
             }
         } catch (MalformedURLException e) {
@@ -230,7 +230,7 @@ public class Aty033UploadFile_2 extends Activity implements OnClickListener {
                 break;
             case R.id.upload_btn_submit:
                 if (srcPath.equals("")) {
-                    Toast.makeText(getApplicationContext(), "文件不存在！！！", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "文件不存在！！！", Toast.LENGTH_LONG).show();
                 } else {
                     submitUploadFile();
                 }

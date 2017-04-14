@@ -48,12 +48,12 @@ public class Aty015Volley extends AppCompatActivity {
                 (Request.Method.GET, url, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String s) {
-                        new MyToast(getApplicationContext(), s, 3000);
+                        new MyToast(Aty015Volley.this, s, 3000);
                     }
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        Toast.makeText(getApplicationContext(), "failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Aty015Volley.this, "failed", Toast.LENGTH_SHORT).show();
                     }
                 });
         request.setTag("cancelGet");
@@ -66,12 +66,12 @@ public class Aty015Volley extends AppCompatActivity {
                 (Request.Method.POST, url2, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String s) {
-                        Toast.makeText(getApplicationContext(), s, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Aty015Volley.this, s, Toast.LENGTH_SHORT).show();
                     }
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        Toast.makeText(getApplicationContext(), "failed222", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Aty015Volley.this, "failed222", Toast.LENGTH_SHORT).show();
 
                     }
                 }) {

@@ -53,7 +53,7 @@ public class MainMenu extends ListActivity {
                 (MainMenu.this, android.R.layout.simple_list_item_1, classes));
 
         Animation animation = new AlphaAnimation(0, 1);     //AlphaAnimation 控制渐变透明的动画效果
-        animation.setDuration(300);                         //动画时间毫秒数
+        animation.setDuration(100);                         //动画时间毫秒数
         LayoutAnimationController controller = new LayoutAnimationController(animation, 1);
         getListView().setLayoutAnimation(controller);
     }
