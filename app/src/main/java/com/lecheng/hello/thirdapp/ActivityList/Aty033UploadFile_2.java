@@ -15,7 +15,7 @@ import android.widget.Toast;
 import com.lecheng.hello.thirdapp.Adapter.Common.UnityAdpt;
 import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.MySharedPreferences;
+import com.lecheng.hello.thirdapp.Utils.MySP;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
 import com.lecheng.hello.thirdapp.Utils.MyUtils;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -94,9 +94,9 @@ public class Aty033UploadFile_2 extends Activity implements OnClickListener {
 //                    Looper.getMainLooper();//获取主线程looper以便接下来toast
                     JSONObject jsonObject = new JSONObject(uploadFile(file, URL_UPLOAD, params));
                     //把图片列表存在sp中的pic_id键值对中
-                    String strPicId = (String) MySharedPreferences.loadData(Aty033UploadFile_2.this, "pic_id", "");
+                    String strPicId = (String) MySP.loadData(Aty033UploadFile_2.this, "pic_id", "");
                     strPicId = strPicId + jsonObject.get("pic_id") + "-";
-                    MySharedPreferences.saveData(Aty033UploadFile_2.this, "pic_id", strPicId);
+                    MySP.saveData(Aty033UploadFile_2.this, "pic_id", strPicId);
 //                    new MyToast(Aty033UploadFile_2.this, "上传成功", 3000);
 //                    finish();
                 } catch (JSONException e) {

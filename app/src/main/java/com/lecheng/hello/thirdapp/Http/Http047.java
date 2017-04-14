@@ -24,11 +24,12 @@ import static com.lecheng.hello.thirdapp.Utils.MyApplication.getHttpQue;
 public class Http047 implements I047Model {
 
     @Override               //Get请求
-    public void http047Get(final Context c, String url, final I047Listener listener) {
+    public void http047Get(final Context c, final String url, final I047Listener listener) {
         StringRequest request = new StringRequest
-                (Request.Method.GET, "http://" + url, new Response.Listener<String>() {
+                (Request.Method.GET, url, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String s) {
+                        System.out.println(url);
                         System.out.println("onResponse-Success:\n" + s);
                         listener.onSuccess(s);
                     }

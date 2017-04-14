@@ -24,9 +24,6 @@ public class Aty003EveryLayout extends ActionBarActivity {
                 startActivity(new Intent(Aty003EveryLayout.this,Aty003EveryLayout_Frame.class));
             }
         });
-
-
-
     }
 
     @Override

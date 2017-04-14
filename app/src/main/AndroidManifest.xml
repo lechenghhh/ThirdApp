@@ -234,8 +234,9 @@
         <activity android:name=".ActivityList.Aty050CrashTest" />
         <activity android:name=".ActivityList.Aty051PopWindow" />
         <activity android:name=".ActivityList.Aty052CardView" />
-        <activity android:name=".ActivityList.Aty053Coordinator" />
-        <activity android:name=".ActivityList.Aty054"></activity>
+        <activity android:name=".ActivityList.Aty053Coordinator"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ActivityList.Aty054"/>
     </application>
 
 </manifest>

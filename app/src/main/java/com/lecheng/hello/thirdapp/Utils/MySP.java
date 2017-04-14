@@ -7,7 +7,7 @@ import android.content.SharedPreferences;
  * Created by Cheng on 2016/8/15.lecheng复写
  */
 
-public class MySharedPreferences {
+public class MySP {
 
     private static final String FILE_NAME = "save_file_name";        //存储的sharedpreferences文件名
 

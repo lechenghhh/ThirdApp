@@ -1,7 +1,5 @@
 package com.lecheng.hello.thirdapp.ActivityList;
 
-import com.lecheng.hello.thirdapp.Utils.MySharedPreferences;
-
 /**
  * Created by Cheng on 2017/2/24.
  */
