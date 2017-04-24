@@ -60,7 +60,7 @@ public class Aty033UploadFile_3 extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty033_3);
         ButterKnife.bind(this);
-        tv2.setText(URL_UPLOAD);
+        tv1.setText("服务器Url：" + URL_UPLOAD);
     }
 
     @OnClick({R.id.btnTakePic, R.id.btnSelect, R.id.btnUpload})
@@ -86,8 +86,7 @@ public class Aty033UploadFile_3 extends ActionBarActivity {
         }
     }
 
-    //拍照上传
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {    //拍照上传
         super.onActivityResult(requestCode, resultCode, data);
         System.out.println("requestCode" + requestCode + "resultCode" + resultCode);
         if (resultCode == Activity.RESULT_OK) {
@@ -95,12 +94,10 @@ public class Aty033UploadFile_3 extends ActionBarActivity {
                 case 1:
                     Bundle extras = data.getExtras();
                     Bitmap b = (Bitmap) extras.get("data");
-//                    img.setImageBitmap(b);
                     String name = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
                     String fileNmae = Environment.getExternalStorageDirectory().toString() + File.separator + "tct/image/" + name + ".jpg";
                     srcPath = fileNmae;
-//                    listUri.add("file://" + srcPath);
-                    tv1.setText(srcPath);
+                    tv2.setText("资源文件Uri：" + srcPath);
                     System.out.println("保存路径1----------:" + srcPath);
                     File myCaptureFile = new File(fileNmae);
                     try {
@@ -123,8 +120,8 @@ public class Aty033UploadFile_3 extends ActionBarActivity {
                     }
                     break;
                 case 2:
-                    //Uri转Url
-                    srcPath = MyUtils.getPath(Aty033UploadFile_3.this, data.getData());
+                    srcPath = MyUtils.getPath(Aty033UploadFile_3.this, data.getData());//Uri转Url
+                    tv2.setText("资源文件Uri：" + srcPath);
                     System.out.println("Uri:" + data.getData() + "\n保存路径2----------:" + srcPath);
                     break;
             }
@@ -140,8 +137,8 @@ public class Aty033UploadFile_3 extends ActionBarActivity {
         }
         System.out.println("请求的URL=========" + URL_UPLOAD + "\n请求的fileName====" + file.getName());
         final Map<String, String> params = new HashMap<String, String>();
-        params.put("image", "image");
-//        params.put("file", "file");//这里修改文件的键名
+//        params.put("image", "image");
+        params.put("file", "file");//这里修改文件的键名
 
         new Thread(new Runnable() { //开启线程上传文件
             @Override
@@ -247,7 +244,7 @@ public class Aty033UploadFile_3 extends ActionBarActivity {
 //                  removeProgressDialog();
 //                    finish();
                 } else {
-                    System.out.println("失败" + result);
+                    System.out.println("失败=========" + result);
                 }
             }
         } catch (MalformedURLException e) {
