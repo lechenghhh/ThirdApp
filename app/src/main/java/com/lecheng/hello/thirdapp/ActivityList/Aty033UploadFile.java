@@ -1,9 +1,5 @@
 package com.lecheng.hello.thirdapp.ActivityList;
 
-import java.io.File;
-import java.util.HashMap;
-import java.util.Map;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,6 +18,13 @@ import com.android.volley.toolbox.StringRequest;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MyApplication;
 
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 
 public class Aty033UploadFile extends AppCompatActivity {
     //    private String newName = "bc.jpg";
@@ -39,32 +42,13 @@ public class Aty033UploadFile extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty033);
+        ButterKnife.bind(this);
 
         File fielAbs = new File(Environment.getExternalStorageDirectory(), "bc.jpg");
         final String filePath = fielAbs.getAbsolutePath();
         TextView tv1 = (TextView) findViewById(R.id.aty33_myText3);
         aty33_myText4 = (TextView) findViewById(R.id.aty33_myText4);
-        btn = (Button) findViewById(R.id.aty33_btn2);
         tv1.setText(filePath);
-
-        findViewById(R.id.aty33_btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                volley_post();
-            }
-        });
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Aty033UploadFile_1.class));
-            }
-        });
-        findViewById(R.id.aty33_btn_tct).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Aty033UploadFile_2.class));
-            }
-        });
     }
 
     private void volley_post() {
@@ -90,6 +74,24 @@ public class Aty033UploadFile extends AppCompatActivity {
         };
         request2.setTag("cancelPost33");
         MyApplication.getHttpQue().add(request2);
+    }
+
+    @OnClick({R.id.aty33_btn, R.id.aty33_btn2, R.id.aty33_btn_tct, R.id.aty33_btn_node})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.aty33_btn:
+                volley_post();
+                break;
+            case R.id.aty33_btn2:
+                startActivity(new Intent(getApplicationContext(), Aty033UploadFile_1.class));
+                break;
+            case R.id.aty33_btn_tct:
+                startActivity(new Intent(getApplicationContext(), Aty033UploadFile_2.class));
+                break;
+            case R.id.aty33_btn_node:
+                startActivity(new Intent(getApplicationContext(), Aty033UploadFile_3.class));
+                break;
+        }
     }
 
 //                httpThread.start();

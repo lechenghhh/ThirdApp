@@ -200,7 +200,8 @@ public class Aty033UploadFile_2 extends Activity implements OnClickListener {
 //                  removeProgressDialog();  
 //                    finish();
                 } else {
-                    new MyToast(this, "请求失败，请重试", 3000);
+//                    new MyToast(this, "请求失败，请重试", 3000);
+                    System.out.println("请求失败，请重试");
                 }
             }
         } catch (MalformedURLException e) {
@@ -219,14 +220,12 @@ public class Aty033UploadFile_2 extends Activity implements OnClickListener {
                     submitUploadFile();
                 }
                 startActivityForResult(new Intent().setType("image/*").setAction(Intent.ACTION_GET_CONTENT), 2);
-
                 break;
             case R.id.upload_btn_takepic:
                 if (!srcPath.equals("")) {
                     submitUploadFile();
                 }
                 startActivityForResult(new Intent(MediaStore.ACTION_IMAGE_CAPTURE), 1);
-
                 break;
             case R.id.upload_btn_submit:
                 if (srcPath.equals("")) {

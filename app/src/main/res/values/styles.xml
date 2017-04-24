@@ -51,6 +51,7 @@
         <item name="android:background">@drawable/style_btn_blue</item>
         <item name="android:paddingRight">@dimen/fab_margin</item>
         <item name="android:paddingLeft">@dimen/fab_margin</item>
+        <item name="android:layout_height">@dimen/unit_btnheight</item>
         <!--<item name="android:layout_weight">1</item>-->
         <item name="android:textColor">@color/colorWhite1</item>
     </style>
@@ -59,6 +60,7 @@
         <!--绿色按钮样式-->
         <item name="android:background">@drawable/style_btn_green</item>
         <item name="android:paddingRight">@dimen/fab_margin</item>
+        <item name="android:layout_height">@dimen/unit_btnheight</item>
         <item name="android:paddingLeft">@dimen/fab_margin</item>
         <!--<item name="android:layout_weight">1</item>-->
         <item name="android:textColor">@color/colorWhite1</item>
@@ -68,6 +70,7 @@
         <!--红色按钮样式-->
         <item name="android:background">@drawable/style_btn_red</item>
         <item name="android:paddingRight">@dimen/fab_margin</item>
+        <item name="android:layout_height">@dimen/unit_btnheight</item>
         <item name="android:paddingLeft">@dimen/fab_margin</item>
         <!--<item name="android:layout_weight">1</item>-->
         <item name="android:textColor">@color/colorWhite1</item>

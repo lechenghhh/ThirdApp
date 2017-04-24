@@ -39,6 +39,11 @@
             android:text="tct图片上传功能 17-4-14测试成功"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/aty33_btn_node"
+            android:text="NodeJs Express框架的图片上传功能"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </ScrollView>

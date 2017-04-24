@@ -20,8 +20,8 @@ import butterknife.OnClick;
 * 教程地址：http://blog.csdn.net/lmj623565791/article/details/48393217*/
 public class Aty054 extends ActionBarActivity {
 
-    @Bind(R.id.tfl)
-    TagFlowLayout tfl;
+//    @Bind(R.id.tfl)
+//    TagFlowLayout tfl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
