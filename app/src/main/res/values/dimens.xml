@@ -1,9 +1,18 @@
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!-- 默认屏幕边距，每个Android的设计准则。. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
+    <!-- 根据Material Designer 规范的尺寸-->
+    <dimen name="md_16dp">16dp</dimen><!--水平边距-->
+    <dimen name="md_24dp">24dp</dimen><!--状态栏-->
+    <dimen name="md_56dp">56dp</dimen><!--ActionBar-->
+    <dimen name="md_72dp">72dp</dimen><!--标题/大型列表高度-->
+    <dimen name="md_48dp">48dp</dimen><!--副标题/左侧导航栏列表高度-->
+    <dimen name="md_8dp">8dp</dimen><!--分隔间隙-->
+    <dimen name="md_40dp">40dp</dimen><!--列表图标尺寸/-->
+
+    <!-- 根据设计指南，导航抽屉应240dp和320dp之间:
          https://developer.android.com/design/patterns/navigation-drawer.html -->
     <dimen name="navigation_drawer_width">240dp</dimen>
     <dimen name="fab_margin">8dp</dimen>
@@ -12,10 +21,8 @@
     <dimen name="unit_textsize">14dp</dimen>
     <dimen name="unit_screensize">18dp</dimen>
     <dimen name="unit_btnheight">36dp</dimen>
-    <!--
-Refer to App Widget Documentation for margin information
-http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
-    -->
+    <!-- 参考应用程序小部件文档的保证金信息
+         http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout -->
     <dimen name="widget_margin">8dp</dimen>
 
 </resources>
