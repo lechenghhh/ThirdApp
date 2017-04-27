@@ -12,7 +12,6 @@
         <!--android:id="@+id/tfl"-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="wrap_content" />-->
-
     <Button
         android:id="@+id/btn1"
         android:text="btn1"
@@ -28,4 +27,5 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/unit_btnheight"
         android:layout_marginTop="@dimen/fab_margin" />
+
 </LinearLayout>

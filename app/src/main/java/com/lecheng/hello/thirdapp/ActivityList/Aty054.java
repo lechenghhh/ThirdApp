@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Widgets.flowlayout.FlowLayout;
 import com.lecheng.hello.thirdapp.Widgets.flowlayout.TagAdapter;
@@ -20,8 +21,9 @@ import butterknife.OnClick;
 * 教程地址：http://blog.csdn.net/lmj623565791/article/details/48393217*/
 public class Aty054 extends ActionBarActivity {
 
-//    @Bind(R.id.tfl)
+    //    @Bind(R.id.tfl)
 //    TagFlowLayout tfl;
+    PullToRefreshListView pullToRefreshListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
