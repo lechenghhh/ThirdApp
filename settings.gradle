@@ -1,2 +1,2 @@
-include ':app', ':mylibrary1'
-include ':PullToRefresh1'
+include ':app', ':mylibrary'
+include ':pulltorefresh'
