@@ -9,23 +9,28 @@
     tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty054">
 
     <!--<com.lecheng.hello.thirdapp.Widgets.flowlayout.TagFlowLayout-->
-        <!--android:id="@+id/tfl"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content" />-->
+    <!--android:id="@+id/tfl"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content" />-->
+
     <Button
         android:id="@+id/btn1"
-        android:text="btn1"
         style="@style/style_btn_green1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/unit_btnheight"
-        android:layout_marginTop="@dimen/fab_margin" />
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="btn1" />
 
     <Button
         android:id="@+id/btn2"
-        android:text="btn2"
         style="@style/style_btn_green1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/unit_btnheight"
-        android:layout_marginTop="@dimen/fab_margin" />
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="btn2" />
 
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/ptrLv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

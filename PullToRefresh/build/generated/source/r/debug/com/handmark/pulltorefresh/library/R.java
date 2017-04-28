@@ -143,25 +143,27 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     public static final class id {
         public static int both=0x7f070003;
         public static int disabled=0x7f070004;
-        public static int fl_inner=0x7f07000c;
+        public static int fl_inner=0x7f07000d;
         public static int flip=0x7f07000a;
         public static int gridview=0x7f070000;
         public static int manualOnly=0x7f070005;
+        public static int ptrLv1=0x7f07000c;
         public static int pullDownFromTop=0x7f070006;
         public static int pullFromEnd=0x7f070007;
         public static int pullFromStart=0x7f070008;
         public static int pullUpFromBottom=0x7f070009;
-        public static int pull_to_refresh_image=0x7f07000d;
-        public static int pull_to_refresh_progress=0x7f07000e;
-        public static int pull_to_refresh_sub_text=0x7f070010;
-        public static int pull_to_refresh_text=0x7f07000f;
+        public static int pull_to_refresh_image=0x7f07000e;
+        public static int pull_to_refresh_progress=0x7f07000f;
+        public static int pull_to_refresh_sub_text=0x7f070011;
+        public static int pull_to_refresh_text=0x7f070010;
         public static int rotate=0x7f07000b;
         public static int scrollview=0x7f070001;
         public static int webview=0x7f070002;
     }
     public static final class layout {
-        public static int pull_to_refresh_header_horizontal=0x7f030000;
-        public static int pull_to_refresh_header_vertical=0x7f030001;
+        public static int aty054_lib=0x7f030000;
+        public static int pull_to_refresh_header_horizontal=0x7f030001;
+        public static int pull_to_refresh_header_vertical=0x7f030002;
     }
     public static final class string {
         public static int pull_to_refresh_from_bottom_pull_label=0x7f050003;
