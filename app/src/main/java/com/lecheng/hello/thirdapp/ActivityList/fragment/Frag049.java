@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.lecheng.hello.thirdapp.ActivityList.Aty018MyBrowser;
 import com.lecheng.hello.thirdapp.Adapter.Common.UnityAdpt;
 import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
-import com.lecheng.hello.thirdapp.Bean.Bean049;
+import com.lecheng.hello.thirdapp.Bean.Gson.Bean049;
 import com.lecheng.hello.thirdapp.Http.Http047;
 import com.lecheng.hello.thirdapp.Interface.I047Listener;
 import com.lecheng.hello.thirdapp.R;
