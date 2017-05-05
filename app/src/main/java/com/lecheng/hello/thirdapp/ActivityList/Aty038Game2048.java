@@ -23,12 +23,6 @@ public class Aty038Game2048 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty038);
         tvScore = (TextView) findViewById(R.id.tvScore);
-        findViewById(R.id.tvstart).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                /*在此处添加视图*/
-            }
-        });
     }
 
     public void clearScore() {
