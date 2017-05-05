@@ -7,7 +7,6 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.lecheng.hello.thirdapp.R;
-
 /**
  * Created by 乐城 on 2017/5/5.
  * Constructor构造函数------>onMeasure测量View大小------>onSizeChanged确定View大小------>
@@ -15,7 +14,6 @@ import com.lecheng.hello.thirdapp.R;
  * <p>
  * 记得在res/values/attr里面声明
  */
-
 public class MyActionBar extends View {
     public MyActionBar(Context context) {
         super(context);
@@ -27,7 +25,6 @@ public class MyActionBar extends View {
 
     public MyActionBar(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-
         /*super.setScaleType(SCALE_TYPE);
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.CircleImageView, defStyle, 0);
         int mBorderWidth = a.getDimensionPixelSize(R.styleable.CircleImageView_border_width, DEFAULT_BORDER_WIDTH);

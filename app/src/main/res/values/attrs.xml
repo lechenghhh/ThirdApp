@@ -6,9 +6,14 @@
          necessary to support previous API levels. -->
     <!--<declare-styleable name="CardView038"></declare-styleable>-->
     <declare-styleable name="GameView038"></declare-styleable>
+
     <declare-styleable name="ButtonBarContainerTheme">
         <attr name="metaButtonBarStyle" format="reference" />
         <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="MyActionBar">
+        <attr name="metaButtonBarStyle" format="reference" />
     </declare-styleable>
 
     <!--pulltorefresh top-->
