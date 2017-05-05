@@ -6,6 +6,9 @@ import android.widget.TextView;
 
 public class CardView038 extends FrameLayout {
 
+    private TextView label;
+    private int num = 0;
+
     public CardView038(Context context) {
         super(context);
         // TODO Auto-generated constructor stub
@@ -18,26 +21,21 @@ public class CardView038 extends FrameLayout {
         setNum(0);
     }
 
-    private int num = 0;
-
     public int getNum() {
         return num;
     }
 
     public void setNum(int num) {
         this.num = num;
-        if (num <= 0) {
+        if (num <= 0)
             label.setText("");
-        } else {
+        else
             label.setText(num + "");
-        }
+
     }
 
     public boolean equals(CardView038 o) {
-        // TODO Auto-generated method stub
         return getNum() == o.getNum();
     }
-
-    private TextView label;
 
 }
