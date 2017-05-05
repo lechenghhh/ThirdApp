@@ -33,6 +33,7 @@ public class Aty054PullToRefresh extends ActionBarActivity {
     private LinkedList<String> mListItems;
     private ArrayAdapter<String> mAdapter;
     private int i = 1;
+    UnityAdpt<String> adpt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,30 +76,20 @@ public class Aty054PullToRefresh extends ActionBarActivity {
                 }.execute();
             }
         });
-//        ptrLv1.setOnRefreshListener(new OnRefreshListener<ListView>() {
-//            @Override
-//            public void onRefresh(PullToRefreshBase<ListView> refreshView) {
-//                /*// 更新刷新的时间
-//                String label = DateUtils.formatDateTime(getApplicationContext(), System.currentTimeMillis(),
-//                        DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_ALL);
-//                refreshView.getLoadingLayoutProxy().setLastUpdatedLabel(label);*/
-//                // 做更新的操作
-//                new MyToast(Aty054PullToRefresh.this, "正在刷新", 0);
-//                new GetDataTask().execute();
-//            }
-//        });
 
         ListView actualListView = ptrLv1.getRefreshableView();
         mListItems = new LinkedList<String>();
         mListItems.addAll(Arrays.asList(mStrings));
-        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mListItems);
-        actualListView.setAdapter(mAdapter);
-      /*  ptrLv1.setAdapter(new UnityAdpt<String>(getApplicationContext(), mListItems, R.layout.cell049_metro) {
+//        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mListItems);
+//        actualListView.setAdapter(mAdapter);
+        adpt = new UnityAdpt<String>(getApplicationContext(), mListItems, R.layout.cell053_fethg) {
             @Override
             public void convert(ViewHolder helper, String item) {
                 helper.setText(R.id.tv1, item);
+                helper.setText(R.id.tv2, item);
             }
-        });*/
+        };
+        ptrLv1.setAdapter(adpt);
         ptrLv1.setMode(PullToRefreshBase.Mode.BOTH);
     }
 
@@ -117,7 +108,7 @@ public class Aty054PullToRefresh extends ActionBarActivity {
         @Override
         protected void onPostExecute(String[] result) {
             mListItems.addFirst("No." + i + " Added after refresh... ");
-            mAdapter.notifyDataSetChanged();
+            ptrLv1.setAdapter(adpt);
             // Call onRefreshComplete when the list has been refreshed.
             ptrLv1.onRefreshComplete();
             i++;
