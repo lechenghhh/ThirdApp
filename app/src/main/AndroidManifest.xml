@@ -237,7 +237,7 @@
         <activity
             android:name=".ActivityList.Aty053Coordinator"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ActivityList.Aty054" />
+        <activity android:name=".ActivityList.Aty054PullToRefresh" />
         <activity android:name=".ActivityList.Aty033UploadFile_3"></activity>
     </application>
 

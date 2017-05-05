@@ -8,12 +8,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.lecheng.hello.thirdapp.Adapter.Common.UnityAdpt;
 import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
 import com.lecheng.hello.thirdapp.Bean.Aty040.BeanList;
@@ -23,6 +23,7 @@ import com.lecheng.hello.thirdapp.Utils.MyApplication;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -46,12 +47,12 @@ public class Aty040NetNote extends AppCompatActivity {
     EditText etTitle;
     @Bind(R.id.etContent)
     EditText etContent;
-    @Bind(R.id.lvNoteList)
-    ListView lvNoteList;
     @Bind(R.id.btnAdd)
     Button btnAdd;
     @Bind(R.id.btnDelete)
     Button btnDelete;
+    @Bind(R.id.lvNoteList)
+    PullToRefreshListView lvNoteList;
     private String token = "qfnByOQJGXoAUeHGfXfAbtZUxBqDiTEv";
     private int item = -1;
 
@@ -149,7 +150,7 @@ public class Aty040NetNote extends AppCompatActivity {
                         new MyToast(Aty040NetNote.this, s, 3000);
                         displayLv();
                         volleyList();
-                        item=-1;
+                        item = -1;
                     }
                 }, new Response.ErrorListener() {
                     @Override
@@ -160,7 +161,6 @@ public class Aty040NetNote extends AppCompatActivity {
         request.setTag("volleyList");
         MyApplication.getHttpQue().add(request);
     }
-
 
     private void resolveJson(String s) {
 //        new MyToast(this, s, 3000);
@@ -191,7 +191,7 @@ public class Aty040NetNote extends AppCompatActivity {
     }
 
     private String getTime() {
-        return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date());
+        return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
     }
 
     private void hideLv() {//隐藏lv，显示et
@@ -244,6 +244,5 @@ public class Aty040NetNote extends AppCompatActivity {
                     .setNegativeButton("取消", null).show();
         }
     }
-
 
 }

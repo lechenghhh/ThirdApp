@@ -6,10 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.lecheng.hello.thirdapp.Http.Http047;
+import com.lecheng.hello.thirdapp.Net.Http047;
 import com.lecheng.hello.thirdapp.Interface.I047Listener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MyToast;

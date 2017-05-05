@@ -1,7 +1,6 @@
-package com.lecheng.hello.thirdapp.Http;
+package com.lecheng.hello.thirdapp.Net;
 
 import android.content.Context;
-import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -10,7 +9,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.lecheng.hello.thirdapp.Interface.I047Listener;
 import com.lecheng.hello.thirdapp.Interface.I047Model;
-import com.lecheng.hello.thirdapp.Utils.MyApplication;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
 
 import java.util.HashMap;
