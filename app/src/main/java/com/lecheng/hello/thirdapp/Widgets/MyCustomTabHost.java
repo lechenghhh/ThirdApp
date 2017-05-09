@@ -353,7 +353,6 @@ public class MyCustomTabHost extends TabHost implements
                     ft.show(newTab.fragment);
                 }
             }
-
             mLastTab = newTab;
         }
         return ft;
