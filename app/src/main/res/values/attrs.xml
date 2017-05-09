@@ -12,9 +12,9 @@
         <attr name="metaButtonBarButtonStyle" format="reference" />
     </declare-styleable>
 
-    <declare-styleable name="MyActionBar">
-        <attr name="metaButtonBarStyle" format="reference" />
-    </declare-styleable>
+    <!--<declare-styleable name="MyActionBar">-->
+        <!--<attr name="metaButtonBarStyle" format="reference" />-->
+    <!--</declare-styleable>-->
 
     <!--pulltorefresh top-->
     <declare-styleable name="PullToRefresh">

@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.lecheng.hello.thirdapp.R;
 /**
  * Created by 乐城 on 2017/5/5.
  * Constructor构造函数------>onMeasure测量View大小------>onSizeChanged确定View大小------>
@@ -31,7 +30,7 @@ public class MyActionBar extends View {
         int  mBorderColor = a.getColor(R.styleable.CircleImageView_border_color, DEFAULT_BORDER_COLOR);
         a.recycle();*/
     }
-
+/*
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
@@ -80,5 +79,5 @@ public class MyActionBar extends View {
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
-    }
+    }*/
 }
