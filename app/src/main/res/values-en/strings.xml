@@ -1,17 +1,17 @@
 <resources>
-    <string name="app_name">ThirdAPP</string>
+    <string name="app_name">No.3APP</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">设置</string>
-    <string name="title_activity_service1">服务1</string>
-    <string name="title_activity_main">主界面</string>
-    <string name="title_activity_layout3">布局3</string>
-    <string name="title_activity_fl">片段布局界面</string>
-    <string name="title_activity_animation4">动画4</string>
-    <string name="title_activity_mul_touch5">多点触摸5</string>
-    <string name="title_activity_sqlite">SQLite数据库</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_service1">Service1</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_layout3">Layout3</string>
+    <string name="title_activity_fl">FlActivity</string>
+    <string name="title_activity_animation4">Animation4</string>
+    <string name="title_activity_mul_touch5">MulTouch5</string>
+    <string name="title_activity_sqlite">SQLite</string>
     <string name="title_activity_sqlite6">SQLite6</string>
-    <string name="title_activity_fragment2">片段2</string>
+    <string name="title_activity_fragment2">Fragment2</string>
     <string name="title_activity_navigation">NavigationActivity</string>
 
     <string name="title_section1">Section 1</string>

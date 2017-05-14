@@ -42,7 +42,7 @@ public class MainMenu extends ListActivity {
             "Aty047ProgressDialog", "Aty048TimePiker", "Aty049MetroUI", "Aty050CrashTest",
             "-------------------------------------",
             "Aty051PopWindow", "Aty052CardView", "Aty053Coordinator",
-            "Aty054PullToRefresh", "Aty055View", "Aty056",
+            "Aty054PullToRefresh", "Aty055View", "Aty056Bluetooth",
             "Aty057", "Aty058", "Aty059", "Aty060",
     };
 
