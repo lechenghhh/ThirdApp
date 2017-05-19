@@ -243,7 +243,8 @@
         <activity android:name=".ActivityList.Aty033UploadFile_3" />
         <activity android:name=".ActivityList.Aty055View" />
         <activity android:name=".ActivityList.Aty056Bluetooth" />
-        <activity android:name=".ActivityList.Aty057Chart"></activity>
+        <activity android:name=".ActivityList.Aty057Chart" />
+        <activity android:name=".ActivityList.Aty061Kotlin"/>
     </application>
 
 </manifest>

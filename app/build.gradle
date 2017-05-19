@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'//xml控件自动找到//plugin里可能要装插件
 android {
     compileSdkVersion 21
     buildToolsVersion "22.0.1"
@@ -53,4 +55,9 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile 'com.android.support:design:22.2.1'
     testCompile 'junit:junit:4.12'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"   //Kotlin依赖
+//    compile "org.jetbrains.kotlin:kotlin-reflect-jre7:$kotlin_version"   //Kotlin 反射包
+}
+repositories {
+    mavenCentral()
 }

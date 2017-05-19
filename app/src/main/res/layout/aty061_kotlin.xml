@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty061Kotlin">
+
+    <TextView
+        android:id="@+id/tv1"
+        style="@style/style_tv_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:background="@color/colorBlue2"
+        android:padding="4dp"
+        android:text="Kotlin"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/tv2"
+        style="@style/style_tv_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_weight="1"
+        android:text="test" />
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:hint="input" />
+
+    <Button
+        android:id="@+id/btn1"
+        style="@style/style_btn_blue1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/unit_btnheight"
+        android:layout_margin="4dp"
+        android:text="APPEND" />
+</LinearLayout>
