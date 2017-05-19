@@ -7,7 +7,7 @@ import android.widget.TextView
 import com.lecheng.hello.thirdapp.R
 
 import kotlinx.android.synthetic.main.aty061_kotlin. *              //依赖kotlinx的xml找到控件
-
+//import kotlinx.android.synthetic.main.
 class Aty061Kotlin : ActionBarActivity() {
     private var i = 0;
 
