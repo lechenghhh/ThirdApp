@@ -16,7 +16,7 @@ import com.lecheng.hello.thirdapp.ActivityList.Aty018MyBrowser;
 import com.lecheng.hello.thirdapp.Adapter.Common.UnityAdpt;
 import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
 import com.lecheng.hello.thirdapp.Bean.Gson.Bean049;
-import com.lecheng.hello.thirdapp.Net.Http047;
+import com.lecheng.hello.thirdapp.Net.MyAsyncHttp;
 import com.lecheng.hello.thirdapp.Interface.I047Listener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.GsonUtil;
@@ -38,7 +38,7 @@ public class Frag049 extends Fragment implements I047Listener {
     TextView tvTitle;
     @Bind(R.id.lv1)
     ListView lv1;
-    private Http047 http047;
+    private MyAsyncHttp myAsyncHttp;
     private static final String URL = "http://wangyi.butterfly.mopaasapp.com/news/api";
     // + "?type=war&page=1&limit=10";
     private HashMap<String, String> hashMap = new HashMap<String, String>();
@@ -61,11 +61,11 @@ public class Frag049 extends Fragment implements I047Listener {
 
     private void init() {
         tvTitle.setText(type);
-        http047 = new Http047();
+        myAsyncHttp = new MyAsyncHttp();
         hashMap.put("type", type);
         hashMap.put("page", page + "");
         hashMap.put("limit", "10");
-        http047.http047Post(getActivity(), URL, hashMap, this);
+        myAsyncHttp.http047Post(getActivity(), URL, hashMap, this);
     }
 
     @OnClick({R.id.btn1, R.id.btn2})
@@ -75,14 +75,14 @@ public class Frag049 extends Fragment implements I047Listener {
                 if (page != 1) {
                     page--;
                     hashMap.put("page", page + "");
-                    http047.http047Post(getActivity(), URL, hashMap, this);
+                    myAsyncHttp.http047Post(getActivity(), URL, hashMap, this);
                 } else
                     new MyToast(getActivity(), "已到第一页", 3333);
                 break;
             case R.id.btn2:
                 page++;
                 hashMap.put("page", page + "");
-                http047.http047Post(getActivity(), URL, hashMap, this);
+                myAsyncHttp.http047Post(getActivity(), URL, hashMap, this);
                 break;
         }
     }
@@ -116,6 +116,6 @@ public class Frag049 extends Fragment implements I047Listener {
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
-        http047.http047Cancel("cancelPost");
+        myAsyncHttp.http047Cancel("cancelPost");
     }
 }

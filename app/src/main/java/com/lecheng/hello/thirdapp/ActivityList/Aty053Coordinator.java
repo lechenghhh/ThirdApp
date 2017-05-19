@@ -5,7 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.lecheng.hello.thirdapp.Net.Http047;
+import com.lecheng.hello.thirdapp.Net.MyAsyncHttp;
 import com.lecheng.hello.thirdapp.Interface.I047Listener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
@@ -34,8 +34,8 @@ public class Aty053Coordinator extends ActionBarActivity implements I047Listener
             }
         });
 
-        Http047 http047 = new Http047();
-        http047.http047Get(this, URL, this);
+        MyAsyncHttp myAsyncHttp = new MyAsyncHttp();
+        myAsyncHttp.http047Get(this, URL, this);
     }
 
     @Override

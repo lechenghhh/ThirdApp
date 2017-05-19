@@ -19,7 +19,7 @@ import static com.lecheng.hello.thirdapp.Utils.MyApplication.getHttpQue;
 /*
 */
 
-public class Http047 implements I047Model {
+public class MyAsyncHttp implements I047Model {
 
     @Override               //Get请求
     public void http047Get(final Context c, final String url, final I047Listener listener) {

@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.lecheng.hello.thirdapp.Adapter.Common.UnityAdpt;
 import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
 import com.lecheng.hello.thirdapp.Bean.Gson.Bean039Weather;
-import com.lecheng.hello.thirdapp.Net.Http047;
+import com.lecheng.hello.thirdapp.Net.MyAsyncHttp;
 import com.lecheng.hello.thirdapp.Interface.I047Listener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.GsonUtil;
@@ -52,7 +52,7 @@ public class Aty039NewWeather extends Activity implements I047Listener {
     private LayoutAnimationController lac;      //动画
     private ScaleAnimation sa;                  //动画
 
-    private Http047 http047 = new Http047();
+    private MyAsyncHttp myAsyncHttp = new MyAsyncHttp();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,11 +60,11 @@ public class Aty039NewWeather extends Activity implements I047Listener {
         setContentView(R.layout.aty039);
         ButterKnife.bind(this);
         imageLoader.displayImage(bgUrl, aty40IvBg);
-//        http047.http047Get(this, "http://wthrcdn.etouch.cn/weather_mini?city=" +
+//        myAsyncHttp.http047Get(this, "http://wthrcdn.etouch.cn/weather_mini?city=" +
 //                MySP.loadData(getApplicationContext(), "city", "福州"), this);
         HashMap<String, String> hm = new HashMap<String, String>();
         hm.put("city", MySP.loadData(getApplicationContext(), "city", "福州") + "");
-        http047.http047Post(this, "http://wthrcdn.etouch.cn/weather_mini", hm, this);
+        myAsyncHttp.http047Post(this, "http://wthrcdn.etouch.cn/weather_mini", hm, this);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
                 (getApplicationContext(), android.R.layout.simple_list_item_1);
         aty40Lv2.setAdapter(adapter);
@@ -78,7 +78,7 @@ public class Aty039NewWeather extends Activity implements I047Listener {
                 MySP.saveData(getApplicationContext(), "city", cityList[position]);
                 aty40Lv.setVisibility(View.VISIBLE);
                 aty40Lv2.setVisibility(View.GONE);
-                http047.http047Get(Aty039NewWeather.this,
+                myAsyncHttp.http047Get(Aty039NewWeather.this,
                         "http://wthrcdn.etouch.cn/weather_mini?city=" +
                                 MySP.loadData(getApplicationContext(), "city", "福州"),
                         Aty039NewWeather.this);
