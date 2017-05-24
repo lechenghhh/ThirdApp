@@ -7,7 +7,7 @@ import android.os.Environment;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 import com.lecheng.hello.thirdapp.R;
-import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
+import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiskCache;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.cache.memory.impl.UsingFreqLimitedMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -44,8 +44,8 @@ public class MyApplication extends Application {
         ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this)//UniversalImageLoader
                 .memoryCacheExtraOptions(480, 800)
                 // max width, max height，即保存的每个缓存文件的最大长宽
-//				.discCacheExtraOptions(480, 800, null)
-                .discCacheExtraOptions(480, 800, Bitmap.CompressFormat.JPEG, 75, null)
+                .discCacheExtraOptions(480, 800, null)
+                //.discCacheExtraOptions(480, 800, Bitmap.CompressFormat.JPEG, 75, null)
                 // Can slow ImageLoader, use it carefully (Better don't use
                 // it)/设置缓存的详细信息，最好不要设置这个
                 .threadPoolSize(3)
@@ -62,7 +62,7 @@ public class MyApplication extends Application {
                 .tasksProcessingOrder(QueueProcessingType.LIFO)
                 .discCacheFileCount(100)
                 // 缓存的文件数量
-                .discCache(new UnlimitedDiscCache(new File(Environment
+                .discCache(new UnlimitedDiskCache(new File(Environment
                         .getExternalStorageDirectory()
                         + "/android/com.lecheng.thirdapp/cache")))
                 // 自定义缓存路径
