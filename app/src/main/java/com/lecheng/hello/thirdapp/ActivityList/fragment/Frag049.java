@@ -16,7 +16,7 @@ import com.lecheng.hello.thirdapp.ActivityList.Aty018MyBrowser;
 import com.lecheng.hello.thirdapp.Adapter.Common.UnityAdpt;
 import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
 import com.lecheng.hello.thirdapp.Bean.Gson.Bean049;
-import com.lecheng.hello.thirdapp.Net.MyAsyncHttp;
+import com.lecheng.hello.thirdapp.Net.MyHttp;
 import com.lecheng.hello.thirdapp.Interface.I047Listener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.GsonUtil;
@@ -38,7 +38,7 @@ public class Frag049 extends Fragment implements I047Listener {
     TextView tvTitle;
     @Bind(R.id.lv1)
     ListView lv1;
-    private MyAsyncHttp myAsyncHttp;
+    private MyHttp myAsyncHttp;
     private static final String URL = "http://wangyi.butterfly.mopaasapp.com/news/api";
     // + "?type=war&page=1&limit=10";
     private HashMap<String, String> hashMap = new HashMap<String, String>();
@@ -61,7 +61,7 @@ public class Frag049 extends Fragment implements I047Listener {
 
     private void init() {
         tvTitle.setText(type);
-        myAsyncHttp = new MyAsyncHttp();
+        myAsyncHttp = new MyHttp();
         hashMap.put("type", type);
         hashMap.put("page", page + "");
         hashMap.put("limit", "10");

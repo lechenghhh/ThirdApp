@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.lecheng.hello.thirdapp.Adapter.Common.UnityAdpt;
 import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
 import com.lecheng.hello.thirdapp.Bean.Gson.Bean039Weather;
-import com.lecheng.hello.thirdapp.Net.MyAsyncHttp;
+import com.lecheng.hello.thirdapp.Net.MyHttp;
 import com.lecheng.hello.thirdapp.Interface.I047Listener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.GsonUtil;
@@ -52,7 +52,7 @@ public class Aty039NewWeather extends Activity implements I047Listener {
     private LayoutAnimationController lac;      //动画
     private ScaleAnimation sa;                  //动画
 
-    private MyAsyncHttp myAsyncHttp = new MyAsyncHttp();
+    private MyHttp myAsyncHttp = new MyHttp();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.lecheng.hello.thirdapp.Net.MyAsyncHttp;
+import com.lecheng.hello.thirdapp.Net.MyHttp;
 import com.lecheng.hello.thirdapp.Interface.I047Listener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
@@ -25,7 +25,7 @@ public class Aty046MsgVerify extends AppCompatActivity implements I047Listener {
     EditText et2;
     @Bind(R.id.tv)
     TextView tv;
-    private MyAsyncHttp myAsyncHttp;
+    private MyHttp myAsyncHttp;
     private HashMap<String, String> map;
     private String url = "http://10.0.110.114:8090/Androidpacs/services/AndroidController?wsdl";
 
@@ -35,7 +35,7 @@ public class Aty046MsgVerify extends AppCompatActivity implements I047Listener {
         setContentView(R.layout.aty046_msgverify);
         ButterKnife.bind(this);
         //实例化
-        myAsyncHttp = new MyAsyncHttp();
+        myAsyncHttp = new MyHttp();
         map = new HashMap<String, String>();
     }
 
