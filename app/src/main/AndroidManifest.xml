@@ -130,6 +130,7 @@
         <activity android:name=".ActivityList.Aty032TestBanner" />
         <activity android:name=".ActivityList.Aty033UploadFile" />
         <activity android:name=".ActivityList.Aty033UploadFile_2" />
+        <activity android:name=".ActivityList.Aty033UploadFile_4" />
         <activity android:name=".ActivityList.Aty033UploadFile_1" />
         <activity android:name=".ActivityList.Aty034Tuner" />
         <activity android:name=".ActivityList.Aty035Contact" />

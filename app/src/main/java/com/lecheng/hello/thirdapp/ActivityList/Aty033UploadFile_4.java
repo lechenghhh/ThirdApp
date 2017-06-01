@@ -42,13 +42,14 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Aty033UploadFile_3 extends ActionBarActivity {
+//17-6-1测试成功
+public class Aty033UploadFile_4 extends ActionBarActivity {
     @Bind(R.id.tv1)
     TextView tv1;
     @Bind(R.id.tv2)
     TextView tv2;
-    private String URL_UPLOAD = "http://10.0.110.134:8086/file_upload";
-//    private String URL_UPLOAD = "http://localhost:8085/Upload";
+    private String URL_UPLOAD = "http://10.0.110.134:8085/Upload";//java后台地址
+    //    private String URL_UPLOAD = "http://10.0.110.134:8086/file_upload";//nodejs地址
     private ImageLoader il = ImageLoader.getInstance();
     private String srcPath = "";
     private final int TIME_OUT = 30 * 1000;   //超时时间
@@ -112,7 +113,7 @@ public class Aty033UploadFile_3 extends ActionBarActivity {
                             bos.flush();
                             bos.close();
                         } else {
-                            new MyToast(Aty033UploadFile_3.this, "保存失败，SD卡无效", Toast.LENGTH_SHORT);
+                            new MyToast(Aty033UploadFile_4.this, "保存失败，SD卡无效", Toast.LENGTH_SHORT);
                         }
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
@@ -121,7 +122,7 @@ public class Aty033UploadFile_3 extends ActionBarActivity {
                     }
                     break;
                 case 2:
-                    srcPath = MyUtils.getPath(Aty033UploadFile_3.this, data.getData());//Uri转Url
+                    srcPath = MyUtils.getPath(Aty033UploadFile_4.this, data.getData());//Uri转Url
                     tv2.setText("资源文件Uri：" + srcPath);
                     System.out.println("Uri:" + data.getData() + "\n保存路径2----------:" + srcPath);
                     break;
@@ -148,9 +149,9 @@ public class Aty033UploadFile_3 extends ActionBarActivity {
 //                    Looper.getMainLooper();//获取主线程looper以便接下来toast
                     JSONObject jsonObject = new JSONObject(uploadFile(file, URL_UPLOAD, params));
                     //把图片列表存在sp中的pic_id键值对中
-                    String strPicId = (String) MySP.loadData(Aty033UploadFile_3.this, "pic_id", "");
+                    String strPicId = (String) MySP.loadData(Aty033UploadFile_4.this, "pic_id", "");
                     strPicId = strPicId + jsonObject.get("pic_id") + "-";
-                    MySP.saveData(Aty033UploadFile_3.this, "pic_id", strPicId);
+                    MySP.saveData(Aty033UploadFile_4.this, "pic_id", strPicId);
 //                    new MyToast(Aty033UploadFile_2.this, "上传成功", 3000);
 //                    finish();
                 } catch (Exception e) {

@@ -76,7 +76,7 @@ public class Aty033UploadFile extends AppCompatActivity {
         MyApplication.getHttpQue().add(request2);
     }
 
-    @OnClick({R.id.aty33_btn, R.id.aty33_btn2, R.id.aty33_btn_tct, R.id.aty33_btn_node})
+    @OnClick({R.id.aty33_btn, R.id.aty33_btn2, R.id.aty33_btn_tct, R.id.aty33_btn_node,R.id.aty33_btn5})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.aty33_btn:
@@ -90,6 +90,9 @@ public class Aty033UploadFile extends AppCompatActivity {
                 break;
             case R.id.aty33_btn_node:
                 startActivity(new Intent(getApplicationContext(), Aty033UploadFile_3.class));
+                break;
+            case R.id.aty33_btn5:
+                startActivity(new Intent(getApplicationContext(), Aty033UploadFile_4.class));
                 break;
         }
     }
