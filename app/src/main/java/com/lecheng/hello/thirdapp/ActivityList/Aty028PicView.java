@@ -52,7 +52,7 @@ public class Aty028PicView extends AppCompatActivity implements View.OnClickList
     private void photoViewwithViewPager() {
         final TextView mTvTittle = (TextView) findViewById(R.id.test_title);
         ViewPager _vp;                                              //viewpagers
-        _pvArray = new PhotoView[_imgUrlArray.length];                     //每个view承载photoview数组
+        _pvArray = new PhotoView[_imgUrlArray.length];              //每个view承载photoview数组
         List<View> mViews1 = new ArrayList<View>();                 //vp承载的view数组
         ImageLoader imageLoader = ImageLoader.getInstance();
         LayoutInflater inflater = LayoutInflater.from(Aty028PicView.this);
