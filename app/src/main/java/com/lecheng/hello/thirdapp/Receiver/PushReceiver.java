@@ -19,7 +19,6 @@ public class PushReceiver extends PushMessageReceiver {
     @Override
     public void onBind(Context context, int i, String s, String s1, String s2, String s3) {
         new MyToast(context, "appid:" + s + "userId:" + s1 + "channelId:" + s2 + "requestId:" + s3, 3333);
-
     }
 
     @Override
