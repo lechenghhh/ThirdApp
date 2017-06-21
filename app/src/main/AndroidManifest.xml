@@ -207,7 +207,6 @@
 
         <receiver android:name=".Receiver.PushReceiver"> <!-- 此处Receiver名字修改为当前包名路径 -->
             <intent-filter>
-
                 <!-- 接收push消息 -->
                 <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
                 <!-- 接收bind、setTags等method的返回结果 -->
