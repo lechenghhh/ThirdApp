@@ -15,6 +15,9 @@ import android.widget.Toast;
 
 import com.lecheng.hello.thirdapp.Utils.MyToast;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class MainMenu extends ListActivity {
     //命名规范 前置Atyxxx  如果是实验模块功能请添加Test，如果是借鉴请添加Demo----16.9.6.
     private String classes[] = {
@@ -73,21 +76,22 @@ public class MainMenu extends ListActivity {
         }
     }
 
-    private long lct = 0;                       //后退事件处理
+    private boolean mBackKeyPressed = false;
 
     @Override
     public void onBackPressed() {
-        if (lct <= 0) {
+        if (!mBackKeyPressed) {
             new MyToast(this, "再按一次退出程序", 1);
-            lct = System.currentTimeMillis();
+            mBackKeyPressed = true;
+            new Timer().schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    mBackKeyPressed = false;
+                }
+            }, 2000);
         } else {
-            long cct = System.currentTimeMillis();
-            if (cct - lct < 1200) {
-                finish();
-            } else {
-                new MyToast(this, "再按一次吧", 1);
-                lct = cct;
-            }
+            this.finish();
+            System.exit(0);
         }
     }
 

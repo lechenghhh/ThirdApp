@@ -7,6 +7,7 @@ import android.widget.TextView
 import com.lecheng.hello.thirdapp.R
 
 import kotlinx.android.synthetic.main.aty061_kotlin. *              //依赖kotlinx的xml找到控件
+
 //import kotlinx.android.synthetic.main.
 class Aty061Kotlin : ActionBarActivity() {
     private var i = 0;//
@@ -14,7 +15,7 @@ class Aty061Kotlin : ActionBarActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.aty061_kotlin)
-        init("init()");
+        init("init()")
     }
 
     private fun init(str: String?) {
@@ -27,6 +28,4 @@ class Aty061Kotlin : ActionBarActivity() {
             tv2.append(str + et1.text + i)
         }
     }
-
-
 }
