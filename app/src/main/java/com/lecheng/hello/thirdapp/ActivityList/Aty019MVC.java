@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.lecheng.hello.thirdapp.Net.MyHttp;
+import com.lecheng.hello.thirdapp.Net.HttpGo;
 import com.lecheng.hello.thirdapp.Interface.I047Listener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
@@ -29,14 +29,14 @@ public class Aty019MVC extends AppCompatActivity implements I047Listener {
     @Bind(R.id.image1)
     ImageView image1;
     ImageLoader imageLoader = ImageLoader.getInstance();
-    private MyHttp weatherModel;
+    private HttpGo weatherModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty019_mvc);
         ButterKnife.bind(this);
-        weatherModel = new MyHttp();
+        weatherModel = new HttpGo();
     }
 
     private void displayWeather(String strJson) {

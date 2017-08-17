@@ -17,7 +17,7 @@ import java.util.Map;
 import static com.lecheng.hello.thirdapp.Utils.MyApplication.getHttpQue;
 
 
-public class MyHttp implements I047Model {
+public class HttpGo implements I047Model {
 
     @Override               //Get请求
     public void http047Get(final Context c, final String url, final I047Listener listener) {
