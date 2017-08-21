@@ -40,11 +40,12 @@
     <!-- 适配Android N系统必需的ContentProvider写权限声明，写权限包含应用包名 -->
     <uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.YourPackageName" />
     <!-- 微信分享权限 -->
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <permission
         android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.YourPackageName"
         android:protectionLevel="normal" />
@@ -212,6 +213,7 @@
 
         <receiver android:name=".Receiver.PushReceiver"> <!-- 此处Receiver名字修改为当前包名路径 -->
             <intent-filter>
+
                 <!-- 接收push消息 -->
                 <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
                 <!-- 接收bind、setTags等method的返回结果 -->
@@ -253,7 +255,9 @@
             android:name=".wxapi.WXEntryActivity"
             android:exported="true"
             android:label="微信分享" />
-        <activity android:name=".ActivityList.Aty061Kotlin"/>
+        <activity android:name=".ActivityList.Aty061Kotlin" />
+        <activity android:name=".ActivityList.Aty058Share"/>
+        <activity android:name=".ActivityList.Aty058Share"/>
     </application>
 
 </manifest>
