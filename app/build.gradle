@@ -57,6 +57,7 @@ dependencies {
     //Kotlin依赖
     //    compile "org.jetbrains.kotlin:kotlin-reflect-jre7:$kotlin_version"   //Kotlin 反射包
     compile files('libs/hellocharts-library-1.5.8.jar')
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'//微信分享sdk
 }
 repositories {
     mavenCentral()

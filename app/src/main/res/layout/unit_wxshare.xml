@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_share_entry"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etURL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:text="http://" />
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="标题"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/etContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请发表感言"
+        android:lines="3"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btnSS"
+        style="@style/style_btn_green1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="分享给微信好友" />
+
+    <Button
+        android:id="@+id/btnWTL"
+        style="@style/style_btn_green1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="分享到朋友圈" />
+
+</LinearLayout>
