@@ -51,12 +51,13 @@ public class Aty058Share extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty058_share);
         ButterKnife.bind(this);
-        arrImg.add("http://wx4.sinaimg.cn/mw690/48d84e6fly1firh5odb69j20ps0fvwwk.jpg");
-        arrImg.add("http://fanyi.baidu.com/static/translation/img/header/logo_cbfea26.png");
-        arrImg.add("https://os.alipayobjects.com/rmsportal/uGWcpAFgWdynxBy.png");
-        arrImg.add("https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=2512058291,4137050375&fm=85&s=5B5E38D210FE598C627CB649030040F5");
+        arrImg.add("https://oimageb2.ydstatic.com/image?id=-1072109575241953457&product=adpublish&w=250&h=208");
+        arrImg.add("https://img3.doubanio.com/view/dale-online/dale_ad/public/ce25d251bf05306.jpg");
+        arrImg.add("https://img1.doubanio.com/view/status/median/public/1fExnu.webp");
+        arrImg.add("https://img3.doubanio.com/view/status/median/public/0V52Hn.webp");
+        arrImg.add("https://img3.doubanio.com/view/note/large/public/p44727256.jpg");
+        arrImg.add("https://img1.doubanio.com/view/status/small/public/3jkX7W.webp");
     }
-
 
     @OnClick({R.id.btn1, R.id.btn2})
     public void onViewClicked(View view) {
@@ -70,6 +71,12 @@ public class Aty058Share extends ActionBarActivity {
                 System.out.println("Environment:" + Environment.getExternalStorageDirectory());
                 break;
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        arrShare = new ArrayList<String>();
     }
 
     private void getImg(final ArrayList<String> arrUrl) {
@@ -94,7 +101,7 @@ public class Aty058Share extends ActionBarActivity {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    if (finalI == arrUrl.size() - 1) share2Wx(arrShare);
+                    if (finalI == arrUrl.size() - 1) share2Wx(arrShare);//最后一遍循环的时候启动分享功能
                 }
             }, 0, 0, Bitmap.Config.RGB_565, new Response.ErrorListener() {
                 @Override
