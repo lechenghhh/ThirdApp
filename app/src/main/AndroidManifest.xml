@@ -23,16 +23,10 @@
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 
     <!-- Push service 运行需要的权限 create by 乐城 17-3-2 -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <!-- 富媒体需要声明的权限 -->
     <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
@@ -40,11 +34,6 @@
     <!-- 适配Android N系统必需的ContentProvider写权限声明，写权限包含应用包名 -->
     <uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.YourPackageName" />
     <!-- 微信分享权限 -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <permission
         android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.YourPackageName"
@@ -256,7 +245,6 @@
             android:exported="true"
             android:label="微信分享" />
         <activity android:name=".ActivityList.Aty061Kotlin" />
-        <activity android:name=".ActivityList.Aty058Share"/>
         <activity android:name=".ActivityList.Aty058Share"/>
     </application>
 
