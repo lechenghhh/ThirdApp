@@ -115,7 +115,11 @@ public class Aty058Share extends ActionBarActivity {
 
     public void share2Wx(ArrayList<String> arrayList) {
         Intent intent = new Intent();
-        ComponentName comp = new ComponentName("com.tencent.mm", "com.tencent.mm.ui.tools.ShareToTimeLineUI");
+//        ComponentName comp = new ComponentName
+// ("com.tencent.mm", "com.tencent.mm.ui.tools.ShareToTimeLineUI");
+        ComponentName comp = new ComponentName
+                ("com.tencent.mm", "com.tencent.mm.ui.tools.ShareImgUI");//发送给好友
+
         intent.setComponent(comp);
         intent.setAction(Intent.ACTION_SEND_MULTIPLE);
         intent.setType("image/*");
