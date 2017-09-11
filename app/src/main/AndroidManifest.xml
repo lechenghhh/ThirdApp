@@ -245,7 +245,8 @@
             android:exported="true"
             android:label="微信分享" />
         <activity android:name=".ActivityList.Aty061Kotlin" />
-        <activity android:name=".ActivityList.Aty058Share"/>
+        <activity android:name=".ActivityList.Aty058Share" />
+        <activity android:name=".ActivityList.Aty059WebViewPlus" />
     </application>
 
 </manifest>
