@@ -23,7 +23,7 @@ import uk.co.senab.photoview.PhotoViewAttacher;
 public class Aty028PicView extends AppCompatActivity implements View.OnClickListener {
     private WebView webView;
     private EditText urlBox;
-    String[] _imgUrlArray = {
+    private String[] _imgUrlArray = {
             "http://ww2.sinaimg.cn/mw690/d0a5385bgw1f864oduizdj21kw13a10v.jpg",
             "http://ww1.sinaimg.cn/mw690/d0a5385bgw1f864okpn0pj21kw11x47s.jpg",
             "http://www.pp3.cn/uploads/201510/2015102409.jpg",

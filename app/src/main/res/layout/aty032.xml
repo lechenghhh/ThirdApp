@@ -1,64 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/aty32_ll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/aty32_ll"
     android:background="@drawable/bg_pic"
     android:orientation="vertical">
-<!--13-09修改后push-->
-    <android.support.v4.view.ViewPager
-        android:id="@+id/test8_vp"
+
+    <com.bigkoo.convenientbanner.ConvenientBanner
+        android:id="@+id/cb1"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
-        android:background="@color/colorWhite1" />
+        android:layout_height="120dp"
+        app:canLoop="true" />//控制循环与否
 
-    <!--<LinearLayout-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="16dp"-->
-    <!--android:gravity="right">-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/test8_title"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_weight="1"-->
-    <!--android:gravity="left"-->
-    <!--android:text="test" />-->
-
-    <!--<View-->
-    <!--android:id="@+id/dot_0"-->
-    <!--android:layout_width="8dp"-->
-    <!--android:layout_height="8dp"-->
-    <!--android:layout_margin="2dp"-->
-    <!--android:background="@color/colorGray" />-->
-
-    <!--<View-->
-    <!--android:id="@+id/dot_1"-->
-    <!--android:layout_width="8dp"-->
-    <!--android:layout_height="8dp"-->
-    <!--android:layout_margin="2dp"-->
-    <!--android:background="@color/colorGray" />-->
-
-    <!--<View-->
-    <!--android:id="@+id/dot_2"-->
-    <!--android:layout_width="8dp"-->
-    <!--android:layout_height="8dp"-->
-    <!--android:layout_margin="2dp"-->
-    <!--android:background="@color/colorGray" />-->
-
-    <!--<View-->
-    <!--android:id="@+id/dot_3"-->
-    <!--android:layout_width="8dp"-->
-    <!--android:layout_height="8dp"-->
-    <!--android:layout_margin="2dp"-->
-    <!--android:background="@color/colorGray" />-->
-
-    <!--<View-->
-    <!--android:id="@+id/dot_4"-->
-    <!--android:layout_width="8dp"-->
-    <!--android:layout_height="8dp"-->
-    <!--android:layout_margin="2dp"-->
-    <!--android:background="@color/colorGray" />-->
-    <!--</LinearLayout>-->
 </LinearLayout>

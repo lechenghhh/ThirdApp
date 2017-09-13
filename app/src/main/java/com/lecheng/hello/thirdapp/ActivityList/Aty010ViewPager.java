@@ -77,9 +77,9 @@ public class Aty010ViewPager extends AppCompatActivity implements ViewPager.OnPa
         }*/
         for (int i = 0; i < ids.length; i++) {
             if (position == i) {
-                dots[i].setImageResource(R.drawable.util_point_selected);
+                dots[i].setImageResource(R.drawable.unit_dot_p);
             } else {
-                dots[i].setImageResource(R.drawable.util_point);
+                dots[i].setImageResource(R.drawable.unit_dot_n);
             }
         }
     }
