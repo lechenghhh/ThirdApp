@@ -10,7 +10,7 @@ import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.lecheng.hello.thirdapp.Adapter.MyPreviewAdp;
+import com.lecheng.hello.thirdapp.Adapter.MyPreviewAdpt;
 import com.lecheng.hello.thirdapp.R;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -65,7 +65,7 @@ public class Aty028PicView extends AppCompatActivity implements View.OnClickList
 
         //vp实例化并设置适配器
         _vp = (ViewPager) findViewById(R.id.test_vp);
-        MyPreviewAdp mVPAdp1 = new MyPreviewAdp(mViews1, Aty028PicView.this);
+        MyPreviewAdpt mVPAdp1 = new MyPreviewAdpt(mViews1, Aty028PicView.this);
         _vp.setAdapter(mVPAdp1);
 //        _vp.setCurrentItem(imgPosition);
 

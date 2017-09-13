@@ -16,7 +16,7 @@ import com.lecheng.hello.thirdapp.Adapter.Common.UnityAdpt;
 import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
 import com.lecheng.hello.thirdapp.Bean.Gson.Bean039Weather;
 import com.lecheng.hello.thirdapp.Net.HttpGo;
-import com.lecheng.hello.thirdapp.Interface.I047Listener;
+import com.lecheng.hello.thirdapp.Interface.IWListener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.GsonUtil;
 import com.lecheng.hello.thirdapp.Utils.MySP;
@@ -29,7 +29,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Aty039NewWeather extends Activity implements I047Listener {
+public class Aty039NewWeather extends Activity implements IWListener {
     @Bind(R.id.aty40_iv_bg)
     ImageView aty40IvBg;
     @Bind(R.id.aty40_tv_city)

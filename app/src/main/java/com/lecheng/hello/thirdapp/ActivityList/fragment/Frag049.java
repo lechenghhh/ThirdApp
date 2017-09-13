@@ -17,7 +17,7 @@ import com.lecheng.hello.thirdapp.Adapter.Common.UnityAdpt;
 import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
 import com.lecheng.hello.thirdapp.Bean.Gson.Bean049;
 import com.lecheng.hello.thirdapp.Net.HttpGo;
-import com.lecheng.hello.thirdapp.Interface.I047Listener;
+import com.lecheng.hello.thirdapp.Interface.IWListener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.GsonUtil;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
@@ -33,7 +33,7 @@ import butterknife.OnClick;
  * 文档地址：http://wangyi.butterfly.mopaasapp.com/
  */
 
-public class Frag049 extends Fragment implements I047Listener {
+public class Frag049 extends Fragment implements IWListener {
     @Bind(R.id.tvTitle)
     TextView tvTitle;
     @Bind(R.id.lv1)

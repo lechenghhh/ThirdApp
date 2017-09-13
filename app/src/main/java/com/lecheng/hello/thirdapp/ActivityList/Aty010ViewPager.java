@@ -1,6 +1,5 @@
 package com.lecheng.hello.thirdapp.ActivityList;
 
-import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,18 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.lecheng.hello.thirdapp.MainMenu;
-import com.lecheng.hello.thirdapp.Adapter.MyVPAdapter;
+import com.lecheng.hello.thirdapp.Adapter.MyVPAdpt;
 import com.lecheng.hello.thirdapp.R;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.download.ImageDownloader;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Aty010ViewPager extends AppCompatActivity implements ViewPager.OnPageChangeListener {
     private ViewPager VP;            //VP界面
-    private MyVPAdapter VPA;         //适配器
+    private MyVPAdpt VPA;         //适配器
     private List<View> views;        //内容
     private ImageView[] dots;        //导航点的集合
     private int[] ids = {R.id.ivp1, R.id.ivp2, R.id.ivp3};    //导航点id的集合
@@ -41,7 +38,7 @@ public class Aty010ViewPager extends AppCompatActivity implements ViewPager.OnPa
         views.add(iv);
         views.add(iv2);
         views.add(iv3);
-        VPA = new MyVPAdapter(views, this);
+        VPA = new MyVPAdpt(views, this);
         VP = (ViewPager) findViewById(R.id.vp);
         VP.setAdapter(VPA);
         VP.setOnPageChangeListener(this);

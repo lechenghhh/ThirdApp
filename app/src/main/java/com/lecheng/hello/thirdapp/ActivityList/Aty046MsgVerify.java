@@ -7,7 +7,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.Net.HttpGo;
-import com.lecheng.hello.thirdapp.Interface.I047Listener;
+import com.lecheng.hello.thirdapp.Interface.IWListener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
 
@@ -17,7 +17,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Aty046MsgVerify extends AppCompatActivity implements I047Listener {
+public class Aty046MsgVerify extends AppCompatActivity implements IWListener {
 
     @Bind(R.id.et)
     EditText et;

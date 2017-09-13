@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.Net.HttpGo;
-import com.lecheng.hello.thirdapp.Interface.I047Listener;
+import com.lecheng.hello.thirdapp.Interface.IWListener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -20,7 +20,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Aty019MVC extends AppCompatActivity implements I047Listener {
+public class Aty019MVC extends AppCompatActivity implements IWListener {
 
     @Bind(R.id.editText3)
     EditText editText3;

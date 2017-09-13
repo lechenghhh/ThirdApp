@@ -11,11 +11,11 @@ import java.util.List;
 /**
  * Created by Cheng on 2015/8/6.
  */
-public class MyPreviewAdp extends PagerAdapter {
+public class MyPreviewAdpt extends PagerAdapter {
     private List<View> views;
     private Context c;
 
-    public MyPreviewAdp(List<View> views, Context c) {
+    public MyPreviewAdpt(List<View> views, Context c) {
         this.views = views;
         this.c = c;
     }

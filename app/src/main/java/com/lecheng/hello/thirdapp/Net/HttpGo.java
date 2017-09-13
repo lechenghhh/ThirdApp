@@ -7,8 +7,8 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.lecheng.hello.thirdapp.Interface.I047Listener;
-import com.lecheng.hello.thirdapp.Interface.I047Model;
+import com.lecheng.hello.thirdapp.Interface.IWListener;
+import com.lecheng.hello.thirdapp.Interface.IWModel;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
 
 import java.util.HashMap;
@@ -17,10 +17,10 @@ import java.util.Map;
 import static com.lecheng.hello.thirdapp.Utils.MyApplication.getHttpQue;
 
 
-public class HttpGo implements I047Model {
+public class HttpGo implements IWModel {
 
     @Override               //Get请求
-    public void http047Get(final Context c, final String url, final I047Listener listener) {
+    public void http047Get(final Context c, final String url, final IWListener listener) {
         StringRequest request = new StringRequest
                 (Request.Method.GET, url, new Response.Listener<String>() {
                     @Override
@@ -41,7 +41,7 @@ public class HttpGo implements I047Model {
     }
 
     @Override               //Post请求
-    public void http047Post(final Context c, String url, final HashMap<String, String> hashMap, final I047Listener listener) {
+    public void http047Post(final Context c, String url, final HashMap<String, String> hashMap, final IWListener listener) {
         StringRequest request2 = new StringRequest
                 (Request.Method.POST, url, new Response.Listener<String>() {
                     @Override
