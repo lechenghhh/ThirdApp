@@ -59,6 +59,7 @@ dependencies {
     compile 'com.android.support:design:22.2.1'
     compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
     testCompile 'junit:junit:4.12'
+//    compile 'com.jude:rollviewpager:1.2.9'//aty032依赖
 }
 repositories {
     mavenCentral()

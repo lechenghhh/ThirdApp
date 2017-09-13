@@ -21,7 +21,6 @@ import android.widget.ImageView;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageRequest;
-import com.lecheng.hello.thirdapp.ActivityList.Test.Aty058_1;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.UrlUtil;
 
