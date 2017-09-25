@@ -12,6 +12,7 @@ import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.holder.Holder;
 import com.bigkoo.convenientbanner.listener.OnItemClickListener;
 import com.lecheng.hello.thirdapp.R;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.Arrays;
 import java.util.List;
@@ -28,7 +29,6 @@ public class Aty032TestBanner extends AppCompatActivity {
             "http://ww2.sinaimg.cn/mw690/d0a5385bgw1f864oduizdj21kw13a10v.jpg",
             "http://ww1.sinaimg.cn/mw690/d0a5385bgw1f864okpn0pj21kw11x47s.jpg",
             "http://www.pp3.cn/uploads/201510/2015102409.jpg",
-            "http://imga1.pic21.com/bizhi/131223/05601/s22.jpg",
             "http://ww4.sinaimg.cn/mw1024/d0a5385bjw1faesqbybmcj215o0rsk04.jpg",
             "http://ww1.sinaimg.cn/mw1024/d0a5385bjw1faesqasq7nj20rs15o0zi.jpg",
     };
@@ -48,8 +48,7 @@ public class Aty032TestBanner extends AppCompatActivity {
                 .setPageIndicator(new int[]
                         {R.drawable.unit_dot_n, R.drawable.unit_dot_p}) //设置两个点作为指示器
                 .setPageIndicatorAlign
-                        (ConvenientBanner.PageIndicatorAlign.CENTER_HORIZONTAL); //设置指示器的方向水平  居中
-
+                        (ConvenientBanner.PageIndicatorAlign.CENTER_HORIZONTAL);//设置指示器的方向水平居中
         cb1.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
@@ -58,13 +57,23 @@ public class Aty032TestBanner extends AppCompatActivity {
         });
 //        cb1.setPageIndicator(int[]) // 这个是设置指示器的方法
 //        cb1.setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign)// 设置指示器方向
-        cb1.startTurning(2000);      //设置开始轮播以及轮播时间  建议在onResume方法中设置
-        cb1.stopTurning();              //停止轮播  建议在onPause方法中设置
-        cb1.setManualPageable(false);//设置不能手动影响  默认是手指触摸 轮播图不能翻页
+        cb1.setManualPageable(true);//设置不能手动影响  默认是手指触摸 轮播图不能翻页
         cb1.setCanLoop(true);  //默认true,设置轮播图是否轮播
     }
 
-    class ImageViewHolder implements Holder<Integer> {
+    @Override
+    protected void onResume() {
+        super.onResume();
+        cb1.startTurning(4000);      //设置开始轮播以及轮播时间  建议在onResume方法中设置
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        cb1.stopTurning();//停止轮播  建议在onPause方法中设置
+    }
+
+    class ImageViewHolder implements Holder<String> {
         private ImageView imageView;
 
         @Override
@@ -75,8 +84,9 @@ public class Aty032TestBanner extends AppCompatActivity {
         }
 
         @Override
-        public void UpdateUI(Context context, int position, Integer data) {
-            imageView.setImageResource(data);
+        public void UpdateUI(Context context, int position, String data) {
+//            imageView.setImageResource(data);
+            ImageLoader.getInstance().displayImage(data, imageView);
         }
     }
 }
