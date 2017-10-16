@@ -247,7 +247,9 @@
         <activity android:name=".ActivityList.Aty061Kotlin"/>
         <activity android:name=".ActivityList.Aty058Share"/>
         <activity android:name=".ActivityList.Aty059WebViewPlus"/>
-        <activity android:name=".ActivityList.Aty060Text2Speech">
+        <activity android:name=".ActivityList.Aty062Text2Speech">
+        </activity>
+        <activity android:name=".ActivityList.Aty063PlayerWav">
         </activity>
     </application>
 
