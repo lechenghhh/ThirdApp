@@ -53,14 +53,14 @@ dependencies {
     //    compile "org.jetbrains.kotlin:kotlin-reflect-jre7:$kotlin_version"   //Kotlin 反射包
     compile files('libs/hellocharts-library-1.5.8.jar')
     //微信分享sdk
+    //    compile 'com.jude:rollviewpager:1.2.9'//aty032依赖
+    compile files('libs/swipemenulistview.jar')
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:cardview-v7:21.0.3'
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile 'com.android.support:design:22.2.1'
     compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
     testCompile 'junit:junit:4.12'
-    //    compile 'com.jude:rollviewpager:1.2.9'//aty032依赖
-    compile files('libs/swipemenulistview.jar')
 }
 repositories {
     mavenCentral()

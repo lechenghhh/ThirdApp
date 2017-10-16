@@ -6,9 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
 import android.view.animation.LayoutAnimationController;
-import android.view.animation.ScaleAnimation;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -46,7 +44,7 @@ public class MainMenu extends ListActivity {
             "-------------------------------------",
             "Aty051PopWindow", "Aty052CardView", "Aty053Coordinator",
             "Aty054PullToRefresh", "Aty055View", "Aty056Bluetooth",
-            "Aty057Chart", "Aty058Share", "Aty059WebViewPlus", "Aty060",
+            "Aty057Chart", "Aty058Share", "Aty059WebViewPlus", "Aty060Text2Speech",
             "Aty061Kotlin", "Aty062", "Aty063", "Aty064",
     };
 
@@ -55,8 +53,7 @@ public class MainMenu extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setListAdapter(new ArrayAdapter<String>
-                (MainMenu.this, android.R.layout.simple_list_item_1, classes));
+        setListAdapter(new ArrayAdapter<String>(MainMenu.this, android.R.layout.simple_list_item_1, classes));
 
         Animation animation = new AlphaAnimation(0, 1);     //AlphaAnimation 控制渐变透明的动画效果
         animation.setDuration(100);                         //动画时间毫秒数
