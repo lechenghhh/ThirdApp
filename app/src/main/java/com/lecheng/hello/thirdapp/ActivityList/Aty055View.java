@@ -2,25 +2,38 @@ package com.lecheng.hello.thirdapp.ActivityList;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.widget.Toast;
 
 import com.lecheng.hello.thirdapp.Interface.IWListener;
 import com.lecheng.hello.thirdapp.Net.HttpGo;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
+import com.lecheng.hello.thirdapp.Widgets.SudokuView.SudokuView;
 
 import java.util.HashMap;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /* 超精准计步器：http://blog.csdn.net/linglongxin24/article/details/52868803*/
 public class Aty055View extends ActionBarActivity implements IWListener {
 
+    @Bind(R.id.sv9)
+    SudokuView sv9;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty055_view);
         ButterKnife.bind(this);
+
+        sv9.setOnViewClick(new SudokuView.onViewClick() {
+            @Override
+            public void onClick(String text) {
+                new MyToast(Aty055View.this, text, 1);
+            }
+        });
     }
 
     @OnClick(R.id.btn2)

@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBlack"
+    android:background="@color/black1"
     android:orientation="vertical"
     android:id="@+id/ll049"
     android:paddingBottom="@dimen/fab_margin"
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:singleLine="true"
         android:text="大标题"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/white"
         android:textSize="24dp" />
 
     <TextView
@@ -24,6 +24,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="小标题"
-        android:textColor="@color/colorWhite1"
+        android:textColor="@color/white1"
         android:textSize="@dimen/unit_textsize" />
 </LinearLayout>

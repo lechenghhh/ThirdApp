@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="@dimen/fab_margin"
-    android:background="@color/BlackCool"
+    android:background="@color/blackCool"
     tools:context=".ActivityList.fragment.Frag014_1">
 
     <Button

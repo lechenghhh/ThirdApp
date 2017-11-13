@@ -34,11 +34,11 @@ public class Aty027ViewFlipper extends Activity implements OnGestureListener {
         detector = new GestureDetector(this);
         flipper = (ViewFlipper) this.findViewById(R.id.ViewFlipper1);
 
-        flipper.addView(addImageView(R.color.colorRed1));
-        flipper.addView(addImageView(R.color.colorOrange1));
-        flipper.addView(addImageView(R.color.colorYellow));
-        flipper.addView(addImageView(R.color.colorGreen2));
-        flipper.addView(addImageView(R.color.colorBlue3));
+        flipper.addView(addImageView(R.color.red1));
+        flipper.addView(addImageView(R.color.orange1));
+        flipper.addView(addImageView(R.color.yellow));
+        flipper.addView(addImageView(R.color.green2));
+        flipper.addView(addImageView(R.color.blue3));
     }
 
     private View addImageView(int id) {

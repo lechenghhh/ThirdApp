@@ -20,7 +20,7 @@
             android:maxLines="1"
             android:scrollHorizontally="true"
             android:singleLine="true"
-            android:textColor="@color/colorGray"
+            android:textColor="@color/gray1"
             android:textSize="14dp" />
 
         <TextView
@@ -30,7 +30,7 @@
             android:background="@drawable/style_et1"
             android:gravity="center"
             android:text="进入"
-            android:textColor="@color/colorGray" />
+            android:textColor="@color/gray1" />
     </LinearLayout>
 
 

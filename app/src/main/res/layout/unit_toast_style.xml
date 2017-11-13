@@ -29,7 +29,7 @@
         android:clickable="true"
         android:foreground="?attr/selectableItemBackground"
         android:stateListAnimator="@animator/cardview_touch_raise"
-        app:cardBackgroundColor="@color/colorGreen2"
+        app:cardBackgroundColor="@color/green2"
         app:cardCornerRadius="12dp"
         app:cardElevation="8dp">
 
@@ -38,6 +38,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/fab_margin"
-            android:textColor="@color/colorWhite" />
+            android:textColor="@color/white" />
     </android.support.v7.widget.CardView>
 </LinearLayout>

@@ -7,7 +7,7 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorGray"
+        android:background="@color/gray1"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="分数: "
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/white"
             android:textSize="20dp" />
 
         <TextView
@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2048"
-            android:textColor="@color/colorWhite" />
+            android:textColor="@color/white" />
 
     </LinearLayout>
 

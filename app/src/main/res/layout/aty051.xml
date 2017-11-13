@@ -43,5 +43,5 @@
         android:layout_width="64dp"
         android:layout_height="32dp"
         android:layout_margin="@dimen/fab_margin"
-        android:background="@color/colorPurple1" />
+        android:background="@color/purple1" />
 </LinearLayout>

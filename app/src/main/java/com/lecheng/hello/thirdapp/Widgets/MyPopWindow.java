@@ -36,7 +36,7 @@ public class MyPopWindow {
                 return false;       // 这里如果返回true的话，touch事件将被拦截
             }
         });                         // 拦截后 PopupWindow的onTouchEvent不被调用，这样点击外部区域无法dismiss
-        popupWindow.setBackgroundDrawable(mContext.getResources().getDrawable(R.color.colorTransparent));
+        popupWindow.setBackgroundDrawable(mContext.getResources().getDrawable(R.color.tran1));
         // 如果不设置PopupWindow的背景，无论是点击外部区域还是Back键都无法dismiss弹框,我觉得这里是API的一个bug
         popupWindow.showAsDropDown(view);        // 设置好参数之后再show
     }

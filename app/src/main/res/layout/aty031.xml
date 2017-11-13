@@ -62,7 +62,7 @@
         android:layout_width="400dp"
         android:layout_height="10dp"
         android:layout_margin="@dimen/fab_margin"
-        android:background="@color/colorOrange1" />
+        android:background="@color/orange1" />
     <!--<fragment-->
     <!--android:name="com.lecheng.hello.thirdapp.ActivityList.fragment.Frag031Blur"-->
     <!--android:layout_width="20dp"-->

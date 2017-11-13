@@ -15,7 +15,7 @@
             android:id="@+id/iv_uploadpic_imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorTextGray1" />
+            android:background="@color/textGray1" />
 
         <Button
             android:id="@+id/btn_uploadpic_selectImage"

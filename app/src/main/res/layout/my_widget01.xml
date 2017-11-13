@@ -9,11 +9,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:background="@color/BlackCool"
+        android:background="@color/blackCool"
         android:contentDescription="好玩"
         android:gravity="center"
         android:text="真好玩2"
-        android:textColor="@color/colorWhite1"
+        android:textColor="@color/white1"
         android:textSize="24dp"
         android:textStyle="bold|italic" />
 

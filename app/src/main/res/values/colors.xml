@@ -4,33 +4,32 @@
     <color name="colorPrimaryDark">#d22f2f</color>
     <color name="colorAccent">#fe4081</color>
 
-    <color name="colorTran">#00ffffff</color>
     <color name="background1">#ffffff</color>
     <color name="background2">#f7f7f5</color>
-    <color name="colorTransparent">#00ffffff</color>
-    <color name="colorText1">#c3000000</color>
-    <color name="colorTextGray1">#dadad8</color>
-    <color name="colorTextGray2">#babbb9</color>
+    <color name="tran1">#00ffffff</color>
+    <color name="tran">#00ffffff</color>
+    <color name="text1">#c3000000</color>
+    <color name="textGray1">#dadad8</color>
+    <color name="textGray2">#babbb9</color>
     <color name="tranBlack">#66858585</color>
 
-    <color name="colorWhite">#ffffff</color>
-    <color name="colorWhite1">#b0ffffff</color>
-    <color name="colorWhite3">#26e9f0eb</color>
-    <color name="colorRed2">#8c0002</color>
-    <color name="colorRed1">#f80408</color>
-    <color name="colorOrange1">#ff7300</color>
-    <color name="colorYellow">#e7eb0b</color>
-    <color name="colorYellow2">#ffc800</color>
-    <color name="colorGreen1">#1eec07</color>
-    <color name="colorGreen2">#3daf37</color>
-    <color name="colorBlue1">#27c6fc</color>
-    <color name="colorBlue2">#137ade</color>
-    <color name="colorBlue3">#4043ff</color>
-    <color name="colorPurple1">#bb00ff</color>
-    <color name="colorBlack">#000000</color>
-    <color name="colorGray">#a4a4a4</color>
-    <color name="BlackCool">#9f000000</color>
-
-    <color name="black_overlay">#66000000</color>
+    <color name="white">#ffffff</color>
+    <color name="white1">#b0ffffff</color>
+    <color name="white3">#26e9f0eb</color>
+    <color name="red2">#8c0002</color>
+    <color name="red1">#f80408</color>
+    <color name="orange1">#ff7300</color>
+    <color name="yellow">#e7eb0b</color>
+    <color name="yellow2">#ffc800</color>
+    <color name="green1">#1eec07</color>
+    <color name="green2">#3daf37</color>
+    <color name="blue1">#27c6fc</color>
+    <color name="blue2">#137ade</color>
+    <color name="blue3">#4043ff</color>
+    <color name="purple1">#bb00ff</color>
+    <color name="black1">#000000</color>
+    <color name="gray1">#a4a4a4</color>
+    <color name="blackCool">#9f000000</color>
+    <color name="blackOverlay">#66000000</color>
 
 </resources>

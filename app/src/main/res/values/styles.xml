@@ -26,7 +26,7 @@
         <!-- 设置无边框 -->
         <item name="android:windowNoTitle">true</item>
         <!-- 设置无标题 -->
-        <item name="android:windowBackground">@color/colorTextGray2</item>
+        <item name="android:windowBackground">@color/textGray2</item>
         <!-- 设置完全透明 -->
         <item name="android:backgroundDimEnabled">true</item>
         <!-- 设置屏幕变暗 -->
@@ -36,14 +36,14 @@
         <!--横线1，粗0.8，比较黑-->
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0.8dp</item>
-        <item name="android:background">@color/colorTextGray1</item>
+        <item name="android:background">@color/textGray1</item>
     </style>
 
     <style name="style_v_line2">
         <!--横线1，粗0.4，比较浅-->
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0.4dp</item>
-        <item name="android:background">@color/colorText1</item>
+        <item name="android:background">@color/text1</item>
     </style>
 
     <style name="style_btn_blue1">
@@ -53,7 +53,7 @@
         <item name="android:paddingLeft">@dimen/fab_margin</item>
         <item name="android:layout_height">@dimen/unit_btnheight</item>
         <!--<item name="android:layout_weight">1</item>-->
-        <item name="android:textColor">@color/colorWhite1</item>
+        <item name="android:textColor">@color/white1</item>
     </style>
 
     <style name="style_btn_green1">
@@ -63,7 +63,7 @@
         <item name="android:layout_height">@dimen/unit_btnheight</item>
         <item name="android:paddingLeft">@dimen/fab_margin</item>
         <!--<item name="android:layout_weight">1</item>-->
-        <item name="android:textColor">@color/colorWhite1</item>
+        <item name="android:textColor">@color/white1</item>
     </style>
 
     <style name="style_btn_red1">
@@ -73,7 +73,7 @@
         <item name="android:layout_height">@dimen/unit_btnheight</item>
         <item name="android:paddingLeft">@dimen/fab_margin</item>
         <!--<item name="android:layout_weight">1</item>-->
-        <item name="android:textColor">@color/colorWhite1</item>
+        <item name="android:textColor">@color/white1</item>
     </style>
 
     <style name="style_ll_vertical">
@@ -81,7 +81,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_marginTop">@dimen/fab_margin</item>
-        <item name="android:background">@color/colorWhite1</item>
+        <item name="android:background">@color/white1</item>
         <item name="android:orientation">vertical</item>
         <item name="android:elevation" tools:targetApi="lollipop">2dp</item>
 
@@ -98,7 +98,7 @@
     <style name="style_tv_loading">
         <!--加载中展示-->
         <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/colorTextGray1</item>
+        <item name="android:textColor">@color/textGray1</item>
         <item name="android:textSize">14dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">180dp</item>
@@ -126,7 +126,7 @@
     </style>
 
     <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/black_overlay</item>
+        <item name="android:background">@color/blackOverlay</item>
     </style>
 
 </resources>

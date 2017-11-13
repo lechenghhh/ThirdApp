@@ -29,7 +29,7 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="24dp"
-                android:background="@color/BlackCool"
+                android:background="@color/blackCool"
                 android:gravity="center">
 
                 <LinearLayout
@@ -46,7 +46,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="4dp"
                         android:text="请选择城市"
-                        android:textColor="@color/colorWhite1"
+                        android:textColor="@color/white1"
                         android:textSize="16dp" />
 
                     <TextView
@@ -55,7 +55,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="温度"
-                        android:textColor="@color/colorWhite1"
+                        android:textColor="@color/white1"
                         android:textSize="24dp" />
                 </LinearLayout>
 
@@ -67,7 +67,7 @@
                     android:layout_margin="12dp"
                     android:layout_weight="1"
                     android:text="穿衣建议"
-                    android:textColor="@color/colorWhite1"
+                    android:textColor="@color/white1"
                     android:textSize="12dp" />
             </LinearLayout>
 
@@ -79,7 +79,7 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:layout_weight="1"
-                android:background="@color/BlackCool" />
+                android:background="@color/blackCool" />
 
             <ListView
                 android:id="@+id/aty40_lv2"
@@ -89,7 +89,7 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:layout_weight="1"
-                android:background="@color/BlackCool"
+                android:background="@color/blackCool"
                 android:visibility="gone" />
 
 
