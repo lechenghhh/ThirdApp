@@ -28,6 +28,24 @@
             android:layout_width="280dp"
             android:layout_height="48dp"/>
 
+        <com.lecheng.hello.thirdapp.Widgets.VerificationSeekBar
+            android:id="@+id/vsb1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:maxHeight="40dp"
+            android:padding="1dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/bg_seekbar"
+            android:thumb="@drawable/bg_seekbar_thumb"
+            android:thumbOffset="-1dp"/>
+
+        <com.lecheng.hello.thirdapp.Widgets.SlideButton.SlideButton
+            android:id="@+id/sbtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_margin="20dp"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

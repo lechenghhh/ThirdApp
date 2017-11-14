@@ -2,13 +2,15 @@ package com.lecheng.hello.thirdapp.ActivityList;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.widget.Toast;
+import android.widget.SeekBar;
 
 import com.lecheng.hello.thirdapp.Interface.IWListener;
 import com.lecheng.hello.thirdapp.Net.HttpGo;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
+import com.lecheng.hello.thirdapp.Widgets.SlideButton.SlideButton;
 import com.lecheng.hello.thirdapp.Widgets.SudokuView.SudokuView;
+import com.lecheng.hello.thirdapp.Widgets.VerificationSeekBar;
 
 import java.util.HashMap;
 
@@ -21,6 +23,10 @@ public class Aty055View extends ActionBarActivity implements IWListener {
 
     @Bind(R.id.sv9)
     SudokuView sv9;
+    @Bind(R.id.sbtn1)
+    SlideButton sbtn1;
+    @Bind(R.id.vsb1)
+    VerificationSeekBar vsb1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,38 @@ public class Aty055View extends ActionBarActivity implements IWListener {
             @Override
             public void onClick(String text) {
                 new MyToast(Aty055View.this, text, 1);
+            }
+        });
+        sbtn1.setOnSlideListner(new SlideButton.SlideListner() {
+            @Override
+            public void slideOver() {
+                new MyToast(Aty055View.this, "滑动完成", 1);
+            }
+
+            @Override
+            public void slideRestart() {
+                new MyToast(Aty055View.this, "滑动取消", 1);
+            }
+        });
+
+        vsb1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                if (seekBar.getProgress() != seekBar.getMax()) {
+                    seekBar.setProgress(0);
+                } else {                    // todo 做滑动到最右的操作.
+                    new MyToast(Aty055View.this, "滑动完成", 1);
+                }
             }
         });
     }

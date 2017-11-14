@@ -237,7 +237,9 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".ActivityList.Aty054PullToRefresh"/>
         <activity android:name=".ActivityList.Aty033UploadFile_3"/>
-        <activity android:name=".ActivityList.Aty055View"/>
+        <activity
+            android:name=".ActivityList.Aty055View"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".ActivityList.Aty056Bluetooth"/>
         <activity android:name=".ActivityList.Aty057Chart"/>
         <activity
