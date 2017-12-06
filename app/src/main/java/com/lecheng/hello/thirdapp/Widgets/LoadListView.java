@@ -17,25 +17,25 @@ import android.widget.TextView;
  * Created by Cheng on 2017/12/6.
  */
 
-public class MyLoadLv extends ListView {
+public class LoadListView extends ListView {
     private Context context;
     private int itemId, imgId = android.R.drawable.ic_menu_recent_history;
     private String strLoad = "正在加载中...";
     private String strNoMore = "没有更多数据";
 
-    public MyLoadLv(Context context) {
+    public LoadListView(Context context) {
         super(context);
         this.context = context;
         super.setAdapter(new LoadAdpt(context, imgId, strLoad));
     }
 
-    public MyLoadLv(Context context, AttributeSet attrs) {
+    public LoadListView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
         super.setAdapter(new LoadAdpt(context, imgId, strLoad));
     }
 
-    public MyLoadLv(Context context, AttributeSet attrs, int defStyleAttr) {
+    public LoadListView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.context = context;
         super.setAdapter(new LoadAdpt(context, imgId, strLoad));

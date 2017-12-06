@@ -16,7 +16,7 @@
         android:layout_height="36dp"
         android:text="加载列表"/>
 
-    <com.lecheng.hello.thirdapp.Widgets.MyLoadLv
+    <com.lecheng.hello.thirdapp.Widgets.LoadListView
         android:id="@+id/lv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

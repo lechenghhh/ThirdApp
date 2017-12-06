@@ -7,7 +7,7 @@ import android.view.View;
 import com.lecheng.hello.thirdapp.Adapter.Common.UnityAdpt;
 import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Widgets.MyLoadLv;
+import com.lecheng.hello.thirdapp.Widgets.LoadListView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,7 +20,7 @@ import butterknife.OnClick;
 public class Aty064MyLoadLv extends AppCompatActivity {
 
     @Bind(R.id.lv1)
-    MyLoadLv lv1;
+    LoadListView lv1;
     private String[] strings = {"第1个", "第2个", "第3个", "第4个",};
     private List<String> arr = new ArrayList<>();
 
