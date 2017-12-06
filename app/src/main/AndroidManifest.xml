@@ -253,6 +253,8 @@
         </activity>
         <activity android:name=".ActivityList.Aty063PlayerWav">
         </activity>
+        <activity android:name=".ActivityList.Aty064MyLoadLv">
+        </activity>
     </application>
 
 </manifest>

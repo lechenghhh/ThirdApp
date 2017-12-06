@@ -45,7 +45,7 @@ public class MainMenu extends ListActivity {
             "Aty051PopWindow", "Aty052CardView", "Aty053Coordinator",
             "Aty054PullToRefresh", "Aty055View", "Aty056Bluetooth",
             "Aty057Chart", "Aty058Share", "Aty059WebViewPlus", "Aty060",
-            "Aty061Kotlin", "Aty062Text2Speech", "Aty063", "Aty064",
+            "Aty061Kotlin", "Aty062Text2Speech", "Aty063", "Aty064MyLoadLv",
     };
 
     private LayoutAnimationController lac;
