@@ -46,6 +46,7 @@ public class MyToast {
             toastStart.setDuration(duration);
             toastStart.setView(toastRoot);
         }
+        System.out.println("MyToast:" + text);
         toastStart.show();
 
         /*
