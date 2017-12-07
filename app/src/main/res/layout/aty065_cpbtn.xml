@@ -41,11 +41,14 @@
             android:layout_height="50dp"
             android:textColor="#fff"
             app:cpb_cornerRadius="30dp"
-            app:cpb_iconComplete="@drawable/ic_play"
-            app:cpb_iconError="@drawable/ic_stop"
-            app:cpb_paddingProgress="15dp"
+            app:cpb_iconComplete="@drawable/ic_success"
+            app:cpb_iconError="@drawable/ic_failed"
             app:cpb_textIdle="Http请求"/>
-
+        <!--
+            app:cpb_iconComplete="@drawable/ic_success"
+            app:cpb_iconError="@drawable/ic_failed"
+            app:cpb_paddingProgress="15dp"
+            -->
         <Button
             android:id="@+id/btn1"
             android:layout_width="64dp"

@@ -253,6 +253,10 @@
         <activity android:name=".ActivityList.Aty063PlayerWav"/>
         <activity android:name=".ActivityList.Aty064MyLoadLv"/>
         <activity android:name=".ActivityList.Aty065CPBtn"/>
+        <activity android:name=".ActivityList.Aty066FancyBtn">
+        </activity>
+        <activity android:name=".ActivityList.Aty067RoundCornerPB">
+        </activity>
     </application>
 
 </manifest>

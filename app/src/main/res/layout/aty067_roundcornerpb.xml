@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty067RoundCornerPB">
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+        android:id="@+id/rcpb1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:rcBackgroundColor="@color/green1"
+        app:rcBackgroundPadding="6dp"
+        app:rcMax="100"
+        app:rcProgress="30"
+        app:rcProgressColor="@color/blue1"
+        app:rcRadius="6dp"
+        app:rcReverse="true"
+        app:rcSecondaryProgress="20"
+        app:rcSecondaryProgressColor="@color/green2"/>
+
+    <View
+        style="@style/style_v_line2"
+        android:layout_margin="@dimen/fab_margin"/>
+
+    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+        android:id="@+id/progress_1"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        app:rcBackgroundPadding="5dp"/>
+
+    <com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar
+        android:id="@+id/progress_2"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        app:rcBackgroundPadding="10dp"
+        app:rcIconPadding="5dp"
+        app:rcIconSize="50dp"/>
+</LinearLayout>
