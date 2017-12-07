@@ -13,7 +13,8 @@ import com.lecheng.hello.thirdapp.Widgets.CircularProgressButton.CircularProgres
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
+//项目地址:https://github.com/dmytrodanylyk/circular-progress-button
+//也可以gradle引用: compile 'com.github.dmytrodanylyk.circular-progress-button:library:1.1.3'
 public class Aty065CPBtn extends Activity {
 
     @Bind(R.id.cpb1)

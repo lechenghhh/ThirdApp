@@ -10,7 +10,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import mehdi.sakout.fancybuttons.FancyButton;
 
-//https://github.com/medyo/fancybuttons#supported-attributes
+//项目地址：https://github.com/medyo/fancybuttons#supported-attributes
 public class Aty066FancyBtn extends AppCompatActivity {
 
     @Bind(R.id.btnSpotify)

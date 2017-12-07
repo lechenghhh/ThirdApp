@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
 import com.lecheng.hello.thirdapp.R;
 
-//https://github.com/akexorcist/Android-RoundCornerProgressBar
+//项目地址：https://github.com/akexorcist/Android-RoundCornerProgressBar
 public class Aty067RoundCornerPB extends AppCompatActivity {
 
     @Override
