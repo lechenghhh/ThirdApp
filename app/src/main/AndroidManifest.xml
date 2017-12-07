@@ -249,12 +249,10 @@
         <activity android:name=".ActivityList.Aty061Kotlin"/>
         <activity android:name=".ActivityList.Aty058Share"/>
         <activity android:name=".ActivityList.Aty059WebViewPlus"/>
-        <activity android:name=".ActivityList.Aty062Text2Speech">
-        </activity>
-        <activity android:name=".ActivityList.Aty063PlayerWav">
-        </activity>
-        <activity android:name=".ActivityList.Aty064MyLoadLv">
-        </activity>
+        <activity android:name=".ActivityList.Aty062Text2Speech"/>
+        <activity android:name=".ActivityList.Aty063PlayerWav"/>
+        <activity android:name=".ActivityList.Aty064MyLoadLv"/>
+        <activity android:name=".ActivityList.Aty065CPBtn"/>
     </application>
 
 </manifest>

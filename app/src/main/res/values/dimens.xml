@@ -25,4 +25,5 @@
          http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout -->
     <dimen name="widget_margin">8dp</dimen>
 
+    <dimen name="cpb_stroke_width">4dp</dimen>
 </resources>

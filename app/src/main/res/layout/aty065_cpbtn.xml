@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/fab_margin"
+    tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty064MyLoadLv">
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CircularProgressButton"
+        android:textSize="20sp"/>
+
+    <!--
+    textColor：全局字体颜色设置
+    textSize：全局字体大小设置
+    cpb_cornerRadius：按钮的边缘弧度数
+    cpb_textIdle：默认的text文字
+    cpb_textComplete：完成时显示的text
+    cpb_textError：出错时显示的text
+    cpb_iconComplete：完成时显示的图标，这个和cpb_textComplete不能共用
+    cpb_iconError：出错时显示的图标，这个和cpb_textError不能共用
+    cpb_paddingProgress：圆形进度条和按钮的边界的差值，设定后按钮会在走进度时缩小到小进度条，走完后再由小进度条扩大到原始按钮
+    cpb_selectorComplete：自定义完成时按钮背景的颜色，包括获取焦点、按下、普通各种状态
+    cpb_selectorError：自定义出错时按钮背景的颜色，包括获取焦点、按下、普通各种状态
+    cpb_selectorIdle：自定义初始时按钮的背景色，包括获取焦点、按下、普通各种状态\n
+     -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/fab_margin">
+
+        <com.lecheng.hello.thirdapp.Widgets.CircularProgressButton.CircularProgressButton
+            android:id="@+id/cpb1"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:textColor="#fff"
+            app:cpb_cornerRadius="30dp"
+            app:cpb_iconComplete="@drawable/ic_play"
+            app:cpb_iconError="@drawable/ic_stop"
+            app:cpb_paddingProgress="15dp"
+            app:cpb_textIdle="Http请求"/>
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:text="Success"
+            android:textSize="8dp"/>
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:text="Failed"
+            android:textSize="8dp"/>
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:text="btn3"
+            android:textSize="8dp"/>
+    </LinearLayout>
+
+    <!--<com.lecheng.hello.thirdapp.Widgets.dd.CircularProgressButton-->
+    <!--android:id="@+id/circularButton06"-->
+    <!--android:layout_width="196dp"-->
+    <!--android:layout_height="64dp"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:textColor="@color/cpb_white"-->
+    <!--android:textSize="18sp"-->
+    <!--app:cpb_cornerRadius="48dp"-->
+    <!--app:cpb_selectorComplete="@drawable/cpb_complete_state_selector"-->
+    <!--app:cpb_selectorError="@drawable/cpb_error_state_selector"-->
+    <!--app:cpb_selectorIdle="@drawable/cpb_idle_state_selector"-->
+    <!--app:cpb_textComplete="Complete"-->
+    <!--app:cpb_textError="Error"-->
+    <!--app:cpb_textIdle="Upload"/>-->
+
+    <!--<com.dd.CircularProgressButton-->
+    <!--android:id="@+id/circularButton05"-->
+    <!--android:layout_width="196dp"-->
+    <!--android:layout_height="64dp"-->
+    <!--android:layout_marginTop="34dp"-->
+    <!--android:textColor="@color/cpb_white"-->
+    <!--android:textSize="18sp"-->
+    <!--app:cpb_cornerRadius="48dp"-->
+    <!--app:cpb_selectorComplete="@drawable/complete_state_selector"-->
+    <!--app:cpb_selectorError="@drawable/error_state_selector"-->
+    <!--app:cpb_selectorIdle="@drawable/idle_state_selector"-->
+    <!--app:cpb_textComplete="Complete"-->
+    <!--app:cpb_textError="Error"-->
+    <!--app:cpb_textIdle="Upload"/>-->
+
+    <!--<com.dd.CircularProgressButton-->
+    <!--android:id="@+id/circularButton04"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:textColor="#00ffff"-->
+    <!--android:textSize="18sp"-->
+    <!--app:cpb_cornerRadius="10dp"-->
+    <!--app:cpb_textComplete="Complete"-->
+    <!--app:cpb_textError="Error"-->
+    <!--app:cpb_textIdle="upload"/>-->
+
+    <!--<com.dd.CircularProgressButton-->
+    <!--android:id="@+id/circularButton03"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_marginTop="28dp"-->
+    <!--android:textColor="#ffff00"-->
+    <!--android:textSize="18sp"-->
+    <!--app:cpb_cornerRadius="30dp"-->
+    <!--app:cpb_iconComplete="@drawable/ic_action_accept"-->
+    <!--app:cpb_iconError="@drawable/ic_action_cancel"-->
+    <!--app:cpb_textIdle="upload"/>-->
+
+    <!--<com.dd.CircularProgressButton-->
+    <!--android:id="@+id/circularButton02"-->
+    <!--android:layout_width="120dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginTop="14dp"-->
+    <!--android:textColor="#00ffff"-->
+    <!--android:textSize="18sp"-->
+    <!--app:cpb_cornerRadius="10dp"-->
+    <!--app:cpb_textComplete="Complete"-->
+    <!--app:cpb_textError="Error"-->
+    <!--app:cpb_textIdle="upload"/>-->
+
+
+</LinearLayout>
