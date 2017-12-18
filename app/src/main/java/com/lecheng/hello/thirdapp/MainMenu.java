@@ -44,7 +44,7 @@ public class MainMenu extends ListActivity {
             "-------------------------------------",
             "Aty051PopWindow", "Aty052CardView", "Aty053Coordinator",
             "Aty054PullToRefresh", "Aty055View", "Aty056Bluetooth",
-            "Aty057Chart", "Aty058Share", "Aty059WebViewPlus", "Aty060",
+            "Aty057Chart", "Aty058Share", "Aty059WebViewPlus", "Aty060RxJava",
             "-------------------------------------",
             "Aty061Kotlin", "Aty062Text2Speech", "Aty063",
             "Aty064MyLoadLv", "Aty065CPBtn", "Aty066FancyBtn",

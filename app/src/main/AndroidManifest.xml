@@ -257,6 +257,8 @@
         </activity>
         <activity android:name=".ActivityList.Aty067RoundCornerPB">
         </activity>
+        <activity android:name=".ActivityList.Aty060RxJava">
+        </activity>
     </application>
 
 </manifest>

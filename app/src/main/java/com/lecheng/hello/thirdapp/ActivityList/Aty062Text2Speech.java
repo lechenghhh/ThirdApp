@@ -2,12 +2,8 @@ package com.lecheng.hello.thirdapp.ActivityList;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -36,7 +32,7 @@ public class Aty062Text2Speech extends Activity implements TextToSpeech.OnInitLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.aty060_playerwav);
+        setContentView(R.layout.aty062);
         ButterKnife.bind(this);
 
         try {//"这里注意，如果本机tts没有安装，这里就会抓获到异常的。tts使用的时候也要注意非空验证"
