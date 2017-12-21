@@ -259,6 +259,8 @@
         </activity>
         <activity android:name=".ActivityList.Aty060RxJava">
         </activity>
+        <activity android:name=".ActivityList.Aty068MVVM">
+        </activity>
     </application>
 
 </manifest>
