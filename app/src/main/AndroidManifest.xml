@@ -241,26 +241,23 @@
             android:name=".ActivityList.Aty055View"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".ActivityList.Aty056Bluetooth"/>
+        <activity android:name=".ActivityList.Aty056BluetoothEpay"/>
         <activity android:name=".ActivityList.Aty057Chart"/>
+        <activity android:name=".ActivityList.Aty058Share"/>
+        <activity android:name=".ActivityList.Aty059WebViewPlus"/>
         <activity
             android:name=".wxapi.WXEntryActivity"
             android:exported="true"
             android:label="微信分享"/>
         <activity android:name=".ActivityList.Aty061Kotlin"/>
-        <activity android:name=".ActivityList.Aty058Share"/>
-        <activity android:name=".ActivityList.Aty059WebViewPlus"/>
         <activity android:name=".ActivityList.Aty062Text2Speech"/>
         <activity android:name=".ActivityList.Aty063PlayerWav"/>
         <activity android:name=".ActivityList.Aty064MyLoadLv"/>
         <activity android:name=".ActivityList.Aty065CPBtn"/>
-        <activity android:name=".ActivityList.Aty066FancyBtn">
-        </activity>
-        <activity android:name=".ActivityList.Aty067RoundCornerPB">
-        </activity>
-        <activity android:name=".ActivityList.Aty060RxJava">
-        </activity>
-        <activity android:name=".ActivityList.Aty068MVVM">
-        </activity>
+        <activity android:name=".ActivityList.Aty066FancyBtn"/>
+        <activity android:name=".ActivityList.Aty067RoundCornerPB"/>
+        <activity android:name=".ActivityList.Aty060RxJava"/>
+        <activity android:name=".ActivityList.Aty068MVVM"/>
     </application>
 
 </manifest>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/fab_margin">
+
+    <TextView
+        android:id="@+id/tvScreen"
+        style="@style/style_tv_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请输入要发送的数据:"/>
+
+    <EditText
+        android:id="@+id/etData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome !\nplease make sure bluetooth have innter printer\n中文示例\n"/>
+
+    <Button
+        android:id="@+id/btn1"
+        style="@style/style_btn_red1"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="发送数据"/>
+
+</LinearLayout>

@@ -103,6 +103,7 @@ public class Aty056Bluetooth extends Activity {
                 }
                 break;
             case R.id.btn3:
+                startActivity(new Intent(this, Aty056BluetoothEpay.class));
                 break;
         }
     }
