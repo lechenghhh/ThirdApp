@@ -86,6 +86,7 @@ public class Aty056BluetoothEpay extends Activity {
             return;
         }
         String strData = etData.getText().toString();
+        strData = text;
 
         byte[] data = null;
         try {
