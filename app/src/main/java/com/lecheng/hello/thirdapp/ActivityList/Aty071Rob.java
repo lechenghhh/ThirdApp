@@ -17,7 +17,8 @@ import android.widget.Toast;
 
 import com.lecheng.hello.thirdapp.R;
 
-//http://blog.csdn.net/qq_16564849/article/details/70280755
+//音量键后台监听：http://blog.csdn.net/qq_16564849/article/details/70280755
+//root后模拟按钮：http://blog.csdn.net/jzj1993/article/details/39158865
 public class Aty071Rob extends Activity {
 
     private static final String TAG = "Aty071Rob";
