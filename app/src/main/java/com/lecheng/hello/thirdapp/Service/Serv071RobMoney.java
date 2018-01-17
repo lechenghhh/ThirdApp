@@ -17,6 +17,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
+import android.widget.Toast;
 
 public class Serv071RobMoney extends AccessibilityService {
 
@@ -30,7 +31,6 @@ public class Serv071RobMoney extends AccessibilityService {
         int key = event.getKeyCode();
         switch (key) {
             case KeyEvent.KEYCODE_VOLUME_DOWN:
-
                 Intent downintent = new Intent("com.exmaple.broadcaster.KEYDOWN");
                 downintent.putExtra("dtime", System.currentTimeMillis());
                 if (flag == 0) {
@@ -39,6 +39,7 @@ public class Serv071RobMoney extends AccessibilityService {
                     flag = 0;
                 }
                 Log.i(TAG, "KEYCODE_VOLUME_DOWN");
+//                Toast.makeText(this, "音量-被按下", Toast.LENGTH_SHORT).show();
                 break;
             case KeyEvent.KEYCODE_VOLUME_UP:
                 Intent upintent = new Intent("com.exmaple.broadcaster.KEYUP");
@@ -50,6 +51,7 @@ public class Serv071RobMoney extends AccessibilityService {
                     flag = 0;
                 }
                 Log.i(TAG, "KEYCODE_VOLUME_UP");
+//                Toast.makeText(this, "音量+被按下", Toast.LENGTH_SHORT).show();
                 break;
             default:
                 break;
