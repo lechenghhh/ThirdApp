@@ -6,11 +6,13 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Contacts;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Toast;
 
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Service.Serv069Suspension;
+import com.lecheng.hello.thirdapp.Utils.MyToast;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -26,6 +28,27 @@ public class Aty069Suspension extends Activity {
         ButterKnife.bind(this);
         intent = new Intent(this, Serv069Suspension.class);
     }
+
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
+            return true;
+        } else if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
+            return true;
+        } else return super.onKeyUp(keyCode, event);
+    }
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        // TODO Auto-generated method stub
+        if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
+            new MyToast(this, "KEY DOWN", 1);
+            return true;
+        } else if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
+            new MyToast(this, "KEY UP", 1);
+            return true;
+        } else return super.onKeyDown(keyCode, event);
+    }
+
 
     @OnClick({R.id.btnStart, R.id.btnStop, R.id.btnPremission})
     public void onClick(View view) {

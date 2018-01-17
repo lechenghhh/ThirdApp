@@ -13,6 +13,7 @@
     <string name="title_activity_sqlite6">SQLite6</string>
     <string name="title_activity_fragment2">片段2</string>
     <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="aty071service">启动aty071服务</string>
 
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>

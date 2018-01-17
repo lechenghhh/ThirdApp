@@ -21,7 +21,7 @@ import java.io.InputStreamReader;
 //http://blog.csdn.net/fuchaosz/article/details/51852442
 public class Aty070AutoClick extends AppCompatActivity implements View.OnClickListener {
 
-    private static final String TAG = "[TAG][MainActivity]";
+    private static final String TAG = "[TAG][Aty071Rob]";
     private static final String PACKAGE_NAME = "com.qiyi.video";
     private String apkPath = "/mnt/sdcard/test.apk";
     public static boolean flag = false;//控制只能自己的app才能执行智能安装

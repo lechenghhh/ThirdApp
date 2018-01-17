@@ -279,8 +279,24 @@
             </intent-filter>
             <meta-data
                 android:name="android.accessibilityservice"
-                android:resource="@xml/accessibility_service_config"
+                android:resource="@xml/service_accessibility_config"
                 />
+        </service>
+
+        <activity android:name=".ActivityList.Aty071Rob"/>
+        <service
+            android:name=".Service.Serv071RobMoney"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/service_rob_config"/>
         </service>
     </application>
 
