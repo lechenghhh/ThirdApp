@@ -4,6 +4,5 @@
                        android:accessibilityFeedbackType="feedbackGeneric"
                        android:accessibilityFlags="flagDefault"
                        android:canRetrieveWindowContent="true"
-                       android:description="@string/app_name"
-                       android:packageNames="com.android.packageinstaller"
-    />
+                       android:description="@string/aty070service"
+                       android:packageNames="com.android.packageinstaller"/>
