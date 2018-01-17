@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Service.Ser042Download;
+import com.lecheng.hello.thirdapp.Service.Serv042Download;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -33,7 +33,7 @@ public class Aty042SerDownLoad extends AppCompatActivity {
                 tv.setText("点击了下载...");
                 Bundle bundle = new Bundle();
                 bundle.putString("download_url", "http://121.42.56.143:8080/task/klhb/GridTask.apk");/*电子签名下载地址*/
-                Intent it = new Intent().setClass(this, Ser042Download.class).putExtras(bundle);
+                Intent it = new Intent().setClass(this, Serv042Download.class).putExtras(bundle);
                 startService(it);
                 break;
             case R.id.tv:

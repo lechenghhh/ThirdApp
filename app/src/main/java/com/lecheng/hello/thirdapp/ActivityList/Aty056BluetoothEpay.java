@@ -31,32 +31,19 @@ public class Aty056BluetoothEpay extends Activity {
     private final UUID PRINTER_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     private final String Innerprinter_Address = "00:11:22:33:44:55";
     private String text = "118114便民平台\n" +
-            "\n" +
             "产品名称：莆田电信缴费\n" +
-            "\n" +
             "------------------------\n" +
-            "\n" +
             "订单号：15180116135928230310\n" +
-            "\n" +
             "流水号：15180116140157085058\n" +
-            "\n" +
             "交易金额：5.00\n" +
-            "\n" +
             "缴费号码：18959506618\n" +
-            "\n" +
             "交易时间：2018-01-16 13:59:28\n" +
-            "\n" +
             "操作员：李涛个人营业厅\n" +
-            "\n" +
             "------------------------\n" +
-            "\n" +
             "门店名称：个人营业厅章三\n" +
-            "\n" +
             "客服电话：0591-83356611\n" +
-            "\n" +
             "------------------------\n" +
-            "\n" +
-            "感谢您使用118114便民 ";
+            "感谢您使用118114便民 \n\n\n\n";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Service.SerMedia;
+import com.lecheng.hello.thirdapp.Service.Serv008Media;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
 
 import butterknife.ButterKnife;
@@ -26,10 +26,10 @@ public class Aty008Player extends Activity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.v1:
-                stopService(new Intent(Aty008Player.this, SerMedia.class));
+                stopService(new Intent(Aty008Player.this, Serv008Media.class));
                 break;
             case R.id.v2:
-                startService(new Intent(Aty008Player.this, SerMedia.class));
+                startService(new Intent(Aty008Player.this, Serv008Media.class));
                 break;
             case R.id.v3:
                 new MyToast(Aty008Player.this, "下一首", 3333);

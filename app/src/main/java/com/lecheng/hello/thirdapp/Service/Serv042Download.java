@@ -23,7 +23,7 @@ import java.net.URLConnection;
  * Created by dk on 2016/11/25.
  */
 
-public class Ser042Download extends Service {
+public class Serv042Download extends Service {
     protected static final String fileRootPath = Environment.getExternalStorageDirectory() + File.separator;
     protected static final String fileDownloadPath = "sunrise/download/";
     protected int fileSzie;//文件大小
@@ -84,13 +84,13 @@ public class Ser042Download extends Service {
         }
         /*如何文件存在 这安装文件*/
         if (downloadfile.exists()) {
-            installApp(Ser042Download.this, fileRootPath + fileDownloadPath + fileName);
+            installApp(Serv042Download.this, fileRootPath + fileDownloadPath + fileName);
         }
         /*否则下载文件*/
         else {
             mNotifyManager =
-                    (NotificationManager) Ser042Download.this.getSystemService(Ser042Download.this.NOTIFICATION_SERVICE);
-            mBuilder = new NotificationCompat.Builder(Ser042Download.this);
+                    (NotificationManager) Serv042Download.this.getSystemService(Serv042Download.this.NOTIFICATION_SERVICE);
+            mBuilder = new NotificationCompat.Builder(Serv042Download.this);
             mBuilder.setContentTitle("下载 电子签名App")
                     .setContentText("正在下载···")
                     .setProgress(100, 0, false)
@@ -167,13 +167,13 @@ public class Ser042Download extends Service {
                     if (downloadfiletemp.exists()) {
                         downloadfiletemp.renameTo(downloadfile);
                     }
-                    Toast.makeText(Ser042Download.this, s, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Serv042Download.this, s, Toast.LENGTH_SHORT).show();
                     /*取消通知*/
                     mBuilder.setContentText(s).setProgress(100, 0, false);
                     mNotifyManager.cancel(notifiID);
-                    installApp(Ser042Download.this, fileRootPath + fileDownloadPath + fileName);
+                    installApp(Serv042Download.this, fileRootPath + fileDownloadPath + fileName);
                     /*service kill 自杀*/
-                    Ser042Download.this.stopSelf();
+                    Serv042Download.this.stopSelf();
                     super.onPostExecute(s);
                 }
             }.execute(downloadUrl);

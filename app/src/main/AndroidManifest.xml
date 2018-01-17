@@ -21,7 +21,13 @@
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <!-- 允许修改联系人的权限 -->
     <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
-
+    <!-- 允许悬浮窗 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+    作者：LightingContour
+    链接：https://www.jianshu.com/p/ac63c57d2555
+    來源：简书
+    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
     <!-- Push service 运行需要的权限 create by 乐城 17-3-2 -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
@@ -66,7 +72,7 @@
             android:label="服务1"/>
 
         <service
-            android:name=".Service.Ser001"
+            android:name=".Service.Serv001"
             android:enabled="true"
             android:exported="true"/>
 
@@ -142,7 +148,7 @@
             android:label="MVP开发案例"/>
         <activity android:name=".ActivityList.Aty042SerDownLoad"/>
 
-        <service android:name=".Service.Ser042Download"/>
+        <service android:name=".Service.Serv042Download"/>
 
         <activity android:name=".ActivityList.Aty043WeiXPay"/>
         <activity android:name=".ActivityList.Aty044AliPay"/>
@@ -221,7 +227,7 @@
                 android:resource="@xml/my_widget01_info"/>
         </receiver>
 
-        <service android:name=".Service.SerMedia"/>
+        <service android:name=".Service.Serv008Media"/>
 
         <activity android:name=".ActivityList.Aty046MsgVerify"/>
         <activity android:name=".ActivityList.Aty047ProgressDialog"/>
@@ -258,6 +264,24 @@
         <activity android:name=".ActivityList.Aty067RoundCornerPB"/>
         <activity android:name=".ActivityList.Aty060RxJava"/>
         <activity android:name=".ActivityList.Aty068MVVM"/>
+        <activity android:name=".ActivityList.Aty069Suspension"/>
+
+        <service android:name=".Service.Serv069Suspension"/>
+
+        <activity android:name=".ActivityList.Aty070AutoClick"/>
+        <service
+            android:name=".Service.Serv070AccessibilityService"
+            android:label="智能安装App"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            >
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config"
+                />
+        </service>
     </application>
 
 </manifest>

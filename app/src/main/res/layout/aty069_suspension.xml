@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/fab_margin">
+
+    <Button
+        android:id="@+id/btnStart"
+        style="@style/style_btn_green1"
+        android:text="Start"/>
+
+    <Button
+        android:id="@+id/btnStop"
+        style="@style/style_btn_red1"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="Stop"/>
+
+    <TextView
+        style="@style/style_tv_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="没有权限？去授权 >"/>
+
+    <Button
+        android:id="@+id/btnPremission"
+        style="@style/style_btn_blue1"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="授权开启悬浮窗"/>
+</LinearLayout>

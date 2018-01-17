@@ -7,7 +7,7 @@ import android.os.IBinder;
 
 import com.lecheng.hello.thirdapp.R;
 
-public class SerMedia extends Service {
+public class Serv008Media extends Service {
     private MediaPlayer mp;
 
     @Override  
@@ -18,7 +18,7 @@ public class SerMedia extends Service {
             System.out.println("create player");  
             // 创建MediaPlayer对象  
             mp = new MediaPlayer();  
-            mp = MediaPlayer.create(SerMedia.this, R.raw.x1);
+            mp = MediaPlayer.create(Serv008Media.this, R.raw.x1);
             // mp.prepare();  
         } catch (IllegalStateException e) {  
             // TODO Auto-generated catch block  
