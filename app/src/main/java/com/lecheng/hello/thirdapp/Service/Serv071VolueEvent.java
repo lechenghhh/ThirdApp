@@ -83,6 +83,7 @@ public class Serv071VolueEvent extends AccessibilityService {
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event) {
         Log.i(TAG, "onAccessibilityEvent-" + event);
+//        createToucher();        //OnCreate中来生成悬浮窗.
     }
 
     private void createToucher() {
@@ -147,5 +148,15 @@ public class Serv071VolueEvent extends AccessibilityService {
                 }
             });
         }
+    }
+
+    private void remobeToucher() {
+
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (windowManager != null) windowManager.removeViewImmediate(toucherLayout);
     }
 }

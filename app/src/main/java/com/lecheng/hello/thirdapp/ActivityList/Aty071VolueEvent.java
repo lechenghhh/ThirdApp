@@ -56,7 +56,11 @@ public class Aty071VolueEvent extends Activity {
                 registerReceiver(keycodebroadreceiver, intentfilter);
                 break;
             case R.id.btnUnRegister:
-                unregisterReceiver(keycodebroadreceiver);
+                try {
+                    unregisterReceiver(keycodebroadreceiver);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 break;
         }
     }
@@ -87,7 +91,6 @@ public class Aty071VolueEvent extends Activity {
         }
         return super.onKeyDown(keyCode, event);
     }
-
 
     private Time t3 = new Time();
     private Time t4 = new Time();
