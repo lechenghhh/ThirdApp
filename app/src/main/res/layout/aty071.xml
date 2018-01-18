@@ -7,8 +7,19 @@
     android:padding="@dimen/fab_margin">
 
     <Button
-        android:id="@+id/btn_start"
+        android:id="@+id/btnAccessibility"
         style="@style/style_btn_blue1"
         android:text="前往辅助设置开启音量键监听服务"/>
 
+    <Button
+        android:id="@+id/btnRegister"
+        style="@style/style_btn_green1"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="注册音量键监听"/>
+
+    <Button
+        android:id="@+id/btnUnRegister"
+        style="@style/style_btn_red1"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="取消注册音量键监听"/>
 </LinearLayout>
