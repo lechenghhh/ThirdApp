@@ -1,48 +1,86 @@
 package com.lecheng.hello.thirdapp.Service;
 
-import android.app.Service;
+import java.util.Calendar;
+
+import android.accessibilityservice.AccessibilityService;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.PixelFormat;
-import android.os.IBinder;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.accessibility.AccessibilityEvent;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.MyToast;
 
-/**
- * Created by Cheng on 2018/1/17.
- */
+public class Serv071VolueEvent extends AccessibilityService {
 
-public class Serv069Suspension extends Service {
+    private static final String TAG = "Aty071VolueEvent";
+    private Calendar c = Calendar.getInstance();
+    private int flag = 0;
 
-    private static final String TAG = "Serv069Suspension";    //Log用的TAG
     private LinearLayout toucherLayout;    //要引用的布局文件.
     private WindowManager.LayoutParams params;    //布局参数.
     private WindowManager windowManager;    //实例化的WindowManager.
     private ImageButton ivBtn;
     private int statusBarHeight = -1;    //状态栏高度.（接下来会用到）
 
-    @Nullable
     @Override
-    public IBinder onBind(Intent intent) {
-        return null;
+    protected boolean onKeyEvent(KeyEvent event) {
+        Log.i(TAG, "onKeyEvent");
+        int key = event.getKeyCode();
+        switch (key) {
+            case KeyEvent.KEYCODE_VOLUME_DOWN:
+                Intent downintent = new Intent("com.exmaple.broadcaster.KEYDOWN");
+                downintent.putExtra("dtime", System.currentTimeMillis());
+                if (flag == 0) {
+                    sendBroadcast(downintent);
+                } else if (flag == 1) {
+                    flag = 0;
+                }
+                Log.i(TAG, "KEYCODE_VOLUME_DOWN");
+                Toast.makeText(Serv071VolueEvent.this, "音量-被按下", Toast.LENGTH_SHORT).show();
+                break;
+            case KeyEvent.KEYCODE_VOLUME_UP:
+                Intent upintent = new Intent("com.exmaple.broadcaster.KEYUP");
+                upintent.putExtra("utime", System.currentTimeMillis());
+                if (flag == 0) {
+                    sendBroadcast(upintent);
+                    flag += 1;
+                } else if (flag == 1) {
+                    flag = 0;
+                }
+                Log.i(TAG, "KEYCODE_VOLUME_UP");
+                Toast.makeText(Serv071VolueEvent.this, "音量+被按下", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                break;
+        }
+        return super.onKeyEvent(event);
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.i(TAG, " Created");
+        Log.i(TAG, "onCreate");
         createToucher();        //OnCreate中来生成悬浮窗.
+    }
+
+    @Override
+    public void onInterrupt() {
+
+    }
+
+    @Override
+    public void onAccessibilityEvent(AccessibilityEvent event) {
+        Log.i(TAG, "onAccessibilityEvent-" + event);
     }
 
     private void createToucher() {
@@ -91,14 +129,14 @@ public class Serv069Suspension extends Service {
 
         //浮动窗口按钮.
         ivBtn = (ImageButton) toucherLayout.findViewById(R.id.imageButton1);
-
+        ivBtn.setBackgroundResource(R.drawable.ic_play);
         //其他代码...
-        ivBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "点击了悬浮窗", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        ivBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(Serv071VolueEvent.this, "点击了悬浮窗", Toast.LENGTH_SHORT).show();
+//            }
+//        });
         ivBtn.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -110,13 +148,5 @@ public class Serv069Suspension extends Service {
                 return false;
             }
         });
-    }
-
-    @Override
-    public void onDestroy() {
-        if (ivBtn != null) {//用imageButton检查悬浮窗还在不在，这里可以不要。优化悬浮窗时要用到。
-            windowManager.removeView(toucherLayout);
-        }
-        super.onDestroy();
     }
 }

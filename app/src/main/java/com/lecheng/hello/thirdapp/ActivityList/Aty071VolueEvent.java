@@ -19,9 +19,9 @@ import com.lecheng.hello.thirdapp.R;
 
 //音量键后台监听：http://blog.csdn.net/qq_16564849/article/details/70280755
 //root后模拟按钮：http://blog.csdn.net/jzj1993/article/details/39158865
-public class Aty071Rob extends Activity {
+public class Aty071VolueEvent extends Activity {
 
-    private static final String TAG = "Aty071Rob";
+    private static final String TAG = "Aty071VolueEvent";
     private KeycodeBroadReceiver keycodebroadreceiver;
     private Calendar c = Calendar.getInstance();
 
@@ -29,10 +29,8 @@ public class Aty071Rob extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty071);
-        Log.i(TAG, "Aty071Rob::onCreate");
-
+        Log.i(TAG, "onCreate");
         registerBroader();
-
         findViewById(R.id.btn_start).setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -65,12 +63,10 @@ public class Aty071Rob extends Activity {
                 Log.i(TAG, "KEYCODE_VOLUME_DOWN");
                 break;
             case KeyEvent.KEYCODE_VOLUME_UP:
-
                 Intent upintent = new Intent("com.exmaple.broadcaster.KEYUP");
                 upintent.putExtra("utime", System.currentTimeMillis());
                 sendBroadcast(upintent);
                 Log.i(TAG, "KEYCODE_VOLUME_UP");
-
                 break;
             default:
                 break;
@@ -80,7 +76,7 @@ public class Aty071Rob extends Activity {
     }
 
     private void registerBroader() {
-        Log.i(TAG, "Aty071Rob::registerBroader");
+        Log.i(TAG, "Aty071VolueEvent::registerBroader");
         keycodebroadreceiver = new KeycodeBroadReceiver();
         IntentFilter intentfilter = new IntentFilter();
         intentfilter.addAction("com.exmaple.broadcaster.KEYDOWN");
@@ -137,9 +133,6 @@ public class Aty071Rob extends Activity {
                 am2.setTime((c.getTimeInMillis()));
                 Log.i(TAG, "KeycodeBroadReceiver::onReceive");
             }
-
         }
-
     }
-
 }

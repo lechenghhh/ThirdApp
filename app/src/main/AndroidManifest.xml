@@ -271,9 +271,8 @@
         <activity android:name=".ActivityList.Aty070AutoClick"/>
         <service
             android:name=".Service.Serv070AccessibilityService"
-            android:label="智能安装App"
-            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
-            >
+            android:label="@string/aty070service"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService"/>
             </intent-filter>
@@ -283,12 +282,12 @@
                 />
         </service>
 
-        <activity android:name=".ActivityList.Aty071Rob"/>
+        <activity android:name=".ActivityList.Aty071VolueEvent"/>
         <service
-            android:name=".Service.Serv071RobMoney"
+            android:name=".Service.Serv071VolueEvent"
             android:enabled="true"
             android:exported="true"
-            android:label="@string/app_name"
+            android:label="@string/aty071service"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService"/>
