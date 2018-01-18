@@ -11,10 +11,16 @@
         android:text="当程序被杀死可会能导致系统物理按钮失灵的情况，请前往辅助功能重新开启即可"/>
 
     <Button
+        android:id="@+id/btnWindow"
+        style="@style/style_btn_blue1"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="step1:授权开启悬浮窗"/>
+
+    <Button
         android:id="@+id/btnAccessibility"
         style="@style/style_btn_blue1"
         android:layout_marginTop="@dimen/fab_margin"
-        android:text="前往辅助设置开启音量键监听服务"/>
+        android:text="step2:辅助设置->开启音量键监听服务"/>
 
     <Button
         android:id="@+id/btnRegister"

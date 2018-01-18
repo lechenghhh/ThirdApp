@@ -6,6 +6,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.format.Time;
@@ -38,7 +40,7 @@ public class Aty071VolueEvent extends Activity {
         keycodebroadreceiver = new KeycodeBroadReceiver();
     }
 
-    @OnClick({R.id.btnAccessibility, R.id.btnRegister, R.id.btnUnRegister})
+    @OnClick({R.id.btnAccessibility, R.id.btnWindow, R.id.btnRegister, R.id.btnUnRegister})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnAccessibility:
@@ -48,6 +50,19 @@ public class Aty071VolueEvent extends Activity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+                break;
+            case R.id.btnWindow:
+                Intent intent = new Intent();
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                if (Build.VERSION.SDK_INT >= 9) {
+                    intent.setAction("android.settings.APPLICATION_DETAILS_SETTINGS");
+                    intent.setData(Uri.fromParts("package", getPackageName(), null));
+                } else if (Build.VERSION.SDK_INT <= 8) {
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.setClassName("com.android.settings", "com.android.settings.InstalledAppDetails");
+                    intent.putExtra("com.android.settings.ApplicationPkgName", getPackageName());
+                }
+                startActivity(intent);
                 break;
             case R.id.btnRegister:
                 IntentFilter intentfilter = new IntentFilter();

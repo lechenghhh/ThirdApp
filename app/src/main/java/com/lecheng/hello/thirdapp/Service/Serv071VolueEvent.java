@@ -18,6 +18,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.lecheng.hello.thirdapp.ActivityList.Aty071VolueEvent;
 import com.lecheng.hello.thirdapp.R;
 
 public class Serv071VolueEvent extends AccessibilityService {
@@ -31,6 +32,13 @@ public class Serv071VolueEvent extends AccessibilityService {
     private WindowManager windowManager;    //实例化的WindowManager.
     private ImageButton ivBtn;
     private int statusBarHeight = -1;    //状态栏高度.（接下来会用到）
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        Log.i(TAG, "onCreate");
+        createToucher();        //OnCreate中来生成悬浮窗.
+    }
 
     @Override
     protected boolean onKeyEvent(KeyEvent event) {
@@ -69,13 +77,6 @@ public class Serv071VolueEvent extends AccessibilityService {
     }
 
     @Override
-    public void onCreate() {
-        super.onCreate();
-        Log.i(TAG, "onCreate");
-        createToucher();        //OnCreate中来生成悬浮窗.
-    }
-
-    @Override
     public void onInterrupt() {
 
     }
@@ -83,7 +84,6 @@ public class Serv071VolueEvent extends AccessibilityService {
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event) {
         Log.i(TAG, "onAccessibilityEvent-" + event);
-//        createToucher();        //OnCreate中来生成悬浮窗.
     }
 
     private void createToucher() {
@@ -133,7 +133,7 @@ public class Serv071VolueEvent extends AccessibilityService {
 
             //浮动窗口按钮.
             ivBtn = (ImageButton) toucherLayout.findViewById(R.id.imageButton1);
-            ivBtn.setBackgroundResource(R.drawable.ic_play);
+            ivBtn.setBackgroundResource(R.drawable.ic_add);
             //其他代码...
 
             ivBtn.setOnTouchListener(new View.OnTouchListener() {
@@ -147,11 +147,15 @@ public class Serv071VolueEvent extends AccessibilityService {
                     return false;
                 }
             });
+            ivBtn.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    startActivity(new Intent(Serv071VolueEvent.this, Aty071VolueEvent.class)
+                            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));//设置这个flags
+                    return true;
+                }
+            });
         }
-    }
-
-    private void remobeToucher() {
-
     }
 
     @Override
