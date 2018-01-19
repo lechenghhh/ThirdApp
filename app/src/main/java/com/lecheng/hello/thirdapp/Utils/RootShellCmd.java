@@ -43,4 +43,9 @@ public class RootShellCmd {
     public final void simulateTap(int x, int y) {
         exec("input tap " + x + " " + y + "\n");
     }
+
+/*  无线调试
+手机的usb接口连接PC
+在Android studio的terminal窗口中输入adb tcpip 5555
+在Android studio的terminal窗口中输入adb connect xxx.xxx.xxx.xxx:5555（比如：192.168.10.103:5555） */
 } 

@@ -11,7 +11,7 @@ import com.lecheng.hello.thirdapp.Utils.RootShellCmd;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
+//adb -s 8d68ecc37ce3 shell input text 12345
 public class Aty072Root extends Activity {
     @Bind(R.id.et1)
     EditText et1;

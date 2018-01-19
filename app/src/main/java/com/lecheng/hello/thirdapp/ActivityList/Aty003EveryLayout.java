@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.R;
+import com.lecheng.hello.thirdapp.Utils.NetUtils;
 
 
 public class Aty003EveryLayout extends ActionBarActivity {
@@ -17,11 +19,12 @@ public class Aty003EveryLayout extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty003);
 
-
+        TextView textView = (TextView) findViewById(R.id.textView2);
+        textView.append(NetUtils.getIPAddress(this));
         findViewById(R.id.btnstartFL).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Aty003EveryLayout.this,Aty003EveryLayout_Frame.class));
+                startActivity(new Intent(Aty003EveryLayout.this, Aty003EveryLayout_Frame.class));
             }
         });
     }
