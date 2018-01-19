@@ -32,7 +32,8 @@ public class Serv071VolueEvent extends AccessibilityService {
     private ImageButton ivBtn;
     private int statusBarHeight = -1;    //状态栏高度.（接下来会用到）
     private RootShellCmd rsc = new RootShellCmd();//root发送shell指令
-    private boolean flag = false;
+    private boolean flag = true;
+    private int simulateTapX = 1, simulateTapY = 1;
 
     @Override
     public void onCreate() {
@@ -42,40 +43,42 @@ public class Serv071VolueEvent extends AccessibilityService {
     }
 
     @Override
-    protected boolean onKeyEvent(KeyEvent event) {
-        Log.i(TAG, "onKeyEvent=" + event);
-        int key = event.getKeyCode();
-        switch (key) {
+    protected boolean onKeyEvent(KeyEvent event) {//        Log.i(TAG, "onKeyEvent=" + event);
+        if (flag) switch (event.getKeyCode()) {
             case KeyEvent.KEYCODE_VOLUME_DOWN:
-//                Toast.makeText(Serv071VolueEvent.this, "音量-被按下", Toast.LENGTH_SHORT).show();
-                if (flag) rsc.simulateKey(4);
-                flag = !flag;
+                rsc.simulateKey(4);//Toast.makeText(Serv071VolueEvent.this, "音量-被按下", Toast.LENGTH_SHORT).show();
                 break;
             case KeyEvent.KEYCODE_VOLUME_UP:
-//                Toast.makeText(Serv071VolueEvent.this, "音量+被按下", Toast.LENGTH_SHORT).show();
-                if (flag) rsc.simulateTap(540, 540);
-                flag = !flag;
+                rsc.simulateTap(simulateTapX, simulateTapY);
                 break;
             default:
-                break;
+                return false;
         }
-//        return super.onKeyEvent(event);//返回音量键的事件
-        return true;//拦截音量键的事件
+        flag = !flag;
+        return true;//拦截音量键的事件//return super.onKeyEvent(event);//返回音量键的事件
     }
 
     @Override
     public void onInterrupt() {
-
     }
 
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event) {
-        Log.i(TAG, "onAccessibilityEvent-" + event);
+//        Log.i(TAG, "onAccessibilityEvent-" + event);
     }
 
     //创建悬浮窗以保证toast可以被显示
     private void createToucher() {
         if (toucherLayout == null) {
+
+
+            LayoutInflater inflater = LayoutInflater.from(getApplication());
+            //获取浮动窗口视图所在布局.
+            toucherLayout = (LinearLayout) inflater.inflate(R.layout.unit_suspension, null);
+            //浮动窗口按钮.
+            ivBtn = (ImageButton) toucherLayout.findViewById(R.id.imageButton1);
+            ivBtn.setBackgroundResource(R.drawable.ic_this);
+
             //赋值WindowManager&LayoutParam.
             params = new WindowManager.LayoutParams();
             windowManager = (WindowManager) getApplication().getSystemService(Context.WINDOW_SERVICE);
@@ -95,12 +98,8 @@ public class Serv071VolueEvent extends AccessibilityService {
             //注意，这里的width和height均使用px而非dp.这里我偷了个懒
             //如果你想完全对应布局设置，需要先获取到机器的dpi
             //px与dp的换算为px = dp * (dpi / 160).
-            params.width = 300;
-            params.height = 300;
-
-            LayoutInflater inflater = LayoutInflater.from(getApplication());
-            //获取浮动窗口视图所在布局.
-            toucherLayout = (LinearLayout) inflater.inflate(R.layout.unit_suspension, null);
+            params.width = 96;
+            params.height = 96;
             //添加toucherlayout
             windowManager.addView(toucherLayout, params);
 
@@ -119,30 +118,32 @@ public class Serv071VolueEvent extends AccessibilityService {
             }
             Log.i(TAG, "状态栏高度为:" + statusBarHeight);
 
-            //浮动窗口按钮.
-            ivBtn = (ImageButton) toucherLayout.findViewById(R.id.imageButton1);
-            ivBtn.setBackgroundResource(R.drawable.ic_add);
             //其他代码...
 
             ivBtn.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
+                    int viewWidth = v.getMeasuredWidth();
+                    int viewHeight = v.getMeasuredHeight();
                     //ImageButton我放在了布局中心，布局一共300dp
-                    params.x = (int) event.getRawX() - 150;
+                    params.x = (int) event.getRawX() - viewWidth;
                     //这就是状态栏偏移量用的地方
-                    params.y = (int) event.getRawY() - 150 - statusBarHeight;
+                    params.y = (int) event.getRawY() - viewHeight;
+                    System.out.println("Event-x=" + event.getRawX() + " y=" + event.getRawY());
+                    simulateTapX = (int) params.x - 1;
+                    simulateTapY = (int) event.getRawY() - viewWidth / 2 - 1;
                     windowManager.updateViewLayout(toucherLayout, params);
                     return false;
                 }
             });
-            ivBtn.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-                    startActivity(new Intent(Serv071VolueEvent.this, Aty071VolueEvent.class)
-                            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));//设置这个flags
-                    return true;
-                }
-            });
+//            ivBtn.setOnLongClickListener(new View.OnLongClickListener() {
+//                @Override
+//                public boolean onLongClick(View v) {
+//                    startActivity(new Intent(Serv071VolueEvent.this, Aty071VolueEvent.class)
+//                            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));//设置这个flags
+//                    return true;
+//                }
+//            });
         }
     }
 
