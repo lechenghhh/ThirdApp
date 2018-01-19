@@ -20,7 +20,9 @@ import android.widget.Toast;
 
 import com.lecheng.hello.thirdapp.ActivityList.Aty071VolueEvent;
 import com.lecheng.hello.thirdapp.R;
+import com.lecheng.hello.thirdapp.Utils.RootShellCmd;
 
+//你真的理解AccessibilityService吗:https://www.jianshu.com/p/4cd8c109cdfb
 public class Serv071VolueEvent extends AccessibilityService {
 
     private static final String TAG = "Aty071VolueEvent";
@@ -32,6 +34,7 @@ public class Serv071VolueEvent extends AccessibilityService {
     private WindowManager windowManager;    //实例化的WindowManager.
     private ImageButton ivBtn;
     private int statusBarHeight = -1;    //状态栏高度.（接下来会用到）
+    private RootShellCmd rsc = new RootShellCmd();//root发送shell指令
 
     @Override
     public void onCreate() {
@@ -46,29 +49,12 @@ public class Serv071VolueEvent extends AccessibilityService {
         int key = event.getKeyCode();
         switch (key) {
             case KeyEvent.KEYCODE_VOLUME_DOWN:
-                //发广播
-//                Intent downintent = new Intent("com.exmaple.broadcaster.KEYDOWN");
-//                downintent.putExtra("dtime", System.currentTimeMillis());
-//                if (flag == 0) {
-//                    sendBroadcast(downintent);
-//                } else if (flag == 1) {
-//                    flag = 0;
-//                }
-//                Log.i(TAG, "KEYCODE_VOLUME_DOWN");
                 Toast.makeText(Serv071VolueEvent.this, "音量-被按下", Toast.LENGTH_SHORT).show();
+//                rsc.exec("input text Third App Test\n");//root发送shell指令
                 break;
             case KeyEvent.KEYCODE_VOLUME_UP:
-                //发广播
-//                Intent upintent = new Intent("com.exmaple.broadcaster.KEYUP");
-//                upintent.putExtra("utime", System.currentTimeMillis());
-//                if (flag == 0) {
-//                    sendBroadcast(upintent);
-//                    flag += 1;
-//                } else if (flag == 1) {
-//                    flag = 0;
-//                }
-//                Log.i(TAG, "KEYCODE_VOLUME_UP");
                 Toast.makeText(Serv071VolueEvent.this, "音量+被按下", Toast.LENGTH_SHORT).show();
+
                 break;
             default:
                 break;
@@ -86,6 +72,7 @@ public class Serv071VolueEvent extends AccessibilityService {
         Log.i(TAG, "onAccessibilityEvent-" + event);
     }
 
+    //创建悬浮窗以保证toast可以被显示
     private void createToucher() {
         if (toucherLayout == null) {
             //赋值WindowManager&LayoutParam.

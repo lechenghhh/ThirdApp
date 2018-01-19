@@ -52,7 +52,7 @@ public class MainMenu extends ListActivity {
             "Aty064MyLoadLv", "Aty065CPBtn", "Aty066FancyBtn",
             "Aty067RoundCornerPB", "Aty068MVVM", "Aty069Suspension", "Aty070AutoClick",
             "-------------------------------------",
-            "Aty071VolueEvent", "", "", "", "", "", "", "",
+            "Aty071VolueEvent", "Aty072Root", "", "", "", "", "", "",
     };
 
     private LayoutAnimationController lac;

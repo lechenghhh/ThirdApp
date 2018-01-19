@@ -269,6 +269,7 @@
         <service android:name=".Service.Serv069Suspension"/>
 
         <activity android:name=".ActivityList.Aty070AutoClick"/>
+
         <service
             android:name=".Service.Serv070AccessibilityService"
             android:label="@string/aty070service"
@@ -276,13 +277,16 @@
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService"/>
             </intent-filter>
+
             <meta-data
                 android:name="android.accessibilityservice"
-                android:resource="@xml/service_accessibility_config"
-                />
+                android:resource="@xml/service_accessibility_config"/>
         </service>
 
-        <activity android:name=".ActivityList.Aty071VolueEvent"/>
+        <activity
+            android:name=".ActivityList.Aty071VolueEvent"
+            android:launchMode="singleTask"/>
+
         <service
             android:name=".Service.Serv071VolueEvent"
             android:enabled="true"
@@ -297,6 +301,8 @@
                 android:name="android.accessibilityservice"
                 android:resource="@xml/service_rob_config"/>
         </service>
+
+        <activity android:name=".ActivityList.Aty072Root"/>
     </application>
 
 </manifest>
