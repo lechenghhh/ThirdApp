@@ -26,15 +26,13 @@ import com.lecheng.hello.thirdapp.Utils.RootShellCmd;
 public class Serv071VolueEvent extends AccessibilityService {
 
     private static final String TAG = "Aty071VolueEvent";
-    private Calendar c = Calendar.getInstance();
-    private int flag = 0;
-
     private LinearLayout toucherLayout;    //要引用的布局文件.
     private WindowManager.LayoutParams params;    //布局参数.
     private WindowManager windowManager;    //实例化的WindowManager.
     private ImageButton ivBtn;
     private int statusBarHeight = -1;    //状态栏高度.（接下来会用到）
     private RootShellCmd rsc = new RootShellCmd();//root发送shell指令
+    private boolean flag = false;
 
     @Override
     public void onCreate() {
@@ -45,21 +43,24 @@ public class Serv071VolueEvent extends AccessibilityService {
 
     @Override
     protected boolean onKeyEvent(KeyEvent event) {
-        Log.i(TAG, "onKeyEvent");
+        Log.i(TAG, "onKeyEvent=" + event);
         int key = event.getKeyCode();
         switch (key) {
             case KeyEvent.KEYCODE_VOLUME_DOWN:
-                Toast.makeText(Serv071VolueEvent.this, "音量-被按下", Toast.LENGTH_SHORT).show();
-//                rsc.exec("input text Third App Test\n");//root发送shell指令
+//                Toast.makeText(Serv071VolueEvent.this, "音量-被按下", Toast.LENGTH_SHORT).show();
+                if (flag) rsc.simulateKey(4);
+                flag = !flag;
                 break;
             case KeyEvent.KEYCODE_VOLUME_UP:
-                Toast.makeText(Serv071VolueEvent.this, "音量+被按下", Toast.LENGTH_SHORT).show();
-
+//                Toast.makeText(Serv071VolueEvent.this, "音量+被按下", Toast.LENGTH_SHORT).show();
+                if (flag) rsc.simulateTap(540, 540);
+                flag = !flag;
                 break;
             default:
                 break;
         }
-        return super.onKeyEvent(event);
+//        return super.onKeyEvent(event);//返回音量键的事件
+        return true;//拦截音量键的事件
     }
 
     @Override

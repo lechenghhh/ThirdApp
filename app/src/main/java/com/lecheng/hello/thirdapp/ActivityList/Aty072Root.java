@@ -11,6 +11,7 @@ import com.lecheng.hello.thirdapp.Utils.RootShellCmd;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
 //adb -s 8d68ecc37ce3 shell input text 12345
 public class Aty072Root extends Activity {
     @Bind(R.id.et1)
@@ -40,7 +41,7 @@ public class Aty072Root extends Activity {
                 rsc.simulateKey(25);
                 break;
             case R.id.btn3:
-                rsc.simulateTap(50,360);
+                rsc.simulateTap(540, 540);
                 break;
             case R.id.btn4:
                 rsc.exec("input text Third App Test\n");

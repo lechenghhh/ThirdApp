@@ -54,7 +54,7 @@
             android:id="@+id/btn3"
             style="@style/style_btn_blue1"
             android:layout_marginTop="@dimen/fab_margin"
-            android:text="模拟 x50 y50"/>
+            android:text="模拟 x500 y500"/>
 
         <Button
             android:id="@+id/btn4"
