@@ -15,6 +15,7 @@
     <string name="title_activity_navigation">NavigationActivity</string>
     <string name="aty070service">启动智能安装</string>
     <string name="aty071service">启动音量按钮监听</string>
+    <string name="aty073service">微信自动插件</string>
 
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>

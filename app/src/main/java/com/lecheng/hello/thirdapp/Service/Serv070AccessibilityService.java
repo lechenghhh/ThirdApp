@@ -17,6 +17,7 @@ public class Serv070AccessibilityService extends AccessibilityService {
 
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event) {
+        System.out.println("Serv070=" + event);
         AccessibilityNodeInfo nodeInfo = event.getSource();
         if (nodeInfo != null && Aty070AutoClick.flag) {
             int eventType = event.getEventType();

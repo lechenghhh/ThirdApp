@@ -20,7 +20,7 @@
         android:id="@+id/btnAccessibility"
         style="@style/style_btn_blue1"
         android:layout_marginTop="@dimen/fab_margin"
-        android:text="step2:辅助设置->开启音量键监听服务"/>
+        android:text="step2:辅助功能设置"/>
 
     <Button
         android:id="@+id/btnRegister"
