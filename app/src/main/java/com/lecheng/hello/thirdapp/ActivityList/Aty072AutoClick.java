@@ -19,7 +19,7 @@ import java.io.DataOutputStream;
 import java.io.File;
 import java.io.InputStreamReader;
 //http://blog.csdn.net/fuchaosz/article/details/51852442
-public class Aty070AutoClick extends AppCompatActivity implements View.OnClickListener {
+public class Aty072AutoClick extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "[TAG][Aty071Rob]";
     private static final String PACKAGE_NAME = "com.qiyi.video";
@@ -31,7 +31,7 @@ public class Aty070AutoClick extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.aty070);
+        setContentView(R.layout.aty072);
         tvTest = (TextView) findViewById(R.id.tv_test);
         findViewById(R.id.btn_install).setOnClickListener(this);
         findViewById(R.id.btn_uninstall).setOnClickListener(this);

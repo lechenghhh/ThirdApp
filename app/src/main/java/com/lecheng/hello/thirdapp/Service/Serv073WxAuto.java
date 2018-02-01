@@ -13,18 +13,36 @@ import java.util.List;
 //教程地址：http://blog.csdn.net/dd864140130/article/details/51794318
 public class Serv073WxAuto extends AccessibilityService {
 
+    private String contentDescription = "", text = "";
+
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event) {
-        System.out.println("Serv073-event=" + event);
+//        System.out.println("Serv073-event=" + event);
 //        System.out.println("Serv073-getEventType=" + event.getEventType());
 //        System.out.println("Serv073-getSource=" + event.getSource());
-//        System.out.println("Serv073-getContentDescription=" + event.getSource().getContentDescription());
+        if (!contentDescription.equals(event.getSource().getContentDescription() + "")) {
+            System.out.println("Serv073-getContentDescription=" + event.getSource().getContentDescription());
+            if ((event.getSource().getContentDescription() + "").equals("")) {
+                AccessibilityNodeInfo nodeInfo = getRootInActiveWindow();
+                if (nodeInfo != null) {
+                    //为了演示,直接查看了关闭按钮的id
+                    List<AccessibilityNodeInfo> infos = nodeInfo.findAccessibilityNodeInfosByViewId("@id/anb");
+                    nodeInfo.recycle();
+                    for (AccessibilityNodeInfo item : infos) {
+                        item.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+                    }
+                }
+            }
+        }
+        contentDescription = event.getSource().getContentDescription() + "";
+//        System.out.println("Serv073-getText=" + event.getText());
 //        System.out.println("Serv073-getClassName=" + event.getClassName());
 //        System.out.println("Serv073-getText=" + event.getText());
 //        System.out.println("Serv073-isEnabled=" + event.isEnabled());
 //        System.out.println("Serv073-getItemCount=" + event.getItemCount());
 
-
+/*抢红包代码触发器*/
 //        switch (eventType) {
 //            case AccessibilityEvent.TYPE_NOTIFICATION_STATE_CHANGED:
 //                handleNotification(event);
@@ -41,6 +59,16 @@ public class Serv073WxAuto extends AccessibilityService {
 //                }
 //                break;
 //        }
+    }
+
+    @Override
+    public void onInterrupt() {
+
+    }
+
+    @Override
+    protected void onServiceConnected() {
+        super.onServiceConnected();
     }
 
     /**
@@ -147,13 +175,4 @@ public class Serv073WxAuto extends AccessibilityService {
         return node;
     }
 
-    @Override
-    public void onInterrupt() {
-
-    }
-
-    @Override
-    protected void onServiceConnected() {
-        super.onServiceConnected();
-    }
 }

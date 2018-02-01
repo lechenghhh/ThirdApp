@@ -5,12 +5,12 @@ import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 
-import com.lecheng.hello.thirdapp.ActivityList.Aty070AutoClick;
+import com.lecheng.hello.thirdapp.ActivityList.Aty072AutoClick;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Serv070AccessibilityService extends AccessibilityService {
+public class Serv072AccessibilityService extends AccessibilityService {
 
     private static final String TAG = "[TAG]";
     private Map<Integer, Boolean> handleMap = new HashMap<>();
@@ -19,7 +19,7 @@ public class Serv070AccessibilityService extends AccessibilityService {
     public void onAccessibilityEvent(AccessibilityEvent event) {
         System.out.println("Serv070=" + event);
         AccessibilityNodeInfo nodeInfo = event.getSource();
-        if (nodeInfo != null && Aty070AutoClick.flag) {
+        if (nodeInfo != null && Aty072AutoClick.flag) {
             int eventType = event.getEventType();
             if (eventType == AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED || eventType == AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED) {
                 if (handleMap.get(event.getWindowId()) == null) {

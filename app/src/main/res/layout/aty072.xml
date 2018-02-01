@@ -7,10 +7,16 @@
     android:orientation="vertical"
     android:padding="@dimen/fab_margin">
 
+    <Button
+        android:id="@+id/btn_set"
+        style="@style/style_btn_blue1"
+        android:text="辅助功能设置"/>
+
     <TextView
         android:id="@+id/tv_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_weight="1"
         android:text="test"/>
 
@@ -27,13 +33,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_install"
         android:text="卸载"/>
-
-    <Button
-        android:id="@+id/btn_set"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_uninstall"
-        android:text="辅助功能设置"/>
 
     <Button
         android:id="@+id/btn_smart_install"

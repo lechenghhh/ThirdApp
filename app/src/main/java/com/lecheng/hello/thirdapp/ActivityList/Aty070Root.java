@@ -13,7 +13,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 //adb -s 8d68ecc37ce3 shell input text 12345
-public class Aty072Root extends Activity {
+public class Aty070Root extends Activity {
     @Bind(R.id.et1)
     EditText et1;
     private RootShellCmd rsc = new RootShellCmd();
@@ -21,7 +21,7 @@ public class Aty072Root extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.aty072_root);
+        setContentView(R.layout.aty070_root);
         ButterKnife.bind(this);
     }
 
