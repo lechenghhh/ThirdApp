@@ -25,9 +25,9 @@ public class Aty073 extends Activity {
         setContentView(R.layout.aty073);
         ButterKnife.bind(this);
         hsv.setImgeViewOnClickGoToFirst(tvTitle);
-//        tvTitle.setOnClickListener((v) -> {
-//            new MyToast(Aty073.this, "lambda", 1);
-//        });
+        tvTitle.setOnClickListener((v) -> {
+            new MyToast(Aty073.this, "Hello Lambda !", 1);
+        });
     }
 
     public void onScrollChanged(int x, int y, int oldx, int oldy) {
