@@ -1,6 +1,6 @@
 package com.lecheng.hello.thirdapp.ActivityList
 
-import android.support.v7.app.ActionBarActivity
+import android.app.Activity
 import android.os.Bundle
 import android.widget.TextView
 
@@ -9,7 +9,7 @@ import com.lecheng.hello.thirdapp.R
 import kotlinx.android.synthetic.main.aty061_kotlin. *              //依赖kotlinx的xml找到控件
 
 //import kotlinx.android.synthetic.main.
-class Aty061Kotlin : ActionBarActivity() {
+class Aty061Kotlin : Activity() {
     private var i = 0;//
 
     override fun onCreate(savedInstanceState: Bundle?) {

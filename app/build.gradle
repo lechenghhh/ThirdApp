@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'//xml控件自动找到//plugin里可能要装插件
+//apply plugin: 'me.tatarka.retrolambda'//此处为支持lambda表达式的插件
+
 android {
     compileSdkVersion 21
     buildToolsVersion "22.0.1"
