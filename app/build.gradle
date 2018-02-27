@@ -13,6 +13,11 @@ android {
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
+        javaCompileOptions {//http://blog.csdn.net/huangxiaoguo1/article/details/78111857 AS3.0支持butterkinfe
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
     }
     buildTypes {
         release {
@@ -40,6 +45,7 @@ android {
 //    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
