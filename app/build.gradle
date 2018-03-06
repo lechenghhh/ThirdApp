@@ -5,7 +5,7 @@ apply plugin: 'kotlin-android-extensions'//xml控件自动找到//plugin里可�
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "22.0.1"
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         applicationId "com.lecheng.hello.thirdapp"
@@ -13,7 +13,8 @@ android {
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
-        javaCompileOptions {//http://blog.csdn.net/huangxiaoguo1/article/details/78111857 AS3.0支持butterkinfe
+        javaCompileOptions {
+//http://blog.csdn.net/huangxiaoguo1/article/details/78111857 AS3.0支持butterkinfe
             annotationProcessorOptions {
                 includeCompileClasspath = true
             }
