@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.lecheng.hello.thirdapp.Bean.Gson.Bean049;
+import com.lecheng.hello.thirdapp.Bean.Json.Bean049;
 import com.lecheng.hello.thirdapp.R;
 import com.nostra13.universalimageloader.core.ImageLoader;
 

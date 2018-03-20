@@ -12,14 +12,14 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSON;
 import com.lecheng.hello.thirdapp.ActivityList.Aty018MyBrowser;
 import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.LvUnitAdpt;
 import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.ViewHolder;
-import com.lecheng.hello.thirdapp.Bean.Gson.Bean049;
+import com.lecheng.hello.thirdapp.Bean.Json.Bean049;
 import com.lecheng.hello.thirdapp.Net.HttpGo;
 import com.lecheng.hello.thirdapp.Interface.IWListener;
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.GsonUtil;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
 
 import java.util.HashMap;
@@ -90,7 +90,8 @@ public class Frag049 extends Fragment implements IWListener {
     @Override
     public void onSuccess(final String strJson) {
         new MyToast(getActivity(), type + "数据加载成功,page=" + page, 3333);
-        final Bean049 bean049 = GsonUtil.GsonToBean(strJson, Bean049.class);
+//        final Bean049 bean049 = GsonUtil.GsonToBean(strJson, Bean049.class);
+        final Bean049 bean049 = JSON.parseObject(strJson, Bean049.class);
 //        lv1.setAdapter(new Adpt049List(getActivity(), bean049));
         lv1.setAdapter(new LvUnitAdpt<Bean049.ListBean>(getActivity(), bean049.getList(), R.layout.item049_metro) {
             @Override

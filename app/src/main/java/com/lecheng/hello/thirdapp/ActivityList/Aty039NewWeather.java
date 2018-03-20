@@ -12,13 +12,13 @@ import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSON;
 import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.LvUnitAdpt;
 import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.ViewHolder;
-import com.lecheng.hello.thirdapp.Bean.Gson.Bean039Weather;
+import com.lecheng.hello.thirdapp.Bean.Json.Bean039Weather;
 import com.lecheng.hello.thirdapp.Net.HttpGo;
 import com.lecheng.hello.thirdapp.Interface.IWListener;
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.GsonUtil;
 import com.lecheng.hello.thirdapp.Utils.MySP;
 import com.lecheng.hello.thirdapp.Utils.MyUtils;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -95,7 +95,8 @@ public class Aty039NewWeather extends Activity implements IWListener {
     @Override
     public void onSuccess(String strJson) {
         try {
-            final Bean039Weather bean = GsonUtil.GsonToBean(strJson, Bean039Weather.class);
+//            final Bean039Weather bean = GsonUtil.GsonToBean(strJson, Bean039Weather.class);
+            final Bean039Weather bean = JSON.parseObject(strJson, Bean039Weather.class);
             //呈现到列表上
             aty40TvCity.setText(bean.getData().getCity());
             aty40Tv1.setText(bean.getData().getWendu() + "摄氏度");

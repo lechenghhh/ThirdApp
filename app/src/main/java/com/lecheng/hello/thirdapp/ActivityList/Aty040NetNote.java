@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.alibaba.fastjson.JSON;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -18,7 +19,6 @@ import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.LvUnitAdpt;
 import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.ViewHolder;
 import com.lecheng.hello.thirdapp.Bean.Aty040.BeanList;
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.GsonUtil;
 import com.lecheng.hello.thirdapp.Utils.MyApplication;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
 
@@ -169,7 +169,8 @@ public class Aty040NetNote extends AppCompatActivity {
         System.out.println("开头截取的位置：" + i);
         String sChange = "{\"data\":" + s.substring(i, s.length() - 1) + "}";
         System.out.println("修改后的Json：" + sChange);
-        final BeanList beanList = GsonUtil.GsonToBean(sChange, BeanList.class);
+//        final BeanList beanList = GsonUtil.GsonToBean(sChange, BeanList.class);
+        BeanList beanList = JSON.parseObject(sChange,BeanList.class);
         lvNoteList.setAdapter(new LvUnitAdpt<BeanList.DataBean>(Aty040NetNote.this, beanList.getData(), R.layout.item006_sqlite) {
             @Override
             public void convert(ViewHolder helper, BeanList.DataBean item) {
