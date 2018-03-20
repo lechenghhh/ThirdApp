@@ -48,7 +48,7 @@ public class AdptGetNum extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder vh = null;                                           //局部类声明
         if (convertView == null) {                                      //只有在没有convertview的时候
-            convertView = View.inflate(context, R.layout.cell035_call, null); //找到布局
+            convertView = View.inflate(context, R.layout.item035_call, null); //找到布局
             vh = new ViewHolder();                                      //实例化vh
             vh.tv1 = (TextView) convertView.findViewById(R.id.call35_name);    //找到控件
             vh.tv2 = (TextView) convertView.findViewById(R.id.call35_number);    //找到控件

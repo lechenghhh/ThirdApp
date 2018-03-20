@@ -66,7 +66,7 @@ public class Adpt017 extends BaseAdapter{
         LayoutInflater inflater = LayoutInflater.from(context);
         if (convertView == null) {
             convertView = inflater.inflate(
-                    R.layout.cell017, null);
+                    R.layout.item017, null);
             holder = new ViewHolder();
             holder.cb = (CheckBox) convertView.findViewById(R.id.checkBox1);
             holder.tvName = (TextView) convertView

@@ -4,20 +4,18 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
-import com.lecheng.hello.thirdapp.Adapter.Common.UnityAdpt;
-import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
+import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.LvUnitAdpt;
+import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.ViewHolder;
 import com.lecheng.hello.thirdapp.R;
 
 import java.util.Arrays;
 import java.util.LinkedList;
 
 import android.os.AsyncTask;
-import android.text.format.DateUtils;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
 
 /*tagflowlayout
@@ -33,7 +31,7 @@ public class Aty054PullToRefresh extends ActionBarActivity {
     private LinkedList<String> mListItems;
     private ArrayAdapter<String> mAdapter;
     private int i = 1;
-    UnityAdpt<String> adpt;
+    LvUnitAdpt<String> adpt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +80,7 @@ public class Aty054PullToRefresh extends ActionBarActivity {
         mListItems.addAll(Arrays.asList(mStrings));
 //        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mListItems);
 //        actualListView.setAdapter(mAdapter);
-        adpt = new UnityAdpt<String>(getApplicationContext(), mListItems, R.layout.cell053_fethg) {
+        adpt = new LvUnitAdpt<String>(getApplicationContext(), mListItems, R.layout.item053_fethg) {
             @Override
             public void convert(ViewHolder helper, String item) {
                 helper.setText(R.id.tv1, item);

@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.lecheng.hello.thirdapp.Adapter.Common.UnityAdpt;
-import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
+import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.LvUnitAdpt;
+import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.ViewHolder;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Widgets.LoadListView;
 
@@ -38,7 +38,7 @@ public class Aty064MyLoadLv extends AppCompatActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnLoadLv:
-                lv1.setAdapter(new UnityAdpt<String>(this, arr, R.layout.cell053_fethg) {
+                lv1.setAdapter(new LvUnitAdpt<String>(this, arr, R.layout.item053_fethg) {
                     @Override
                     public void convert(ViewHolder helper, String item) {
                         helper.setText(R.id.tv1, item);

@@ -67,7 +67,7 @@ public class Adpt049List extends BaseAdapter {
 
     private View myAdapterTypeSelector(ViewHolder vh, int position, View convertView, ViewGroup parent) {    //自定义列表样式选择器
         if (convertView == null) {                                      //只有在没有convertview的时候
-            convertView = View.inflate(context, R.layout.cell049_metro, null); //找到布局
+            convertView = View.inflate(context, R.layout.item049_metro, null); //找到布局
             vh = new ViewHolder();                                      //实例化vh
             //找到控件
             vh.tv1 = (TextView) convertView.findViewById(R.id.tv1);

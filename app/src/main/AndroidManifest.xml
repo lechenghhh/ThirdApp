@@ -114,7 +114,7 @@
             android:windowSoftInputMode="stateHidden|stateUnchanged" />
         <activity android:name=".ActivityList.Aty019MVC" />
         <activity android:name=".ActivityList.Aty020FragmentTabHost" />
-        <activity android:name=".ActivityList.Aty021ButterKnife" />
+        <activity android:name=".ActivityList.Aty021RecyclerView" />
         <activity android:name=".ActivityList.Aty022UniversalImgLoader" />
         <activity android:name=".ActivityList.Aty023UploadPic" />
         <activity android:name=".ActivityList.Aty023UploadPic_Select" />

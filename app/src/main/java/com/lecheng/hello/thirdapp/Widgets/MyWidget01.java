@@ -17,7 +17,7 @@ public class MyWidget01 extends AppWidgetProvider {
 
         CharSequence widgetText = context.getString(R.string.navigation_drawer_close);
         // Construct the RemoteViews object
-        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.my_widget01);
+        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget01);
         views.setTextViewText(R.id.appwidget_text, widgetText);
 
         // Instruct the widget manager to update the widget

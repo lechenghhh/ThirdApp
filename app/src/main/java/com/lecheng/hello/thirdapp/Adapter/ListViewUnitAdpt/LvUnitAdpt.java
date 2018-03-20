@@ -1,4 +1,4 @@
-package com.lecheng.hello.thirdapp.Adapter.Common;
+package com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,13 +8,13 @@ import android.widget.BaseAdapter;
 
 import java.util.List;
 
-public abstract class UnityAdpt<T> extends BaseAdapter {
+public abstract class LvUnitAdpt<T> extends BaseAdapter {
     protected LayoutInflater mInflater;
     protected Context mContext;
     protected List<T> mDatas;
     protected final int mItemLayoutId;
 
-    public UnityAdpt(Context context, List<T> mDatas, int itemLayoutId) {
+    public LvUnitAdpt(Context context, List<T> mDatas, int itemLayoutId) {
         this.mContext = context;
         this.mInflater = LayoutInflater.from(mContext);
         this.mDatas = mDatas;

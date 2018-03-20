@@ -41,7 +41,7 @@ public class Adpt016 extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        ly = (LinearLayout) inflater.inflate(R.layout.cell016, null);
+        ly = (LinearLayout) inflater.inflate(R.layout.item016, null);
         tv = (TextView) ly.findViewById(R.id.tv_16);
         et = (EditText) ly.findViewById(R.id.et_16);
         tv.setText(count + "");

@@ -12,11 +12,10 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 
-import com.lecheng.hello.thirdapp.Adapter.Common.UnityAdpt;
-import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
+import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.LvUnitAdpt;
+import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.ViewHolder;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MySP;
-import com.lecheng.hello.thirdapp.Utils.MyToast;
 import com.lecheng.hello.thirdapp.Utils.MyUtils;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -281,7 +280,7 @@ public class Aty033UploadFile_2 extends Activity implements OnClickListener {
                     System.out.println("Uri:" + data.getData() + "\n保存路径2----------:" + srcPath);
                     break;
             }
-            gv.setAdapter(new UnityAdpt<String>(Aty033UploadFile_2.this, listUri, R.layout.cell033_pic) {
+            gv.setAdapter(new LvUnitAdpt<String>(Aty033UploadFile_2.this, listUri, R.layout.item033_pic) {
                 @Override
                 public void convert(ViewHolder helper, String item) {
                     helper.setImageByUrl(R.id.cell8_iv_pic, item);

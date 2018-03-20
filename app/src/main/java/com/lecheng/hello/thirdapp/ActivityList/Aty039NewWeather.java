@@ -12,8 +12,8 @@ import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.lecheng.hello.thirdapp.Adapter.Common.UnityAdpt;
-import com.lecheng.hello.thirdapp.Adapter.Common.ViewHolder;
+import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.LvUnitAdpt;
+import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.ViewHolder;
 import com.lecheng.hello.thirdapp.Bean.Gson.Bean039Weather;
 import com.lecheng.hello.thirdapp.Net.HttpGo;
 import com.lecheng.hello.thirdapp.Interface.IWListener;
@@ -100,7 +100,7 @@ public class Aty039NewWeather extends Activity implements IWListener {
             aty40TvCity.setText(bean.getData().getCity());
             aty40Tv1.setText(bean.getData().getWendu() + "摄氏度");
             aty40Tv2.setText(bean.getData().getGanmao());
-            aty40Lv.setAdapter(new UnityAdpt<Bean039Weather.DataBean.ForecastBean>(getApplicationContext(), bean.getData().getForecast(), R.layout.cell040_weather) {
+            aty40Lv.setAdapter(new LvUnitAdpt<Bean039Weather.DataBean.ForecastBean>(getApplicationContext(), bean.getData().getForecast(), R.layout.item040_weather) {
                 @Override
                 public void convert(ViewHolder helper, Bean039Weather.DataBean.ForecastBean item) {
                     helper.setText(R.id.listcell40_type, item.getType());

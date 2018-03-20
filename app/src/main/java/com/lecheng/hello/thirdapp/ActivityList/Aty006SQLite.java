@@ -47,7 +47,7 @@ public class Aty006SQLite extends ListActivity {
         dbread = db.getReadableDatabase();
         dbwrite = db.getWritableDatabase();
 
-        adapter = new SimpleCursorAdapter(this,R.layout.cell006_sqlite,null,
+        adapter = new SimpleCursorAdapter(this,R.layout.item006_sqlite,null,
                 new String[]{"name","sex"},new int[]{R.id.textView4,R.id.textView5});
         setListAdapter(adapter);
         syncListView();
