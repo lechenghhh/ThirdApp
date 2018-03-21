@@ -22,7 +22,16 @@
             android:layout_height="36dp"
             android:layout_margin="4dp"
             android:layout_weight="1"
-            android:text="加载列表" />
+            android:text="load" />
+
+        <Button
+            android:id="@+id/btnHeader"
+            style="@style/style_btn_green1"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:text="头" />
 
         <Button
             android:id="@+id/btnAdd"
@@ -43,7 +52,6 @@
             android:text="-" />
 
     </LinearLayout>
-
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv1"
