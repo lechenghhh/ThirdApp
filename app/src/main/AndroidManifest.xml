@@ -320,7 +320,8 @@
         </service>
 
         <activity android:name=".ActivityList.Aty073" />
-        <activity android:name=".ActivityList.Aty074DispatchTouchEvent"></activity>
+        <activity android:name=".ActivityList.Aty074DispatchTouchEvent" />
+        <activity android:name=".ActivityList.Aty075Bitmap"></activity>
     </application>
 
 </manifest>

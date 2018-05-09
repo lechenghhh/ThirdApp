@@ -42,7 +42,6 @@ public class Serv071VolueEvent extends AccessibilityService {
         createToucher();        //OnCreate中来生成悬浮窗.
     }
 
-    @Override
     protected boolean onKeyEvent(KeyEvent event) {//        Log.i(TAG, "onKeyEvent=" + event);
         if (flag) switch (event.getKeyCode()) {
             case KeyEvent.KEYCODE_VOLUME_DOWN:
@@ -120,30 +119,31 @@ public class Serv071VolueEvent extends AccessibilityService {
 
             //其他代码...
 
-            ivBtn.setOnTouchListener(new View.OnTouchListener() {
+
+            ivBtn.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    int viewWidth = v.getMeasuredWidth();
-                    int viewHeight = v.getMeasuredHeight();
-                    //ImageButton我放在了布局中心，布局一共300dp
-                    params.x = (int) event.getRawX() - viewWidth;
-                    //这就是状态栏偏移量用的地方
-                    params.y = (int) event.getRawY() - viewHeight;
-                    System.out.println("Event-x=" + event.getRawX() + " y=" + event.getRawY());
-                    simulateTapX = (int) params.x - 1;
-                    simulateTapY = (int) event.getRawY() - viewWidth / 2 - 1;
-                    windowManager.updateViewLayout(toucherLayout, params);
-                    return false;
+                public boolean onLongClick(View v) {
+                    ivBtn.setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View v, MotionEvent event) {
+                            int viewWidth = v.getMeasuredWidth();
+                            int viewHeight = v.getMeasuredHeight();
+                            //ImageButton我放在了布局中心，布局一共300dp
+                            params.x = (int) event.getRawX() - viewWidth;
+                            //这就是状态栏偏移量用的地方
+                            params.y = (int) event.getRawY() - viewHeight;
+                            System.out.println("Event-x=" + event.getRawX() + " y=" + event.getRawY());
+                            simulateTapX = (int) params.x - 1;
+                            simulateTapY = (int) event.getRawY() - viewWidth / 2 - 1;
+                            windowManager.updateViewLayout(toucherLayout, params);
+                            return true;
+                        }
+                    });
+                    //                    startActivity(new Intent(Serv071VolueEvent.this, Aty071VolueEvent.class)
+//                            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));//设置这个flags
+                    return true;
                 }
             });
-//            ivBtn.setOnLongClickListener(new View.OnLongClickListener() {
-//                @Override
-//                public boolean onLongClick(View v) {
-//                    startActivity(new Intent(Serv071VolueEvent.this, Aty071VolueEvent.class)
-//                            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));//设置这个flags
-//                    return true;
-//                }
-//            });
         }
     }
 
