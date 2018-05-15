@@ -19,7 +19,7 @@ class Aty061Kotlin : Activity() {
     }
 
     private fun init(str: String?) {
-        var tv1 = findViewById(R.id.tv1) as TextView
+//        var tv1 = findViewById(R.id.tv1) as TextView              //用了synthetic这个库就不用实例化了
         tv1.setOnClickListener { tv1.text = "fffff" }
         tv2.setOnClickListener { tv2.text = "" }
         btn1.setOnClickListener {
