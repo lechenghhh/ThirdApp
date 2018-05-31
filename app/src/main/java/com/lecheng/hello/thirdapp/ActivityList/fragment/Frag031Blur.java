@@ -8,16 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.EditText;
-import android.widget.TextView;
 
-import com.lecheng.hello.mylibrary.blurdialogfragment.BlurDialogEngine;
+import com.blurfragment.BlurDialogEngine;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /*使用说明  ：http://p.codekk.com/detail/Android/tvbarthel/BlurDialogFragment
 * 在 fragment继承这几个类后，在oncreate方法中加入

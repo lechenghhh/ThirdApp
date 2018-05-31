@@ -1,4 +1,4 @@
-package com.lecheng.hello.mylibrary.blurdialogfragment;
+package com.blurfragment;
 
 import android.graphics.Bitmap;
 

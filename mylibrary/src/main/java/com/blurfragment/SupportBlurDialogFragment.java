@@ -1,10 +1,8 @@
-package com.lecheng.hello.mylibrary.blurdialogfragment;
+package com.blurfragment;
 
-import android.annotation.TargetApi;
-import android.app.DialogFragment;
 import android.content.DialogInterface;
-import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 
 /*使用说明  ：http://p.codekk.com/detail/Android/tvbarthel/BlurDialogFragment
 * 在 fragment继承这几个类后，在oncreate方法中加入
@@ -13,12 +11,12 @@ import android.os.Bundle;
 *        this.setDownScaleFactor(5.0f);*/
 
 /**
- * Encapsulate dialog behavior with blur effect for app using {@link DialogFragment}.
+ * Encapsulate dialog behavior with blur effect for
+ * app using {@link DialogFragment}.
  * <p/>
  * All the screen behind the dialog will be blurred except the action bar.
  */
-@TargetApi(Build.VERSION_CODES.HONEYCOMB)
-public class BlurDialogFragment extends DialogFragment {
+public class SupportBlurDialogFragment extends DialogFragment {
 
     /**
      * Bundle key used to start the blur dialog with a given scale factor (float).
@@ -33,7 +31,7 @@ public class BlurDialogFragment extends DialogFragment {
     /**
      * Log cat
      */
-    private static final String TAG = BlurDialogFragment.class.getSimpleName();
+    private static final String TAG = SupportBlurDialogFragment.class.getSimpleName();
 
     /**
      * Engine used to blur.
@@ -48,7 +46,7 @@ public class BlurDialogFragment extends DialogFragment {
     /**
      * default constructor as needed
      */
-    public BlurDialogFragment() {
+    public SupportBlurDialogFragment() {
         mDebugEnable = false;
     }
 

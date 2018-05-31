@@ -67,14 +67,15 @@ allprojects {
     repositories {
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
-        google()
         maven { url "https://jitpack.io" }
+        google()
     }
 }
 
 dependencies {
     //    compile 'com.android.support:appcompat-v7:22.2.1'
     //    compile 'com.android.support:support-v4:22.2.1'
+    testCompile 'junit:junit:4.12'
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile files('libs/volly-1.0.11.jar')
     compile files('libs/activeandroid-3.1-beta.jar')
@@ -92,8 +93,6 @@ dependencies {
     compile files('libs/hellocharts-library-1.5.8.jar')
     //微信分享sdk
     //    compile 'com.jude:rollviewpager:1.2.9'//aty032依赖
-    //左划删除的列表
-    compile files('libs/swipemenulistview.jar')
     //fancy按钮，不用图片就可以帮助我们创建出漂亮按钮的库
     //圆角进度条
     //rxjava
@@ -113,7 +112,6 @@ dependencies {
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'jp.wasabeef:glide-transformations:2.0.1'
-    testCompile 'junit:junit:4.12'
     //左划控件
 //    compile 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.2.1'
 
