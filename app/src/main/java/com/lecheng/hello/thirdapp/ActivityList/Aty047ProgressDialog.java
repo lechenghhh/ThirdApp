@@ -129,4 +129,22 @@ public class Aty047ProgressDialog extends AppCompatActivity {
                 }).show();
 //        AlertDialog alert = builder.create();
     }
+
+    @Override
+    public void onBackPressed() {
+//        super.onBackPressed();
+        new AlertDialog.Builder(Aty047ProgressDialog.this)
+                .setTitle("退出界面？")
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                }).create().show();
+    }
 }
