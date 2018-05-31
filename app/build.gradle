@@ -50,6 +50,28 @@ android {
     }
 }
 
+buildscript {
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        google()
+        maven { url "https://jitpack.io" }
+    }
+}
+
 dependencies {
     //    compile 'com.android.support:appcompat-v7:22.2.1'
     //    compile 'com.android.support:support-v4:22.2.1'
@@ -92,25 +114,9 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'jp.wasabeef:glide-transformations:2.0.1'
     testCompile 'junit:junit:4.12'
+    //左划控件
+//    compile 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.2.1'
+
 }
 
-buildscript {
-    repositories {
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
-        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-    }        
-}
-
-allprojects {
-    repositories {
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
-        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
-        google()
-    }
-}
