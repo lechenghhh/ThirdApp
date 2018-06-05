@@ -14,7 +14,7 @@ android {
         versionCode 1
         versionName "1.0"
         javaCompileOptions {
-//http://blog.csdn.net/huangxiaoguo1/article/details/78111857 AS3.0支持butterkinfe
+            //http://blog.csdn.net/huangxiaoguo1/article/details/78111857 AS3.0支持butterkinfe
             annotationProcessorOptions {
                 includeCompileClasspath = true
             }
@@ -36,18 +36,17 @@ android {
     dataBinding {    //开启数据绑定，教程地址：http://www.jianshu.com/p/a15d6e68d93f
         enabled = true
     }
-//    /*2017-3-1*/
-//    repositories {
-//        maven { url "https://jitpack.io" }
-//    }
-//    dependencies {
-//        //...
-//        compile 'com.github.elevenetc:textsurface:0.9.1'
-//    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+//    lintOptions {
+//        checkReleaseBuilds false
+//        // 如果您愿意，可以继续检查发布版本中的错误,但是即使发现错误也要继续构建：
+//        abortOnError false
+//    }
 }
 
 buildscript {
