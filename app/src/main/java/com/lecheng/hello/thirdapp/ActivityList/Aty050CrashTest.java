@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.lecheng.hello.thirdapp.R;
+import com.lecheng.hello.thirdapp.Utils.MySP;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -18,6 +19,7 @@ public class Aty050CrashTest extends AppCompatActivity {
         setContentView(R.layout.aty050);
         ButterKnife.bind(this);
         init();
+        MySP.loadData(this, "Aty050CrashTest", 1);
     }
 
     private void init() {

@@ -46,29 +46,91 @@ public class MySP {
      * @param context
      * @param key
      * @param defValue
-     * @return
+     * @return //
      */
-    public static Object loadData(Context context, String key, Object defValue) {
+//    public static Object loadData(Context context, String key, Object defValue) {
+//
+//        String type = defValue.getClass().getSimpleName();
+//        SharedPreferences sharedPreferences = context.getSharedPreferences
+//                (FILE_NAME, Context.MODE_PRIVATE);
+//
+//        //defValue为为默认值，如果当前获取不到数据就返回它
+//        if ("Integer".equals(type)) {
+//            return sharedPreferences.getInt(key, (Integer) defValue);
+//        } else if ("Boolean".equals(type)) {
+//            return sharedPreferences.getBoolean(key, (Boolean) defValue);
+//        } else if ("String".equals(type)) {
+//            return sharedPreferences.getString(key, (String) defValue);
+//        } else if ("Float".equals(type)) {
+//            return sharedPreferences.getFloat(key, (Float) defValue);
+//        } else if ("Long".equals(type)) {
+//            return sharedPreferences.getLong(key, (Long) defValue);
+//        }
+//        return null;
+//    }
+    public static String loadData(Context context, String key, String defValue) {
 
-        String type = defValue.getClass().getSimpleName();
-        SharedPreferences sharedPreferences = context.getSharedPreferences
-                (FILE_NAME, Context.MODE_PRIVATE);
+//        String type = defValue.getClass().getSimpleName();
+        SharedPreferences sharedPreferences = context.getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE);
 
         //defValue为为默认值，如果当前获取不到数据就返回它
-        if ("Integer".equals(type)) {
-            return sharedPreferences.getInt(key, (Integer) defValue);
-        } else if ("Boolean".equals(type)) {
-            return sharedPreferences.getBoolean(key, (Boolean) defValue);
-        } else if ("String".equals(type)) {
+//        if ("Integer".equals(type)) {
+//            return sharedPreferences.getInt(key, (Integer) defValue);
+//        } else if ("Boolean".equals(type)) {
+//            return sharedPreferences.getBoolean(key, (Boolean) defValue);
+//        } else if ("String".equals(type)) {
+        try {
             return sharedPreferences.getString(key, (String) defValue);
-        } else if ("Float".equals(type)) {
-            return sharedPreferences.getFloat(key, (Float) defValue);
-        } else if ("Long".equals(type)) {
-            return sharedPreferences.getLong(key, (Long) defValue);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return defValue;
         }
 
-        return null;
+//        } else if ("Float".equals(type)) {
+//            return sharedPreferences.getFloat(key, (Float) defValue);
+//        } else if ("Long".equals(type)) {
+//            return sharedPreferences.getLong(key, (Long) defValue);
+//        }
+
     }
 
+    public static int loadData(Context context, String key, int defValue) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE);
+        try {
+            return sharedPreferences.getInt(key, defValue);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return defValue;
+        }
+    }
 
+    public static Float loadData(Context context, String key, Float defValue) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE);
+        try {
+            return sharedPreferences.getFloat(key, defValue);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return defValue;
+        }
+    }
+
+    public static Long loadData(Context context, String key, Long defValue) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE);
+        try {
+            return sharedPreferences.getLong(key, defValue);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return defValue;
+        }
+    }
+
+    public static boolean loadData(Context context, String key, boolean defValue) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE);
+        try {
+            return sharedPreferences.getBoolean(key, defValue);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return defValue;
+        }
+    }
 }

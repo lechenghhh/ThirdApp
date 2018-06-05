@@ -56,7 +56,6 @@ public class Frag049 extends Fragment implements IWListener {
         ButterKnife.bind(this, root);
         init();
         return root;
-
     }
 
     private void init() {
