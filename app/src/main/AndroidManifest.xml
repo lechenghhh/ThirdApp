@@ -248,6 +248,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ActivityList.Aty056Bluetooth" />
         <activity android:name=".ActivityList.Aty056BluetoothEpay" />
+        <activity android:name=".ActivityList.Aty056BluetoothBLE" />
         <activity android:name=".ActivityList.Aty057Chart" />
         <activity android:name=".ActivityList.Aty058Share" />
         <activity android:name=".ActivityList.Aty059WebViewPlus" />

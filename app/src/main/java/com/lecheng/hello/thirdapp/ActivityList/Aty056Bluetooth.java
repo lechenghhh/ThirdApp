@@ -82,7 +82,7 @@ public class Aty056Bluetooth extends Activity {
 
     };
 
-    @OnClick({R.id.btn1, R.id.btn2, R.id.btn3})
+    @OnClick({R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn1:
@@ -104,6 +104,9 @@ public class Aty056Bluetooth extends Activity {
                 break;
             case R.id.btn3:
                 startActivity(new Intent(this, Aty056BluetoothEpay.class));
+                break;
+            case R.id.btn4:
+                startActivity(new Intent(this, Aty056BluetoothBLE.class));
                 break;
         }
     }

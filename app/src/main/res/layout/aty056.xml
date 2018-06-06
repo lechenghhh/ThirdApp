@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty056Bluetooth">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty056Bluetooth">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,29 +16,35 @@
             android:id="@+id/tv1"
             style="@style/style_tv_screen"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/btn1"
             style="@style/style_btn_blue1"
-            android:text="连接蓝牙"/>
+            android:text="连接蓝牙" />
 
         <Button
             android:id="@+id/btn2"
             style="@style/style_btn_blue1"
             android:layout_marginTop="@dimen/fab_margin"
-            android:text="设置蓝牙可见性"/>
+            android:text="设置蓝牙可见性" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <Button
             android:id="@+id/btn3"
             style="@style/style_btn_red1"
             android:layout_marginTop="@dimen/fab_margin"
-            android:text="EPAY蓝牙打印机测试 >>>"/>
+            android:text="EPAY蓝牙打印机测试 >>>" />
+
+        <Button
+            android:id="@+id/btn4"
+            style="@style/style_btn_green1"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:text="BLE蓝牙测试 >>>" />
 
     </LinearLayout>
 </ScrollView>
