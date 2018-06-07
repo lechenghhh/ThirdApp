@@ -23,12 +23,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import com.lecheng.hello.thirdapp.R;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.UUID;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -37,17 +35,20 @@ import butterknife.OnClick;
 //https://www.jianshu.com/p/3a372af38103
 public class Aty056BluetoothBLE extends AppCompatActivity {
     public static final int REQUEST_ENABLE_BT = 999;
-    String TAG = "Aty056BluetoothBLE_TAG";
-    BluetoothAdapter mBluetoothAdapter;
-    //    LeDeviceListAdapter mLeDeviceListAdapter;
-    List<BluetoothAdapter> list = new ArrayList<>();
-    boolean mScanning = false;
-    boolean btnScanning = true;
-    BluetoothDevice mDevice;
-    BluetoothGatt mBluetoothGatt;
-    TextView tv1;
-    EditText etSend;
-    public static final String CLIENT_CHARACTERISTIC_CONFIG = "00002902-0000-1000-8000-00805f9b34fb";
+    public static final String TAG = "Aty056BluetoothBLE_TAG";
+    public static final String CHARACTERISTIC_UUID_SERVICE = "0000fff0-0000-1000-8000-00805f9b34fb";//主服务
+    public static final String CHARACTERISTIC_UUID_READ = "0000fff1-0000-1000-8000-00805f9b34fb";   //读
+    public static final String CHARACTERISTIC_UUID_WRITE = "0000fff3-0000-1000-8000-00805f9b34fb";  //写
+    private BluetoothAdapter mBluetoothAdapter;         //蓝牙适配器
+    private BluetoothDevice mDevice;                    //连接的蓝牙设备
+    private BluetoothGatt mBluetoothGatt;               //建立的蓝牙协议
+    private BluetoothGattCharacteristic mCharacteristicRead;//蓝牙传输特性
+    private BluetoothGattCharacteristic mCharacteristicWrite;//蓝牙传输特性
+    private UUID uuid;
+    private boolean mScanning = false;
+    private boolean btnScanning = true;
+    private TextView tv1;
+    private EditText etSend;
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
@@ -61,7 +62,14 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
 
         tv1 = (TextView) findViewById(R.id.tv1);
         etSend = (EditText) findViewById(R.id.etSend);
-
+        tv1.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                tv1.setText("");
+                Toast.makeText(Aty056BluetoothBLE.this, "清屏成功！", Toast.LENGTH_SHORT).show();
+                return true;
+            }
+        });
         checkBLEFeature();//检查ble功能
     }
 
@@ -82,6 +90,9 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
                 mBluetoothGatt.disconnect();
                 break;
             case R.id.btn4://发送
+                byte[] bytes = new byte[]{0, 54, 01, 43, 04, 01, 01, 01, 0, 0};
+                mCharacteristicRead.setValue(bytes);//写入发送的数据
+                mBluetoothGatt.writeCharacteristic(mCharacteristicRead);//写入异步蓝牙设备之中
                 break;
         }
     }
@@ -157,7 +168,6 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
     //检查ble可用
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
     private void checkBLEFeature() {
-        //权限获取
         RxPermissions rxPermissions = new RxPermissions(this);
         rxPermissions.request(android.Manifest.permission.ACCESS_FINE_LOCATION,
                 android.Manifest.permission.ACCESS_COARSE_LOCATION,
@@ -165,6 +175,7 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
                 android.Manifest.permission.BLUETOOTH_ADMIN,
                 android.Manifest.permission.READ_EXTERNAL_STORAGE)
                 .subscribe();
+
         //判断是否支持蓝牙4.0
         if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
             Toast.makeText(this, "R.string.ble_not_supported", Toast.LENGTH_SHORT).show();
@@ -189,9 +200,8 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
 
     //参数连接状态回调。
     private BluetoothGattCallback mGattCallback = new BluetoothGattCallback() {
-        //连接状态改变的回调
         @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
-        @Override
+        @Override//连接状态改变的回调
         public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
             mBluetoothGatt = gatt;
             Log.v(TAG, "连接状态改变的回调-status=" + status + "-newState=" + newState);
@@ -199,48 +209,56 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
 //                tv1.setText("已经连接到:18:7A:93:00:00:03");
                 Log.e(TAG, "启动服务发现:" + mBluetoothGatt.discoverServices());
             } else {
-                mBluetoothGatt.close();
+                Log.e(TAG, "onConnectionStateChange-失败");
+//                mBluetoothGatt.close();
 //                tv1.setText("连接关闭");
             }
         }
 
-        //发现服务的回调
-        @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
+        @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)        //发现服务的回调
         public void onServicesDiscovered(BluetoothGatt gatt, int status) {
             Log.v(TAG, "发现服务的回调-status=" + status);
             if (status == BluetoothGatt.GATT_SUCCESS) {
-                Log.e(TAG, "成功发现服务");
+                Log.e(TAG, "成功发现服务:");
                 for (BluetoothGattService service : gatt.getServices()) {
-                    Log.v(TAG, "服务的Uuid=" + service.getUuid());
+                    Log.v(TAG, "service-uuid=" + service.getInstanceId());
+                    for (BluetoothGattCharacteristic c : service.getCharacteristics()) {
+                        Log.v(TAG, "service-characteristic=" + c.getInstanceId());
+                    }
                 }
+//                if (service.getUuid().toString().equals(CHARACTERISTIC_UUID)) {
+//                    uuid = service.getUuid();
+//                    break;
+//                }
+//                mBluetoothGatt = gatt;
+//                mCharacteristic = gatt.getService(uuid).getCharacteristic(uuid);
             } else {
                 Log.e(TAG, "服务发现失败，错误码为:" + status);
             }
         }
 
-        //写操作的回调
         @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
+        //写操作的回调
         public void onCharacteristicWrite(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
-            Log.v(TAG, "写操作的回调-status=" + status + "-characteristic=" + characteristic);
-
+            Log.v(TAG, "写操作的回调-status=" + status + "-mCharacteristic=" + characteristic);
             if (status == BluetoothGatt.GATT_SUCCESS) {
                 Log.e(TAG, "写入成功" + characteristic.getValue());
             }
         }
 
-        //读操作的回调
         @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
+        //读操作的回调
         public void onCharacteristicRead(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
-            Log.v(TAG, "读操作的回调-status=" + status + "-characteristic=" + characteristic);
+            Log.v(TAG, "读操作的回调-status=" + status + "-mCharacteristic=" + characteristic);
             if (status == BluetoothGatt.GATT_SUCCESS) {
                 Log.e(TAG, "读取成功" + characteristic.getValue());
             }
         }
 
+        @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
         //数据返回的回调（此处接收BLE设备返回数据）
         public void onCharacteristicChanged(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic) {
-            Log.v(TAG, "数据返回的回调(此处接收BLE设备返回数据)-characteristic=" + characteristic);
-
+            Log.v(TAG, "数据返回的回调(此处接收BLE设备返回数据)-mCharacteristic=" + characteristic);
         }
     };
 }
