@@ -6,6 +6,7 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCallback;
 import android.bluetooth.BluetoothGattCharacteristic;
+import android.bluetooth.BluetoothGattService;
 import android.bluetooth.BluetoothManager;
 import android.bluetooth.BluetoothProfile;
 import android.content.Context;
@@ -18,6 +19,7 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,32 +29,60 @@ import com.lecheng.hello.thirdapp.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+
+//https://www.jianshu.com/p/3a372af38103
 public class Aty056BluetoothBLE extends AppCompatActivity {
-    String TAG = "Aty056BluetoothBLE";
+    public static final int REQUEST_ENABLE_BT = 999;
+    String TAG = "Aty056BluetoothBLE_TAG";
     BluetoothAdapter mBluetoothAdapter;
     //    LeDeviceListAdapter mLeDeviceListAdapter;
     List<BluetoothAdapter> list = new ArrayList<>();
     boolean mScanning = false;
+    boolean btnScanning = true;
+    BluetoothDevice mDevice;
     BluetoothGatt mBluetoothGatt;
-    //    @Bind(R.id.tv1)
     TextView tv1;
+    EditText etSend;
+    public static final String CLIENT_CHARACTERISTIC_CONFIG = "00002902-0000-1000-8000-00805f9b34fb";
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test);
+        setContentView(R.layout.aty056_ble);
+        ButterKnife.bind(this);
 
         final BluetoothManager bluetoothManager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
         mBluetoothAdapter = bluetoothManager.getAdapter();
 
         tv1 = (TextView) findViewById(R.id.tv1);
-        findViewById(R.id.btn1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                scanLeDevice(true);
-            }
-        });
+        etSend = (EditText) findViewById(R.id.etSend);
+
+        checkBLEFeature();//检查ble功能
+    }
+
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
+    @OnClick({R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.btn1://搜索
+                scanLeDevice(btnScanning);
+                btnScanning = !btnScanning;
+                break;
+            case R.id.btn2://连接
+//                mBluetoothGatt.connect();
+//                device.connectGatt(this, false, mGattCallback);
+                mDevice.connectGatt(Aty056BluetoothBLE.this, false, mGattCallback);
+                break;
+            case R.id.btn3://断开
+                mBluetoothGatt.disconnect();
+                break;
+            case R.id.btn4://发送
+                break;
+        }
     }
 
     //扫描BLE设备
@@ -64,8 +94,9 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
                     return;
                 mScanning = true;
 //                mLeDeviceListAdapter.clear();
-                mHandler.postDelayed(mScanRunnable, 5000);//五秒后关闭扫描
+                mHandler.postDelayed(mScanRunnable, 10000);//五秒后关闭扫描
                 mBluetoothAdapter.startLeScan(mLeScanCallback);
+                tv1.append("--------------开始搜索--------------" + "\n");
             } else {
                 Toast.makeText(this, " R.string.scan_bt_disabled", Toast.LENGTH_SHORT).show();
             }
@@ -74,6 +105,7 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
 //            mRefreshLayout.setRefreshing(false);
             mHandler.removeCallbacks(mScanRunnable);
             mScanning = false;
+            tv1.append("--------------停止搜索--------------" + "\n");
         }
     }
 
@@ -100,8 +132,15 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
                     //保存到本地：用来展示扫描得到的内容
 //                    mLeDeviceListAdapter.addDevice(new LeDevice(device.getName(), device.getAddress(), rssi, scanRecord));
 //                    mLeDeviceListAdapter.notifyDataSetChanged();
-                    if (device.getName() != null)
+                    if (device.getName() != null) {
                         tv1.append("name=" + device.getName() + " address=" + device.getAddress() + "\n\n");
+                        if (device.getAddress().toString().equals("18:7A:93:00:00:03")) {
+                            Log.v(TAG, device.getName() + " " + device.getAddress());
+                            mDevice = device;
+                            tv1.append("已经搜索到:18:7A:93:00:00:03" + "\n");
+                            scanLeDevice(false);
+                        }
+                    }
                 }
             });
         }
@@ -135,7 +174,7 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
             //打开蓝牙
             if (!mBluetoothAdapter.isEnabled()) {//判断是否已经打开
                 Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                startActivityForResult(enableBtIntent, 999);
+                startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
             }
     }
 
@@ -145,16 +184,26 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
         @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
         @Override
         public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
+            mBluetoothGatt = gatt;
+            Log.v(TAG, "连接状态改变的回调-status=" + status + "-newState=" + newState);
             if (newState == BluetoothProfile.STATE_CONNECTED) {
-                // 连接成功后启动服务发现
-                Log.e("AAAAAAAA", "启动服务发现:" + mBluetoothGatt.discoverServices());
+//                tv1.setText("已经连接到:18:7A:93:00:00:03");
+                Log.e(TAG, "启动服务发现:" + mBluetoothGatt.discoverServices());
+            } else {
+                mBluetoothGatt.close();
+//                tv1.setText("连接关闭");
             }
         }
 
         //发现服务的回调
+        @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
         public void onServicesDiscovered(BluetoothGatt gatt, int status) {
+            Log.v(TAG, "发现服务的回调-status=" + status);
             if (status == BluetoothGatt.GATT_SUCCESS) {
                 Log.e(TAG, "成功发现服务");
+                for (BluetoothGattService service : gatt.getServices()) {
+                    Log.v(TAG, "服务的Uuid=" + service.getUuid());
+                }
             } else {
                 Log.e(TAG, "服务发现失败，错误码为:" + status);
             }
@@ -163,6 +212,8 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
         //写操作的回调
         @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
         public void onCharacteristicWrite(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
+            Log.v(TAG, "写操作的回调-status=" + status + "-characteristic=" + characteristic);
+
             if (status == BluetoothGatt.GATT_SUCCESS) {
                 Log.e(TAG, "写入成功" + characteristic.getValue());
             }
@@ -171,6 +222,7 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
         //读操作的回调
         @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
         public void onCharacteristicRead(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
+            Log.v(TAG, "读操作的回调-status=" + status + "-characteristic=" + characteristic);
             if (status == BluetoothGatt.GATT_SUCCESS) {
                 Log.e(TAG, "读取成功" + characteristic.getValue());
             }
@@ -178,8 +230,8 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
 
         //数据返回的回调（此处接收BLE设备返回数据）
         public void onCharacteristicChanged(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic) {
+            Log.v(TAG, "数据返回的回调(此处接收BLE设备返回数据)-characteristic=" + characteristic);
+
         }
-
     };
-
 }

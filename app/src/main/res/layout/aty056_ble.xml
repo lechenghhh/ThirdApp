@@ -14,10 +14,16 @@
 
         <TextView
             android:id="@+id/tv1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="test" />
+            android:text="搜索到的内容:\n" />
     </ScrollView>
+
+    <EditText
+        android:id="@+id/etSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入要发的内容" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,21 +41,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="2" />
+            android:text="连接" />
 
         <Button
             android:id="@+id/btn3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="3" />
+            android:text="断开" />
 
         <Button
             android:id="@+id/btn4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="4" />
+            android:text="发送" />
     </LinearLayout>
 
 </LinearLayout>
