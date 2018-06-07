@@ -221,9 +221,9 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
             if (status == BluetoothGatt.GATT_SUCCESS) {
                 Log.e(TAG, "成功发现服务:");
                 for (BluetoothGattService service : gatt.getServices()) {
-                    Log.v(TAG, "service-uuid=" + service.getInstanceId());
+                    Log.v(TAG, "service-uuid=" + service.getUuid());
                     for (BluetoothGattCharacteristic c : service.getCharacteristics()) {
-                        Log.v(TAG, "service-characteristic=" + c.getInstanceId());
+                        Log.v(TAG, "service-characteristic=" + c.getUuid());
                     }
                 }
 //                if (service.getUuid().toString().equals(CHARACTERISTIC_UUID)) {
