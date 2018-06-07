@@ -113,6 +113,8 @@ dependencies {
     compile 'jp.wasabeef:glide-transformations:2.0.1'
     //左划控件
 //    compile 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.2.1'
+    //rx权限
+    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
 
 }
 

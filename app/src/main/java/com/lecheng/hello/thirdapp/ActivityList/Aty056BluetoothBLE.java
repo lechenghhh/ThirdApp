@@ -25,6 +25,7 @@ import android.widget.Toast;
 
 
 import com.lecheng.hello.thirdapp.R;
+import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -156,6 +157,14 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
     //检查ble可用
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
     private void checkBLEFeature() {
+        //权限获取
+        RxPermissions rxPermissions = new RxPermissions(this);
+        rxPermissions.request(android.Manifest.permission.ACCESS_FINE_LOCATION,
+                android.Manifest.permission.ACCESS_COARSE_LOCATION,
+                android.Manifest.permission.BLUETOOTH,
+                android.Manifest.permission.BLUETOOTH_ADMIN,
+                android.Manifest.permission.READ_EXTERNAL_STORAGE)
+                .subscribe();
         //判断是否支持蓝牙4.0
         if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
             Toast.makeText(this, "R.string.ble_not_supported", Toast.LENGTH_SHORT).show();
