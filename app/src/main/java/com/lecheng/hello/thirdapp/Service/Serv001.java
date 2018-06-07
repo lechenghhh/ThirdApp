@@ -7,7 +7,7 @@ import android.os.IBinder;
 
 public class Serv001 extends Service {
     public String data1 = "默认信息1";
-    private boolean serviceRunning=false;
+    private boolean serviceRunning = false;
     private String data2 = "默认信息2";
 
     public Serv001() {
@@ -17,14 +17,17 @@ public class Serv001 extends Service {
     public IBinder onBind(Intent intent) {      //当其他组件绑定这个服务时，返回给它 自定义MyBinder
         return new MyBinder();
     }
-    public class MyBinder extends Binder{       //自定义MyBinder 增加了功能：把外面传进值传给自身
-        public void setdata1(String data){
+
+    public class MyBinder extends Binder {       //自定义MyBinder 增加了功能：把外面传进值传给自身
+        public void setdata1(String data) {
             Serv001.this.data1 = data;
         }
-        public void setdata2(String data){
+
+        public void setdata2(String data) {
             Serv001.this.data2 = data;
         }
-        public Serv001 getService(){          //使外界获取到MyService类
+
+        public Serv001 getService() {          //使外界获取到MyService类
             return Serv001.this;
         }
     }
@@ -39,18 +42,18 @@ public class Serv001 extends Service {
     public void onCreate() {
         super.onCreate();
         serviceRunning = true;
-        new Thread(){
+        new Thread() {
             @Override
             public void run() {
                 super.run();
                 int i = 0;
-                while (serviceRunning){
+                while (serviceRunning) {
                     i++;
-                    String str1 = "服务正在运行。。。显示Aty1内容: "+data1+" 数字: "+i;
-                    String str2 = "服务正在运行。。。显示Aty2内容: "+data2+" 数字: "+i;
+                    String str1 = "服务正在运行。。。显示Aty1内容: " + data1 + " 数字: " + i;
+                    String str2 = "服务正在运行。。。显示Aty2内容: " + data2 + " 数字: " + i;
                     System.out.println(str1);
                     System.out.println(str2);
-                    if (cb!=null){
+                    if (cb != null) {
                         cb.onDataChange(str2);             //把接口2内容改变
                     }
                     try {
@@ -73,8 +76,6 @@ public class Serv001 extends Service {
     }
 
 
-
-
     //回调函数
 
     private Callback cb = null;
@@ -87,7 +88,7 @@ public class Serv001 extends Service {
         return cb;
     }
 
-    public static interface Callback{                          //接口2
+    public static interface Callback {                          //接口2
         void onDataChange(String Data);                 //设置抽象方法但不实现
     }
 
