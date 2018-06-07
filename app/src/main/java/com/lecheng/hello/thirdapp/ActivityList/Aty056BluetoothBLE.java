@@ -90,9 +90,10 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
                 mBluetoothGatt.disconnect();
                 break;
             case R.id.btn4://发送
-                byte[] bytes = new byte[]{0, 54, 01, 43, 04, 01, 01, 01, 0, 0};
-                mCharacteristicRead.setValue(bytes);//写入发送的数据
-                mBluetoothGatt.writeCharacteristic(mCharacteristicRead);//写入异步蓝牙设备之中
+//                byte[] bytes = new byte[]{0, 54, 01, 43, 04, 01, 01, 01, 0, 0};
+                String value = "0xCD54014304010101xxDB";
+                mCharacteristicWrite.setValue(value);//写入发送的数据
+                mBluetoothGatt.writeCharacteristic(mCharacteristicWrite);//写入异步蓝牙设备之中
                 break;
         }
     }
@@ -222,23 +223,25 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
                 Log.e(TAG, "成功发现服务:");
                 for (BluetoothGattService service : gatt.getServices()) {
                     Log.v(TAG, "service-uuid=" + service.getUuid());
+//                    if (CHARACTERISTIC_UUID_SERVICE.equals(service.getUuid().toString())) {
                     for (BluetoothGattCharacteristic c : service.getCharacteristics()) {
                         Log.v(TAG, "service-characteristic=" + c.getUuid());
+//                            if (CHARACTERISTIC_UUID_READ.equals(c.getUuid().toString())) {
+//                                mCharacteristicRead = c;
+//                            }
+//                            if (CHARACTERISTIC_UUID_WRITE.equals(c.getUuid().toString())) {
+//                                mCharacteristicWrite = c;
+//                            }
                     }
-                }
-//                if (service.getUuid().toString().equals(CHARACTERISTIC_UUID)) {
-//                    uuid = service.getUuid();
-//                    break;
 //                }
-//                mBluetoothGatt = gatt;
-//                mCharacteristic = gatt.getService(uuid).getCharacteristic(uuid);
+                }
+                mBluetoothGatt = gatt;
             } else {
                 Log.e(TAG, "服务发现失败，错误码为:" + status);
             }
         }
 
-        @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
-        //写操作的回调
+        @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)//写操作的回调
         public void onCharacteristicWrite(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
             Log.v(TAG, "写操作的回调-status=" + status + "-mCharacteristic=" + characteristic);
             if (status == BluetoothGatt.GATT_SUCCESS) {
@@ -246,8 +249,7 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
             }
         }
 
-        @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
-        //读操作的回调
+        @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)//读操作的回调
         public void onCharacteristicRead(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
             Log.v(TAG, "读操作的回调-status=" + status + "-mCharacteristic=" + characteristic);
             if (status == BluetoothGatt.GATT_SUCCESS) {
@@ -255,8 +257,7 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
             }
         }
 
-        @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
-        //数据返回的回调（此处接收BLE设备返回数据）
+        @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)//数据返回的回调（此处接收BLE设备返回数据）
         public void onCharacteristicChanged(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic) {
             Log.v(TAG, "数据返回的回调(此处接收BLE设备返回数据)-mCharacteristic=" + characteristic);
         }
