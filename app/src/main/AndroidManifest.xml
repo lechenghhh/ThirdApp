@@ -75,7 +75,8 @@
             android:name=".Service.Serv001"
             android:enabled="true"
             android:exported="true" />
-
+        <service
+            android:name=".Service.Serv001Timer"/>
         <activity android:name=".ActivityList.Aty003EveryLayout_Frame" />
         <activity android:name=".ActivityList.Aty003EveryLayout" />
         <activity android:name=".ActivityList.Aty004Animation" />

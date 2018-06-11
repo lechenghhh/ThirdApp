@@ -57,5 +57,18 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
 
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:background="@color/blue2"
+        android:text="IntentService:"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnStartIntentService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动" />
 
 </LinearLayout>
