@@ -61,9 +61,7 @@ public class Serv001 extends Service {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-
                 }
-
             }
         }.start();
     }
