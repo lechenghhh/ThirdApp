@@ -6,6 +6,7 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCallback;
 import android.bluetooth.BluetoothGattCharacteristic;
+import android.bluetooth.BluetoothGattDescriptor;
 import android.bluetooth.BluetoothGattService;
 import android.bluetooth.BluetoothManager;
 import android.bluetooth.BluetoothProfile;
@@ -91,9 +92,14 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
                 break;
             case R.id.btn4://发送
 //                byte[] bytes = new byte[]{0, 54, 01, 43, 04, 01, 01, 01, 0, 0};
-                String value = "0xCD54014304010101xxDB";
+                String value = "CD5401430401010100DB";
                 mCharacteristicWrite.setValue(value);//写入发送的数据
                 mBluetoothGatt.writeCharacteristic(mCharacteristicWrite);//写入异步蓝牙设备之中
+
+                mBluetoothGatt.setCharacteristicNotification(mCharacteristicWrite, true);
+                BluetoothGattDescriptor descriptor = mCharacteristicWrite.getDescriptor(UUID.fromString(CHARACTERISTIC_UUID_WRITE));
+                descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
+                mBluetoothGatt.writeDescriptor(descriptor);
                 break;
         }
     }
