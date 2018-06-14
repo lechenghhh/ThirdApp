@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -21,9 +20,9 @@ import com.lecheng.hello.thirdapp.Service.Serv001Timer;
 public class Aty001Service extends Activity implements View.OnClickListener, ServiceConnection {
     private EditText ed1, ed2;
     private TextView tv1, tvIntentService;
-    private Intent i;
-    private Serv001.MyBinder b;
-    private static String a;
+    private Intent intent;
+    private Serv001.MyBinder myBinder;
+    private static String result;
     private Serv001Timer servTimer;
     private int timed = 0;
 
@@ -34,7 +33,7 @@ public class Aty001Service extends Activity implements View.OnClickListener, Ser
 
         Toast.makeText(this, "欢迎来到服务的学习实验", Toast.LENGTH_LONG).show();
 
-        i = new Intent(Aty001Service.this, Serv001.class);
+        intent = new Intent(Aty001Service.this, Serv001.class);
 
         ed1 = (EditText) findViewById(R.id.et1);
         ed2 = (EditText) findViewById(R.id.et2);
@@ -43,15 +42,15 @@ public class Aty001Service extends Activity implements View.OnClickListener, Ser
         findViewById(R.id.btnstartService).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                i.putExtra("haha", ed1.getText().toString());
-                startService(i);
+                intent.putExtra("haha", ed1.getText().toString());
+                startService(intent);
             }
         });
 
         findViewById(R.id.btnstopService).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                stopService(i);
+                stopService(intent);
             }
         });
 
@@ -65,11 +64,11 @@ public class Aty001Service extends Activity implements View.OnClickListener, Ser
     @Override
     public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
         Toast.makeText(this, "服务绑定成功", Toast.LENGTH_SHORT).show();
-        b = (Serv001.MyBinder) iBinder;
-        b.getService().setCb(new Serv001.Callback() {
+        myBinder = (Serv001.MyBinder) iBinder;
+        myBinder.getService().setCb(new Serv001.Callback() {
             @Override
             public void onDataChange(String Data) {                 //调用接口2下的回调方法，
-                a = Data;
+                result = Data;
             }
         });
     }
@@ -89,10 +88,10 @@ public class Aty001Service extends Activity implements View.OnClickListener, Ser
                 unbindService(this);
                 break;
             case R.id.btnsync:
-                if (b != null) {
-                    b.setdata1(ed2.getText().toString());
+                if (myBinder != null) {
+                    myBinder.setdata1(ed2.getText().toString());
                 }
-                tv1.setText(a);
+                tv1.setText(result);
                 tv1.setText("剩余时间:" + timed + "ms");
                 break;
             case R.id.btnIntentService:
