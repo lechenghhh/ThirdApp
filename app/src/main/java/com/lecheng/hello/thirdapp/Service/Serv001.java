@@ -53,8 +53,8 @@ public class Serv001 extends Service {
                     String str2 = "服务正在运行。。。显示Aty2内容: " + data2 + " 数字: " + i;
                     System.out.println(str1);
                     System.out.println(str2);
-                    if (cb != null) {
-                        cb.onDataChange(str2);             //把接口2内容改变
+                    if (callback != null) {
+                        callback.onDataChange(str2);             //把接口2内容改变
                     }
                     try {
                         sleep(2000);
@@ -76,14 +76,14 @@ public class Serv001 extends Service {
 
     //回调函数
 
-    private Callback cb = null;
+    private Callback callback = null;
 
-    public void setCb(Callback cb) {
-        this.cb = cb;
+    public void setCallback(Callback callback) {
+        this.callback = callback;
     }
 
-    public Callback getCb() {
-        return cb;
+    public Callback getCallback() {
+        return callback;
     }
 
     public static interface Callback {                          //接口2

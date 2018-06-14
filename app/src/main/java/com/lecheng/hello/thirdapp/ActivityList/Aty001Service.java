@@ -65,7 +65,7 @@ public class Aty001Service extends Activity implements View.OnClickListener, Ser
     public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
         Toast.makeText(this, "服务绑定成功", Toast.LENGTH_SHORT).show();
         myBinder = (Serv001.MyBinder) iBinder;
-        myBinder.getService().setCb(new Serv001.Callback() {
+        myBinder.getService().setCallback(new Serv001.Callback() {
             @Override
             public void onDataChange(String Data) {                 //调用接口2下的回调方法，
                 result = Data;
