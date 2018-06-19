@@ -181,6 +181,9 @@ public class Aty060RxJava extends AppCompatActivity {
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)//设置动画效果
                         .replace(android.R.id.content, new Frag060RxBus())
                         .commit();
+//                EventMsg eventMsg = new EventMsg();
+//                eventMsg.setMsg(etSend.getText().toString());
+//                RxBus.getInstance().post(eventMsg);
                 break;
         }
     }
