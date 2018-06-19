@@ -23,12 +23,13 @@ public class RxBus {
         }
         return instance;
     }
+
     public void post(Object obj) {
         mBus.accept(obj);
     }
 
     public <T> Observable<T> toObservable(Class<T> tClass) {
-        return  mBus.ofType(tClass);
+        return mBus.ofType(tClass);
     }
 
     public Observable<Object> toObservable() {
