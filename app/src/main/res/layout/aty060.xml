@@ -1,30 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/selectableItemBackground"
     android:orientation="vertical"
     android:padding="@dimen/fab_margin">
 
     <TextView
         android:id="@+id/tvScreen"
-        style="@style/style_tv_screen"/>
+        style="@style/style_tv_screen" />
 
     <Button
         android:id="@+id/btn1"
-        style="@style/style_btn_blue1"
-        android:layout_marginTop="@dimen/fab_margin"/>
+        style="@style/style_btn_red1"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="sender.subscribe(receiver)" />
 
     <Button
         android:id="@+id/btn2"
-        style="@style/style_btn_green1"
-        android:layout_marginTop="@dimen/fab_margin"/>
+        style="@style/style_btn_red1"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="startDownload();" />
 
     <Button
         android:id="@+id/btn3"
         style="@style/style_btn_red1"
-        android:layout_marginTop="@dimen/fab_margin"/>
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="Observable《String》 sender3" />
 
+    <Button
+        android:id="@+id/btn4"
+        style="@style/style_btn_blue1"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="启动第二个fragment" />
+
+    <TextView
+        android:id="@+id/tvScreen2"
+        style="@style/style_tv_screen"
+        android:text="这是第二个界面发来的信息:\n" />
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white1"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/etSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入消息" />
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/style_btn_blue1"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:text="向界面1发消息" />
+    </LinearLayout>
 </LinearLayout>

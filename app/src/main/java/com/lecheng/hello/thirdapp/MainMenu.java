@@ -1,9 +1,12 @@
 package com.lecheng.hello.thirdapp;
 
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -105,4 +108,26 @@ public class MainMenu extends ListActivity {
         }
     }
 
+    protected void startFragment(Context c, android.support.v4.app.Fragment frag) {
+        AppCompatActivity activity = (AppCompatActivity) c;
+        activity.getSupportFragmentManager()
+                .beginTransaction()
+                .addToBackStack(null)  //将当前fragment加入到返回栈中
+//                        .setCustomAnimations(R.anim.bottom_in, R.anim.bottom_out)//设置动画效果
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)//设置动画效果
+                .replace(android.R.id.content, frag)
+                .commit();
+    }
+
+    protected void startFragment(Context c, android.support.v4.app.Fragment frag, Bundle b) {
+        AppCompatActivity activity = (AppCompatActivity) c;
+        frag.setArguments(b);
+        activity.getSupportFragmentManager()
+                .beginTransaction()
+                .addToBackStack(null)  //将当前fragment加入到返回栈中
+//                        .setCustomAnimations(R.anim.bottom_in, R.anim.bottom_out)//设置动画效果
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)//设置动画效果
+                .replace(android.R.id.content, frag)
+                .commit();
+    }
 }

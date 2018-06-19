@@ -1,11 +1,15 @@
 package com.lecheng.hello.thirdapp.ActivityList;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.lecheng.hello.thirdapp.ActivityList.fragment.Frag060RxBus;
+import com.lecheng.hello.thirdapp.Bean.RxBusMsg.EventMsg;
+import com.lecheng.hello.thirdapp.Interface.RxBus;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MyToast;
 
@@ -21,6 +25,8 @@ import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
+import io.reactivex.functions.Function;
 import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
 
@@ -28,6 +34,8 @@ public class Aty060RxJava extends AppCompatActivity {
 
     @Bind(R.id.tvScreen)
     TextView tvScreen;
+    @Bind(R.id.tvScreen2)
+    TextView tvScreen2;
     private CompositeDisposable mCompositeDisposable = new CompositeDisposable();
 
     @Override
@@ -36,8 +44,23 @@ public class Aty060RxJava extends AppCompatActivity {
         setContentView(R.layout.aty060);
         ButterKnife.bind(this);
 //        myObservable.observeOn(AndroidSchedulers.mainThread()).subscribe(mySubscriber);
+        //注册监听
+        RxBus.getInstance().toObservable().map(new Function<Object, EventMsg>() {
+            @Override
+            public EventMsg apply(Object o) throws Exception {
+                return (EventMsg) o;
+            }
+        }).subscribe(new Consumer<EventMsg>() {
+            @Override
+            public void accept(EventMsg eventMsg) throws Exception {
+                if (eventMsg != null) {
+                    tvScreen2.append(eventMsg.getMsg() + "\n");
+                }
+            }
+        });
     }
 
+    //Rxbus未被封装时的使用：
     //被观察者
     Observable<String> sender = Observable.create(new ObservableOnSubscribe<String>() {
         @Override
@@ -113,7 +136,7 @@ public class Aty060RxJava extends AppCompatActivity {
         mCompositeDisposable.add(disposableObserver);
     }
 
-    @OnClick({R.id.btn1, R.id.btn2, R.id.btn3})
+    @OnClick({R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn1:
@@ -149,6 +172,15 @@ public class Aty060RxJava extends AppCompatActivity {
                     public void onComplete() {
                     }
                 });
+                break;
+            case R.id.btn4://https://blog.csdn.net/donkor_/article/details/79709366
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .addToBackStack(null)  //将当前fragment加入到返回栈中
+//                        .setCustomAnimations(R.anim.bottom_in, R.anim.bottom_out)//设置动画效果
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)//设置动画效果
+                        .replace(android.R.id.content, new Frag060RxBus())
+                        .commit();
                 break;
         }
     }
