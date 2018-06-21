@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty057Chart">
+    android:background="@color/black1"
+    android:orientation="vertical">
 
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/lChart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="360dp" />
 
     <Button
         android:id="@+id/btnAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/style_btn_blue1"
         android:layout_gravity="center_horizontal"
+        android:layout_margin="4dp"
         android:text="动态添加数据" />
 
 </LinearLayout>
