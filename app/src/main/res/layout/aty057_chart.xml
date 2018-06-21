@@ -7,16 +7,16 @@
     android:orientation="vertical"
     tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty057Chart">
 
-    <TextView
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lChart"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/yellow2"
-        android:gravity="center"
-        android:text="折线图"
-        android:textColor="@color/white" />
+        android:layout_height="match_parent" />
 
-    <lecho.lib.hellocharts.view.LineChartView
-        android:id="@+id/line_chart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="动态添加数据" />
+
 </LinearLayout>

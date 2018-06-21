@@ -1,113 +1,185 @@
 package com.lecheng.hello.thirdapp.ActivityList;
 
-import android.graphics.Color;
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.view.View;
-
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.XAxis.XAxisPosition;
+import com.github.mikephil.charting.components.YAxis.AxisDependency;
+import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.components.Legend.LegendForm;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.github.mikephil.charting.utils.ColorTemplate;
 import com.lecheng.hello.thirdapp.R;
 
-import java.util.ArrayList;
-import java.util.List;
+import android.app.Activity;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
-import lecho.lib.hellocharts.gesture.ContainerScrollType;
-import lecho.lib.hellocharts.gesture.ZoomType;
-import lecho.lib.hellocharts.model.Axis;
-import lecho.lib.hellocharts.model.AxisValue;
-import lecho.lib.hellocharts.model.Line;
-import lecho.lib.hellocharts.model.LineChartData;
-import lecho.lib.hellocharts.model.PointValue;
-import lecho.lib.hellocharts.model.ValueShape;
-import lecho.lib.hellocharts.model.Viewport;
-import lecho.lib.hellocharts.view.LineChartView;
+public class Aty057Chart extends Activity {
 
-//http://blog.csdn.net/u012534831/article/details/51505683
-public class Aty057Chart extends ActionBarActivity {
-    private LineChartView lineChart;
-    private float[] weather = {2, 3, 4,};
-    private String[] date = {"10-22", "11-22", "12-22", "1-22", "6-22", "5-23", "5-22", "6-22", "5-23", "5-22"};//X轴的标注
-    private int[] score = {50, 42, 90, 33, 10, 74, 22, 18, 79, 20};//图表的数据点
-    private List<PointValue> mPointValues = new ArrayList<PointValue>();
-    private List<AxisValue> mAxisXValues = new ArrayList<AxisValue>();
+    private LineChart lChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty057_chart);
 
-        lineChart = (LineChartView) findViewById(R.id.line_chart);
-        getAxisXLables();//获取x轴的标注
-        getAxisPoints();//获取坐标点
-        initLineChart();//初始化
+        lChart = (LineChart) findViewById(R.id.lChart);
+
+        lChart.setDescription("Zhang Phil @ http://blog.csdn.net/zhangphil");
+        lChart.setNoDataTextDescription("暂时尚无数据");
+
+        lChart.setTouchEnabled(true);
+
+        // 可拖曳
+        lChart.setDragEnabled(true);
+
+        // 可缩放
+        lChart.setScaleEnabled(true);
+        lChart.setDrawGridBackground(false);
+
+        lChart.setPinchZoom(true);
+
+        // 设置图表的背景颜色
+        lChart.setBackgroundColor(Color.LTGRAY);
+
+        LineData data = new LineData();
+
+        // 数据显示的颜色
+        data.setValueTextColor(Color.WHITE);
+
+        // 先增加一个空的数据，随后往里面动态添加
+        lChart.setData(data);
+
+        // 图表的注解(只有当数据集存在时候才生效)
+        Legend l = lChart.getLegend();
+
+        // 可以修改图表注解部分的位置
+        // l.setPosition(LegendPosition.LEFT_OF_CHART);
+
+        // 线性，也可是圆
+        l.setForm(LegendForm.LINE);
+
+        // 颜色
+        l.setTextColor(Color.WHITE);
+
+        // x坐标轴
+        XAxis xl = lChart.getXAxis();
+        xl.setTextColor(Color.WHITE);
+        xl.setDrawGridLines(false);
+        xl.setAvoidFirstLastClipping(true);
+
+        // 几个x坐标轴之间才绘制？
+//        xl.setSpaceBetweenLabels(5);
+
+        // 如果false，那么x坐标轴将不可见
+        xl.setEnabled(true);
+
+        // 将X坐标轴放置在底部，默认是在顶部。
+        xl.setPosition(XAxisPosition.BOTTOM);
+
+        // 图表左边的y坐标轴线
+        YAxis leftAxis = lChart.getAxisLeft();
+        leftAxis.setTextColor(Color.WHITE);
+
+        // 最大值
+        leftAxis.setAxisMaxValue(90f);
+
+        // 最小值
+        leftAxis.setAxisMinValue(40f);
+
+        // 不一定要从0开始
+        leftAxis.setStartAtZero(false);
+
+        leftAxis.setDrawGridLines(true);
+
+        YAxis rightAxis = lChart.getAxisRight();
+        // 不显示图表的右边y坐标轴线
+        rightAxis.setEnabled(false);
+
+
+        // 每点击一次按钮，增加一个点
+        Button addButton = (Button) findViewById(R.id.button);
+        addButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                addEntry();
+            }
+        });
     }
 
-    /**
-     * 设置X 轴的显示
-     */
-    private void getAxisXLables() {
-        for (int i = 0; i < date.length; i++) {
-            mAxisXValues.add(new AxisValue(i).setLabel(date[i]));
+    // 添加进去一个坐标点
+    private void addEntry() {
+
+        LineData data = lChart.getData();
+
+        // 每一个LineDataSet代表一条线，每张统计图表可以同时存在若干个统计折线，这些折线像数组一样从0开始下标。
+        // 本例只有一个，那么就是第0条折线
+        ILineDataSet set = data.getDataSetByIndex(0);
+
+        // 如果该统计折线图还没有数据集，则创建一条出来，如果有则跳过此处代码。
+        if (set == null) {
+            set = createLineDataSet();
+            data.addDataSet(set);
         }
+
+        // 先添加一个x坐标轴的值
+        // 因为是从0开始，data.getXValCount()每次返回的总是全部x坐标轴上总数量，所以不必多此一举的加1
+//        data.addXValue((data.getXValCount()) + "");
+
+        // 生成随机测试数
+        float f = (float) ((Math.random()) * 20 + 50);
+
+        // set.getEntryCount()获得的是所有统计图表上的数据点总量，
+        // 如从0开始一样的数组下标，那么不必多次一举的加1
+        Entry entry = new Entry(f, set.getEntryCount());
+
+        // 往linedata里面添加点。注意：addentry的第二个参数即代表折线的下标索引。
+        // 因为本例只有一个统计折线，那么就是第一个，其下标为0.
+        // 如果同一张统计图表中存在若干条统计折线，那么必须分清是针对哪一条（依据下标索引）统计折线添加。
+        data.addEntry(entry, 0);
+
+        // 像ListView那样的通知数据更新
+        lChart.notifyDataSetChanged();
+
+        // 当前统计图表中最多在x轴坐标线上显示的总量
+        lChart.setVisibleXRangeMaximum(5);
+
+        // y坐标轴线最大值
+        // lChart.setVisibleYRange(30, AxisDependency.LEFT);
+
+        // 将坐标移动到最新
+        // 此代码将刷新图表的绘图
+//        lChart.moveViewToX(data.getXValCount() - 5);
+
+        // lChart.moveViewTo(data.getXValCount()-7, 55f,
+        // AxisDependency.LEFT);
     }
 
-    /**
-     * 图表的每个点的显示
-     */
-    private void getAxisPoints() {
-//        for (int i = 0; i < weather.length; i++) {
-//            mPointValues.add(new PointValue(i, weather[i]));
-//        }
-        for (int i = 0; i < score.length; i++) {
-            mPointValues.add(new PointValue(i, score[i]));
-        }
-    }
+    // 初始化数据集，添加一条统计折线，可以简单的理解是初始化y坐标轴线上点的表征
+    private LineDataSet createLineDataSet() {
 
-    private void initLineChart() {
-        Line line = new Line(mPointValues).setColor(Color.parseColor("#FFCD41"));  //折线的颜色（橙色）
-        List<Line> lines = new ArrayList<Line>();
-        line.setShape(ValueShape.CIRCLE);//折线图上每个数据点的形状  这里是圆形 （有三种 ：ValueShape.SQUARE  ValueShape.CIRCLE  ValueShape.DIAMOND）
-        line.setCubic(false);//曲线是否平滑，即是曲线还是折线
-        line.setFilled(false);//是否填充曲线的面积
-        line.setHasLabels(true);//曲线的数据坐标是否加上备注
-//      line.setHasLabelsOnlyForSelected(true);//点击数据坐标提示数据（设置了这个line.setHasLabels(true);就无效）
-        line.setHasLines(true);//是否用线显示。如果为false 则没有曲线只有点显示
-        line.setHasPoints(true);//是否显示圆点 如果为false 则没有原点只有点显示（每个数据点都是个大的圆点）
-        lines.add(line);
-        LineChartData data = new LineChartData();
-        data.setLines(lines);
+        LineDataSet set = new LineDataSet(null, "动态添加的数据");
+        set.setAxisDependency(AxisDependency.LEFT);
 
-        //坐标轴
-        Axis axisX = new Axis(); //X轴
-        axisX.setHasTiltedLabels(true);  //X坐标轴字体是斜的显示还是直的，true是斜的显示
-        axisX.setTextColor(Color.WHITE);  //设置字体颜色
-        //axisX.setName("date");  //表格名称
-        axisX.setTextSize(10);//设置字体大小
-        axisX.setMaxLabelChars(8); //最多几个X轴坐标，意思就是你的缩放让X轴上数据的个数7<=x<=mAxisXValues.length
-        axisX.setValues(mAxisXValues);  //填充X轴的坐标名称
-        data.setAxisXBottom(axisX); //x 轴在底部
-        //data.setAxisXTop(axisX);  //x 轴在顶部
-        axisX.setHasLines(true); //x 轴分割线
+        // 折线的颜色
+        set.setColor(ColorTemplate.getHoloBlue());
 
-        // Y轴是根据数据的大小自动设置Y轴上限(在下面我会给出固定Y轴数据个数的解决方案)
-        Axis axisY = new Axis();  //Y轴
-        axisY.setName("");//y轴标注
-        axisY.setTextSize(10);//设置字体大小
-        data.setAxisYLeft(axisY);  //Y轴设置在左边
-        //data.setAxisYRight(axisY);  //y轴设置在右边
-
-        //设置行为属性，支持缩放、滑动以及平移
-        lineChart.setInteractive(true);
-        lineChart.setZoomType(ZoomType.HORIZONTAL);
-        lineChart.setMaxZoom((float) 2);//最大方法比例
-        lineChart.setContainerScrollEnabled(true, ContainerScrollType.HORIZONTAL);
-        lineChart.setLineChartData(data);
-        lineChart.setVisibility(View.VISIBLE);
-        /**注：下面的7，10只是代表一个数字去类比而已
-         * 当时是为了解决X轴固定数据个数。见（http://forum.xda-developers.com/tools/programming/library-hellocharts-charting-library-t2904456/page2）;
-         */
-        Viewport v = new Viewport(lineChart.getMaximumViewport());
-        v.left = 0;
-        v.right = 7;
-        lineChart.setCurrentViewport(v);
+        set.setCircleColor(Color.WHITE);
+        set.setLineWidth(10f);
+        set.setCircleSize(5f);
+        set.setFillAlpha(128);
+        set.setFillColor(ColorTemplate.getHoloBlue());
+        set.setHighLightColor(Color.GREEN);
+        set.setValueTextColor(Color.WHITE);
+        set.setValueTextSize(10f);
+        set.setDrawValues(true);
+        return set;
     }
 }

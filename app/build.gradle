@@ -89,7 +89,7 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     //Kotlin依赖
     //    compile "org.jetbrains.kotlin:kotlin-reflect-jre7:$kotlin_version"   //Kotlin 反射包
-    compile files('libs/hellocharts-library-1.5.8.jar')
+//    compile files('libs/hellocharts-library-1.5.8.jar')
     //微信分享sdk
     //    compile 'com.jude:rollviewpager:1.2.9'//aty032依赖
     //fancy按钮，不用图片就可以帮助我们创建出漂亮按钮的库
@@ -116,6 +116,7 @@ dependencies {
 //    compile 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.2.1'
     //rx权限
     compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.0-beta1'
 
 }
 
