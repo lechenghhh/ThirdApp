@@ -44,7 +44,7 @@ public class Aty060RxJava extends AppCompatActivity {
         setContentView(R.layout.aty060);
         ButterKnife.bind(this);
 //        myObservable.observeOn(AndroidSchedulers.mainThread()).subscribe(mySubscriber);
-        //注册监听
+        //注册监听---RxBus2的使用
         RxBus.getInstance().toObservable().map(new Function<Object, EventMsg>() {
             @Override
             public EventMsg apply(Object o) throws Exception {
@@ -60,7 +60,7 @@ public class Aty060RxJava extends AppCompatActivity {
         });
     }
 
-    //Rxbus未被封装时的使用：
+    /******************Rxbus未被封装时的使用：******************/
     //被观察者
     Observable<String> sender = Observable.create(new ObservableOnSubscribe<String>() {
         @Override
@@ -187,4 +187,55 @@ public class Aty060RxJava extends AppCompatActivity {
                 break;
         }
     }
+
+    /*RxBus1的使用：*/
+//           RxBus.getInstance().post(rxEventSync);//发送消息
+//           RxBus.getInstance().toObserverable(RxEventSync.class)//接收消息
+//                .subscribe(new Action1<RxEventSync>() {
+//                    @Override
+//                    public void call(RxEventSync eventMsg) {
+//                        if (eventMsg != null) {
+//
+//                        }
+//                    }
+//                });
+    /*RxBus类：*/
+    /**
+     * import rx.Observable;
+     * import rx.subjects.PublishSubject;
+     * import rx.subjects.SerializedSubject;
+     * import rx.subjects.Subject;
+     */
+//    public class RxBus {
+//        private static volatile RxBus mInstance;
+//        private final Subject bus;
+//
+//        public RxBus() {
+//            bus = new SerializedSubject<>(PublishSubject.create());
+//        }
+//
+//        public static RxBus getInstance() {//单例
+//            RxBus rxBus2 = mInstance;
+//            if (mInstance == null) {
+//                synchronized (RxBus.class) {
+//                    rxBus2 = mInstance;
+//                    if (mInstance == null) {
+//                        rxBus2 = new RxBus();
+//                        mInstance = rxBus2;
+//                    }
+//                }
+//            }
+//            return rxBus2;
+//        }
+//
+//        //发送消息
+//        public void post(Object object) {
+//            bus.onNext(object);
+//        }
+//
+//        // 接收消息
+//        public <T> Observable<T> toObserverable(Class<T> eventType) {
+//            return bus.ofType(eventType);
+//        }
+//    }
 }
