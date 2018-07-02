@@ -21,6 +21,8 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+//https://blog.csdn.net/fuxiaoyuqing/article/details/53000545
+//https://blog.csdn.net/ww897532167/article/details/74129478
 public class Aty057Chart extends Activity {
 
     @Bind(R.id.lChart)
