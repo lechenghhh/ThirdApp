@@ -24,10 +24,16 @@
     <!-- 允许悬浮窗 -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
-    作者：LightingContour
-    链接：https://www.jianshu.com/p/ac63c57d2555
-    來源：简书
-    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+    <!-- 相机权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
     <!-- Push service 运行需要的权限 create by 乐城 17-3-2 -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
@@ -75,8 +81,8 @@
             android:name=".Service.Serv001"
             android:enabled="true"
             android:exported="true" />
-        <service
-            android:name=".Service.Serv001Timer"/>
+        <service android:name=".Service.Serv001Timer" />
+
         <activity android:name=".ActivityList.Aty003EveryLayout_Frame" />
         <activity android:name=".ActivityList.Aty003EveryLayout" />
         <activity android:name=".ActivityList.Aty004Animation" />
@@ -116,7 +122,7 @@
         <activity android:name=".ActivityList.Aty019MVC" />
         <activity android:name=".ActivityList.Aty020FragmentTabHost" />
         <activity android:name=".ActivityList.Aty021RecyclerView" />
-        <activity android:name=".ActivityList.Aty022UniversalImgLoader" />
+        <activity android:name=".ActivityList.Aty022Camera" />
         <activity android:name=".ActivityList.Aty023UploadPic" />
         <activity android:name=".ActivityList.Aty023UploadPic_Select" />
         <activity android:name=".ActivityList.Aty024ShareToFriends" />

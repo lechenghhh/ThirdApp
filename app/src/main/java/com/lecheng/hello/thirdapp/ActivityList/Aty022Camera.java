@@ -1,5 +1,6 @@
 package com.lecheng.hello.thirdapp.ActivityList;
 
+import android.hardware.Camera;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
@@ -15,7 +16,7 @@ import jp.wasabeef.glide.transformations.BlurTransformation;
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
 
-public class Aty022UniversalImgLoader extends AppCompatActivity {
+public class Aty022Camera extends AppCompatActivity {
 
     @Bind(R.id.iv1)
     ImageView iv1;
@@ -38,6 +39,27 @@ public class Aty022UniversalImgLoader extends AppCompatActivity {
         setContentView(R.layout.aty022);
         ButterKnife.bind(this);
 
+        camera();
+        glide();
+    }
+
+    private void camera() {
+        //可以获取摄像头数量来判断是否存在后置摄像头
+        int cameras = Camera.getNumberOfCameras();
+        openCamera(0);
+
+    }
+
+    public Camera openCamera(int cameraId) {
+        try {
+            return Camera.open(cameraId);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+
+    private void glide() {
         im.displayImage(IMG_URL, iv1);
 
         Glide.with(this).load(IMG_URL).bitmapTransform(new BlurTransformation(this, 15)).into(iv6);
