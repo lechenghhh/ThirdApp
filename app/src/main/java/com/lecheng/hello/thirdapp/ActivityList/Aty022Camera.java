@@ -15,7 +15,6 @@ import butterknife.ButterKnife;
 import jp.wasabeef.glide.transformations.BlurTransformation;
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
-
 public class Aty022Camera extends AppCompatActivity {
 
     @Bind(R.id.iv1)
