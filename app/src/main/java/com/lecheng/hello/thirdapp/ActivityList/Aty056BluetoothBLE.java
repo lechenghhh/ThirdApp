@@ -1,5 +1,6 @@
 package com.lecheng.hello.thirdapp.ActivityList;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -153,12 +154,12 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
 //                    mLeDeviceListAdapter.notifyDataSetChanged();
                     if (device.getName() != null) {
                         tv1.append("name=" + device.getName() + " address=" + device.getAddress() + "\n\n");
-                        if (device.getAddress().toString().equals("18:7A:93:00:00:03")) {
-                            Log.v(TAG, device.getName() + " " + device.getAddress());
-                            mDevice = device;
-                            tv1.append("已经搜索到:18:7A:93:00:00:03" + "\n");
-                            scanLeDevice(false);
-                        }
+                        Log.v(TAG, device.getName() + " " + device.getAddress());
+//                        if (device.getAddress().toString().equals("18:7A:93:00:00:03")) {
+//                            mDevice = device;
+//                            tv1.append("已经搜索到:18:7A:93:00:00:03" + "\n");
+//                            scanLeDevice(false);
+//                        }
                     }
                 }
             });
@@ -189,7 +190,7 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
             finish();
         }
         //获取蓝牙适配器
-        final BluetoothManager bluetoothManager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
+        @SuppressLint("WrongConstant") final BluetoothManager bluetoothManager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
         mBluetoothAdapter = bluetoothManager.getAdapter();
         //判断是否支持蓝牙
         if (mBluetoothAdapter == null) {
