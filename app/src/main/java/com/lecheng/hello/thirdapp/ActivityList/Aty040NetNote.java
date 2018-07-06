@@ -20,7 +20,7 @@ import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.ViewHolder;
 import com.lecheng.hello.thirdapp.Bean.Aty040.BeanList;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MyApplication;
-import com.lecheng.hello.thirdapp.Utils.MyToast;
+import com.lecheng.hello.thirdapp.Widgets.MyToast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MySP;
-import com.lecheng.hello.thirdapp.Utils.MyToast;
+import com.lecheng.hello.thirdapp.Widgets.MyToast;
 import com.lecheng.hello.thirdapp.Utils.MyUtils;
 import com.nostra13.universalimageloader.core.ImageLoader;
 

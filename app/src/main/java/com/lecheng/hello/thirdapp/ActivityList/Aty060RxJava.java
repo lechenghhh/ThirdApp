@@ -11,9 +11,7 @@ import com.lecheng.hello.thirdapp.ActivityList.fragment.Frag060RxBus;
 import com.lecheng.hello.thirdapp.Bean.RxBusMsg.EventMsg;
 import com.lecheng.hello.thirdapp.Interface.RxBus;
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.MyToast;
-
-import org.reactivestreams.Subscriber;
+import com.lecheng.hello.thirdapp.Widgets.MyToast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

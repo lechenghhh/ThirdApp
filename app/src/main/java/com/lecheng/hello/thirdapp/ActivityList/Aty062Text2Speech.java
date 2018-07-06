@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.MyToast;
+import com.lecheng.hello.thirdapp.Widgets.MyToast;
 
 import java.util.HashMap;
 import java.util.Locale;

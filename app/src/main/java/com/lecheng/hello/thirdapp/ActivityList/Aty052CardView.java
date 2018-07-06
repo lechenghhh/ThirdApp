@@ -9,7 +9,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.MyToast;
+import com.lecheng.hello.thirdapp.Widgets.MyToast;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import butterknife.Bind;

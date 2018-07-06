@@ -12,10 +12,9 @@ import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.Adapter.RecyclerViewUnitAdpt.wrapper.EmptyWrapper;
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.MyToast;
+import com.lecheng.hello.thirdapp.Widgets.MyToast;
 import com.lecheng.hello.thirdapp.Adapter.RecyclerViewUnitAdpt.CommonAdapter;
 import com.lecheng.hello.thirdapp.Adapter.RecyclerViewUnitAdpt.base.ViewHolder;
-import com.lecheng.hello.thirdapp.Adapter.RecyclerViewUnitAdpt.wrapper.HeaderAndFooterWrapper;
 
 import java.util.ArrayList;
 

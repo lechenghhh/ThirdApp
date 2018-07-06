@@ -1,21 +1,17 @@
 package com.lecheng.hello.thirdapp;
 
 import android.app.ListActivity;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.LayoutAnimationController;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import com.lecheng.hello.thirdapp.Utils.MyToast;
+import com.lecheng.hello.thirdapp.Widgets.MyToast;
 import com.lecheng.hello.thirdapp.Utils.SystemInfoUtil;
 
 import java.util.Timer;
@@ -53,7 +49,7 @@ public class MainMenu extends ListActivity {
             "Aty057Chart", "Aty058Share", "Aty059WebViewPlus", "Aty060RxJava",
             "-------------------------------------",
             "Aty061Kotlin", "Aty062Text2Speech", "Aty063",
-            "Aty064MyLoadLv", "Aty065CPBtn", "Aty066FancyBtn",
+            "Aty064MyLoadRv", "Aty065CPBtn", "Aty066FancyBtn",
             "Aty067RoundCornerPB", "Aty068MVVM", "Aty069Suspension", "Aty070Root",
             "-------------------------------------",
             "Aty071VolueEvent", "Aty072AutoClick", "Aty073", "Aty074DispatchTouchEvent",

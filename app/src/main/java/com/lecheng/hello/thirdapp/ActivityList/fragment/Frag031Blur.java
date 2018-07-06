@@ -11,7 +11,7 @@ import android.view.Window;
 
 import com.blurfragment.BlurDialogEngine;
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.MyToast;
+import com.lecheng.hello.thirdapp.Widgets.MyToast;
 
 import butterknife.ButterKnife;
 

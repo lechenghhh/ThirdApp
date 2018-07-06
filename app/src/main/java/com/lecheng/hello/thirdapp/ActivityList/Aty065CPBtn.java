@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.MyToast;
+import com.lecheng.hello.thirdapp.Widgets.MyToast;
 import com.lecheng.hello.thirdapp.Widgets.CircularProgressButton.CircularProgressButton;
 
 import butterknife.Bind;

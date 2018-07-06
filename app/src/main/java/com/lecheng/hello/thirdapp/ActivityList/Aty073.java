@@ -2,11 +2,10 @@ package com.lecheng.hello.thirdapp.ActivityList;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.MyToast;
+import com.lecheng.hello.thirdapp.Widgets.MyToast;
 import com.lecheng.hello.thirdapp.Widgets.HideTopScrollView;
 
 import butterknife.Bind;

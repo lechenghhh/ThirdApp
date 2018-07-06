@@ -7,11 +7,10 @@ import android.view.View;
 
 import com.lecheng.hello.thirdapp.Bean.Bean068;
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.MyToast;
+import com.lecheng.hello.thirdapp.Widgets.MyToast;
 import com.lecheng.hello.thirdapp.databinding.Aty068MvvmBinding;
 
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class Aty068MVVM extends AppCompatActivity {
     private Bean068 user = new Bean068();

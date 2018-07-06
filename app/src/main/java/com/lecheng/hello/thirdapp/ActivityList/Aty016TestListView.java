@@ -29,7 +29,7 @@ public class Aty016TestListView extends AppCompatActivity {
                 Toast.makeText(Aty016TestListView.this, "简易版FAB", Toast.LENGTH_SHORT).show();
             }
         });
-//        lv1.setOnSwipeListener(new SwipeMenuListView.OnSwipeListener() {//set SwipeListener
+//        lrv1.setOnSwipeListener(new SwipeMenuListView.OnSwipeListener() {//set SwipeListener
 //            @Override
 //            public void onSwipeStart(int position) {
 //            }
@@ -50,13 +50,13 @@ public class Aty016TestListView extends AppCompatActivity {
 //                menu.addMenuItem(deleteItem);                // add to menu
 //            }
 //        };
-//        lv1.setMenuCreator(creator);        // set creator
-//        lv1.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
+//        lrv1.setMenuCreator(creator);        // set creator
+//        lrv1.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
 //            @Override
 //            public void onMenuItemClick(int position, SwipeMenu menu, int index) {//index指的是每一行的第几个选项
 //                /*删除操作*/
 //                adapter.notifyDataSetChanged();
-//                lv1.invalidate();
+//                lrv1.invalidate();
 //            }
 //        });
     }

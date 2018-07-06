@@ -266,7 +266,7 @@
         <activity android:name=".ActivityList.Aty061Kotlin" />
         <activity android:name=".ActivityList.Aty062Text2Speech" />
         <activity android:name=".ActivityList.Aty063PlayerWav" />
-        <activity android:name=".ActivityList.Aty064MyLoadLv" />
+        <activity android:name=".ActivityList.Aty064MyLoadRv" />
         <activity android:name=".ActivityList.Aty065CPBtn" />
         <activity android:name=".ActivityList.Aty066FancyBtn" />
         <activity android:name=".ActivityList.Aty067RoundCornerPB" />

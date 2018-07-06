@@ -5,14 +5,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.Contacts;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.Toast;
 
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Service.Serv069Suspension;
-import com.lecheng.hello.thirdapp.Utils.MyToast;
+import com.lecheng.hello.thirdapp.Widgets.MyToast;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;

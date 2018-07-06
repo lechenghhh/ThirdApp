@@ -7,7 +7,7 @@ import android.widget.SeekBar;
 import com.lecheng.hello.thirdapp.Interface.IWListener;
 import com.lecheng.hello.thirdapp.Net.HttpGo;
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.MyToast;
+import com.lecheng.hello.thirdapp.Widgets.MyToast;
 import com.lecheng.hello.thirdapp.Widgets.SlideButton.SlideButton;
 import com.lecheng.hello.thirdapp.Widgets.SudokuView.SudokuView;
 import com.lecheng.hello.thirdapp.Widgets.VerificationSeekBar;

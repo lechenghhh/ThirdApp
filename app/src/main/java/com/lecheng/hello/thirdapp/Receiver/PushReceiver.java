@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.baidu.android.pushservice.PushMessageReceiver;
 import com.lecheng.hello.thirdapp.Bean.EventBusMsg.MsgPush;
-import com.lecheng.hello.thirdapp.Utils.MyToast;
+import com.lecheng.hello.thirdapp.Widgets.MyToast;
 
 import java.util.List;
 
