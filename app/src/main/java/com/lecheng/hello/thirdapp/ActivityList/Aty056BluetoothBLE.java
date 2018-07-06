@@ -59,7 +59,7 @@ public class Aty056BluetoothBLE extends AppCompatActivity {
         setContentView(R.layout.aty056_ble);
         ButterKnife.bind(this);
 
-        final BluetoothManager bluetoothManager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
+        @SuppressLint("WrongConstant") final BluetoothManager bluetoothManager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
         mBluetoothAdapter = bluetoothManager.getAdapter();
 
         tv1 = (TextView) findViewById(R.id.tv1);
