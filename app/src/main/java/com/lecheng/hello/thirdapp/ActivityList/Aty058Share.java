@@ -52,10 +52,10 @@ public class Aty058Share extends ActionBarActivity {
         ButterKnife.bind(this);
         arrImg.add("https://oimageb2.ydstatic.com/image?id=-1072109575241953457&product=adpublish&w=250&h=208");
         arrImg.add("https://img3.doubanio.com/view/dale-online/dale_ad/public/ce25d251bf05306.jpg");
-        arrImg.add("https://img1.doubanio.com/view/status/median/public/1fExnu.webp");
+        arrImg.add("https://bg_img1.doubanio.com/view/status/median/public/1fExnu.webp");
         arrImg.add("https://img3.doubanio.com/view/status/median/public/0V52Hn.webp");
         arrImg.add("https://img3.doubanio.com/view/note/large/public/p44727256.jpg");
-        arrImg.add("https://img1.doubanio.com/view/status/small/public/3jkX7W.webp");
+        arrImg.add("https://bg_img1.doubanio.com/view/status/small/public/3jkX7W.webp");
     }
 
     @OnClick({R.id.btn1, R.id.btn2})

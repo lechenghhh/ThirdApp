@@ -46,7 +46,7 @@
                 android:id="@+id/iv1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/img1" />
+                android:background="@drawable/bg_img1" />
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView

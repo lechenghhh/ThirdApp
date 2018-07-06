@@ -28,7 +28,7 @@ public class Aty075Bitmap extends ActionBarActivity {
     @Bind(R.id.tv3)
     TextView tv3;
     private Bitmap bitmap;
-    private int drawableId = R.drawable.dsc09214;
+    private int drawableId = R.drawable.bg_047;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
