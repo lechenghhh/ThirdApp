@@ -6,9 +6,12 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ListView;
 
 import com.lecheng.hello.thirdapp.Adapter.RecyclerViewUnitAdpt.CommonAdapter;
+import com.lecheng.hello.thirdapp.Adapter.RecyclerViewUnitAdpt.base.ViewHolder;
 import com.lecheng.hello.thirdapp.R;
+import com.lecheng.hello.thirdapp.Widgets.LoadRecyclerView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,7 +24,7 @@ import butterknife.OnClick;
 public class Aty064MyLoadRv extends AppCompatActivity {
 
     @Bind(R.id.lv1)
-    RecyclerView lrv1;
+    LoadRecyclerView lrv1;
 
     private String[] strings = {"第1个", "第2个", "第3个", "第4个",};
     private List<String> arr = new ArrayList<>();
@@ -46,7 +49,7 @@ public class Aty064MyLoadRv extends AppCompatActivity {
             case R.id.btnLoadLv:
                 lrv1.setAdapter(adpt = new CommonAdapter<String>(this, R.layout.item053_fethg, arr) {
                     @Override
-                    protected void convert(com.lecheng.hello.thirdapp.Adapter.RecyclerViewUnitAdpt.base.ViewHolder holder, String s, int position) {
+                    protected void convert(ViewHolder holder, String s, int position) {
                         holder.setText(R.id.tv1, s);
                     }
                 });

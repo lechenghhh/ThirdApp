@@ -8,16 +8,22 @@
     android:padding="@dimen/fab_margin"
     tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty064MyLoadRv">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/lv1"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
-    <!--<com.lecheng.hello.thirdapp.Widgets.LoadRecyclerView-->
+        android:layout_weight="1">
+
+        <com.lecheng.hello.thirdapp.Widgets.LoadRecyclerView
+            android:id="@+id/lv1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <!--<com.lecheng.hello.thirdapp.Widgets.LoadRecyclerView-->
         <!--android:id="@+id/lv1"-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="wrap_content"-->
         <!--android:layout_weight="1" />-->
+    </LinearLayout>
+
     <Button
         android:id="@+id/btnLoadLv"
         style="@style/style_btn_blue1"

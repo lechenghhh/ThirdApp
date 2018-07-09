@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.Adapter.RecyclerViewUnitAdpt.wrapper.EmptyWrapper;
 import com.lecheng.hello.thirdapp.R;
+import com.lecheng.hello.thirdapp.Widgets.LoadRecyclerView;
 import com.lecheng.hello.thirdapp.Widgets.MyToast;
 import com.lecheng.hello.thirdapp.Adapter.RecyclerViewUnitAdpt.CommonAdapter;
 import com.lecheng.hello.thirdapp.Adapter.RecyclerViewUnitAdpt.base.ViewHolder;
@@ -30,9 +31,9 @@ public class Aty021RecyclerView extends Activity {
     Button btn1;
     @Bind(R.id.rv1)
     RecyclerView rv1;
-    ArrayList<String> bean = new ArrayList<>();
+    private ArrayList<String> bean = new ArrayList<>();
     //    RvAdpt<String> adpt;
-    CommonAdapter<String> adpt2;
+    private CommonAdapter<String> adpt2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

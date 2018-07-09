@@ -29,27 +29,27 @@ public class LoadRecyclerView extends RecyclerView {
     public LoadRecyclerView(Context context) {
         super(context);
         this.context = context;
-        super.setAdapter(new LoadAdpt(context));
+        super.setAdapter(new LoadAdpt(context, strLoad));
     }
 
     public LoadRecyclerView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
-        super.setAdapter(new LoadAdpt(context));
+        super.setAdapter(new LoadAdpt(context, strLoad));
     }
 
     public LoadRecyclerView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.context = context;
-        super.setAdapter(new LoadAdpt(context));
+        super.setAdapter(new LoadAdpt(context, strLoad));
     }
 
     @Override
     public void setAdapter(Adapter adapter) {
-//        if (adapter.getItemCount() == 0) {
-////            System.out.println("MyLoadLv:没有行数！");
-//            super.setAdapter(new LoadAdpt(context));
-//        } else
+        if (adapter.getItemCount() == 0) {
+//            System.out.println("MyLoadLv:没有行数！");
+            super.setAdapter(new LoadAdpt(context, strNoMore));
+        } else
             super.setAdapter(adapter);
 
     }
@@ -62,21 +62,23 @@ public class LoadRecyclerView extends RecyclerView {
     private class LoadAdpt extends RecyclerView.Adapter<LoadAdpt.ViewHolder> {
 
         private Context context;
-        private int size = 0;
+        private int size = 1;
+        private String alertText = strLoad;
 
-        public LoadAdpt(Context context) {
+        public LoadAdpt(Context context, String alertText) {
             this.context = context;
-//            this.size = size;
-
+            this.alertText = alertText;
         }
 
         @Override
         public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 //            View view = LayoutInflater.from(context).inflate(R.layout.item_recyclerview, parent, false);
+
             LinearLayout layout = new LinearLayout(context);
             layout.setOrientation(LinearLayout.VERTICAL);
             layout.setGravity(Gravity.CENTER);
-            LayoutParams layoutParams = new LayoutParams(LayoutParams.MATCH_PARENT, 800);
+            System.out.println("LoadRecyclerView:w=" + LoadRecyclerView.this.getMeasuredWidth() + "-h=" + LoadRecyclerView.this.getMeasuredHeight());
+            LayoutParams layoutParams = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
             layout.setLayoutParams(layoutParams);
 
             ImageView iv = new ImageView(context);
@@ -89,7 +91,7 @@ public class LoadRecyclerView extends RecyclerView {
             LayoutParams tvParams = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             tv.setLayoutParams(tvParams);
             tv.setPadding(0, 32, 0, 0);
-            tv.setText(strLoad);
+            tv.setText(alertText);
             tv.setTextColor(Color.GRAY);
             tv.setTextSize(20);
             layout.addView(tv);
@@ -109,7 +111,7 @@ public class LoadRecyclerView extends RecyclerView {
 
         @Override
         public int getItemCount() {
-            return 4;
+            return size;
         }
 
         public class ViewHolder extends RecyclerView.ViewHolder {
