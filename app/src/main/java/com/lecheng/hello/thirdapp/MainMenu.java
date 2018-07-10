@@ -50,7 +50,7 @@ public class MainMenu extends ListActivity {
             "-------------------------------------",
             "Aty061Kotlin", "Aty062Text2Speech", "Aty063",
             "Aty064MyLoadRv", "Aty065CPBtn", "Aty066FancyBtn",
-            "Aty067RoundCornerPB", "Aty068MVVM", "Aty069Suspension", "Aty070Root",
+            "Aty067RoundCornerPB", "Aty068DataBinding", "Aty069Suspension", "Aty070Root",
             "-------------------------------------",
             "Aty071VolueEvent", "Aty072AutoClick", "Aty073", "Aty074DispatchTouchEvent",
             "Aty075Bitmap", "", "", "",

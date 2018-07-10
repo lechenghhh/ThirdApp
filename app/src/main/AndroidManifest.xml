@@ -271,7 +271,7 @@
         <activity android:name=".ActivityList.Aty066FancyBtn" />
         <activity android:name=".ActivityList.Aty067RoundCornerPB" />
         <activity android:name=".ActivityList.Aty060RxJava" />
-        <activity android:name=".ActivityList.Aty068MVVM" />
+        <activity android:name=".ActivityList.Aty068DataBinding" />
         <activity android:name=".ActivityList.Aty069Suspension" />
 
         <service android:name=".Service.Serv069Suspension" />

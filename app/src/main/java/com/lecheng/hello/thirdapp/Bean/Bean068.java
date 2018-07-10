@@ -73,6 +73,19 @@ public class Bean068 extends BaseObservable {
     }
 
     private String birth;
+
+    @Override
+    public String toString() {
+        return "Bean068{" +
+                "name='" + name + '\'' +
+                ", sex='" + sex + '\'' +
+                ", address='" + address + '\'' +
+                ", id='" + id + '\'' +
+                ", height='" + height + '\'' +
+                ", age=" + age +
+                ", birth='" + birth + '\'' +
+                '}';
+    }
 }
 /*
 public class Bean068 extends BaseObservable {

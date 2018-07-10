@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -8,46 +7,59 @@
 
         <variable
             name="user"
-            type="com.lecheng.hello.thirdapp.Bean.Bean068"/>
+            type="com.lecheng.hello.thirdapp.Bean.Bean068" />
     </data>
 
     <LinearLayout
+        android:id="@+id/ll1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="@dimen/fab_margin"
-        tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty068MVVM">
+        android:padding="@dimen/fab_margin">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{user.name}"/>
+            android:text="@{user.name}" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{user.sex}"/>
+            android:text="@{user.sex}" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{String.valueOf(user.age)}"/>
+            android:text="@{String.valueOf(user.age)}" />
 
         <ImageView
             android:id="@+id/iv1"
             android:layout_width="108dp"
             android:layout_height="108dp"
-            android:layout_margin="@dimen/fab_margin"/>
+            android:layout_margin="@dimen/fab_margin"
+            android:background="@color/tranBlack" />
 
         <Button
             android:id="@+id/btn1"
             style="@style/style_btn_blue1"
-            android:text="年龄加1"/>
+            android:text="年龄加1" />
 
         <Button
             android:id="@+id/btn2"
             style="@style/style_btn_blue1"
-            android:layout_marginTop="@dimen/fab_margin"/>
+            android:layout_marginTop="@dimen/fab_margin" />
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/style_btn_green1"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:text="启动fragment" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:text="@{user.toString()}" />
     </LinearLayout>
 </layout>
