@@ -7,7 +7,7 @@
 
         <variable
             name="user2"
-            type="com.lecheng.hello.thirdapp.Bean.Bean068_f" />
+            type="com.lecheng.hello.thirdapp.Bean.Bean068" />
     </data>
 
     <LinearLayout
@@ -27,8 +27,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/fab_margin"
-            android:text="@{user2.age}" />
+            android:layout_marginTop="@dimen/fab_margin"/>
+            android:text="@{user2.age}"
 
         <Button
             android:id="@+id/btn1"

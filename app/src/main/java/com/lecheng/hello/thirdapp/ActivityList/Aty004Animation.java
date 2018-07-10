@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
+import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.R;
 
@@ -32,6 +33,8 @@ public class Aty004Animation extends ActionBarActivity {
 
     @Bind(R.id.vView)
     View vView;
+    @Bind(R.id.tv1)
+    TextView tv1;
     private Animation myAnim;
 
     @Override
@@ -39,6 +42,7 @@ public class Aty004Animation extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty004);
         ButterKnife.bind(this);
+        tv1.setText(getResources().getConfiguration().locale.getCountry());
     }
 
     @OnClick({R.id.vView, R.id.btnAnimMe, R.id.btnAnimMe2, R.id.btnAnimMe3, R.id.btnAnimMe4, R.id.btnAnimMe5, R.id.btnAnimMe6})

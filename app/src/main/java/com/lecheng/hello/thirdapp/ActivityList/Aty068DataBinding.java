@@ -11,6 +11,7 @@ import com.lecheng.hello.thirdapp.Utils.FragmentUtil;
 import com.lecheng.hello.thirdapp.Widgets.MyToast;
 import com.lecheng.hello.thirdapp.databinding.Aty068DatabindingBinding;
 
+//https://www.jianshu.com/p/05b9838a1949
 public class Aty068DataBinding extends AppCompatActivity {
     private Bean068 user = new Bean068();
     private Aty068DatabindingBinding atyBind;
@@ -18,7 +19,7 @@ public class Aty068DataBinding extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.atyBind = DataBindingUtil.setContentView(this, R.layout.aty068_databinding);
+        atyBind = DataBindingUtil.setContentView(this, R.layout.aty068_databinding);
 
         user.setAge(29);
         user.setName("乐城");
