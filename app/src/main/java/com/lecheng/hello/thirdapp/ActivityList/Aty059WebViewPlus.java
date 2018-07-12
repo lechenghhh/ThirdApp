@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.LinearLayout;
 
 import com.lecheng.hello.thirdapp.R;
 
@@ -17,6 +18,7 @@ import com.lecheng.hello.thirdapp.R;
  */
 //教程地址：http://blog.csdn.net/z82367825/article/details/52187921
 public class Aty059WebViewPlus extends ActionBarActivity {
+    private LinearLayout llContainer;
     private WebView webView;
 
     @Override
@@ -27,6 +29,7 @@ public class Aty059WebViewPlus extends ActionBarActivity {
     }
 
     private void init() {
+        llContainer = (LinearLayout) findViewById(R.id.llContainer);
         webView = (WebView) findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.addJavascriptInterface(new InJavaScriptLocalObj(), "local_obj");
@@ -67,7 +70,20 @@ public class Aty059WebViewPlus extends ActionBarActivity {
         });
     }
 
-    final class InJavaScriptLocalObj {
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        //防止内存泄漏
+        llContainer.removeView(webView);
+        webView.stopLoading();
+        webView.getSettings().setJavaScriptEnabled(false);
+        webView.clearHistory();
+        webView.removeAllViews();
+        webView.destroy();
+    }
+
+    final class InJavaScriptLocalObj {//开启javascript的通信接口
+
         @JavascriptInterface
         public void showSource(String html) {
             System.out.println("====>html=" + html);
