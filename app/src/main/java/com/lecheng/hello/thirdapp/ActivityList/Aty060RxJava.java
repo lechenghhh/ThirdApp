@@ -1,5 +1,9 @@
 package com.lecheng.hello.thirdapp.ActivityList;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -56,6 +60,16 @@ public class Aty060RxJava extends AppCompatActivity {
                 }
             }
         });
+
+        //动态注册广播接收器
+        IntentFilter filter = new IntentFilter("BroadcastReceiverAction");
+        BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                tvScreen2.append(intent.getStringExtra("BroadcastReceiverKey") + "\n");
+            }
+        };
+        registerReceiver(broadcastReceiver, filter);
     }
 
     /******************Rxbus未被封装时的使用：******************/

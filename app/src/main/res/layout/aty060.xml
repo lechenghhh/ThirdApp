@@ -37,6 +37,7 @@
         android:layout_marginTop="@dimen/fab_margin"
         android:text="启动第二个fragment" />
 
+
     <TextView
         android:id="@+id/tvScreen2"
         style="@style/style_tv_screen"
@@ -62,5 +63,11 @@
             style="@style/style_btn_blue1"
             android:layout_marginTop="@dimen/fab_margin"
             android:text="向界面1发消息" />
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/style_btn_blue1"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:text="使用广播传递消息" />
     </LinearLayout>
 </LinearLayout>
