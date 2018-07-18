@@ -86,7 +86,9 @@
         <activity android:name=".ActivityList.Aty003EveryLayout_Frame" />
         <activity android:name=".ActivityList.Aty003EveryLayout" />
         <activity android:name=".ActivityList.Aty004Animation" />
-        <activity android:name=".ActivityList.Aty005MulTouch" />
+        <activity
+            android:name=".ActivityList.Aty005MulTouch"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ActivityList.Aty006SQLite" />
         <activity android:name=".ActivityList.Aty014Fragment" />
         <activity android:name=".ActivityList.Aty014Fragment_Navi" />
