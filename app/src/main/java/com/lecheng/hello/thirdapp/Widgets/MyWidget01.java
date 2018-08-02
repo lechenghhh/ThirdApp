@@ -12,8 +12,7 @@ import com.lecheng.hello.thirdapp.R;
  */
 public class MyWidget01 extends AppWidgetProvider {
 
-    static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
-                                int appWidgetId) {
+    static void updateAppWidget(Context context, AppWidgetManager appWidgetManager, int appWidgetId) {
 
         CharSequence widgetText = context.getString(R.string.navigation_drawer_close);
         // Construct the RemoteViews object
