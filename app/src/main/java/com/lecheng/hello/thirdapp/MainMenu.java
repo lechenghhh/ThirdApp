@@ -11,6 +11,7 @@ import android.view.animation.LayoutAnimationController;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.lecheng.hello.thirdapp.Utils.NetUtils;
 import com.lecheng.hello.thirdapp.Widgets.MyToast;
 import com.lecheng.hello.thirdapp.Utils.SystemInfoUtil;
 
@@ -67,6 +68,7 @@ public class MainMenu extends ListActivity {
         animation.setDuration(100);                         //动画时间毫秒数
         LayoutAnimationController controller = new LayoutAnimationController(animation, 1);
         getListView().setLayoutAnimation(controller);
+        classes[1] = "本机ip: "+NetUtils.getIPAddress(this);
     }
 
     @Override

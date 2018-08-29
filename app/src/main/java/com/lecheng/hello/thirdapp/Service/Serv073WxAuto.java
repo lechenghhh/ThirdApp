@@ -19,7 +19,7 @@ public class Serv073WxAuto extends AccessibilityService {
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event) {
-//        System.out.println("Serv073-event=" + event);
+        System.out.println("Serv073-event=" + event);
 //        System.out.println("Serv073-getEventType=" + event.getEventType());
 //        System.out.println("Serv073-getSource=" + event.getSource());
 //        System.out.println("Serv073-getText=" + event.getText());
