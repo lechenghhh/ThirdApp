@@ -41,7 +41,8 @@ public class Aty059WebViewPlus extends ActionBarActivity {
         webView.getSettings().setLoadWithOverviewMode(true);
         webView.getSettings().setSupportZoom(true);
         webView.getSettings().setBuiltInZoomControls(true);
-        webView.loadUrl("http://baidu.com");
+//        webView.loadUrl("http://baidu.com");
+        webView.loadUrl("http://192.168.0.107:8085/12Video/AdPage.html");
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
@@ -57,9 +58,13 @@ public class Aty059WebViewPlus extends ActionBarActivity {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-                view.loadUrl("javascript:window.local_obj.showSource('<head>'+"
-                        + "document.getElementsByTagName('html')[0].innerHTML+'</head>');");
-//                view.loadData("javascript:alert('Hello JavaScript !')");
+//                view.loadUrl("javascript:window.local_obj.showSource('<head>'+"
+//                        + "document.getElementsByTagName('html')[0].innerHTML+'</head>');");
+//                view.loadUrl("javascript:document.getElementById('text1').innerText = 'hello Android'");
+                view.loadUrl("javascript:" +
+                        "document.getElementById('video1').src =\n" +
+                        "        'https://f.us.sinaimg.cn/0010ggjTlx07nKkrH7QA01040201fAlA0k010.mp4?label=mp4_720p&template=1080x720.28&Expires=1537362983&ssig=EAhSGsnbYg&KID=unistore,video';\n" +
+                        "    document.getElementById(\"video1\").load()");
             }
 
             @Override
