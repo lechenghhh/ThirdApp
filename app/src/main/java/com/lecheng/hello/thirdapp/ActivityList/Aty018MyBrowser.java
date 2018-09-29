@@ -2,12 +2,14 @@ package com.lecheng.hello.thirdapp.ActivityList;
 
 import android.app.Activity;
 import android.content.Context;
+import android.net.http.SslError;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.webkit.SslErrorHandler;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -44,6 +46,12 @@ public class Aty018MyBrowser extends Activity implements OnClickListener {
         findViewById(R.id.tvGoto).setOnClickListener(this);
 
         webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+                // handler.cancel();// Android默认的处理方式
+                // handleMessage(Message msg);// 进行其他处理
+                handler.proceed();//接受所有网站的证书
+            }
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
                 etUrl.setText(url);
