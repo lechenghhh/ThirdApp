@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 import android.os.AsyncTask;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -19,8 +20,8 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.lecheng.hello.thirdapp.Widgets.MyToast;
 
 /*tagflowlayout
-* tagflow教程地址：http://blog.csdn.net/lmj623565791/article/details/48393217
-* http://blog.csdn.net/hantangsongming/article/details/42490277*/
+ * tagflow教程地址：http://blog.csdn.net/lmj623565791/article/details/48393217
+ * http://blog.csdn.net/hantangsongming/article/details/42490277*/
 public class Aty054PullToRefresh extends ActionBarActivity {
     private String[] mStrings = {"John", "Michelle", "Amy", "Kim", "Mary",
             "David", "Sunny", "James", "Maria", "Michael", "Sarah", "Robert",
@@ -85,6 +86,12 @@ public class Aty054PullToRefresh extends ActionBarActivity {
             public void convert(ViewHolder helper, String item) {
                 helper.setText(R.id.tv1, item);
                 helper.setText(R.id.tv2, item);
+                helper.setOnClickListener(R.id.tv1, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        new MyToast(Aty054PullToRefresh.this, "哈哈哈", 1);
+                    }
+                });
             }
         };
         ptrLv1.setAdapter(adpt);

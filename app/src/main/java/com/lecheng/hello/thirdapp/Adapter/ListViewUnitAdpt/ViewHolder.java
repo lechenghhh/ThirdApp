@@ -2,10 +2,12 @@ package com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.text.TextWatcher;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -92,8 +94,8 @@ public class ViewHolder {
     }
 
     /*
-    * lecheng create by 2016-11-7
-    * */
+     * lecheng create by 2016-11-7
+     * */
 //    public ViewHolder setGridView(int viewId,)
 
     /**
@@ -137,5 +139,32 @@ public class ViewHolder {
         return mPosition;
     }
 
+
+    /* 关于事件的 */
+    public ViewHolder setOnClickListener(int viewId,
+                                         View.OnClickListener listener) {
+        View view = getView(viewId);
+        view.setOnClickListener(listener);
+        return this;
+    }
+
+    public ViewHolder setOnTouchListener(int viewId,
+                                         View.OnTouchListener listener) {
+        View view = getView(viewId);
+        view.setOnTouchListener(listener);
+        return this;
+    }
+
+    public ViewHolder setOnLongClickListener(int viewId, View.OnLongClickListener listener) {
+        View view = getView(viewId);
+        view.setOnLongClickListener(listener);
+        return this;
+    }
+
+    public ViewHolder setOnTextChangeListener(int viewId, TextWatcher listener) {//当edittext变化时候的舰艇将
+        EditText view = getView(viewId);
+        view.addTextChangedListener(listener);
+        return this;
+    }
 
 }
