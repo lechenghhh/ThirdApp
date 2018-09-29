@@ -161,7 +161,7 @@ public class ViewHolder {
         return this;
     }
 
-    public ViewHolder setOnTextChangeListener(int viewId, TextWatcher listener) {//当edittext变化时候的舰艇将
+    public ViewHolder setOnTextChangeListener(int viewId, TextWatcher listener) {//当edittext变化时候的监听
         EditText view = getView(viewId);
         view.addTextChangedListener(listener);
         return this;
