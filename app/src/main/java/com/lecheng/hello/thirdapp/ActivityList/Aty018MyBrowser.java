@@ -2,7 +2,6 @@ package com.lecheng.hello.thirdapp.ActivityList;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -16,64 +15,60 @@ import android.webkit.WebViewClient;
 import android.widget.EditText;
 
 import com.lecheng.hello.thirdapp.R;
-import com.lecheng.hello.thirdapp.Utils.KeyBoardUtils;
 
 public class Aty018MyBrowser extends Activity implements OnClickListener {
     private WebView webView;
-    private EditText urlBox;
+    private EditText etUrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        requestWindowFeature(Window.FEATURE_PROGRESS);
         setContentView(R.layout.aty018);
+
         init();
     }
 
     private void init() {
-
         setProgressBarVisibility(true);
-        urlBox = (EditText) findViewById(R.id.house_et_url);
 
-        Intent ig = this.getIntent();
-        if (ig.getStringExtra("url") == "")
-            urlBox.setText("http://fanyi.baidu.com/?aldtype=16047#en/zh/");
-        else
-            urlBox.setText(ig.getStringExtra("url"));
-        KeyBoardUtils.closeKeybord(urlBox, this);
+        webView = (WebView) findViewById(R.id.webView);
+        etUrl = (EditText) findViewById(R.id.etUrl);
 
-        webView = (WebView) findViewById(R.id.house_webview);
+        String url = getIntent().getStringExtra("url");
+        if (url != null && !url.equals(""))
+            etUrl.setText(url);
+        findViewById(R.id.ivClose).setOnClickListener(this);
+        findViewById(R.id.ivBack).setOnClickListener(this);
+        findViewById(R.id.ivSync).setOnClickListener(this);
+        findViewById(R.id.tvForward).setOnClickListener(this);
+        findViewById(R.id.tvGoto).setOnClickListener(this);
 
         webView.setWebViewClient(new WebViewClient() {
-            // Load opened URL in the application instead of standard browser
-            // application
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
                 return true;
             }
         });
-        webView.setWebChromeClient(new WebChromeClient() {
-            // Set progress bar during loading
+        webView.setWebChromeClient(new WebChromeClient() {            // Set progress bar during loading
             public void onProgressChanged(WebView view, int progress) {
                 Aty018MyBrowser.this.setProgress(progress * 100);
             }
         });
 
-        // Enable some feature like Javascript and pinch zoom
-        WebSettings websettings = webView.getSettings();
+        WebSettings websettings = webView.getSettings();        // Enable some feature like Javascript and pinch zoom
         websettings.setJavaScriptEnabled(true);                        // Warning! You can have XSS vulnerabilities!
         websettings.setBuiltInZoomControls(true);
 
-        urlBox.setOnKeyListener(new View.OnKeyListener() {
-
+        etUrl.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (event.getAction() == KeyEvent.ACTION_DOWN) {
                     switch (keyCode) {
                         case KeyEvent.KEYCODE_ENTER:
-                            webView.loadUrl(urlBox.getText().toString());
+                            String thisUrl = completionUrl(etUrl.getText().toString());
+                            webView.loadUrl(thisUrl);
+                            etUrl.setText(thisUrl);
                             InputMethodManager inputManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                            inputManager.hideSoftInputFromWindow(
-                                    urlBox.getWindowToken(), 0);
+                            inputManager.hideSoftInputFromWindow(etUrl.getWindowToken(), 0);
                             return true;
                         default:
                             break;
@@ -82,58 +77,62 @@ public class Aty018MyBrowser extends Activity implements OnClickListener {
                 return false;
             }
         });
+        webView.loadUrl(completionUrl(etUrl.getText().toString()));
+    }
 
-        //监听事件响应
-        findViewById(R.id.webview_backhomeaty).setOnClickListener(this);
-        findViewById(R.id.webview_back).setOnClickListener(this);
-        findViewById(R.id.webview_refresh).setOnClickListener(this);
-        findViewById(R.id.webview_stop).setOnClickListener(this);
-        findViewById(R.id.webview_forward).setOnClickListener(this);
-        findViewById(R.id.webview_goto).setOnClickListener(this);
-        //加载指定的居家网主页
-        webView.loadUrl(urlBox.getText().toString());
+    private String completionUrl(String thisUrl) {
+        if (!thisUrl.contains("http"))
+            thisUrl = "http://" + thisUrl;
+        return thisUrl;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.ivClose:
+                finish();
+                break;
+            case R.id.ivBack:
+                if (webView.canGoBack()) webView.goBack(); // goBack()表示返回WebV
+                else finish();
+                break;
+            case R.id.ivSync:
+                webView.reload();
+                break;
+            case R.id.tvForward:
+                webView.goForward();
+                break;
+            case R.id.tvGoto:
+                webView.loadUrl(etUrl.getText().toString());
+                break;
+            /*case R.id.webview_stop:
+                webView.stopLoading();
+                break;*/
+        }
     }
 
     @Override
     public void onBackPressed() {
-//        webView.goBack();//浏览器返回
-        finish();//浏览器退出关闭
+        if (webView.canGoBack()) webView.goBack(); // goBack()表示返回WebV
+        else finish();
     }
 
+    @Override//防止内存泄漏
     protected void onDestroy() {
         super.onDestroy();
         webView.removeAllViews();
         webView.destroy();
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.webview_backhomeaty:
-                finish();
-                break;
-            case R.id.webview_back:
-                webView.goBack();
-                break;
-            case R.id.webview_refresh:
-                webView.reload();
-                break;
-            case R.id.webview_stop:
-                webView.stopLoading();
-                break;
-            case R.id.webview_forward:
-                webView.goForward();
-                break;
-            case R.id.webview_goto:
-                webView.loadUrl("http://" + urlBox.getText().toString());
-                break;
-        }
-    }
-
-    @Override
+    @Override//防止内存泄漏
     public void finish() {
         ViewGroup view = (ViewGroup) getWindow().getDecorView();
         view.removeAllViews();
+        webView.stopLoading();
+        webView.getSettings().setJavaScriptEnabled(false);
+        webView.clearHistory();
+        webView.removeAllViews();
+        webView.destroy();
         super.finish();
     }
 }
