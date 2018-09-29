@@ -48,7 +48,7 @@ public class Aty021RecyclerView extends Activity {
         rv1.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         rv1.setItemAnimator(new DefaultItemAnimator());
 
-        adpt2 = new CommonAdapter<String>(this, R.layout.item021_rv, bean) {
+        adpt2 = new CommonAdapter<String>(this, bean ,R.layout.item021_rv) {
             @Override
             protected void convert(ViewHolder holder, String s, int position) {
                 holder.setText(R.id.tv1, s);

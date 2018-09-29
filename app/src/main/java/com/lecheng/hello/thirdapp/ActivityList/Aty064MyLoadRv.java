@@ -47,7 +47,7 @@ public class Aty064MyLoadRv extends AppCompatActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnLoadLv:
-                lrv1.setAdapter(adpt = new CommonAdapter<String>(this, R.layout.item053_fethg, arr) {
+                lrv1.setAdapter(adpt = new CommonAdapter<String>(this, arr, R.layout.item053_fethg) {
                     @Override
                     protected void convert(ViewHolder holder, String s, int position) {
                         holder.setText(R.id.tv1, s);
