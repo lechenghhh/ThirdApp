@@ -46,6 +46,7 @@ public class Aty018MyBrowser extends Activity implements OnClickListener {
         webView.setWebViewClient(new WebViewClient() {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
+                etUrl.setText(url);
                 return true;
             }
         });
