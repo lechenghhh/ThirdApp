@@ -1,6 +1,5 @@
 package com.lecheng.hello.thirdapp.Utils;
 
-import android.graphics.Bitmap;
 import android.util.LruCache;
 
 public class MyLruCache<T> extends LruCache<String, T> {
@@ -22,6 +21,4 @@ public class MyLruCache<T> extends LruCache<String, T> {
         }
         return instance;
     }
-
-
 }
