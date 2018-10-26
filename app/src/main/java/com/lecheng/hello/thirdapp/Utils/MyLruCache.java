@@ -5,7 +5,6 @@ import android.util.LruCache;
 public class MyLruCache<T> extends LruCache<String, T> {
 
     private static volatile MyLruCache instance = null;
-    private T t;
 
     private MyLruCache(int maxSize) {
         super(maxSize);
