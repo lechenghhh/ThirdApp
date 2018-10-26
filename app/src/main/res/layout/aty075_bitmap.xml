@@ -21,7 +21,7 @@
         <Button
             android:id="@+id/btn1"
             style="@style/style_btn_red1"
-            android:text="原图加载" />
+            android:text="原图加载/lru缓存" />
 
         <TextView
             android:id="@+id/tv2"
@@ -29,8 +29,8 @@
 
         <Button
             android:id="@+id/btn2"
-            android:text="glide加载"
-            style="@style/style_btn_red1" />
+            style="@style/style_btn_red1"
+            android:text="glide加载" />
 
         <TextView
             android:id="@+id/tv3"

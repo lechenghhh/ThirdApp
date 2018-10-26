@@ -1,11 +1,13 @@
 package com.lecheng.hello.thirdapp.ActivityList;
 
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.R;
@@ -32,7 +34,7 @@ public class Aty004Animation extends ActionBarActivity {
 
 
     @Bind(R.id.vView)
-    View vView;
+    ImageView vView;
     @Bind(R.id.tv1)
     TextView tv1;
     private Animation myAnim;
@@ -64,11 +66,14 @@ public class Aty004Animation extends ActionBarActivity {
                 vView.setVisibility(View.VISIBLE);
                 break;
             case R.id.btnAnimMe4:
-                final TranslateAnimation ta2 = new TranslateAnimation(12, 0, 12, 0);
+                TranslateAnimation ta2 = new TranslateAnimation(12, 0, 12, 0);
                 ta2.setDuration(10);
                 vView.startAnimation(ta2);
                 break;
-            case R.id.btnAnimMe5:
+            case R.id.btnAnimMe5:        //帧动画
+                vView.setImageResource(R.drawable.anmi_list_001);
+                final AnimationDrawable animationDrawable = (AnimationDrawable) vView.getDrawable();
+                animationDrawable.start();
                 break;
             case R.id.btnAnimMe6:
                 break;
