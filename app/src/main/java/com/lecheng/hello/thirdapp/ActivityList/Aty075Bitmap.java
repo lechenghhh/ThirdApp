@@ -5,6 +5,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.util.LruCache;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -30,6 +31,7 @@ public class Aty075Bitmap extends ActionBarActivity {
     TextView tv3;
     private Bitmap bitmap;
     private int drawableId = R.drawable.bg_047;
+    private LruCache<String, Bitmap> lurcache = new LruCache<>(1024 * 1024 * 10);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,16 +58,25 @@ public class Aty075Bitmap extends ActionBarActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn1:
-                MyLruCache<Bitmap> myLruCache = MyLruCache.getInstance();
-
-                Bitmap thatBitmap = myLruCache.get("123456");
+//                MyLruCache<Bitmap> myLruCache = MyLruCache.getInstance();
+//
+//                Bitmap thatBitmap = myLruCache.get("123456");
+//                if (thatBitmap == null) {
+//                    thatBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_047);
+//                    myLruCache.put("123456", thatBitmap);
+//                    Log.v(getClass().getName(), "myLruCache-put");
+//                } else {
+//                    Log.v(getClass().getName(), "myLruCache-get");
+//                }
+                Bitmap thatBitmap = lurcache.get("123456");
                 if (thatBitmap == null) {
                     thatBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_047);
-                    myLruCache.put("123456", thatBitmap);
+                    lurcache.put("123456", thatBitmap);
                     Log.v(getClass().getName(), "myLruCache-put");
                 } else {
                     Log.v(getClass().getName(), "myLruCache-get");
                 }
+
                 iv1.setImageBitmap(thatBitmap);
                 break;
             case R.id.btn2:
