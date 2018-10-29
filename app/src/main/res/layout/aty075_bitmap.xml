@@ -38,6 +38,11 @@
 
         <Button
             android:id="@+id/btn3"
-            style="@style/style_btn_red1" />
+            style="@style/style_btn_red1"
+            android:text="解码图片" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
     </LinearLayout>
 </ScrollView>
