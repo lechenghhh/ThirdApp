@@ -52,7 +52,7 @@ public class Aty075Bitmap extends ActionBarActivity {
         );
     }
 
-    @OnClick({R.id.btn1, R.id.btn2, R.id.btn3})
+    @OnClick({R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn1:
@@ -73,6 +73,12 @@ public class Aty075Bitmap extends ActionBarActivity {
                 break;
             case R.id.btn3:
                 decodeResource(view);
+                break;
+            case R.id.btn4:
+                int[] colors = {256};
+                Bitmap bm = Bitmap.createBitmap(colors, 1, 1, Bitmap.Config.RGB_565);
+                iv1.setImageBitmap(bm);
+//                Glide.with(this).load(bm).into(iv1);
                 break;
         }
     }
