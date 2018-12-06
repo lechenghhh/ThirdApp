@@ -160,7 +160,7 @@
         <service android:name=".Service.Serv042Download" />
 
         <activity android:name=".ActivityList.Aty043WeiXPay" />
-        <activity android:name=".ActivityList.Aty044AliPay" />
+        <activity android:name=".ActivityList.Aty044ZXingLite" />
         <activity android:name=".ActivityList.Aty045BaiduPush" />
 
         <!-- push -->

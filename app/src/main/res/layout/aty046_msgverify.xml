@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_margin="@dimen/fab_margin"
     android:orientation="vertical"
-    tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty044AliPay">
+    tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty044ZXingLite">
 
     <LinearLayout
         android:layout_width="match_parent"

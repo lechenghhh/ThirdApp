@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_margin="@dimen/fab_margin"
     android:orientation="vertical"
-    tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty044AliPay">
+    tools:context="com.lecheng.hello.thirdapp.ActivityList.Aty044ZXingLite">
 
     <TextView
         android:id="@+id/tv"
@@ -19,5 +19,5 @@
         android:layout_width="match_parent"
         android:layout_height="36dp"
         android:layout_marginTop="@dimen/fab_margin"
-        android:text="支付宝支付测试" />
+        android:text="zxinglite" />
 </LinearLayout>

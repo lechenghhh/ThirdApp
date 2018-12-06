@@ -42,7 +42,7 @@ public class MainMenu extends ListActivity {
             "Aty038Game2048", "Aty039NewWeather", "Aty040NetNote",
             "-------------------------------------",
             "Aty041MVP_View", "Aty042SerDownLoad", "Aty043WeiXPay",
-            "Aty044AliPay", "Aty045BaiduPush", "Aty046MsgVerify",
+            "Aty044ZXingLite", "Aty045BaiduPush", "Aty046MsgVerify",
             "Aty047ProgressDialog", "Aty048TimePiker", "Aty049MetroUI", "Aty050CrashTest",
             "-------------------------------------",
             "Aty051PopWindow", "Aty052CardView", "Aty053Coordinator",
@@ -62,6 +62,7 @@ public class MainMenu extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setListAdapter(new ArrayAdapter<String>(MainMenu.this, android.R.layout.simple_list_item_1, classes));
 
         Animation animation = new AlphaAnimation(0, 1);     //AlphaAnimation 控制渐变透明的动画效果
