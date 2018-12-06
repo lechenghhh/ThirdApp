@@ -19,5 +19,5 @@
         android:layout_width="match_parent"
         android:layout_height="36dp"
         android:layout_marginTop="@dimen/fab_margin"
-        android:text="zxinglite" />
+        android:text="扫描二维码" />
 </LinearLayout>

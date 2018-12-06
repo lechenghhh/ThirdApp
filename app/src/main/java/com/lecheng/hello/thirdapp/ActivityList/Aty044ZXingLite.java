@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.zxing.client.android.CaptureActivity;
-import com.google.zxing.client.android.Intents;
 import com.lecheng.hello.thirdapp.R;
 
 import butterknife.Bind;
@@ -28,19 +28,16 @@ public class Aty044ZXingLite extends AppCompatActivity {
 
     @OnClick(R.id.btn)
     public void onClick() {
-        tv.setText("Hello！");
-        Intent intent = new Intent();
-        intent.setClass(this, CaptureActivity.class);
-        startActivityForResult(intent, 111);
+        startActivityForResult(new Intent().setClass(this, CaptureActivity.class), 111);
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (null != data && requestCode == 111) {
             Bundle bundle = data.getExtras();
-            String scanResult = bundle.getString(Intents.Scan.RESULT);
-            tv.setText(scanResult);
+            String scanResult = bundle.getString("content");
+            tv.append(scanResult + "\n");
         }
     }
 }
