@@ -60,11 +60,11 @@ public class Aty039NewWeather extends Activity implements OnResponseListener {
         setContentView(R.layout.aty039);
         ButterKnife.bind(this);
         imageLoader.displayImage(bgUrl, aty40IvBg);
-//        myAsyncHttp.http047Get(this, "http://wthrcdn.etouch.cn/weather_mini?city=" +
+//        myAsyncHttp.Get(this, "http://wthrcdn.etouch.cn/weather_mini?city=" +
 //                MySP.loadData(getApplicationContext(), "city", "福州"), this);
         HashMap<String, String> hm = new HashMap<String, String>();
         hm.put("city", MySP.loadData(getApplicationContext(), "city", "福州") + "");
-        myAsyncHttp.http047Post(this, "http://wthrcdn.etouch.cn/weather_mini", hm, this);
+        myAsyncHttp.Post(this, "http://wthrcdn.etouch.cn/weather_mini", hm, this);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
                 (getApplicationContext(), android.R.layout.simple_list_item_1);
         aty40Lv2.setAdapter(adapter);
@@ -78,7 +78,7 @@ public class Aty039NewWeather extends Activity implements OnResponseListener {
                 MySP.saveData(getApplicationContext(), "city", cityList[position]);
                 aty40Lv.setVisibility(View.VISIBLE);
                 aty40Lv2.setVisibility(View.GONE);
-                myAsyncHttp.http047Get(Aty039NewWeather.this,
+                myAsyncHttp.Get(Aty039NewWeather.this,
                         "http://wthrcdn.etouch.cn/weather_mini?city=" +
                                 MySP.loadData(getApplicationContext(), "city", "福州"),
                         Aty039NewWeather.this);

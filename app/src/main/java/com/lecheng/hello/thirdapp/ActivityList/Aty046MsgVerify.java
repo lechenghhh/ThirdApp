@@ -44,7 +44,7 @@ public class Aty046MsgVerify extends AppCompatActivity implements OnResponseList
         switch (view.getId()) {
             case R.id.btn:
                 map.put("tel", et.getText() + "");
-                myAsyncHttp.http047Post(this, url, map, this);
+                myAsyncHttp.Post(this, url, map, this);
                 break;
             case R.id.btn2:
                 break;

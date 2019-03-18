@@ -42,7 +42,7 @@ public class Aty053Coordinator extends ActionBarActivity implements OnResponseLi
         });
 
         HttpVolley myAsyncHttp = new HttpVolley();
-        myAsyncHttp.http047Get(this, URL, this);
+        myAsyncHttp.Get(this, URL, this);
     }
 
     @Override

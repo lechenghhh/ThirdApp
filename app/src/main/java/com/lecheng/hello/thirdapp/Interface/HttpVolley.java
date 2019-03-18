@@ -21,7 +21,7 @@ public class HttpVolley {
     public static final String CANCEL_POST = "cancelPost";
 
     //Get请求
-    public void http047Get(final Context c, final String url, final OnResponseListener listener) {
+    public void Get(final Context c, final String url, final OnResponseListener listener) {
         StringRequest request = new StringRequest
                 (Request.Method.GET, url, new Response.Listener<String>() {
                     @Override
@@ -42,7 +42,7 @@ public class HttpVolley {
     }
 
     //Post请求
-    public void http047Post(final Context c, String url, final HashMap<String, String> hashMap, final OnResponseListener listener) {
+    public void Post(final Context c, String url, final HashMap<String, String> hashMap, final OnResponseListener listener) {
         StringRequest request2 = new StringRequest
                 (Request.Method.POST, url, new Response.Listener<String>() {
                     @Override
@@ -68,7 +68,7 @@ public class HttpVolley {
     }
 
     //取消队列
-    public void http047Cancel(String tag) {
+    public void Cancel(String tag) {
         getHttpQue().cancelAll(tag);
     }
 }

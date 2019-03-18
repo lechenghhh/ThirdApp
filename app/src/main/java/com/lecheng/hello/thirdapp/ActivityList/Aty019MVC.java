@@ -53,7 +53,7 @@ public class Aty019MVC extends AppCompatActivity implements OnResponseListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button2:
-                weatherModel.http047Get(getApplicationContext(), editText3.getText().toString(), this);
+                weatherModel.Get(getApplicationContext(), editText3.getText().toString(), this);
                 break;
             case R.id.button3:
                 HashMap<String, String> map = new HashMap<String, String>();
@@ -64,7 +64,7 @@ public class Aty019MVC extends AppCompatActivity implements OnResponseListener {
                 map.put("version", "1.1");
                 map.put("q", editText3.getText()+"");
                 String url2 = "http://fanyi.youdao.com/openapi.do?";
-                weatherModel.http047Post(getApplicationContext(), url2, map, this);
+                weatherModel.Post(getApplicationContext(), url2, map, this);
                 break;
         }
     }

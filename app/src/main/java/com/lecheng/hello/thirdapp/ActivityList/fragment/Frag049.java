@@ -64,7 +64,7 @@ public class Frag049 extends Fragment implements OnResponseListener {
         hashMap.put("type", type);
         hashMap.put("page", page + "");
         hashMap.put("limit", "10");
-        myAsyncHttp.http047Post(getActivity(), URL, hashMap, this);
+        myAsyncHttp.Post(getActivity(), URL, hashMap, this);
     }
 
     @OnClick({R.id.btn1, R.id.btn2})
@@ -74,14 +74,14 @@ public class Frag049 extends Fragment implements OnResponseListener {
                 if (page != 1) {
                     page--;
                     hashMap.put("page", page + "");
-                    myAsyncHttp.http047Post(getActivity(), URL, hashMap, this);
+                    myAsyncHttp.Post(getActivity(), URL, hashMap, this);
                 } else
                     new MyToast(getActivity(), "已到第一页", 3333);
                 break;
             case R.id.btn2:
                 page++;
                 hashMap.put("page", page + "");
-                myAsyncHttp.http047Post(getActivity(), URL, hashMap, this);
+                myAsyncHttp.Post(getActivity(), URL, hashMap, this);
                 break;
         }
     }
@@ -116,6 +116,6 @@ public class Frag049 extends Fragment implements OnResponseListener {
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
-        myAsyncHttp.http047Cancel("cancelPost");
+        myAsyncHttp.Cancel("cancelPost");
     }
 }
