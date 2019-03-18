@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.SeekBar;
 
-import com.lecheng.hello.thirdapp.Interface.IWListener;
-import com.lecheng.hello.thirdapp.Net.HttpGo;
+import com.lecheng.hello.thirdapp.Interface.OnResponseListener;
+import com.lecheng.hello.thirdapp.Interface.HttpVolley;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Widgets.MyToast;
 import com.lecheng.hello.thirdapp.Widgets.SlideButton.SlideButton;
@@ -19,7 +19,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /* 超精准计步器：http://blog.csdn.net/linglongxin24/article/details/52868803*/
-public class Aty055View extends ActionBarActivity implements IWListener {
+public class Aty055View extends ActionBarActivity implements OnResponseListener {
 
     @Bind(R.id.sv9)
     SudokuView sv9;
@@ -78,7 +78,7 @@ public class Aty055View extends ActionBarActivity implements IWListener {
     public void onViewClicked() {
 
         HashMap<String, String> map = new HashMap<String, String>();
-        new HttpGo().http047Post(this, "http://10.0.110.134:8084/gallery", map, this);
+        new HttpVolley().http047Post(this, "http://10.0.110.134:8084/gallery", map, this);
     }
 
     @Override

@@ -8,8 +8,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.lecheng.hello.thirdapp.Net.HttpGo;
-import com.lecheng.hello.thirdapp.Interface.IWListener;
+import com.lecheng.hello.thirdapp.Interface.HttpVolley;
+import com.lecheng.hello.thirdapp.Interface.OnResponseListener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Widgets.MyToast;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -20,7 +20,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Aty019MVC extends AppCompatActivity implements IWListener {
+public class Aty019MVC extends AppCompatActivity implements OnResponseListener {
 
     @Bind(R.id.editText3)
     EditText editText3;
@@ -29,14 +29,14 @@ public class Aty019MVC extends AppCompatActivity implements IWListener {
     @Bind(R.id.image1)
     ImageView image1;
     ImageLoader imageLoader = ImageLoader.getInstance();
-    private HttpGo weatherModel;
+    private HttpVolley weatherModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty019_mvc);
         ButterKnife.bind(this);
-        weatherModel = new HttpGo();
+        weatherModel = new HttpVolley();
     }
 
     private void displayWeather(String strJson) {

@@ -17,8 +17,8 @@ import com.lecheng.hello.thirdapp.ActivityList.Aty018MyBrowser;
 import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.LvUnitAdpt;
 import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.ViewHolder;
 import com.lecheng.hello.thirdapp.Bean.Json.Bean049;
-import com.lecheng.hello.thirdapp.Net.HttpGo;
-import com.lecheng.hello.thirdapp.Interface.IWListener;
+import com.lecheng.hello.thirdapp.Interface.HttpVolley;
+import com.lecheng.hello.thirdapp.Interface.OnResponseListener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Widgets.MyToast;
 
@@ -33,12 +33,12 @@ import butterknife.OnClick;
  * 文档地址：http://wangyi.butterfly.mopaasapp.com/
  */
 
-public class Frag049 extends Fragment implements IWListener {
+public class Frag049 extends Fragment implements OnResponseListener {
     @Bind(R.id.tvTitle)
     TextView tvTitle;
     @Bind(R.id.lv1)
     ListView lv1;
-    private HttpGo myAsyncHttp;
+    private HttpVolley myAsyncHttp;
     private static final String URL = "http://wangyi.butterfly.mopaasapp.com/news/api";
     // + "?type=war&page=1&limit=10";
     private HashMap<String, String> hashMap = new HashMap<String, String>();
@@ -60,7 +60,7 @@ public class Frag049 extends Fragment implements IWListener {
 
     private void init() {
         tvTitle.setText(type);
-        myAsyncHttp = new HttpGo();
+        myAsyncHttp = new HttpVolley();
         hashMap.put("type", type);
         hashMap.put("page", page + "");
         hashMap.put("limit", "10");

@@ -16,8 +16,8 @@ import com.alibaba.fastjson.JSON;
 import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.LvUnitAdpt;
 import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.ViewHolder;
 import com.lecheng.hello.thirdapp.Bean.Json.Bean039Weather;
-import com.lecheng.hello.thirdapp.Net.HttpGo;
-import com.lecheng.hello.thirdapp.Interface.IWListener;
+import com.lecheng.hello.thirdapp.Interface.HttpVolley;
+import com.lecheng.hello.thirdapp.Interface.OnResponseListener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MySP;
 import com.lecheng.hello.thirdapp.Utils.MyUtils;
@@ -29,7 +29,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Aty039NewWeather extends Activity implements IWListener {
+public class Aty039NewWeather extends Activity implements OnResponseListener {
     @Bind(R.id.aty40_iv_bg)
     ImageView aty40IvBg;
     @Bind(R.id.aty40_tv_city)
@@ -52,7 +52,7 @@ public class Aty039NewWeather extends Activity implements IWListener {
     private LayoutAnimationController lac;      //动画
     private ScaleAnimation sa;                  //动画
 
-    private HttpGo myAsyncHttp = new HttpGo();
+    private HttpVolley myAsyncHttp = new HttpVolley();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

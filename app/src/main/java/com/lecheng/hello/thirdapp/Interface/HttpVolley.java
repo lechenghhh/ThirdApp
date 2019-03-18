@@ -1,14 +1,13 @@
-package com.lecheng.hello.thirdapp.Net;
+package com.lecheng.hello.thirdapp.Interface;
 
 import android.content.Context;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.lecheng.hello.thirdapp.Interface.IWListener;
-import com.lecheng.hello.thirdapp.Interface.IWModel;
 import com.lecheng.hello.thirdapp.Widgets.MyToast;
 
 import java.util.HashMap;
@@ -17,42 +16,45 @@ import java.util.Map;
 import static com.lecheng.hello.thirdapp.Utils.MyApplication.getHttpQue;
 
 
-public class HttpGo implements IWModel {
+public class HttpVolley {
+    public static final String CANCEL_GET = "cancelGet";
+    public static final String CANCEL_POST = "cancelPost";
 
-    @Override               //Get请求
-    public void http047Get(final Context c, final String url, final IWListener listener) {
+    //Get请求
+    public void http047Get(final Context c, final String url, final OnResponseListener listener) {
         StringRequest request = new StringRequest
                 (Request.Method.GET, url, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String s) {
                         System.out.println(url);
-                        System.out.println("onResponse-Success:\n" + s);
+                        System.out.println("HttpVolley-Success:\n" + s);
                         listener.onSuccess(s);
                     }
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError e) {
 //                        listener.onError();
-                        new MyToast(c, "请求失败:\n" + e, 3000);
+                        Toast.makeText(c, "请求失败:\n" + e, Toast.LENGTH_LONG).show();
                     }
                 });
-        request.setTag("cancelGet");
+        request.setTag(CANCEL_GET);
         getHttpQue().add(request);
     }
 
-    @Override               //Post请求
-    public void http047Post(final Context c, String url, final HashMap<String, String> hashMap, final IWListener listener) {
+    //Post请求
+    public void http047Post(final Context c, String url, final HashMap<String, String> hashMap, final OnResponseListener listener) {
         StringRequest request2 = new StringRequest
                 (Request.Method.POST, url, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String s) {
-                        System.out.println("onResponse-Success:\n" + s);
+                        System.out.println("HttpVolley-Success:\n" + s);
                         listener.onSuccess(s);
                     }
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError e) {
-                        new MyToast(c, "请求失败:\n" + e, 3000);
+//                        listener.onError();
+                        Toast.makeText(c, "请求失败:\n" + e, Toast.LENGTH_LONG).show();
                     }
                 }) {
             @Override
@@ -61,11 +63,11 @@ public class HttpGo implements IWModel {
                 return map;
             }
         };
-        request2.setTag("cancelPost");
+        request2.setTag(CANCEL_POST);
         getHttpQue().add(request2);
     }
 
-    @Override               //取消队列
+    //取消队列
     public void http047Cancel(String tag) {
         getHttpQue().cancelAll(tag);
     }

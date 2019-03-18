@@ -6,8 +6,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.lecheng.hello.thirdapp.Net.HttpGo;
-import com.lecheng.hello.thirdapp.Interface.IWListener;
+import com.lecheng.hello.thirdapp.Interface.HttpVolley;
+import com.lecheng.hello.thirdapp.Interface.OnResponseListener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Widgets.MyToast;
 
@@ -17,7 +17,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Aty046MsgVerify extends AppCompatActivity implements IWListener {
+public class Aty046MsgVerify extends AppCompatActivity implements OnResponseListener {
 
     @Bind(R.id.et)
     EditText et;
@@ -25,7 +25,7 @@ public class Aty046MsgVerify extends AppCompatActivity implements IWListener {
     EditText et2;
     @Bind(R.id.tv)
     TextView tv;
-    private HttpGo myAsyncHttp;
+    private HttpVolley myAsyncHttp;
     private HashMap<String, String> map;
     private String url = "http://10.0.110.114:8090/Androidpacs/services/AndroidController?wsdl";
 
@@ -35,7 +35,7 @@ public class Aty046MsgVerify extends AppCompatActivity implements IWListener {
         setContentView(R.layout.aty046_msgverify);
         ButterKnife.bind(this);
         //实例化
-        myAsyncHttp = new HttpGo();
+        myAsyncHttp = new HttpVolley();
         map = new HashMap<String, String>();
     }
 
