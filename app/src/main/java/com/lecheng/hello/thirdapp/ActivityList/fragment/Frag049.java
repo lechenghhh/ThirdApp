@@ -1,5 +1,6 @@
 package com.lecheng.hello.thirdapp.ActivityList.fragment;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -33,6 +34,7 @@ import butterknife.OnClick;
  * 文档地址：http://wangyi.butterfly.mopaasapp.com/
  */
 
+@SuppressLint("ValidFragment")
 public class Frag049 extends Fragment implements OnResponseListener {
     @Bind(R.id.tvTitle)
     TextView tvTitle;
@@ -45,6 +47,7 @@ public class Frag049 extends Fragment implements OnResponseListener {
     private String type = "war";
     private int page = 1;
 
+    @SuppressLint("ValidFragment")
     public Frag049(String type) {
         this.type = type;
     }
@@ -60,11 +63,11 @@ public class Frag049 extends Fragment implements OnResponseListener {
 
     private void init() {
         tvTitle.setText(type);
-        myAsyncHttp = new HttpVolley();
+        myAsyncHttp = new HttpVolley(getActivity());
         hashMap.put("type", type);
         hashMap.put("page", page + "");
         hashMap.put("limit", "10");
-        myAsyncHttp.Post(getActivity(), URL, hashMap, this);
+        myAsyncHttp.Post(URL, hashMap, this);
     }
 
     @OnClick({R.id.btn1, R.id.btn2})
@@ -74,14 +77,14 @@ public class Frag049 extends Fragment implements OnResponseListener {
                 if (page != 1) {
                     page--;
                     hashMap.put("page", page + "");
-                    myAsyncHttp.Post(getActivity(), URL, hashMap, this);
+                    myAsyncHttp.Post( URL, hashMap, this);
                 } else
                     new MyToast(getActivity(), "已到第一页", 3333);
                 break;
             case R.id.btn2:
                 page++;
                 hashMap.put("page", page + "");
-                myAsyncHttp.Post(getActivity(), URL, hashMap, this);
+                myAsyncHttp.Post( URL, hashMap, this);
                 break;
         }
     }

@@ -19,9 +19,14 @@ import static com.lecheng.hello.thirdapp.Utils.MyApplication.getHttpQue;
 public class HttpVolley {
     public static final String CANCEL_GET = "cancelGet";
     public static final String CANCEL_POST = "cancelPost";
+    private Context context;
+
+    public HttpVolley(Context context) {
+        this.context = context;
+    }
 
     //Get请求
-    public void Get(final Context c, final String url, final OnResponseListener listener) {
+    public void Get(final String url, final OnResponseListener listener) {
         StringRequest request = new StringRequest
                 (Request.Method.GET, url, new Response.Listener<String>() {
                     @Override
@@ -34,7 +39,7 @@ public class HttpVolley {
                     @Override
                     public void onErrorResponse(VolleyError e) {
 //                        listener.onError();
-                        Toast.makeText(c, "请求失败:\n" + e, Toast.LENGTH_LONG).show();
+                        Toast.makeText(context, "请求失败:\n" + e, Toast.LENGTH_LONG).show();
                     }
                 });
         request.setTag(CANCEL_GET);
@@ -42,7 +47,7 @@ public class HttpVolley {
     }
 
     //Post请求
-    public void Post(final Context c, String url, final HashMap<String, String> hashMap, final OnResponseListener listener) {
+    public void Post(String url, final HashMap<String, String> hashMap, final OnResponseListener listener) {
         StringRequest request2 = new StringRequest
                 (Request.Method.POST, url, new Response.Listener<String>() {
                     @Override
@@ -54,7 +59,7 @@ public class HttpVolley {
                     @Override
                     public void onErrorResponse(VolleyError e) {
 //                        listener.onError();
-                        Toast.makeText(c, "请求失败:\n" + e, Toast.LENGTH_LONG).show();
+                        Toast.makeText(context, "请求失败:\n" + e, Toast.LENGTH_LONG).show();
                     }
                 }) {
             @Override

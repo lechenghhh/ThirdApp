@@ -78,7 +78,7 @@ public class Aty055View extends ActionBarActivity implements OnResponseListener 
     public void onViewClicked() {
 
         HashMap<String, String> map = new HashMap<String, String>();
-        new HttpVolley().Post(this, "http://10.0.110.134:8084/gallery", map, this);
+        new HttpVolley(this).Post("http://10.0.110.134:8084/gallery", map, this);
     }
 
     @Override

@@ -36,7 +36,7 @@ public class Aty019MVC extends AppCompatActivity implements OnResponseListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty019_mvc);
         ButterKnife.bind(this);
-        weatherModel = new HttpVolley();
+        weatherModel = new HttpVolley(this);
     }
 
     private void displayWeather(String strJson) {
@@ -53,7 +53,7 @@ public class Aty019MVC extends AppCompatActivity implements OnResponseListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button2:
-                weatherModel.Get(getApplicationContext(), editText3.getText().toString(), this);
+                weatherModel.Get(editText3.getText().toString(), this);
                 break;
             case R.id.button3:
                 HashMap<String, String> map = new HashMap<String, String>();
@@ -62,9 +62,9 @@ public class Aty019MVC extends AppCompatActivity implements OnResponseListener {
                 map.put("type", "data");
                 map.put("doctype", "json");
                 map.put("version", "1.1");
-                map.put("q", editText3.getText()+"");
+                map.put("q", editText3.getText() + "");
                 String url2 = "http://fanyi.youdao.com/openapi.do?";
-                weatherModel.Post(getApplicationContext(), url2, map, this);
+                weatherModel.Post(url2, map, this);
                 break;
         }
     }

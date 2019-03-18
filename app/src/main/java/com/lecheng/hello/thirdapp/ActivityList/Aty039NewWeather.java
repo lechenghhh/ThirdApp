@@ -52,7 +52,7 @@ public class Aty039NewWeather extends Activity implements OnResponseListener {
     private LayoutAnimationController lac;      //动画
     private ScaleAnimation sa;                  //动画
 
-    private HttpVolley myAsyncHttp = new HttpVolley();
+    private HttpVolley myAsyncHttp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,9 +62,10 @@ public class Aty039NewWeather extends Activity implements OnResponseListener {
         imageLoader.displayImage(bgUrl, aty40IvBg);
 //        myAsyncHttp.Get(this, "http://wthrcdn.etouch.cn/weather_mini?city=" +
 //                MySP.loadData(getApplicationContext(), "city", "福州"), this);
+        myAsyncHttp = new HttpVolley(this);
         HashMap<String, String> hm = new HashMap<String, String>();
         hm.put("city", MySP.loadData(getApplicationContext(), "city", "福州") + "");
-        myAsyncHttp.Post(this, "http://wthrcdn.etouch.cn/weather_mini", hm, this);
+        myAsyncHttp.Post("http://wthrcdn.etouch.cn/weather_mini", hm, this);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
                 (getApplicationContext(), android.R.layout.simple_list_item_1);
         aty40Lv2.setAdapter(adapter);
@@ -78,8 +79,7 @@ public class Aty039NewWeather extends Activity implements OnResponseListener {
                 MySP.saveData(getApplicationContext(), "city", cityList[position]);
                 aty40Lv.setVisibility(View.VISIBLE);
                 aty40Lv2.setVisibility(View.GONE);
-                myAsyncHttp.Get(Aty039NewWeather.this,
-                        "http://wthrcdn.etouch.cn/weather_mini?city=" +
+                myAsyncHttp.Get("http://wthrcdn.etouch.cn/weather_mini?city=" +
                                 MySP.loadData(getApplicationContext(), "city", "福州"),
                         Aty039NewWeather.this);
             }
