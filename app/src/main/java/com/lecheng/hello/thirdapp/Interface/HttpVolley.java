@@ -4,6 +4,7 @@ import android.content.Context;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -42,6 +43,7 @@ public class HttpVolley {
                         Toast.makeText(context, "请求失败:\n" + e, Toast.LENGTH_LONG).show();
                     }
                 });
+//        request.setRetryPolicy(new DefaultRetryPolicy(2 * 1000, 0, 1.0f));//超时2*1000ms
         request.setTag(CANCEL_GET);
         getHttpQue().add(request);
     }
@@ -68,6 +70,7 @@ public class HttpVolley {
                 return map;
             }
         };
+//        request2.setRetryPolicy(new DefaultRetryPolicy(2 * 1000, 0, 1.0f));//超时2*1000ms
         request2.setTag(CANCEL_POST);
         getHttpQue().add(request2);
     }
