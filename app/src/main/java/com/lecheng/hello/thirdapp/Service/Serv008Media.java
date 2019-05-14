@@ -18,7 +18,7 @@ public class Serv008Media extends Service {
             System.out.println("create player");  
             // 创建MediaPlayer对象  
             mp = new MediaPlayer();  
-            mp = MediaPlayer.create(Serv008Media.this, R.raw.x1);
+            mp = MediaPlayer.create(Serv008Media.this, R.raw.sound_e2);
             // mp.prepare();  
         } catch (IllegalStateException e) {  
             // TODO Auto-generated catch block  

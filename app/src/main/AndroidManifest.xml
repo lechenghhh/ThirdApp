@@ -25,7 +25,7 @@
     <!-- 允许悬浮窗 -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
-    <!-- 相机权限-->
+    <!-- 相机权限 -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
 
@@ -334,7 +334,8 @@
 
         <activity android:name=".ActivityList.Aty073" />
         <activity android:name=".ActivityList.Aty074DispatchTouchEvent" />
-        <activity android:name=".ActivityList.Aty075Bitmap"></activity>
+        <activity android:name=".ActivityList.Aty075Bitmap" />
+        <activity android:name=".ActivityList.Aty076Metronome"></activity>
     </application>
 
 </manifest>
