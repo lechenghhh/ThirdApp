@@ -14,6 +14,8 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.R;
+import com.lecheng.hello.thirdapp.Widgets.MyPopWindow;
+import com.lecheng.hello.thirdapp.Widgets.MyToast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -46,6 +48,14 @@ public class Aty051PopWindow extends AppCompatActivity {
 
         // 显示popWindow
         showPopWindow(btn2);
+
+        findViewById(R.id.btn0).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new MyToast(Aty051PopWindow.this,"FDFD",1);
+                MyPopWindow p2 = new MyPopWindow(Aty051PopWindow.this,view,R.layout.aty051_pop,"haha");
+            }
+        });
     }
 
     @Override

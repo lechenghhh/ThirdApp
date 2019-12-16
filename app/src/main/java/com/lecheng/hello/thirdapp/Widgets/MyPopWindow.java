@@ -15,7 +15,7 @@ import com.lecheng.hello.thirdapp.R;
  * Created by Administrator on 2016/11/24.
  */
 public class MyPopWindow {
-    public MyPopWindow(final Context mContext, View view, int xmlID, int viewID, final String msg) {
+    public MyPopWindow(final Context mContext, View view, int xmlID, final String msg) {
 
         // 一个自定义的布局，作为显示的内容
         View contentView = LayoutInflater.from(mContext).inflate(xmlID, null);
