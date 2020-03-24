@@ -40,11 +40,11 @@ public abstract class LvUnitAdpt<T> extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         final ViewHolder viewHolder = getViewHolder(position, convertView,
                 parent);
-        convert(viewHolder, getItem(position));
+        convert(viewHolder, getItem(position), position);
         return viewHolder.getConvertView();
     }
 
-    public abstract void convert(ViewHolder helper, T item);
+    public abstract void convert(ViewHolder helper, T item, int position);
 
     private ViewHolder getViewHolder(int position, View convertView,
                                      ViewGroup parent) {
