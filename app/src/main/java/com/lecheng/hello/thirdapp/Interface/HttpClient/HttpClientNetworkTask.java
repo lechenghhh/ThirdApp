@@ -32,7 +32,6 @@ public class HttpClientNetworkTask extends NetworkTask {
 
     @Override
     public String doGet(String url) {
-        Log.d(TAG, "doGet: url=" + url);
         String result = null;
         HttpClient httpCient = new DefaultHttpClient();
         HttpGet httpGet = new HttpGet(url);
@@ -54,7 +53,6 @@ public class HttpClientNetworkTask extends NetworkTask {
 
     @Override
     public String doPost(String url, Map<String, String> paramMap) {
-        Log.d(TAG, "doPost: url=" + url);
         String result;
         HttpClient httpCient = new DefaultHttpClient();
         HttpPost httpRequest = new HttpPost(url);

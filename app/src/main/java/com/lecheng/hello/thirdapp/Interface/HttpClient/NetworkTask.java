@@ -27,6 +27,7 @@ public abstract class NetworkTask extends AsyncTask<String, Integer, String> {
 
     @Override
     protected String doInBackground(String... params) {
+        Log.d(TAG, mRequestMethod + " url=" + params[0]);
         String data;
         String url = params[0];
         if (GET.equals(mRequestMethod)) {
@@ -55,10 +56,10 @@ public abstract class NetworkTask extends AsyncTask<String, Integer, String> {
     protected void onPostExecute(String result) {
         if (null != mResponceLintener) {
             if (isSuccess) {
-                Log.d(TAG, "onSuccess: "+result);
+                Log.d(TAG, "onSuccess: " + result);
                 mResponceLintener.onSuccess(result);
             } else {
-                Log.d(TAG, "onError: "+result);
+                Log.d(TAG, "onError: " + result);
                 mResponceLintener.onError(result);
             }
         }
