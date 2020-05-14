@@ -89,7 +89,7 @@ public class LoadListView extends ListView {
             LinearLayout layout = new LinearLayout(context);
             layout.setOrientation(LinearLayout.VERTICAL);
             layout.setGravity(Gravity.CENTER);
-            LayoutParams layoutParams = new LayoutParams(LayoutParams.MATCH_PARENT, 800);
+            LayoutParams layoutParams = new LayoutParams(parent.getWidth(), parent.getHeight());
             layout.setLayoutParams(layoutParams);
 
             ImageView iv = new ImageView(context);
