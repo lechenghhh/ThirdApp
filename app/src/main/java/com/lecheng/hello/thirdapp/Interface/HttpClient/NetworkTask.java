@@ -57,7 +57,11 @@ public abstract class NetworkTask extends AsyncTask<String, Integer, String> {
         if (null != mResponceLintener) {
             if (isSuccess) {
                 Log.d(TAG, "onSuccess: " + result);
-                mResponceLintener.onSuccess(result);
+                try {
+                    mResponceLintener.onSuccess(result);
+                } catch (Exception e) {
+                    mResponceLintener.onError(e.toString());
+                }
             } else {
                 Log.d(TAG, "onError: " + result);
                 mResponceLintener.onError(result);

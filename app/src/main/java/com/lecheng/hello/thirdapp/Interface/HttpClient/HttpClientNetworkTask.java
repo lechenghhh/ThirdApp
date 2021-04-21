@@ -35,6 +35,7 @@ public class HttpClientNetworkTask extends NetworkTask {
         String result = null;
         HttpClient httpCient = new DefaultHttpClient();
         HttpGet httpGet = new HttpGet(url);
+        //httpGet.addHeader("key","value");
         try {
             HttpResponse httpResponse = httpCient.execute(httpGet);
             if (httpResponse.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
@@ -55,15 +56,16 @@ public class HttpClientNetworkTask extends NetworkTask {
     public String doPost(String url, Map<String, String> paramMap) {
         String result;
         HttpClient httpCient = new DefaultHttpClient();
-        HttpPost httpRequest = new HttpPost(url);
+        HttpPost httpPost = new HttpPost(url);
+        //httpPost.addHeader("key", "value");
         // 使用NameValuePair来保存要传递的Post参数
         List<NameValuePair> params = new ArrayList<NameValuePair>();
         for (Map.Entry<String, String> entry : paramMap.entrySet()) {
             params.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
         }
         try {
-            httpRequest.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
-            HttpResponse response = httpCient.execute(httpRequest);
+            httpPost.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
+            HttpResponse response = httpCient.execute(httpPost);
             if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
                 result = EntityUtils.toString(response.getEntity());
             } else {
@@ -78,23 +80,21 @@ public class HttpClientNetworkTask extends NetworkTask {
         return result;
     }
 
-    /*** 调用示例
+     /*** 调用示例:
 
-     NetworkTask networkTask = new HttpClientNetworkTask(NetworkTask.GET);
-     networkTask.execute("http://123.57.31.11/androidnet/getJoke?id=5");
-     networkTask.setResponceLintener(new NetworkTask.ResponceLintener() {
-    @Override public void onSuccess(String result) {
-    tv.setText(result);
-    }
-
-    @Override public void onError(String error) {
-    Toast.makeText(getApplicationContext(), error, Toast.LENGTH_SHORT).show();
-    }
-    });
+         NetworkTask networkTask = new HttpClientNetworkTask(NetworkTask.GET);
+         networkTask.execute("http://baidu.com");
+         networkTask.setResponceLintener(new NetworkTask.ResponceLintener() {
+            @Override public void onSuccess(String result) {
+                Toast.makeText(context, result, Toast.LENGTH_SHORT).show();
+            }
+            @Override public void onError(String error) {
+                Toast.makeText(context, error, Toast.LENGTH_SHORT).show();
+            }
+         });
 
      ————————————————
      版权声明：本文为CSDN博主「周文凯」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
      原文链接：https://blog.csdn.net/xuehuayous/article/details/54143487
-
-     * */
+     ***/
 }
