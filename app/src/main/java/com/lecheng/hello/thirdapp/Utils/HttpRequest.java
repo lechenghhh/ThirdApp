@@ -41,19 +41,18 @@ public class HttpRequest {
     /**
      * 执行网络请求操作,返回数据会解析成字符串String
      *
-     * @param url    请求的url
-     * @param params 请求的参数
+     * @param url 请求的url
      */
-    public static String get(String url, Map<String, String> params, StringResponse callback) {
-        return request(GET, url, params, callback);
+    public static String get(String url, StringResponse callback) {
+        return request(GET, url, null, callback);
     }
 
-    public static String get(String url, Map<String, String> params, BitmapResponse callback) {
-        return request(GET, url, params, callback);
+    public static String get(String url, BitmapResponse callback) {
+        return request(GET, url, null, callback);
     }
 
-    public static String get(String url, Map<String, String> params, ByteArrayResponse callback) {
-        return request(GET, url, params, callback);
+    public static String get(String url, ByteArrayResponse callback) {
+        return request(GET, url, null, callback);
     }
 
     /**
