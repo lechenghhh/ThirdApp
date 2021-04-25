@@ -83,7 +83,7 @@ public class Aty054PullToRefresh extends ActionBarActivity {
 //        actualListView.setAdapter(mAdapter);
         adpt = new LvUnitAdpt<String>(getApplicationContext(), mListItems, R.layout.item053_fethg) {
             @Override
-            public void convert(ViewHolder helper, String item) {
+            public void convert(ViewHolder helper, String item, int position) {
                 helper.setText(R.id.tv1, item);
                 helper.setText(R.id.tv2, item);
                 helper.setOnClickListener(R.id.tv1, new View.OnClickListener() {

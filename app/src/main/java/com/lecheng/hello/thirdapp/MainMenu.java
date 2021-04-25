@@ -54,7 +54,7 @@ public class MainMenu extends ListActivity {
             "Aty067RoundCornerPB", "Aty068DataBinding", "Aty069Suspension", "Aty070Root",
             "-------------------------------------",
             "Aty071VolueEvent", "Aty072AutoClick", "Aty073", "Aty074DispatchTouchEvent",
-            "Aty075Bitmap", "", "", "",
+            "Aty075Bitmap", "Aty076Metronome", "", "",
     };
 
     private LayoutAnimationController lac;

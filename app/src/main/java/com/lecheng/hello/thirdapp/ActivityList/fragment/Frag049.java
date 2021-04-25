@@ -97,7 +97,7 @@ public class Frag049 extends Fragment implements OnResponseListener {
 //        lv1.setAdapter(new Adpt049List(getActivity(), bean049));
         lv1.setAdapter(new LvUnitAdpt<Bean049.ListBean>(getActivity(), bean049.getList(), R.layout.item049_metro) {
             @Override
-            public void convert(ViewHolder helper, Bean049.ListBean item) {
+            public void convert(ViewHolder helper, Bean049.ListBean item, int position) {
                 helper.setText(R.id.tv1, item.getTitle());
                 helper.setText(R.id.tv2, item.getTime());
             }

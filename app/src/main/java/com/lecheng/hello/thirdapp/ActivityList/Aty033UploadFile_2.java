@@ -282,7 +282,7 @@ public class Aty033UploadFile_2 extends Activity implements OnClickListener {
             }
             gv.setAdapter(new LvUnitAdpt<String>(Aty033UploadFile_2.this, listUri, R.layout.item033_pic) {
                 @Override
-                public void convert(ViewHolder helper, String item) {
+                public void convert(ViewHolder helper, String item, int position) {
                     helper.setImageByUrl(R.id.cell8_iv_pic, item);
                 }
             });

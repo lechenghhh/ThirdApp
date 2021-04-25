@@ -173,7 +173,7 @@ public class Aty040NetNote extends AppCompatActivity {
         BeanList beanList = JSON.parseObject(sChange,BeanList.class);
         lvNoteList.setAdapter(new LvUnitAdpt<BeanList.DataBean>(Aty040NetNote.this, beanList.getData(), R.layout.item006_sqlite) {
             @Override
-            public void convert(ViewHolder helper, BeanList.DataBean item) {
+            public void convert(ViewHolder helper, BeanList.DataBean item, int position) {
                 helper.setText(R.id.textView4, item.getTitle());
                 helper.setText(R.id.textView5, item.getContent());
                 helper.setText(R.id.textView6, item.getNotetime());

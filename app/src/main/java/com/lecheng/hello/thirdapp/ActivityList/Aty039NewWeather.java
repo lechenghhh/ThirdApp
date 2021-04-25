@@ -103,7 +103,7 @@ public class Aty039NewWeather extends Activity implements OnResponseListener {
             aty40Tv2.setText(bean.getData().getGanmao());
             aty40Lv.setAdapter(new LvUnitAdpt<Bean039Weather.DataBean.ForecastBean>(getApplicationContext(), bean.getData().getForecast(), R.layout.item040_weather) {
                 @Override
-                public void convert(ViewHolder helper, Bean039Weather.DataBean.ForecastBean item) {
+                public void convert(ViewHolder helper, Bean039Weather.DataBean.ForecastBean item, int position) {
                     helper.setText(R.id.listcell40_type, item.getType());
                     helper.setText(R.id.listcell40_fengxiang, item.getFengxiang());
                     helper.setText(R.id.listcell40_fengli, item.getFengli());
