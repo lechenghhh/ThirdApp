@@ -11,9 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
-import com.alibaba.fastjson.JSON;
 import com.lecheng.hello.thirdapp.Bean.RxBusMsg.EventMsg;
-import com.lecheng.hello.thirdapp.Interface.RxBus;
+import com.lecheng.hello.thirdapp.Utils.Interface.RxBus;
 import com.lecheng.hello.thirdapp.R;
 
 import butterknife.Bind;

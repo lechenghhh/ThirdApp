@@ -20,11 +20,10 @@ public class Aty076Metronome extends AppCompatActivity {
         findViewById(R.id.btn4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Aty076Metronome.this, "haha", Toast.LENGTH_SHORT).show();
                 HttpRequest.GET("http://baidu.com", new HttpRequest.StringResponse() {
                     @Override
                     public void onSuccess(String result) {
-//                        Toast.makeText(Aty076Metronome.this, result, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Aty076Metronome.this, result, Toast.LENGTH_SHORT).show();
                         Bean039Weather weather = JSON.parseObject(result, Bean039Weather.class);
                     }
 

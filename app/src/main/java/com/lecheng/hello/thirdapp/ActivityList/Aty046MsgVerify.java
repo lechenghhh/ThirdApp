@@ -6,8 +6,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.lecheng.hello.thirdapp.Interface.HttpVolley;
-import com.lecheng.hello.thirdapp.Interface.OnResponseListener;
+import com.lecheng.hello.thirdapp.Utils.Interface.HttpVolley;
+import com.lecheng.hello.thirdapp.Utils.Interface.OnResponseListener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Widgets.MyToast;
 

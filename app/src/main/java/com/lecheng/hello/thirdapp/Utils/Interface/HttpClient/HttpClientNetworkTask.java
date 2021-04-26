@@ -1,6 +1,4 @@
-package com.lecheng.hello.thirdapp.Interface.HttpClient;
-
-import android.util.Log;
+package com.lecheng.hello.thirdapp.Utils.Interface.HttpClient;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;

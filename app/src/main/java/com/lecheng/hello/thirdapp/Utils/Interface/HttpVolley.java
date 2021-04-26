@@ -1,15 +1,13 @@
-package com.lecheng.hello.thirdapp.Interface;
+package com.lecheng.hello.thirdapp.Utils.Interface;
 
 import android.content.Context;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
-import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.lecheng.hello.thirdapp.Widgets.MyToast;
 
 import java.util.HashMap;
 import java.util.Map;
