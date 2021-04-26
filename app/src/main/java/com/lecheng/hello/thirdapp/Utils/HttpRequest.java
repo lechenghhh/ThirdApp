@@ -29,12 +29,17 @@ public class HttpRequest {
     public static final String GET = "GET";
     public static final String POST = "POST";
 
+    private static final int MAX_THREAD = 5;
+    private static final int REQUEST_TIMEOUT = 5000;
+    private static final int RESPONSE_TIMEOUT = 5000;
+    private static final boolean ENABLE_CACHE = false;
+
     //线程池
     private static ExecutorService executor;
     private static Handler mHandler;
 
     static {
-        executor = Executors.newFixedThreadPool(5);
+        executor = Executors.newFixedThreadPool(MAX_THREAD);
         mHandler = new Handler();
     }
 
@@ -43,15 +48,15 @@ public class HttpRequest {
      *
      * @param url 请求的url
      */
-    public static String get(String url, StringResponse callback) {
+    public static String GET(String url, StringResponse callback) {
         return request(GET, url, null, callback);
     }
 
-    public static String get(String url, BitmapResponse callback) {
+    public static String GET(String url, BitmapResponse callback) {
         return request(GET, url, null, callback);
     }
 
-    public static String get(String url, ByteArrayResponse callback) {
+    public static String GET(String url, ByteArrayResponse callback) {
         return request(GET, url, null, callback);
     }
 
@@ -61,21 +66,19 @@ public class HttpRequest {
      * @param url    请求的url
      * @param params 请求的参数
      */
-    public static String post(String url, Map<String, String> params, StringResponse callback) {
+    public static String POST(String url, Map<String, String> params, StringResponse callback) {
         return request(POST, url, params, callback);
     }
 
-    public static String post(String url, Map<String, String> params, BitmapResponse callback) {
+    public static String POST(String url, Map<String, String> params, BitmapResponse callback) {
         return request(POST, url, params, callback);
     }
 
-    public static String post(String url, Map<String, String> params, ByteArrayResponse callback) {
+    public static String POST(String url, Map<String, String> params, ByteArrayResponse callback) {
         return request(POST, url, params, callback);
     }
 
-
-    private static String request(final String method, final String url,
-                                  final Map<String, String> params, final StringResponse callback) {
+    private static String request(final String method, final String url, final Map<String, String> params, final StringResponse response) {
 
         executor.execute(new Runnable() {
             @Override
@@ -92,11 +95,11 @@ public class HttpRequest {
                     // 设置请求方式
                     connection.setRequestMethod(method);
                     // 设置连接超时
-                    connection.setConnectTimeout(5000);
+                    connection.setConnectTimeout(REQUEST_TIMEOUT);
                     // 设置读取超时
-                    connection.setReadTimeout(5000);
+                    connection.setReadTimeout(RESPONSE_TIMEOUT);
                     // 设置缓存不可用
-                    connection.setUseCaches(false);
+                    connection.setUseCaches(ENABLE_CACHE);
                     // 开始连接
                     connection.connect();
 
@@ -120,19 +123,19 @@ public class HttpRequest {
                     if (responseCode == 200) {
                         InputStream inputStream = connection.getInputStream();
                         String result = inputStream2String(inputStream);
-                        if (result != null && callback != null) {
-                            postSuccessString(callback, result);
+                        if (result != null && response != null) {
+                            postSuccessString(response, result);
                         }
                     } else {
-                        if (callback != null) {
-                            postError(callback, responseCode, new Exception("请求数据失败：" + responseCode));
+                        if (response != null) {
+                            postError(response, responseCode, new Exception("请求数据失败：" + responseCode));
                         }
                     }
 
                 } catch (final Exception e) {
                     e.printStackTrace();
-                    if (callback != null) {
-                        postError(callback, 0, e);
+                    if (response != null) {
+                        postError(response, 0, e);
                     }
 
                 } finally {
@@ -152,8 +155,7 @@ public class HttpRequest {
         return null;
     }
 
-    private static String request(final String method, final String url,
-                                  final Map<String, String> params, final BitmapResponse callback) {
+    private static String request(final String method, final String url, final Map<String, String> params, final BitmapResponse response) {
 
         executor.execute(new Runnable() {
             @Override
@@ -171,11 +173,11 @@ public class HttpRequest {
                     // 设置请求方式
                     connection.setRequestMethod(method);
                     // 设置连接超时
-                    connection.setConnectTimeout(5000);
+                    connection.setConnectTimeout(REQUEST_TIMEOUT);
                     // 设置读取超时
-                    connection.setReadTimeout(5000);
+                    connection.setReadTimeout(RESPONSE_TIMEOUT);
                     // 设置缓存不可用
-                    connection.setUseCaches(false);
+                    connection.setUseCaches(ENABLE_CACHE);
                     // 开始连接
                     connection.connect();
 
@@ -199,19 +201,19 @@ public class HttpRequest {
                     if (responseCode == 200) {
                         inputStream = connection.getInputStream();
                         Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
-                        if (bitmap != null && callback != null) {
-                            postSuccessBitmap(callback, bitmap);
+                        if (bitmap != null && response != null) {
+                            postSuccessBitmap(response, bitmap);
                         }
                     } else {
-                        if (callback != null) {
-                            postError(callback, responseCode, new Exception("请求图片失败：" + responseCode));
+                        if (response != null) {
+                            postError(response, responseCode, new Exception("请求图片失败：" + responseCode));
                         }
                     }
 
                 } catch (final Exception e) {
                     e.printStackTrace();
-                    if (callback != null) {
-                        postError(callback, 0, e);
+                    if (response != null) {
+                        postError(response, 0, e);
                     }
 
                 } finally {
@@ -238,8 +240,7 @@ public class HttpRequest {
         return null;
     }
 
-    private static String request(final String method, final String url,
-                                  final Map<String, String> params, final ByteArrayResponse callback) {
+    private static String request(final String method, final String url, final Map<String, String> params, final ByteArrayResponse response) {
 
         executor.execute(new Runnable() {
             @Override
@@ -256,11 +257,11 @@ public class HttpRequest {
                     // 设置请求方式
                     connection.setRequestMethod(method);
                     // 设置连接超时
-                    connection.setConnectTimeout(5000);
+                    connection.setConnectTimeout(REQUEST_TIMEOUT);
                     // 设置读取超时
-                    connection.setReadTimeout(5000);
+                    connection.setReadTimeout(RESPONSE_TIMEOUT);
                     // 设置缓存不可用
-                    connection.setUseCaches(false);
+                    connection.setUseCaches(ENABLE_CACHE);
                     // 开始连接
                     connection.connect();
 
@@ -284,19 +285,19 @@ public class HttpRequest {
                     if (responseCode == 200) {
                         InputStream inputStream = connection.getInputStream();
                         byte[] bytes = inputStream2ByteArray(inputStream);
-                        if (bytes != null && callback != null) {
-                            postSuccessByte(callback, bytes);
+                        if (bytes != null && response != null) {
+                            postSuccessByte(response, bytes);
                         }
                     } else {
-                        if (callback != null) {
-                            postError(callback, responseCode, new Exception("请求图片失败：" + responseCode));
+                        if (response != null) {
+                            postError(response, responseCode, new Exception("请求图片失败：" + responseCode));
                         }
                     }
 
                 } catch (final Exception e) {
                     e.printStackTrace();
-                    if (callback != null) {
-                        postError(callback, 0, e);
+                    if (response != null) {
+                        postError(response, 0, e);
                     }
 
                 } finally {
@@ -323,8 +324,7 @@ public class HttpRequest {
 //     * @param url    请求的url
 //     * @param params 请求的参数
 //     */
-//    private static <T> void doHttpReqeust(final String method, final String url,
-//                                         final Map<String, String> params, final Class<T> cls, final ObjectCallback callback) {
+//    private static <T> void request(final String method, final String url, final Map<String, String> params, final Class<T> cls, final ObjectResponse response) {
 //
 //        executor.execute(new Runnable() {
 //            @Override
@@ -341,11 +341,11 @@ public class HttpRequest {
 //                    // 设置请求方式
 //                    connection.setRequestMethod(method);
 //                    // 设置连接超时
-//                    connection.setConnectTimeout(5000);
+//                    connection.setConnectTimeout(REQUEST_TIMEOUT);
 //                    // 设置读取超时
-//                    connection.setReadTimeout(5000);
+//                    connection.setReadTimeout(RESPONSE_TIMEOUT);
 //                    // 设置缓存不可用
-//                    connection.setUseCaches(false);
+//                    connection.setUseCaches(ENABLE_CACHE);
 //                    // 开始连接
 //                    connection.connect();
 //
@@ -369,20 +369,20 @@ public class HttpRequest {
 //                    if (responseCode == 200) {
 //                        InputStream inputStream = connection.getInputStream();
 //                        String result = inputStream2String(inputStream);
-//                        if (result != null && callback != null) {
-////                            postSuccessObject(callback, new Gson().fromJson(result, cls));
-//                            postSuccessObject(callback, result);
+//                        if (result != null && response != null) {
+////                            postSuccessObject(response, new Gson().fromJson(result, cls));
+//                            postSuccessObject(response, result);
 //                        }
 //                    } else {
-//                        if (callback != null) {
-//                            postFailed(callback, responseCode, new Exception("请求数据失败：" + responseCode));
+//                        if (response != null) {
+//                            postError(response, responseCode, new Exception("请求数据失败：" + responseCode));
 //                        }
 //                    }
 //
 //                } catch (final Exception e) {
 //                    e.printStackTrace();
-//                    if (callback != null) {
-//                        postFailed(callback, 0, e);
+//                    if (response != null) {
+//                        postError(response, 0, e);
 //                    }
 //
 //                } finally {
@@ -414,41 +414,41 @@ public class HttpRequest {
         });
     }
 
-    private static void postSuccessBitmap(final Callback callback, final Bitmap bitmap) {
+    private static void postSuccessBitmap(final Response response, final Bitmap bitmap) {
         mHandler.post(new Runnable() {
             @Override
             public void run() {
-                BitmapResponse bitmapResponse = (BitmapResponse) callback;
+                BitmapResponse bitmapResponse = (BitmapResponse) response;
                 bitmapResponse.onSuccess(bitmap);
             }
         });
     }
 
-    private static void postSuccessByte(final Callback callback, final byte[] bytes) {
+    private static void postSuccessByte(final Response response, final byte[] bytes) {
         mHandler.post(new Runnable() {
             @Override
             public void run() {
-                ByteArrayResponse byteArrayResponse = (ByteArrayResponse) callback;
+                ByteArrayResponse byteArrayResponse = (ByteArrayResponse) response;
                 byteArrayResponse.onSuccess(bytes);
             }
         });
     }
 
-//    private static <T> void postSuccessObject(final ObjectCallback callback, final T t) {
-//        mHandler.post(new Runnable() {
-//            @Override
-//            public void run() {
-//                ObjectCallback objectCallback = (ObjectCallback) callback;
-//                objectCallback.onSuccess(t);
-//            }
-//        });
-//    }
-
-    private static void postError(final Callback callback, final int code, final Exception e) {
+    private static <T> void postSuccessObject(final ObjectResponse callback, final T t) {
         mHandler.post(new Runnable() {
             @Override
             public void run() {
-                callback.onError(code, e);
+                ObjectResponse objectResponse = (ObjectResponse) callback;
+                objectResponse.onSuccess(t);
+            }
+        });
+    }
+
+    private static void postError(final Response response, final int code, final Exception e) {
+        mHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                response.onError(code, e);
             }
         });
     }
@@ -495,7 +495,7 @@ public class HttpRequest {
      * @param inputStream 输入流
      * @return
      */
-    public static byte[] inputStream2ByteArray(InputStream inputStream) {
+    private static byte[] inputStream2ByteArray(InputStream inputStream) {
         byte[] result = null;
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         // 缓冲区
@@ -526,10 +526,9 @@ public class HttpRequest {
      * @param context
      * @return
      */
-    public static boolean isNetWorkConnected(Context context) {
+    public static boolean ISConnecting(Context context) {
 
-        ConnectivityManager manager = (ConnectivityManager)
-                context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager manager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = manager.getActiveNetworkInfo();
 
         if (networkInfo != null) {
@@ -538,25 +537,25 @@ public class HttpRequest {
         return false;
     }
 
-    public interface Callback {
+    public interface Response {
         void onError(int code, Exception e);
     }
 
-    public interface StringResponse extends Callback {
+    public interface StringResponse extends Response {
         void onSuccess(String result);
     }
 
-    public interface BitmapResponse extends Callback {
+    public interface BitmapResponse extends Response {
         void onSuccess(Bitmap bitmap);
     }
 
-    public interface ByteArrayResponse extends Callback {
+    public interface ByteArrayResponse extends Response {
         void onSuccess(byte[] bytes);
     }
 
-//    public interface ObjectCallback<T> extends Callback {
-//        void onSuccess(T t);
-//    }
+    public interface ObjectResponse<T> extends Response {
+        void onSuccess(T t);
+    }
 
 }
 

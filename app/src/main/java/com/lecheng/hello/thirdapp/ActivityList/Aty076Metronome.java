@@ -21,7 +21,7 @@ public class Aty076Metronome extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(Aty076Metronome.this, "haha", Toast.LENGTH_SHORT).show();
-                HttpRequest.get("http://baidu.com", new HttpRequest.StringResponse() {
+                HttpRequest.GET("http://baidu.com", new HttpRequest.StringResponse() {
                     @Override
                     public void onSuccess(String result) {
 //                        Toast.makeText(Aty076Metronome.this, result, Toast.LENGTH_SHORT).show();
