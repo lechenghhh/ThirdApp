@@ -19,7 +19,6 @@ import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.LvUnitAdpt;
 import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.ViewHolder;
 import com.lecheng.hello.thirdapp.Bean.Json.Bean049;
 import com.lecheng.hello.thirdapp.Utils.Interface.HttpVolley;
-import com.lecheng.hello.thirdapp.Utils.Interface.OnResponseListener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Widgets.MyToast;
 
@@ -35,7 +34,7 @@ import butterknife.OnClick;
  */
 
 @SuppressLint("ValidFragment")
-public class Frag049 extends Fragment implements OnResponseListener {
+public class Frag049 extends Fragment implements HttpVolley.OnResponseListener {
     @Bind(R.id.tvTitle)
     TextView tvTitle;
     @Bind(R.id.lv1)

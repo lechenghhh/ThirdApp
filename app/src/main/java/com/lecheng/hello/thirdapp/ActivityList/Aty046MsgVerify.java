@@ -7,7 +7,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.lecheng.hello.thirdapp.Utils.Interface.HttpVolley;
-import com.lecheng.hello.thirdapp.Utils.Interface.OnResponseListener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Widgets.MyToast;
 
@@ -17,7 +16,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Aty046MsgVerify extends AppCompatActivity implements OnResponseListener {
+public class Aty046MsgVerify extends AppCompatActivity implements HttpVolley.OnResponseListener {
 
     @Bind(R.id.et)
     EditText et;

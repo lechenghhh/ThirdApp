@@ -17,7 +17,6 @@ import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.LvUnitAdpt;
 import com.lecheng.hello.thirdapp.Adapter.ListViewUnitAdpt.ViewHolder;
 import com.lecheng.hello.thirdapp.Bean.Json.Bean039Weather;
 import com.lecheng.hello.thirdapp.Utils.Interface.HttpVolley;
-import com.lecheng.hello.thirdapp.Utils.Interface.OnResponseListener;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Utils.MySP;
 import com.lecheng.hello.thirdapp.Utils.MyUtils;
@@ -29,7 +28,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Aty039NewWeather extends Activity implements OnResponseListener {
+public class Aty039NewWeather extends Activity implements HttpVolley.OnResponseListener {
     @Bind(R.id.aty40_iv_bg)
     ImageView aty40IvBg;
     @Bind(R.id.aty40_tv_city)

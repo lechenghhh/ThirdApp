@@ -22,6 +22,13 @@ public class HttpVolley {
     public static final String CANCEL_POST_HEADER = "CANCEL_POST_HEADER";
     private Context context;
 
+    public interface OnResponseListener {
+        void onSuccess(String result);
+
+//    void onError();
+    }
+
+
     public HttpVolley(Context context) {
         this.context = context;
     }
@@ -84,7 +91,7 @@ public class HttpVolley {
     //Get请求,加入header
     public void Get(String url, final Map<String, String> header, final OnResponseListener listener) {
         System.out.println(url);
-        HeaderStringRequest request = new HeaderStringRequest(Request.Method.GET, url, new HeaderInterface() {
+        HttpVolleyHeader request = new HttpVolleyHeader(Request.Method.GET, url, new HttpVolleyHeader.HeaderInterface() {
             @Override
             public Map<String, String> addHeader() {
                 return header;
@@ -110,7 +117,7 @@ public class HttpVolley {
     //Post请求加入header
     public void Post(String url, Map<String, String> header, final HashMap<String, String> keyValue, final OnResponseListener listener) {
         System.out.println(url);
-        HeaderStringRequest request2 = new HeaderStringRequest(Request.Method.POST, url, new HeaderInterface() {
+        HttpVolleyHeader request2 = new HttpVolleyHeader(Request.Method.POST, url, new HttpVolleyHeader.HeaderInterface() {
             @Override
             public Map<String, String> addHeader() {
                 return null;

@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.SeekBar;
 
-import com.lecheng.hello.thirdapp.Utils.Interface.OnResponseListener;
 import com.lecheng.hello.thirdapp.Utils.Interface.HttpVolley;
 import com.lecheng.hello.thirdapp.R;
 import com.lecheng.hello.thirdapp.Widgets.MyToast;
@@ -19,7 +18,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /* 超精准计步器：http://blog.csdn.net/linglongxin24/article/details/52868803*/
-public class Aty055View extends ActionBarActivity implements OnResponseListener {
+public class Aty055View extends ActionBarActivity implements HttpVolley.OnResponseListener {
 
     @Bind(R.id.sv9)
     SudokuView sv9;
