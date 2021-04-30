@@ -100,6 +100,8 @@ public class HttpRequest {
                     connection.setReadTimeout(RESPONSE_TIMEOUT);
                     // 设置缓存不可用
                     connection.setUseCaches(ENABLE_CACHE);
+                    //设置header参数
+                    //connection.setRequestProperty("","");
                     // 开始连接
                     connection.connect();
 
@@ -178,6 +180,8 @@ public class HttpRequest {
                     connection.setReadTimeout(RESPONSE_TIMEOUT);
                     // 设置缓存不可用
                     connection.setUseCaches(ENABLE_CACHE);
+                    //设置header参数
+                    //connection.setRequestProperty("","");
                     // 开始连接
                     connection.connect();
 
@@ -262,6 +266,8 @@ public class HttpRequest {
                     connection.setReadTimeout(RESPONSE_TIMEOUT);
                     // 设置缓存不可用
                     connection.setUseCaches(ENABLE_CACHE);
+                    //设置header参数
+                    //connection.setRequestProperty("","");
                     // 开始连接
                     connection.connect();
 
