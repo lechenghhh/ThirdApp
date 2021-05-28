@@ -23,6 +23,20 @@ import java.util.concurrent.Executors;
  * 版权声明：本文为CSDN博主「qq_36699930」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
  * 原文链接：https://blog.csdn.net/qq_36699930/article/details/80392658
  * 本程序稍作优化命名等  by LeCheng
+ *
+
+    HttpRequest.GET("http://baidu.com", new HttpRequest.StringResponse() {
+        @Override
+        public void onSuccess(String result) {
+            System.out.println("onSuccess:" + result);
+        }
+
+        @Override
+        public void onError(int code, Exception e) {
+            System.out.println("onError:" + e + " code:" + code);
+        }
+    });
+
  */
 public class HttpRequest {
 
